@@ -1,19 +1,23 @@
 import { motion } from "framer-motion"
-import { type LucideIcon } from 'lucide-react'
+import Image from 'next/image'
 
 interface FeatureCardProps {
-  icon: LucideIcon
+  imageSrc: string  // Accept an image source URL
   title: string
   subtitle: string
 }
 
-export function FeatureCard({ icon: Icon, title, subtitle }: FeatureCardProps) {
+export function FeatureCard({ imageSrc, title, subtitle }: FeatureCardProps) {
   return (
-    <div 
-      className="flex items-center gap-4 p-6 bg-[#BBBBBB] backdrop-blur-xl border border-white/10 rounded-full"
-    >
-      <div className="p-3 rounded-full bg-black/30">
-        <Icon className="w-6 h-6 text-white" />
+    <div className="flex items-center gap-4 p-2 bg-[#FEF7F1]/10 rounded-full backdrop-blur-[36px]">
+      <div className="p-10 rounded-full bg-[#16171D]">
+        {/* Use the Next.js Image component to display the image */}
+        <Image 
+          src={imageSrc} 
+          alt={title} 
+          width={28}  // Adjust width and height to match the icon size
+          height={28}
+        />
       </div>
       <div>
         <h3 className="text-white font-medium">{title}</h3>
@@ -22,4 +26,3 @@ export function FeatureCard({ icon: Icon, title, subtitle }: FeatureCardProps) {
     </div>
   )
 }
-

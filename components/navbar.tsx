@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export function NavBar() {
   return (
-    <nav className="w-full py-4 px-6">
+    <nav className="w-full py-6 px-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/assets/monjin-logo.png" alt="Monjin Logo" width={100} height={50} />
