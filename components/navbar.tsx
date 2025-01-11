@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export function NavBar() {
   return (
     <nav className="w-full py-6 px-6">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/assets/monjin-logo.png" alt="Monjin Logo" width={100} height={50} />
         </Link>
@@ -28,11 +28,11 @@ export function NavBar() {
           </Link>
         </div>
 
-        <Button className="bg-[#D3F56A] text-black font-light hover:bg-[#c1e356] rounded-[50]">
+        <Button className="bg-[#D3F56A] text-black rounded-full font-Onest font-light transition-shadow duration-300 ease-in-out hover:bg-[#D0F16C] hover:shadow-lg hover:shadow-[#D0F16C]/50">
           Get started
         </Button>
       </div>
     </nav>
-  )
+  );
 }
 

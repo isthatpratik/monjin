@@ -1,5 +1,5 @@
 import "../styles/globals.css"
-import { Onest, Figtree } from '@next/font/google'
+import { Onest, Figtree } from "next/font/google"
 
 const onest = Onest({ subsets: ["latin"] })
 const figtree = Figtree({ subsets: ["latin"] })

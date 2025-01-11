@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc/generated-native";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,10 +10,16 @@ export default {
   ],
   theme: {
   	extend: {
-		fontFamily: {
-			sans: ['Onest', 'sans-serif'],
-			figtree: ['Figtree', 'sans-serif'],
-		  },
+  		fontFamily: {
+  			sans: [
+  				'Onest',
+  				'sans-serif'
+  			],
+  			figtree: [
+  				'Figtree',
+  				'sans-serif'
+  			]
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -59,6 +66,73 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		animation: {
+  			blob1: 'blob1 7s infinite ease-in-out',
+  			blob2: 'blob2 7s infinite ease-in-out',
+  			blob3: 'blob3 7s infinite ease-in-out',
+  			marquee: 'marquee var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+  		},
+  		keyframes: {
+  			blob1: {
+  				'0%': {
+  					transform: 'translate(0px, 0px) scale(1)'
+  				},
+  				'33%': {
+  					transform: 'translate(20px, -40px) scale(1.1)'
+  				},
+  				'66%': {
+  					transform: 'translate(-15px, 20px) scale(0.9)'
+  				},
+  				'100%': {
+  					transform: 'translate(0px, 0px) scale(1)'
+  				}
+  			},
+  			blob2: {
+  				'0%': {
+  					transform: 'translate(0px, 0px) scale(1)'
+  				},
+  				'33%': {
+  					transform: 'translate(-10px, -25px) scale(0.9)'
+  				},
+  				'66%': {
+  					transform: 'translate(0px, 20px) scale(1.1)'
+  				},
+  				'100%': {
+  					transform: 'translate(0px, 0px) scale(1)'
+  				}
+  			},
+  			blob3: {
+  				'0%': {
+  					transform: 'translate(0px, 0px) scale(1)'
+  				},
+  				'33%': {
+  					transform: 'translate(15px, -25px) scale(0.9)'
+  				},
+  				'66%': {
+  					transform: 'translate(20px, -15px) scale(1.1)'
+  				},
+  				'100%': {
+  					transform: 'translate(0px, 0px) scale(1)'
+  				}
+  			},
+  			marquee: {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-vertical': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
+  				}
+  			}
   		}
   	}
   },

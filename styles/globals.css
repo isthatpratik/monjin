@@ -75,3 +75,69 @@
   }
 }
 
+@layer utilities {
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+}
+
+@layer utilities {
+  .card-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+    background-image: url('/assets/vectors/noise.png'); /* Replace with your noise texture path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1; /* Adjust opacity for desired blending */
+    pointer-events: none;
+    z-index: 5;
+    mix-blend-mode: soft-light;
+  }
+
+  .with-vector1::after {
+    content: '';
+    position: absolute;
+    bottom: 0px; 
+    right: -50px;
+    width: 180px; 
+    height: 180px;
+    background-image: url('/assets/vectors/employee-vector.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 9;
+  }
+
+  .with-vector2::after {
+    content: '';
+    position: absolute;
+    top: 0px; 
+    right: 0px;
+    width: 150px; 
+    height: 150px;
+    background-image: url('/assets/vectors/interviewer-vector.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 9;
+  }
+
+  .with-vector3::after {
+    content: '';
+    position: absolute;
+    top: 0px; /* Adjust position to half-show the vector */
+    left: 0px; /* Keeps it positioned in the bottom-right corner */
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
+    background-image: url('/assets/vectors/candidate-vector.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 9;
+  }
+}
+
