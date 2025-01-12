@@ -5,6 +5,7 @@ import FeatureSection from "@/components/feature-section";
 import ProdcutsSection from "@/components/products-section";
 import BlogSection from "@/components/blog";
 import { Footer } from "@/components/footer";
+import { Testimonials } from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <FeatureSection />
         <ProdcutsSection />
         <BlogSection />
+        <Testimonials />
         <div>
           <div className="absolute inset-0 -z-10">
             <div className="absolute top-[-35%] left-1/2 -translate-x-1/2 md:w-[200vw] h-5/6 bg-[#16171D] blur-[200px] rounded-[60%] -z-30"></div>

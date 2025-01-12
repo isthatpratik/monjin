@@ -139,5 +139,29 @@
     pointer-events: none;
     z-index: 9;
   }
+
+  .footer-bg-web::after {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    background-image: url('/assets/footer-bg-web.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1; 
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .footer-bg-mobile::after {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    background-image: url('/assets/footer-bg-mobile.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1; 
+    pointer-events: none;
+    z-index: 5;
+  }
 }
 

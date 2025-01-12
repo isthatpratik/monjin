@@ -47,7 +47,7 @@ const ReviewCard = ({ img }: { img: string }) => {
     <figure
       className={cn(
         "bg-[#F5FAF9] relative flex h-[106px] w-[180px] cursor-pointer overflow-hidden rounded-[18px] p-4",
-        "items-center justify-center",
+        "items-center justify-center hover:bg-[#e0fff9] hover:scale-1 transition-all transition-300",
       )}
     >
       <div className="flex items-center justify-center w-full h-full ">

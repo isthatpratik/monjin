@@ -26,7 +26,7 @@ export const HeroSection = () => {
       {/* Right Section: Bento Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Employer Card */}
-        <div className="space-y-10">
+        <div className="space-y-10 group">
           {/* Top Image */}
           <div className="relative overflow-hidden rounded-[10px] rounded-br-[100px] bg-[#FADADA]">
             <Image
@@ -38,14 +38,14 @@ export const HeroSection = () => {
             />
           </div>
           {/* Bottom Info */}
-          <div className="relative overflow-hidden rounded-bl-[100px] rounded-[10px] bg-[#FF7F82] h-[200px] sm:h-[220px] card-noise with-vector1">
+          <div className="relative overflow-hidden rounded-bl-[100px] rounded-[10px] bg-[#FF7F82] h-[200px] sm:h-[220px] card-noise with-vector1 hover:cursor-pointer">
             <div className="p-4 sm:p-8 h-full flex flex-col justify-center items-center relative z-10">
               <div className="border border-[#262628] rounded-full px-4 sm:px-6 py-2 mt-2">
                 <h2 className="text-xl sm:text-2xl font-Onest font-bold text-[#262628]">
                   Employer
                 </h2>
               </div>
-              <div className="absolute -top-2 sm: -right-2 bg-[#1E1E27] p-3 rounded-full">
+              <div className="absolute -top-2 sm: -right-2 bg-[#1E1E27] p-3 rounded-full group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-200 ease-out">
                 <ArrowUpRight className="w-6 sm:w-6 h-6 sm:h-6 text-white" />
               </div>
             </div>
@@ -53,15 +53,15 @@ export const HeroSection = () => {
         </div>
 
         {/* Interviewer Card */}
-        <div className="space-y-10">
-          <div className="relative overflow-hidden rounded-bl-[60px] rounded-[10px] bg-[#CAFA63] h-[200px] sm:h-[220px] card-noise with-vector2">
+        <div className="space-y-10 group">
+          <div className="relative overflow-hidden rounded-bl-[60px] rounded-[10px] bg-[#CAFA63] h-[200px] sm:h-[220px] card-noise with-vector2 hover:cursor-pointer">
             <div className="p-4 sm:p-8 h-full flex flex-col justify-center items-center relative z-10">
               <div className="border border-[#262628] rounded-full px-4 sm:px-6 py-2 mt-2">
                 <h2 className="text-xl sm:text-2xl font-Onest font-bold text-[#262628]">
                   Interviewer
                 </h2>
               </div>
-              <div className="absolute -top-2 sm: -right-2 bg-[#1E1E27] p-3 rounded-full">
+              <div className="absolute -top-2 sm: -right-2 bg-[#1E1E27] p-3 rounded-full group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-300 ease-in-out">
                 <ArrowUpRight className="w-6 sm:w-6 h-6 sm:h-6 text-white" />
               </div>
             </div>
@@ -78,7 +78,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Candidate Card */}
-        <div className="space-y-10">
+        <div className="space-y-10 group">
           <div className="relative overflow-hidden rounded-tr-[100px] rounded-[10px] bg-[#E3DCFF]">
             <Image
               src="/assets/hero_images/candidate.png"
@@ -88,14 +88,14 @@ export const HeroSection = () => {
               className="w-full h-[200px] sm:h-[300px] md:h-[360px] object-cover object-center"
             />
           </div>
-          <div className="relative overflow-hidden rounded-bl-[60px] rounded-[10px] bg-[#AC9AFF] h-[200px] sm:h-[220px] card-noise with-vector3">
+          <div className="relative overflow-hidden rounded-bl-[60px] rounded-[10px] bg-[#AC9AFF] h-[200px] sm:h-[220px] card-noise with-vector3 hover:cursor-pointer">
             <div className="p-4 sm:p-8 h-full flex flex-col justify-center items-center relative z-10">
               <div className="border border-[#262628] rounded-full px-4 sm:px-6 py-2 mt-2">
                 <h2 className="text-xl sm:text-2xl font-Onest font-bold text-[#262628]">
                   Candidate
                 </h2>
               </div>
-              <div className="absolute -top-2 sm: -right-2 bg-[#1E1E27] p-3 rounded-full">
+              <div className="absolute -top-2 sm: -right-2 bg-[#1E1E27] p-3 rounded-full group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-300 ease-in-out">
                 <ArrowUpRight className="w-6 sm:w-6 h-6 sm:h-6 text-white" />
               </div>
             </div>
