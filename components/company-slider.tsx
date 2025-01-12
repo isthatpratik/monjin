@@ -46,16 +46,15 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-[#F5FAF9] relative flex h-32 w-52 cursor-pointer overflow-hidden rounded-[18px] p-4",
-        "items-center justify-center", // Center content
-        
+        "bg-[#F5FAF9] relative flex h-[106px] w-[180px] cursor-pointer overflow-hidden rounded-[18px] p-4",
+        "items-center justify-center",
       )}
     >
       <div className="flex items-center justify-center w-full h-full ">
         <Image
           className="object-contain opacity-70 hover:opacity-100 grayscale-hover grayscale transition duration-300 ease-in-out hover:grayscale-0"
-          width={120}
-          height={120}
+          width={100}
+          height={100}
           alt=""
           src={img}
         />
@@ -63,6 +62,7 @@ const ReviewCard = ({ img }: { img: string }) => {
     </figure>
   );
 };
+
 
 export function CompanySlider() {
   return (

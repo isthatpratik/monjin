@@ -11,7 +11,7 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			sans: [
+  			onest: [
   				'Onest',
   				'sans-serif'
   			],
@@ -72,7 +72,9 @@ export default {
   			blob2: 'blob2 7s infinite ease-in-out',
   			blob3: 'blob3 7s infinite ease-in-out',
   			marquee: 'marquee var(--duration) infinite linear',
-  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
   		keyframes: {
   			blob1: {
@@ -131,6 +133,22 @@ export default {
   				},
   				to: {
   					transform: 'translateY(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
   				}
   			}
   		}
