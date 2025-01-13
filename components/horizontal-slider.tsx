@@ -13,6 +13,11 @@ const clientsSet1 = [
   { img: "/assets/clients/cyient.jpg" },
   { img: "/assets/clients/emids.jpg" },
   { img: "/assets/clients/evry.png" },
+  { img: "/assets/clients/netsurion.png" },
+  { img: "/assets/clients/peoplefy.png" },
+  { img: "/assets/clients/persistent.png" },
+  { img: "/assets/clients/quadwave.png" },
+  { img: "/assets/clients/rahi.png" },
 ];
 
 const clientsSet2 = [
@@ -27,14 +32,6 @@ const clientsSet2 = [
   { img: "/assets/clients/L&T.png" },
   { img: "/assets/clients/Mastek.png" },
   { img: "/assets/clients/mgneto.png" },
-];
-
-const clientsSet3 = [
-  { img: "/assets/clients/netsurion.png" },
-  { img: "/assets/clients/peoplefy.png" },
-  { img: "/assets/clients/persistent.png" },
-  { img: "/assets/clients/quadwave.png" },
-  { img: "/assets/clients/rahi.png" },
   { img: "/assets/clients/redington.png" },
   { img: "/assets/clients/talent500.png" },
   { img: "/assets/clients/tata-tech.png" },
@@ -46,13 +43,13 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-[#F5FAF9] relative flex h-[10vh] w-[12vw] cursor-pointer overflow-hidden rounded-[18px] p-4",
-        "items-center justify-center hover:bg-[#e0fff9] hover:scale-1 transition-all transition-300",
+        "bg-[#F5FAF9] relative flex h-[100px] w-[160px] cursor-pointer overflow-hidden rounded-[18px] p-4",
+        "items-center justify-center hover:bg-[#e0fff9] hover:scale-1 transition-all duration-300"
       )}
     >
-      <div className="flex items-center justify-center w-full h-full ">
+      <div className="flex items-center justify-center w-full h-full">
         <Image
-          className="object-contain opacity-70 hover:opacity-100 grayscale-hover grayscale transition duration-300 ease-in-out hover:grayscale-0"
+          className="object-contain opacity-70 hover:opacity-100 grayscale transition duration-300 ease-in-out hover:grayscale-0"
           width={100}
           height={100}
           alt=""
@@ -63,28 +60,20 @@ const ReviewCard = ({ img }: { img: string }) => {
   );
 };
 
-
-export function CompanySlider() {
+export function HorizontalSlider() {
   return (
-    <div className="relative flex flex-col items-center justify-center space-y-8 bg-transparent">
-      <div className="relative flex h-[50vh] w-full flex-row items-center justify-center overflow-hidden bg-transparent">
-        <Marquee pauseOnHover vertical className="[--duration:90s]">
+    <div className="relative flex flex-col items-center justify-center space-y-8 bg-transparent overflow-hidden">
+      <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden bg-transparent">
+        <Marquee pauseOnHover className="[--duration:90s] space-x-4">
           {clientsSet1.map((client) => (
-            <ReviewCard key={client.img} {...client} />
+            <ReviewCard key={client.img} img={client.img} />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover vertical className="[--duration:90s]">
+        <Marquee reverse pauseOnHover className="[--duration:90s] space-x-4">
           {clientsSet2.map((client) => (
-            <ReviewCard key={client.img} {...client} />
+            <ReviewCard key={client.img} img={client.img} />
           ))}
         </Marquee>
-        <Marquee pauseOnHover vertical className="[--duration:90s]">
-          {clientsSet3.map((client) => (
-            <ReviewCard key={client.img} {...client} />
-          ))}
-        </Marquee>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
       </div>
     </div>
   );

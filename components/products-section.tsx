@@ -6,8 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -154,10 +152,10 @@ const ProductsSection = () => {
   return (
     <div className="my-20 bg-[#FFFFFF] rounded-3xl border p-8 max-h-1/3 self-center">
       <div className="flex flex-col items-center justify-center gap-4 my-12">
-        <h2 className="font-Onest font-medium text-5xl text-center max-w-2xl tracking-tighter">
+        <h2 className="font-Onest font-medium lg:text-5xl text-center tracking-tighter text-4xl">
           Powering Achievements with Transformative Tools
         </h2>
-        <p className="font-figtree text-lg text-center max-w-2xl">
+        <p className="font-figtree tracking-tight text-center lg:max-w-[36vw] max-w-[80vw] sm:text-sm md:text-base">
           Unleash the true power of your processes with solutions built for
           rapid execution, flawless precision, and transformative results
         </p>
@@ -195,7 +193,7 @@ const ProductsSection = () => {
         <div className="swiper-pagination-custom mt-4"></div>
       )}
 
-      <div className="my-12 text-center">
+      <div className="sm:hidden my-12 text-center">
         <Button className="border-[#788B3E] bg-[#D0F16C] border-b-2 hover:bg-[#788B3E]/90 rounded-[60px] text-[#242424] text-sm font-Onest px-6 py-6 transition-shadow duration-300 ease-in-out hover:bg-[#D0F16C] hover:shadow-[0px_2px_0px_rgba(0,0,0,1)] hover:shadow-[#788B3E]">
           View All Products
         </Button>

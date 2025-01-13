@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
@@ -9,6 +9,7 @@ export const InfiniteMovingCards = ({
   speed = "fast",
   pauseOnHover = true,
   className,
+  imageUrl, // Single imageUrl prop for all cards
 }: {
   items: {
     company: string;
@@ -20,6 +21,7 @@ export const InfiniteMovingCards = ({
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  imageUrl: string; // Single imageUrl for all cards
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -68,9 +70,9 @@ export const InfiniteMovingCards = ({
       if (speed === "fast") {
         containerRef.current.style.setProperty("--animation-duration", "20s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-duration", "50s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "90s");
       }
     }
   };
@@ -79,7 +81,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_95%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_95%,transparent)]",
         className
       )}
     >
@@ -91,22 +93,15 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, ) => (
+        {items.map((item, index) => (
           <li
-            key={item.name}
-            className="w-[350px] max-w-full relative rounded-3xl border flex-shrink-0 px-8 py-10 md:w-[450px] min-h-[300px]" // Add min-h-[300px] or adjust to suit your needs
-            style={{
-              backgroundColor: "white",
-              backgroundImage: "url('/assets/testimonial-bg.png')",
-              backgroundPosition: "top right",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
+            key={index}
+            className="bg-white w-[350px] max-w-full relative rounded-xl shadow-lg flex-shrink-0 px-8 py-10 md:w-[450px] min-h-[350px]"
           >
             <blockquote>
               {/* Top Left Content (Company, Title, Position) */}
-              <div className="absolute top-0 left-0 p-4">
-                <div className="text-sm font-figtree text-[#101010]">
+              <div className="absolute top-0 left-0 p-6">
+                <div className="text-sm font-figtree text-[#101010] mt-2">
                   {item.company}
                 </div>
                 <div className="text-xl font-figtree font-medium text-[#16171D]">
@@ -118,10 +113,25 @@ export const InfiniteMovingCards = ({
               </div>
 
               {/* Bottom Left Content (Content) */}
-              <div className="absolute bottom-0 left-0 p-4">
+              <div className="absolute bottom-0 left-0 p-6">
                 <div className="text-lg font-figtree text-[#1D1E23]">
                   {item.content}
                 </div>
+              </div>
+
+              {/* Same Image for All Cards */}
+              <div
+                className="absolute top-4 right-4"
+                style={{
+                  width: "100px",  // Adjust image size
+                  height: "auto",
+                }}
+              >
+                <img
+                  src={imageUrl} // Use the same image URL for all cards
+                  alt="testimonial image"
+                  className="w-full h-auto object-cover"
+                />
               </div>
 
               {/* Overlay for the background image */}

@@ -187,3 +187,17 @@
   opacity: 1;
   background: #000;
 }
+
+@media (max-width: 768px) {
+  .card {
+    width: 20vw;
+    height: 12vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 30vw;
+    height: 18vw;
+  }
+}
