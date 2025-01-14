@@ -1,11 +1,13 @@
-import { NavBar } from "@/components/navbar";
-import { Clients } from "@/components/clients";
-import { HeroSection } from "@/components/hero-section";
-import FeatureSection from "@/components/feature-section";
-import ProdcutsSection from "@/components/products-section";
-import BlogSection from "@/components/blog";
-import { Footer } from "@/components/footer";
-import { Testimonials } from "@/components/testimonials";
+import { NavBar } from "../components/navbar";
+import { Clients } from "../components/clients";
+import { HeroSection } from "../components/hero-section";
+
+import FeatureSection from "../components/feature-section";
+import ProductsSection from "../components/products-section";
+import { MonjinSuite } from "../components/monjin-suite";
+import BlogSection from "../components/blog";
+import { Footer } from "../components/footer";
+import { Testimonials } from "../components/testimonials";
 
 export default function Home() {
   return (
@@ -26,9 +28,10 @@ export default function Home() {
 
       <div className="max-w-[1600px] mx-auto px-6 py-10 z-10">
         <HeroSection />
+        
         <Clients />
         <FeatureSection />
-        <ProdcutsSection />
+        <ProductsSection />
         <BlogSection />
         <Testimonials />
       </div>

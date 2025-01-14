@@ -6,10 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { MonjinSuite } from "./monjin-suite";
 
 const ProductCard = ({
   icon,
@@ -195,10 +194,8 @@ const ProductsSection = () => {
         <div className="swiper-pagination-custom mt-4"></div>
       )}
 
-      <div className="my-12 text-center">
-        <Button className="border-[#788B3E] bg-[#D0F16C] border-b-2 hover:bg-[#788B3E]/90 rounded-[60px] text-[#242424] text-sm font-Onest px-6 py-6 transition-shadow duration-300 ease-in-out hover:bg-[#D0F16C] hover:shadow-[0px_2px_0px_rgba(0,0,0,1)] hover:shadow-[#788B3E]">
-          View All Products
-        </Button>
+      <div className="my-12 mx-12 text-center">
+        <MonjinSuite /> 
       </div>
     </div>
   );
