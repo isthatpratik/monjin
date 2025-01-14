@@ -46,7 +46,7 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-[#F5FAF9] relative flex h-[10vh] w-[12vw] cursor-pointer overflow-hidden rounded-[18px] p-4",
+        "bg-[#F5FAF9] relative flex h-[10vh] w-[10vw] cursor-pointer overflow-hidden rounded-[18px] p-4",
         "items-center justify-center hover:bg-[#e0fff9] hover:scale-1 transition-all transition-300",
       )}
     >

@@ -7,10 +7,10 @@ export function Testimonials() {
   return (
     <div className="my-10 flex flex-col items-center justify-between rounded-[48px] bg-gradient-to-b from-white from 30% to-transparent to-70%">
       <div className="flex flex-col items-center justify-center mt-20 pt-10 max-w-4xl">
-        <h2 className="font-Onest font-medium text-6xl text-[#1D1E23] text-center tracking-tighter">
+        <h2 className="font-Onest font-medium md:text-6xl text-3xl md:max-w-[80vw] max-w-[70vw] text-[#1D1E23] text-center tracking-tighter">
           Client Journeys That Define Success
         </h2>
-        <p className="font-figtree text-base text-[#1D1E23] text-center mt-8 max-w-3xl">
+        <p className="font-figtree md:text-base text-sm text-[#1D1E23] text-center mt-8 md:max-w-3xl max-w-[80vw]">
           Uncover how our expert interviews have transformed hiring processes, helping businesses tap into top talent and make confident decisions. Listen to firsthand accounts of the impact we&apos;ve made.
         </p>
       </div>

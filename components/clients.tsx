@@ -23,7 +23,7 @@ export function Clients() {
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="w-full md:w-1/2 md:max-w-xl mx-0 md:mx-10 px-6 pt-6">
           <div className="flex flex-col sm:flex-row gap-2 mb-4 md:mb-6 w-full">
-            <div className="text-black text-sm flex flex-row items-center gap-2 w-full">
+            <div className="text-black text-sm flex flex-row items-center gap-2 w-full md:justify-start justify-center">
               <AvatarCircles avatarUrls={avatars} />
               <h3 className="font-figtree font-medium text-xs md:text-lg text-center ">17+ professionals hired this week</h3>
             </div>

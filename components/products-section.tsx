@@ -1,13 +1,14 @@
-'use client'
+"use client";
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
+import { MonjinSuiteLanding } from "./monjin-suite-landing";
 
 const ProductCard = ({
   icon,
@@ -29,7 +30,7 @@ const ProductCard = ({
   buttonText2: string;
 }) => {
   return (
-    <Card className="relative bg-white p-4 rounded-[35px] shadow-sm flex flex-col items-center overflow-hidden h-full min-w-[280px]">
+    <Card className="relative bg-white p-4 rounded-[35px] shadow-sm flex flex-col items-center overflow-hidden h-full min-w-[240px]">
       <div
         className={`absolute -bottom-10 -right-10 w-[135px] -rotate-45 h-[90px] ${circleColor} rounded-full blur-[80px] z-10`}
       ></div>
@@ -43,11 +44,17 @@ const ProductCard = ({
           quality={80}
           className="mt-4"
         />
-       
-        <h3 className="font-Onest font-semibold text-lg text-[#1D1E23] mt-4">{title}</h3>
 
-        <div className={`border ${subtitleBorderColor} p-1 mt-2 rounded-[3px]`}>
-          <p className="font-figtree text-[#565656] text-xs">{subtitle}</p>
+        <h3 className="font-Onest font-semibold text-xl text-[#1D1E23] mt-4">
+          {title}
+        </h3>
+
+        <div
+          className={`border ${subtitleBorderColor} p-2 mt-2 rounded-2xl w-[80%]`}
+        >
+          <p className="font-figtree text-[#565656] text-xs text-center">
+            {subtitle}
+          </p>
         </div>
 
         <div className="flex flex-col justify-center items-center mt-2 mb-2 flex-grow">
@@ -57,12 +64,18 @@ const ProductCard = ({
         </div>
       </div>
 
-      <div className="flex gap-4 mt-2 justify-center pb-2">
-        <Button variant="default" className="bg-black text-white font-Onest text-sm px-6 py-2 rounded-[65px] transition-all duration-300 ease-in-out hover:shadow-[0px_2px_0px_rgba(0,0,0,0.3)]">
+      <div className="md:flex-row flex flex-col gap-4 mt-2 justify-center pb-2 w-[80%]">
+        <Button
+          variant="default"
+          className="bg-[#2A2A2A] w-full text-white font-Onest font-normal text-xs px-6 py-4 rounded-[65px] transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(0,0,0,0.3)]"
+        >
           {buttonText1}
         </Button>
-        
-        <Button variant="outline" className="border-[#565656] border-b-2 text-[#565656] font-Onest text-sm px-6 py-2 rounded-[65px] transition-all duration-300 ease-in-out hover:shadow-[0px_2px_0px_rgba(0,0,0,0.3)]">
+
+        <Button
+          variant="outline"
+          className="border-[#0000001A]/10 w-full border-b-2 text-[#565656] font-Onest font-normal text-xs px-6 py-4 rounded-[65px] transition-all duration-300 ease-in-out hover:border-black"
+        >
           {buttonText2}
         </Button>
       </div>
@@ -79,10 +92,10 @@ const ProductsSection = () => {
     };
 
     checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
+    window.addEventListener("resize", checkIsMobile);
 
     return () => {
-      window.removeEventListener('resize', checkIsMobile);
+      window.removeEventListener("resize", checkIsMobile);
     };
   }, []);
 
@@ -91,9 +104,10 @@ const ProductsSection = () => {
       icon: "/assets/product-icons/ocoi.png",
       title: "OCOI",
       subtitle: "OUR CANDIDATE OUR INTERVIEWERS",
-      description: "Schedule an interview for your applicants via Monjin's video platform – all without having to reach out to the candidate yourself",
+      description:
+        "Schedule an interview for your applicants via Monjin's video platform – all without having to reach out to the candidate yourself",
       circleColor: "bg-[#9F8AFF]",
-      subtitleBorderColor: "border-[#8B72FF]",
+      subtitleBorderColor: "border-[#8B72FF]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
@@ -101,9 +115,10 @@ const ProductsSection = () => {
       icon: "/assets/product-icons/ycoi.png",
       title: "YCOI",
       subtitle: "YOUR CANDIDATE YOUR INTERVIEWERS",
-      description: "Schedule an interview for your applicants via Monjin's video platform – all without having to reach out to the candidate yourself",
+      description:
+        "Schedule an interview for your applicants via Monjin's video platform – all without having to reach out to the candidate yourself",
       circleColor: "bg-[#B7D659]",
-      subtitleBorderColor: "border-[#B7D659]",
+      subtitleBorderColor: "border-[#B7D659]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
@@ -111,9 +126,10 @@ const ProductsSection = () => {
       icon: "/assets/product-icons/basics.png",
       title: "Basics",
       subtitle: "SCHEDULE INTERVIEWS REMOTELY",
-      description: "Coordinate interviews effortlessly with Monjin, no direct candidate contact required",
+      description:
+        "Coordinate interviews effortlessly with Monjin, no direct candidate contact required",
       circleColor: "bg-[#F46D70]",
-      subtitleBorderColor: "border-[#F46D70]/40",
+      subtitleBorderColor: "border-[#F46D70]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
@@ -121,9 +137,10 @@ const ProductsSection = () => {
       icon: "/assets/product-icons/spotlight.png",
       title: "Spotlight",
       subtitle: "AUTOMATE INTERVIEWS WITH MONJIN",
-      description: "Effortlessly arrange interviews for your candidates through Monjin's video platform, eliminating the need for direct outreach.",
+      description:
+        "Effortlessly arrange interviews for your candidates through Monjin's video platform, eliminating the need for direct outreach.",
       circleColor: "bg-[#FFB14A]",
-      subtitleBorderColor: "border-[#FFB14A]",
+      subtitleBorderColor: "border-[#FFB14A]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
@@ -131,9 +148,10 @@ const ProductsSection = () => {
       icon: "/assets/product-icons/assessment.png",
       title: "Assessment",
       subtitle: "STREAMLINE INTERVIEWS EFFORTLESSLY",
-      description: "Streamline interview scheduling with Monjin's platform, no candidate outreach necessary.",
+      description:
+        "Streamline interview scheduling with Monjin's platform, no candidate outreach necessary.",
       circleColor: "bg-[#78DCDD]",
-      subtitleBorderColor: "border-[#78DCDD]",
+      subtitleBorderColor: "border-[#78DCDD]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
@@ -141,9 +159,10 @@ const ProductsSection = () => {
       icon: "/assets/product-icons/performance_management.png",
       title: "Performance Management",
       subtitle: "AUTOMATE APPLICANT INTERVIEWS",
-      description: "Seamlessly book interviews through Monjin's platform, bypassing direct candidate contact",
+      description:
+        "Seamlessly book interviews through Monjin's platform, bypassing direct candidate contact",
       circleColor: "bg-[#BA57D3]",
-      subtitleBorderColor: "border-[#BA57D3]/39",
+      subtitleBorderColor: "border-[#BA57D3]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
@@ -151,11 +170,11 @@ const ProductsSection = () => {
 
   return (
     <div className="my-20 bg-[#FFFFFF] rounded-3xl border p-8 max-h-1/3 self-center">
-      <div className="flex flex-col items-center justify-center gap-4 my-12">
-        <h2 className="font-Onest font-medium lg:text-5xl text-center tracking-tighter text-4xl">
+      <div className="flex flex-col items-center justify-center gap-4 my-12 ">
+        <h2 className="font-Onest font-medium md:text-5xl text-center tracking-tighter text-3xl md:max-w-[30vw]">
           Powering Achievements with Transformative Tools
         </h2>
-        <p className="font-figtree tracking-tight text-center lg:max-w-[36vw] max-w-[80vw] sm:text-sm md:text-base">
+        <p className="font-figtree tracking-tight text-center md:max-w-[25vw] max-w-[80vw] sm:text-sm md:text-base">
           Unleash the true power of your processes with solutions built for
           rapid execution, flawless precision, and transformative results
         </p>
@@ -166,9 +185,9 @@ const ProductsSection = () => {
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
-          pagination={{ 
+          pagination={{
             clickable: true,
-            el: '.swiper-pagination-custom',
+            el: ".swiper-pagination-custom",
           }}
           autoplay={{
             delay: 3000,
@@ -183,24 +202,56 @@ const ProductsSection = () => {
           ))}
         </Swiper>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-[90%] my-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-[80%] my-12">
           {productCards.map((card, index) => (
             <ProductCard key={index} {...card} />
           ))}
         </div>
       )}
-      {isMobile && (
-        <div className="swiper-pagination-custom mt-4"></div>
-      )}
+      {isMobile && <div className="swiper-pagination-custom mt-4"></div>}
 
-      <div className="sm:hidden my-12 text-center">
-        <Button className="border-[#788B3E] bg-[#D0F16C] border-b-2 hover:bg-[#788B3E]/90 rounded-[60px] text-[#242424] text-sm font-Onest px-6 py-6 transition-shadow duration-300 ease-in-out hover:bg-[#D0F16C] hover:shadow-[0px_2px_0px_rgba(0,0,0,1)] hover:shadow-[#788B3E]">
-          View All Products
-        </Button>
+      <div className="relative mx-auto rounded-[48px] flex flex-col gap-6 max-w-[80%] md:justify-between bg-[url('/assets/monjin-suite-landing-bg.png')] bg-cover bg-center h-full sm:h-full md:flex-row mt-10 md:pt-0">
+        {/* Left Section */}
+        <div className="w-full md:w-1/2 space-y-4 flex p-10 flex-col justify-center text-center sm:text-left">
+          <div className="flex flex-row gap-4">
+            <Image
+              alt="Monjin Suite Logo"
+              width={50}
+              height={50}
+              src={"/assets/monjin-suite-logo.png"}
+              className="object-contain pb-6"
+            />
+            <h1 className="text-2xl md:text-4xl font-figtree text-center font-medium tracking-tight leading-tight text-white mt-4">
+              Monjin Suite
+            </h1>
+          </div>
+          <p className="text-sm sm:text-base font-figtree font-light text-gray-300 w-full md:w-4/5 pb-6">
+            Seamlessly book interviews through Monjin’s platform, bypassing
+            direct candidate contact.
+          </p>
+          <div className="gap-4 flex flex-col md:flex-row md:w-2/3">
+            <Button className="w-full bg-[#FFFFFF] text-black rounded-full p-6 font-Onest text-sm">
+              Start Trial
+            </Button>
+            <Button className="w-full bg-transparent border border-[#FFFFFF]/20 text-[#FFFFFF] rounded-full p-6 text-sm font-Onest">
+              Learn More
+            </Button>
+          </div>
+        </div>
+
+        {/* Right Section: Image */}
+        <div className="w-full md:w-1/2 relative flex justify-start items-center p-10">
+          <Image
+            src="/assets/monjin-suite-landing-illustration.png"
+            alt="Monjin Suite Illustration"
+            width={520}
+            height={365}
+            className="object-contain mt-4"
+          />
+        </div>
       </div>
     </div>
   );
 };
 
 export default ProductsSection;
-

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Background Image for Mobile */}
-      <div className="absolute inset-0 -z-10 bg-no-repeat bg-top bg-cover bg-[url('/assets/gradient-mobile.png')] md:hidden"></div>
+      <div className="absolute inset-0 -z-10 bg-no-repeat bg-center bg-cover bg-[url('/assets/gradient-mobile.png')] md:hidden"></div>
 
       {/* Background Circles and Overlay Images for Web */}
       <div className="absolute inset-0 -z-10 hidden md:block">
