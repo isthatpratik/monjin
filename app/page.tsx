@@ -8,6 +8,7 @@ import { MonjinSuite } from "../components/monjin-suite";
 import BlogSection from "../components/blog";
 import { Footer } from "../components/footer";
 import { Testimonials } from "../components/testimonials";
+import { ClientSlider } from "@/components/client-slider";
 
 export default function Home() {
   return (
@@ -29,11 +30,12 @@ export default function Home() {
       <div className="max-w-[1600px] mx-auto px-6 py-10 z-10">
         <HeroSection />
         
-        <Clients />
+        {/* <Clients />
         <FeatureSection />
         <ProductsSection />
         <BlogSection />
-        <Testimonials />
+        <Testimonials /> */}
+        <ClientSlider/>
       </div>
 
       <footer>
