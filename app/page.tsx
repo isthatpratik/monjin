@@ -1,18 +1,30 @@
-import { NavBar } from "@/components/navbar";
-import { Clients } from "@/components/clients";
-import { HeroSection } from "@/components/hero-section";
-import FeatureSection from "@/components/feature-section";
-import ProdcutsSection from "@/components/products-section";
-import CaseStudies from "@/components/case-studies";
-import { Footer } from "@/components/footer";
-import { Testimonials } from "@/components/testimonials";
+import { NavBar } from "@/components/layout/navbar";
+import { Clients } from "@/components/sections/clients-landing";
+import { HeroSection } from "@/components/sections/hero-section";
+import FeatureSection from "@/components/sections/feature-section";
+import ProdcutsSection from "@/components/sections/products-section";
+import CaseStudies from "@/components/sections/case-studies";
+import { Footer } from "@/components/layout/footer";
+import { Testimonials } from "@/components/sections/testimonials";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Background Image for Mobile */}
-      <div className="absolute inset-0 -z-10 bg-no-repeat bg-center bg-cover bg-[url('/assets/gradient-mobile.png')] md:hidden"></div>
+      <div className="absolute inset-0 -z-10 md:hidden">
+      <Image
+      alt="gradient-mobile-bg"
+      src={'/assets/gradient-mobile.png'}
+      quality={100}
+      fill
+      sizes="100vw"
+      style={{
+        objectFit: 'cover',
+      }}
+      priority
+    />
+      </div>
 
       {/* Background Circles and Overlay Images for Web */}
       <div className="absolute inset-0 -z-10 hidden md:block">
@@ -28,25 +40,26 @@ export default function Home() {
           <Image
             src="/assets/vectors/middle-left.png"
             alt="Middle Left Overlay"
-            className="w-[600px] h-auto"
             width={600}
             height={600}
+            priority
           />
         </div>
         <div className="absolute top-0 right-0 z-20 hidden md:block">
           <Image
             src="/assets/vectors/top-right.png"
             alt="Top Right Overlay"
-            className="w-[400px] h-auto"
-            width={600}
-            height={600}
+            width={300}
+            height={300}
+            priority
+            className="top-100"
           />
         </div>
       </div>
 
       <NavBar />
 
-      <div className="max-w-[1600px] mx-auto px-6 py-10 z-10">
+      <div className="md:max-w-[80vw] mx-auto px-6 py-10 z-10">
         <HeroSection />
         <Clients />
         <FeatureSection />

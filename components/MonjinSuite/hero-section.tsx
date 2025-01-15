@@ -1,0 +1,32 @@
+import Image from 'next/image';
+import React from 'react'
+import { Button } from '../ui/button';
+
+const MonjinSuiteHero = () => {
+  return (
+    <div className='h-full w-full flex flex-col gap-4 items-center justify-between'>
+        <div className='flex flex-col justify-center items-center space-y-4'>
+            <h2 className='text-center md:font-Onest text-base md:text-4xl lg:text-5xl tracking-normal md:tracking-tighter'>Monjin Suite</h2>
+            <h1 className='text-center md:font-Onest font-Onest font-bold text-4xl md:text-6xl lg:text-7xl tracking-tighter max-w-full md:max-w-full'>Streamline Talent Attraction & <br /> Retention for a Seamless Experience.</h1>
+        </div>
+        <div>
+          <Image 
+            src={'/assets/MonjinSuite/monjin-suite-hero.png'}
+            alt='Monjin Suite Illustration'
+            width={900}
+            height={900}
+            className='object-contain object-center'
+          />
+        </div>
+          <p className='text-center font-figtree text-sm md:max-w-[80%] pb-4'>
+          Unlock the full potential of your recruitment and business strategies with our all-in-one platform designed to 
+          streamline your processes and deliver exceptional results.
+          </p>
+          <Button className='rounded-full bg-[#1B1B1B] text-white px-6 py-4 w-full md:w-auto font-Onest text-sm'>
+        Start Trial
+      </Button>
+    </div>
+  )
+}
+
+export default MonjinSuiteHero;
