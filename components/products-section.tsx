@@ -30,7 +30,7 @@ const ProductCard = ({
   buttonText2: string;
 }) => {
   return (
-    <Card className="relative bg-white p-4 rounded-[35px] shadow-sm flex flex-col items-center overflow-hidden h-full min-w-[240px]">
+    <Card className="relative bg-white p-4 rounded-2xl shadow-sm flex flex-col items-center overflow-hidden h-full min-w-[240px]">
       <div
         className={`absolute -bottom-10 -right-10 w-[135px] -rotate-45 h-[90px] ${circleColor} rounded-full blur-[80px] z-10`}
       ></div>
@@ -45,7 +45,7 @@ const ProductCard = ({
           className="mt-4"
         />
 
-        <h3 className="font-Onest font-semibold text-xl text-[#1D1E23] mt-4">
+        <h3 className="font-Onest font-semibold text-xl text-[#1D1E23] mt-4 text-center">
           {title}
         </h3>
 
@@ -194,6 +194,7 @@ const ProductsSection = () => {
             disableOnInteraction: false,
           }}
           className="my-12"
+          loop
         >
           {productCards.map((card, index) => (
             <SwiperSlide key={index}>
@@ -210,26 +211,42 @@ const ProductsSection = () => {
       )}
       {isMobile && <div className="swiper-pagination-custom mt-4"></div>}
 
-      <div className="relative mx-auto rounded-[48px] flex flex-col gap-6 max-w-[80%] md:justify-between bg-[url('/assets/monjin-suite-landing-bg.png')] bg-cover bg-center h-full sm:h-full md:flex-row mt-10 md:pt-0">
-        {/* Left Section */}
-        <div className="w-full md:w-1/2 space-y-4 flex p-10 flex-col justify-center text-center sm:text-left">
-          <div className="flex flex-row gap-4">
+      <div className="relative mx-auto rounded-3xl flex flex-col gap-6 md:max-w-[80%] md:justify-between bg-[url('/assets/monjin-suite-landing-bg.png')] bg-cover bg-center h-auto sm:h-full md:flex-row md:mt-2 mt-10">
+        {/* Monjin Suite Section */}
+        <div className="flex flex-col items-center p-10 gap-4 md:w-1/2 md:items-start md:justify-center text-center md:text-left">
+          {/* Logo and Title */}
+          <div className="flex items-center gap-4">
             <Image
               alt="Monjin Suite Logo"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               src={"/assets/monjin-suite-logo.png"}
-              className="object-contain pb-6"
+              className="object-contain"
             />
-            <h1 className="text-2xl md:text-4xl font-figtree text-center font-medium tracking-tight leading-tight text-white mt-4">
+            <h1 className="sm:text-2xl md:text-3xl font-figtree font-medium tracking-tight leading-tight text-white align-text-bottom">
               Monjin Suite
             </h1>
           </div>
-          <p className="text-sm sm:text-base font-figtree font-light text-gray-300 w-full md:w-4/5 pb-6">
+
+          {/* Illustration for Mobile/Tablets */}
+          <div className="relative w-full mt-4 md:hidden">
+            <Image
+              src="/assets/monjin-suite-landing-illustration.png"
+              alt="Monjin Suite Illustration"
+              width={520}
+              height={365}
+              className="object-contain mx-auto"
+            />
+          </div>
+
+          {/* Description */}
+          <p className="text-sm sm:text-base font-figtree font-light text-gray-300 mt-4 w-full md:w-4/5">
             Seamlessly book interviews through Monjin’s platform, bypassing
             direct candidate contact.
           </p>
-          <div className="gap-4 flex flex-col md:flex-row md:w-2/3">
+
+          {/* Buttons */}
+          <div className="gap-4 flex flex-col md:flex-row mt-4 w-full md:w-2/3">
             <Button className="w-full bg-[#FFFFFF] text-black rounded-full p-6 font-Onest text-sm">
               Start Trial
             </Button>
@@ -239,14 +256,14 @@ const ProductsSection = () => {
           </div>
         </div>
 
-        {/* Right Section: Image */}
-        <div className="w-full md:w-1/2 relative flex justify-start items-center p-10">
+        {/* Illustration for Larger Devices */}
+        <div className="hidden md:flex md:w-1/2 relative justify-start items-center p-10">
           <Image
             src="/assets/monjin-suite-landing-illustration.png"
             alt="Monjin Suite Illustration"
             width={520}
             height={365}
-            className="object-contain mt-4"
+            className="object-contain"
           />
         </div>
       </div>
