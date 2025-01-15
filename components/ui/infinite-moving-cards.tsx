@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export const InfiniteMovingCards = ({
   items,
@@ -127,10 +128,12 @@ export const InfiniteMovingCards = ({
                   height: "auto",
                 }}
               >
-                <img
+                <Image
                   src={imageUrl} // Use the same image URL for all cards
                   alt="testimonial image"
                   className="w-full h-auto object-cover"
+                  width={50}
+                  height={50}
                 />
               </div>
 

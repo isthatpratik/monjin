@@ -6,6 +6,7 @@ import ProdcutsSection from "@/components/products-section";
 import BlogSection from "@/components/blog";
 import { Footer } from "@/components/footer";
 import { Testimonials } from "@/components/testimonials";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -24,17 +25,21 @@ export default function Home() {
 
         {/* Overlay Images */}
         <div className="absolute top-[6vh] left-0 z-20 hidden md:block">
-          <img
+          <Image
             src="/assets/vectors/middle-left.png"
             alt="Middle Left Overlay"
             className="w-[600px] h-auto"
+            width={600}
+            height={600}
           />
         </div>
         <div className="absolute top-0 right-0 z-20 hidden md:block">
-          <img
+          <Image
             src="/assets/vectors/top-right.png"
             alt="Top Right Overlay"
             className="w-[400px] h-auto"
+            width={600}
+            height={600}
           />
         </div>
       </div>

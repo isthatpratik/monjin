@@ -5,7 +5,6 @@ import Image from "next/image";
 import { ArrowUpRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import { useMediaQuery } from 'react-responsive';
 import { Card, CardContent } from "@/components/ui/card";
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -48,7 +47,6 @@ const blogData = [
 ];
 
 export default function BlogSection() {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
   const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {

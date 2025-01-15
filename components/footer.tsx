@@ -109,7 +109,7 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-b border-gray-800 mb-8"></div>
+        <div className="border-b border-[#FFFFFF]/20 mb-8"></div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:grid md:grid-cols-4 gap-8 mb-12 lg:flex lg:flex-row lg:justify-between">
@@ -163,7 +163,7 @@ export function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-sm text-gray-400 mb-8">
+        <div className="text-sm text-white mb-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex flex-wrap justify-center items-center gap-1">
               <Link href="#" className="hover:text-white underline">
@@ -178,7 +178,7 @@ export function Footer() {
                 GDPR
               </Link>
             </div>
-            <div className="text-center underline">© 2023 Monjin Interviews Pvt. Ltd. All Rights Reserved</div>
+            <div className="text-center underline max-w-[80%] md:w-full">© 2023 Monjin Interviews Pvt. Ltd. All Rights Reserved</div>
           </div>
         </div>
       </div>
