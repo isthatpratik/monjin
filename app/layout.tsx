@@ -9,6 +9,8 @@ export const metadata = {
   description: "Expert interviews for faster hiring",
 }
 
+export const experimental_ppr = true;
+
 export default function RootLayout({
   children,
 }: {

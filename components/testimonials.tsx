@@ -28,33 +28,33 @@ export function Testimonials() {
 
 const testimonials = [
   {
+    company: "KPIT",
     name: "Praveen Siddannavar",
     position: "Global Recruiting Lead Automotive",
     content: "Monjin’s digital recruiting offers a competitive edge by reducing the evaluation cycle time, providing pre-screened candidates, and freeing up bandwidth for stakeholders.",
-    company: "ABC",
   },
   {
-    content: "Monjin’s platform is disruptive and efficient for interviewing. I highly recommend it for industries like Yachting and IT.",
+    company: "Pegasus Yachts",
     name: "Capt. Surender Saini",
-    position: "Pegasus Yachts",
-    company: "ABC",
+    position: "Yachting",
+    content: "Monjin’s platform is disruptive and efficient for interviewing. I highly recommend it for industries like Yachting and IT.",
   },
   {
-    content: "Monjin has been instrumental in helping us scale our business quickly with their unique interview techniques and reliable feedback.",
+    company: "Head - Service Delivery",
     name: "Shashi",
     position: "Samartha Infosolutions",
-    company: "ABC",
+    content: "Monjin has been instrumental in helping us scale our business quickly with their unique interview techniques and reliable feedback.",
   },
   {
-    content: "Monjin tailors its services to meet the needs of different companies. Excellent customer service and quick responses have made our experience seamless.",
+    company: "The Williams Club",
     name: "Thijs Van Dooren",
-    position: "The Williams Club",
-    company: "ABC",
+    position: "Yachting",
+    content: "Monjin tailors its services to meet the needs of different companies. Excellent customer service and quick responses have made our experience seamless.",
   },
   {
-    content: "Monjin simplifies talent acquisition by pre-assessing candidates, improving selection ratios, and optimizing the hiring process.",
+    company: "GIVING FORCE",
     name: "Mandar Dixit",
-    position: "Giving Force",
-    company: "ABC",
+    position: "CTO",
+    content: "Monjin simplifies talent acquisition by pre-assessing candidates, improving selection ratios, and optimizing the hiring process.",
   }
 ];

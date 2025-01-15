@@ -3,6 +3,11 @@
 @tailwind utilities;
  
 @layer base {
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -233,29 +238,14 @@
   animation: slideOut 0.3s ease-in forwards;
 }
 
-.blog-swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background: #1D1E23;
-  opacity: 0.2;
+@media (max-width: 767px) {
+  .desktop-image {
+    display: none;
+  }
 }
 
-.blog-swiper-pagination-bullet-active {
-  opacity: 1;
-}
-
-.blog-swiper-container {
-  padding-bottom: 40px;
-}
-
-.blog-swiper-pagination {
-  bottom: 0 !important;
-}
-
-@media (max-width: 768px) {
-  .blog-swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (min-width: 768px) {
+  .mobile-image {
+    display: none;
   }
 }

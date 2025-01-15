@@ -10,8 +10,8 @@ const clientsSet1 = [
   { img: "/assets/clients/brillio.png" },
   { img: "/assets/clients/calsoft.png" },
   { img: "/assets/clients/cognizant.png" },
-  { img: "/assets/clients/cyient.jpg" },
-  { img: "/assets/clients/emids.jpg" },
+  { img: "/assets/clients/cyient.png" },
+  { img: "/assets/clients/emids.png" },
   { img: "/assets/clients/evry.png" },
 ];
 

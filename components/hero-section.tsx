@@ -34,6 +34,7 @@ export const HeroSection = () => {
               alt="Professional in business attire"
               fill
               className="object-cover object-center"
+              priority
             />
           </div>
           <div className="relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-[#FF7F82] card-noise with-vector1 hover:cursor-pointer flex-grow group card-hover h-[120px] sm:h-[140px] md:h-[160px] lg:h-[180px] xl:h-[220px]">
@@ -70,6 +71,7 @@ export const HeroSection = () => {
               alt="Professional with glasses"
               fill
               className="object-cover object-center"
+              priority
             />
           </div>
         </div>
@@ -82,6 +84,7 @@ export const HeroSection = () => {
               alt="Professional with laptop"
               fill
               className="object-cover object-center"
+              priority
             />
           </div>
           <div className="relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-[#AC9AFF] card-noise with-vector3 hover:cursor-pointer flex-grow group card-hover h-[120px] sm:h-[140px] md:h-[160px] lg:h-[180px] xl:h-[220px]">

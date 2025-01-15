@@ -210,7 +210,7 @@ const ProductsSection = () => {
       )}
       {isMobile && <div className="swiper-pagination-custom mt-4"></div>}
 
-      <div className="relative mx-auto rounded-3xl flex flex-col gap-6 md:max-w-[80%] md:justify-between bg-[url('/assets/monjin-suite-landing-bg.png')] bg-cover bg-center h-auto sm:h-full md:flex-row md:mt-2 mt-10">
+      <div className="relative mx-auto rounded-3xl flex flex-col gap-6 md:max-w-[80%] md:justify-between bg-[url('/assets/monjin-suite-landing-bg.png')] bg-cover bg-center h-auto sm:h-full md:flex-row md:mt-2 my-10">
         {/* Monjin Suite Section */}
         <div className="flex flex-col items-center p-10 gap-4 md:w-1/2 md:items-start md:justify-center text-center md:text-left">
           {/* Logo and Title */}
@@ -246,10 +246,10 @@ const ProductsSection = () => {
 
           {/* Buttons */}
           <div className="gap-4 flex flex-col md:flex-row mt-4 w-full md:w-2/3">
-            <Button className="w-full bg-[#FFFFFF] text-black rounded-full p-6 font-Onest text-sm">
+            <Button className="w-full bg-[#FFFFFF] text-black rounded-full p-6 font-Onest text-sm transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-white">
               Start Trial
             </Button>
-            <Button className="w-full bg-transparent border border-[#FFFFFF]/20 text-[#FFFFFF] rounded-full p-6 text-sm font-Onest">
+            <Button className="w-full bg-transparent border border-[#FFFFFF]/20 text-[#FFFFFF] rounded-full p-6 text-sm font-Onest transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-transparent hover:border-white">
               Learn More
             </Button>
           </div>

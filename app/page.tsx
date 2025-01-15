@@ -3,7 +3,7 @@ import { Clients } from "@/components/clients";
 import { HeroSection } from "@/components/hero-section";
 import FeatureSection from "@/components/feature-section";
 import ProdcutsSection from "@/components/products-section";
-import BlogSection from "@/components/blog";
+import CaseStudies from "@/components/case-studies";
 import { Footer } from "@/components/footer";
 import { Testimonials } from "@/components/testimonials";
 import Image from "next/image";
@@ -51,7 +51,7 @@ export default function Home() {
         <Clients />
         <FeatureSection />
         <ProdcutsSection />
-        <BlogSection />
+        <CaseStudies />
         <Testimonials />
       </div>
 
