@@ -8,7 +8,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import "swiper/css";
 import "swiper/css/pagination";
-import { MonjinSuiteLanding } from "./monjin-suite-landing";
 
 const ProductCard = ({
   icon,
