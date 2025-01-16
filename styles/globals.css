@@ -242,6 +242,18 @@
     }
   }
 
+  @media (max-width: 425px) {
+    .desktop-image {
+      display: none;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .mobile-image {
+      display: none;
+    }
+  }
+
   @media (min-width: 768px) {
     .mobile-image {
       display: none;
