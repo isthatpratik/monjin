@@ -167,18 +167,6 @@
     pointer-events: none;
     z-index: 5;
   }
-<<<<<<< HEAD
-}
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background: #1D1E23;
-  opacity: 0.2;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-=======
 
   .swiper-container {
     padding-bottom: 20px;
@@ -276,7 +264,7 @@
       display: none;
     }
   }
->>>>>>> 00373d24f41a8458fee02ab49190b9e38db2ed40
+
 }
 
 .swiper-container {
