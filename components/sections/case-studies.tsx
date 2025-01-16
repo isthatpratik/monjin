@@ -48,7 +48,7 @@ export default function CaseStudies2() {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8">
-      <div className="text-center mb-16 flex-col self-center max-w-3xl">
+      <div className="text-center mb-16 flex-col self-center">
         <h1 className="text-5xl font-medium mb-4 font-Onest text-[#1D1E23] text-center tracking-tighter">
           Empowering Hiring Outcomes: Client Insights{" "}
         </h1>
