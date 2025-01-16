@@ -1,25 +1,12 @@
-<<<<<<< HEAD
-import { NavBar } from "../components/navbar";
-import { Clients } from "../components/clients";
-import { HeroSection } from "../components/hero-section";
-
-import FeatureSection from "../components/feature-section";
-import ProductsSection from "../components/products-section";
-import { MonjinSuite } from "../components/monjin-suite";
-import BlogSection from "../components/blog";
-import { Footer } from "../components/footer";
-import { Testimonials } from "../components/testimonials";
-=======
 import { NavBar } from "@/components/layout/navbar";
 import { Clients } from "@/components/sections/clients-landing";
 import { HeroSection } from "@/components/sections/hero-section";
 import FeatureSection from "@/components/sections/feature-section";
-import ProdcutsSection from "@/components/sections/products-section";
+import ProductsSection from "@/components/sections/products-section";
 import CaseStudies from "@/components/sections/case-studies";
 import { Footer } from "@/components/layout/footer";
 import { Testimonials } from "@/components/sections/testimonials";
 import Image from "next/image";
->>>>>>> 00373d24f41a8458fee02ab49190b9e38db2ed40
 
 export default function Home() {
   return (
@@ -77,13 +64,9 @@ export default function Home() {
         
         <Clients />
         <FeatureSection />
-<<<<<<< HEAD
+
         <ProductsSection />
-        <BlogSection />
-=======
-        <ProdcutsSection />
         <CaseStudies />
->>>>>>> 00373d24f41a8458fee02ab49190b9e38db2ed40
         <Testimonials />
       </div>
 
