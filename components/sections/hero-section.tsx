@@ -1,11 +1,11 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUp, ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
 export const HeroSection = () => {
   return (
-    <div className="mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 max-w-[90%] lg:max-w-[80vw] justify-between px-4 lg:px-8">
+    <div className="mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 justify-between px-4 lg:px-8 h-full">
       {/* Left Section */}
       <div className="space-y-4 lg:space-y-6 flex flex-col justify-center text-center lg:text-left lg:w-1/2">
         <h1 className="text-5xl md:text-5xl lg:text-6xl xl:text-[78px] max-w-full lg:max-w-xl text-white font-Onest font-bold tracking-tighter leading-tight">
@@ -34,18 +34,17 @@ export const HeroSection = () => {
               alt="Professional in business attire"
               fill
               className="object-cover object-center"
+              quality={80}
               priority
             />
           </div>
-          <div className="relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-[#FF7F82] card-noise with-vector1 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-[#FF7F82] card-noise with-vector1 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-10">
-              <div className="border border-[#262628] rounded-full px-2 sm:px-3 lg:px-4 py-1 sm:py-2">
-                <h2 className="text-xs sm:text-sm lg:text-lg font-Onest font-bold text-[#262628]">
-                  Employer
-                </h2>
-              </div>
+              <Button className="text-xs md:text-sm lg:text-xl font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-8 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
+                Employer
+              </Button>
               <div className="absolute top-0 right-0 bg-[#27292F] p-4 md:p-6 rounded-full arrow-icon">
-                <ArrowUpRight className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
+                <ArrowUp className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
               </div>
             </div>
           </div>
@@ -53,15 +52,13 @@ export const HeroSection = () => {
 
         {/* Interviewer Card */}
         <div className="space-y-2 sm:space-y-4 md:space-y-10 group flex flex-col min-h-full">
-          <div className="relative overflow-hidden rounded-bl-[30px] sm:rounded-bl-[45px] lg:rounded-bl-[60px] rounded-[10px] bg-[#CAFA63] card-noise with-vector2 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+          <div className="group relative overflow-hidden rounded-bl-[30px] sm:rounded-bl-[45px] lg:rounded-bl-[60px] rounded-[10px] bg-[#CAFA63] card-noise with-vector2 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative">
-              <div className="border border-[#262628] rounded-full px-2 sm:px-3 lg:px-4 py-1 sm:py-2">
-                <h2 className="text-xs sm:text-sm lg:text-lg font-Onest font-bold text-[#262628]">
-                  Interviewer
-                </h2>
-              </div>
+              <Button className="text-xs md:text-sm lg:text-xl font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-8 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
+                Interviewer
+              </Button>
               <div className="absolute top-0 right-0 bg-[#17181E] p-4 md:p-6 rounded-full arrow-icon z-10">
-                <ArrowUpRight className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
+                <ArrowDown className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
               </div>
             </div>
           </div>
@@ -72,6 +69,7 @@ export const HeroSection = () => {
               fill
               className="object-cover object-center"
               priority
+              quality={80}
             />
           </div>
         </div>
@@ -85,17 +83,16 @@ export const HeroSection = () => {
               fill
               className="object-cover object-center"
               priority
+              quality={80}
             />
           </div>
-          <div className="relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-[#AC9AFF] card-noise with-vector3 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-[#AC9AFF] card-noise with-vector3 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-10">
-              <div className="border border-[#262628] rounded-full px-2 sm:px-3 lg:px-4 py-1 sm:py-2">
-                <h2 className="text-xs sm:text-sm lg:text-lg font-Onest font-bold text-[#262628]">
-                  Candidate
-                </h2>
-              </div>
+              <Button className="text-xs md:text-sm lg:text-xl font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-8 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
+                Candidate
+              </Button>
               <div className="absolute top-0 right-0 bg-[#2E2C45] p-4 md:p-6 rounded-full arrow-icon">
-                <ArrowUpRight className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
+                <ArrowUp className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
               </div>
             </div>
           </div>

@@ -27,12 +27,12 @@ export default function Home() {
       </div>
 
       {/* Background Circles and Overlay Images for Web */}
-      <div className="absolute inset-0 -z-10 hidden md:block">
+      <div className="absolute inset-0 -z-20 hidden md:block">
         {/* Background Circles */}
         <div className="absolute top-[-50vh] left-1/2 -translate-x-1/2 w-[300vw] h-5/6 bg-[#16171D] blur-[200px] rounded-[60%]"></div>
-        <div className="absolute top-[75vh] -left-[15%] w-[60%] h-[30%] bg-[#F26B64] opacity-30 rounded-full filter blur-[150px] animate-blob1 animation-delay-2000 mix-blend-lighten"></div>
-        <div className="absolute top-[65vh] left-1/3 w-[65%] h-[30%] bg-[#D0F16C] opacity-30 rounded-full filter blur-[150px] animate-blob2 animation-delay-1000 mix-blend-lighten"></div>
-        <div className="absolute top-[60vh] left-2/3 w-[70%] h-[25%] bg-[#9F8AFF] opacity-40 rounded-full filter blur-[150px] animate-blob3"></div>
+        <div className="absolute top-[75vh] -left-[15%] w-[60%] h-[30%] bg-[#F26B64] opacity-30 rounded-full filter blur-[150px] mix-blend-lighten"></div>
+        <div className="absolute top-[65vh] left-1/3 w-[65%] h-[30%] bg-[#D0F16C] opacity-30 rounded-full filter blur-[150px] mix-blend-lighten"></div>
+        <div className="absolute top-[60vh] left-2/3 w-[70%] h-[25%] bg-[#9F8AFF] opacity-40 rounded-full filter blur-[150px]"></div>
         <div className="absolute top-[120vh] left-1/2 -translate-x-1/2 w-[200vw] h-full bg-[#F5FAF8] blur-[300px] rounded-[60%] opacity-90"></div>
 
         {/* Overlay Images */}
@@ -42,6 +42,7 @@ export default function Home() {
             alt="Middle Left Overlay"
             width={600}
             height={600}
+            quality={10}
             priority
           />
         </div>
@@ -52,6 +53,7 @@ export default function Home() {
             width={300}
             height={300}
             priority
+            quality={10}
             className="top-100"
           />
         </div>
