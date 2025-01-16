@@ -115,8 +115,8 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden lg:block md:block" />
-          <CarouselNext className="hidden lg:block md:block" />
+          <CarouselPrevious className="hidden md:flex bg-white border-none [&>svg]:text-black" />
+          <CarouselNext className="hidden md:flex bg-white border-none [&>svg]:text-black" />
         </Carousel>
       </div>
     </section>
