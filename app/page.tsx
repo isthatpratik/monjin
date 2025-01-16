@@ -7,6 +7,8 @@ import CaseStudies from "@/components/sections/case-studies";
 import { Footer } from "@/components/layout/footer";
 import { Testimonials } from "@/components/sections/testimonials";
 import Image from "next/image";
+import Testimonials2 from "@/components/sections/testimonials2";
+
 
 export default function Home() {
   return (
@@ -67,7 +69,8 @@ export default function Home() {
         <FeatureSection />
         <ProdcutsSection />
         <CaseStudies />
-        <Testimonials />
+        {/* <Testimonials /> */}
+       <Testimonials2 />
       </div>
 
       <footer>
