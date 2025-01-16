@@ -59,7 +59,7 @@ export default function Home() {
 
       <NavBar />
 
-      <div className="md:max-w-[80vw] mx-auto px-6 py-10 z-10">
+      <div className="md:max-w-[1600px] mx-auto px-6 py-10 z-10">
         <HeroSection />
         <Clients />
         <FeatureSection />

@@ -1,5 +1,6 @@
 import { NavBarProducts } from '@/components/layout/navbar-products';
 import MonjinSuiteHero from '@/components/MonjinSuite/hero-section';
+import MonjinSuiteProducts from '@/components/MonjinSuite/monjin-suite-products';
 import Image from 'next/image';
 import React from 'react';
 
@@ -29,8 +30,9 @@ const MonjinSuite = () => {
           </div>
         </div>
 
-        <div className="md:max-w-[80vw] mx-auto px-6 py-6 z-10">
+        <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
           <MonjinSuiteHero />
+          <MonjinSuiteProducts />
         </div>
       </main>
   );

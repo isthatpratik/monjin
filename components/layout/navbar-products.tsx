@@ -18,8 +18,8 @@ export function NavBarProducts() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full py-10 px-6 md:my-0 my-4 z-1000">
-      <div className="max-w-[75vw] mx-auto flex items-center justify-between">
+    <nav className="w-full py-10 px-4 md:my-0 my-4 z-1000">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -33,7 +33,7 @@ export function NavBarProducts() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-10 font-figtree font-light ml-auto mr-12">
+        <div className="hidden md:flex items-center gap-10 font-figtree font-light ml-auto mr-8">
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-8">
               {/* Products with Dropdown */}
@@ -94,16 +94,16 @@ export function NavBarProducts() {
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <button
-              className="md:hidden w-7 h-7 flex flex-col justify-center items-center rounded-sm border border-[#87888B] focus:outline-none"
+              className="md:hidden w-7 h-7 flex flex-col justify-center items-center rounded-sm border border-[#222222] focus:outline-none"
               onClick={() => setIsOpen((prev) => !prev)}
             >
-              <span className="bg-white block h-0.5 w-4 rounded-sm mb-1" />
-              <span className="bg-white block h-0.5 w-4 rounded-sm" />
+              <span className="bg-black block h-0.5 w-4 rounded-sm mb-1" />
+              <span className="bg-black block h-0.5 w-4 rounded-sm" />
             </button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[300px] sm:w-[400px] bg-[#16171D] pr-0 text-white flex flex-col justify-center items-center border-none shadow-none"
+            className="w-[300px] sm:w-[400px] bg-white pr-0 text-[#222222] flex flex-col justify-center items-center border-none shadow-none"
           >
             <div className="h-[80%] flex flex-col justify-evenly py-10 font-figtree font-semibold text-center">
               <Link href="#product" className="hover:text-gray-400 transition-colors">

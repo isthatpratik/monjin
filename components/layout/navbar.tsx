@@ -19,7 +19,7 @@ export function NavBar() {
 
   return (
     <nav className="w-full py-10 px-6 md:my-0 my-4 z-1000">
-      <div className="max-w-[75vw] mx-auto flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -33,7 +33,7 @@ export function NavBar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8 font-figtree font-light ml-auto mr-8">
+        <div className="hidden md:flex items-center gap-10 font-figtree font-light ml-auto mr-8">
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-8">
               {/* Products with Dropdown */}
