@@ -5,7 +5,7 @@ import FeatureSection from "@/components/sections/feature-section";
 import ProdcutsSection from "@/components/sections/products-section";
 import CaseStudies from "@/components/sections/case-studies";
 import { Footer } from "@/components/layout/footer";
-import { Testimonials } from "@/components/sections/testimonials";
+import Testimonials from "@/components/sections/testimonials";
 import Image from "next/image";
 
 export default function Home() {
