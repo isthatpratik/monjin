@@ -2,7 +2,6 @@ import { NavBarProducts } from '@/components/layout/navbar-products';
 import MonjinSuiteHero from '@/components/MonjinSuite/hero-section';
 import MonjinSuitePricing from '@/components/MonjinSuite/monjin-suite-pricing';
 import MonjinSuiteProducts from '@/components/MonjinSuite/monjin-suite-products';
-import PricingSection from '@/components/sections/pricing-section';
 import Image from 'next/image';
 import React from 'react';
 
