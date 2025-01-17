@@ -1,59 +1,64 @@
-import PricingSection, { type PricingPlan } from '@/components/sections/pricing-section';
+"use client";
 
-const monjinPricingPlans: PricingPlan[] = [
-  {
-    title: 'LITE',
-    description: 'Ideal for Small Teams',
-    monthlyPrice: 409,
-    annualPrice: 4908,
-    features: [
-      'Spotlight Unlimited',
-      'Basics Unlimited',
-      'OCOI Unlimited',
-    ],
-    bgImage: '/assets/pricing/lite.png',
-    buttonText: 'Buy Now',
-  },
-  {
-    title: 'ESSENTIAL',
-    description: 'Ideal for Growing Teams',
-    monthlyPrice: 649,
-    annualPrice: 7788,
-    features: [
-      'Spotlight Unlimited',
-      'Basics Unlimited',
-      'OCOI Unlimited',
-      'Assessed OW- 100 Interviews',
-      'YCOI- 100 Interviews',
-    ],
-    bgImage: '/assets/pricing/essential.png',
-    buttonText: 'Buy Now',
-    buttonVariant: 'outline',
-    isHighlighted: true,
-  },
-  {
-    title: 'PROFESSIONAL',
-    description: 'Made for Enterprises',
-    monthlyPrice: null,
-    annualPrice: null,
-    features: [
-      'Spotlight Unlimited',
-      'Basics Unlimited',
-      'OCOI Unlimited',
-      'Assessed OW- Unlimited',
-      'YCOI Unlimited',
-    ],
-    bgImage: '/assets/pricing/professional.png',
-    buttonText: 'Contact Sales',
-  },
-]
+import { PricingSection } from "../sections/pricing-section";
+import { PricingSectionMobile } from "../sections/pricing-section-mobile";
 
 export default function MonjinSuitePricing() {
-  return (
-    <PricingSection
-      title="Invest Smarter in Talent with Our Flexible Pricing"
-      plans={monjinPricingPlans}
-    />
-  )
-}
+  const pricingData = {
+    title: "Invest Smarter in Talent with Our Flexible Pricing",
+    lite: {
+      name: "LITE",
+      tagline: "Ideal for Small Teams",
+      monthlyPrice: 409,
+      annualPrice: 4090,
+      features: [
+        { name: "Spotlight Unlimited" },
+        { name: "Basics Unlimited" },
+        { name: "OCOI Unlimited" },
+      ],
+      ctaLabel: "Buy Now",
+      ctaAction: () => console.log("Lite plan selected"),
+    },
+    essential: {
+      name: "ESSENTIAL",
+      tagline: "Ideal for Growing Teams",
+      monthlyPrice: 649,
+      annualPrice: 6490,
+      features: [
+        { name: "Spotlight Unlimited" },
+        { name: "Basics Unlimited" },
+        { name: "OCOI Unlimited" },
+        { name: "Assessed OW- 100 Interviews" },
+        { name: "YCOI- 100 Interviews" },
+      ],
+      ctaLabel: "Buy Now",
+      ctaAction: () => console.log("Essential plan selected"),
+    },
+    professional: {
+      name: "PROFESSIONAL",
+      tagline: "Made for Enterprises",
+      monthlyPrice: 999,
+      annualPrice: 9990,
+      features: [
+        { name: "Spotlight Unlimited" },
+        { name: "Basics Unlimited" },
+        { name: "OCOI Unlimited" },
+        { name: "Assessed OW- Unlimited" },
+        { name: "YCOI Unlimited" },
+      ],
+      ctaLabel: "Contact Sales",
+      ctaAction: () => console.log("Professional plan selected"),
+    },
+  };
 
+  return (
+    <main>
+      <div className="hidden lg:block">
+        <PricingSection {...pricingData} />
+      </div>
+      <div className="block lg:hidden">
+        <PricingSectionMobile {...pricingData} />
+      </div>
+    </main>
+  );
+}

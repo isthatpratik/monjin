@@ -1,3 +1,4 @@
+import { Footer } from '@/components/layout/footer';
 import { NavBarProducts } from '@/components/layout/navbar-products';
 import MonjinSuiteHero from '@/components/MonjinSuite/hero-section';
 import MonjinSuitePricing from '@/components/MonjinSuite/monjin-suite-pricing';
@@ -13,19 +14,21 @@ const MonjinSuite = () => {
         <div className="absolute inset-0 -z-50 w-full h-full">
           <div className="hidden md:block w-full h-full">
             <Image
-              src="/assets/MonjinSuite/background-web.png"
+              src="/assets/MonjinSuite/background-web.jpg"
               alt="Background"
               fill
-              quality={100}
+              quality={80}
+              priority
               className="background-desktop object-cover object-top"
             />
           </div>
           <div className="block md:hidden w-full h-full">
             <Image
-              src="/assets/MonjinSuite/background-mobile.png"
+              src="/assets/MonjinSuite/background-mobile.jpg"
               alt="Background"
               fill
-              quality={100}
+              quality={80}
+              priority
               className="background-mobile object-cover object-top"
             />
           </div>
@@ -36,6 +39,7 @@ const MonjinSuite = () => {
           <MonjinSuiteProducts />
           <MonjinSuitePricing />
         </div>
+          <Footer />
       </main>
   );
 };
