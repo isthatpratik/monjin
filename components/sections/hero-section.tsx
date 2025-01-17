@@ -38,12 +38,12 @@ export const HeroSection = () => {
               priority
             />
           </div>
-          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-[#FF7F82] card-noise with-vector1 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-transparent with-vector1 hover:cursor-pointer flex-grow h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-10">
               <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Employer
               </Button>
-              <div className="absolute top-0 right-0 bg-[#27292F] p-4 md:p-6 rounded-full arrow-icon z-900">
+              <div className="absolute -top-4 -right-2 bg-[#27292F] p-4 md:p-6 rounded-full z-900 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
                 <ArrowUp className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
               </div>
             </div>
@@ -52,13 +52,13 @@ export const HeroSection = () => {
 
         {/* Interviewer Card */}
         <div className="space-y-2 sm:space-y-4 md:space-y-10 group flex flex-col min-h-full">
-          <div className="group relative overflow-hidden rounded-bl-[30px] sm:rounded-bl-[45px] lg:rounded-bl-[60px] rounded-[10px] bg-[#CAFA63] card-noise with-vector2 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
-            <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative">
+          <div className="group relative overflow-hidden rounded-bl-[30px] sm:rounded-bl-[45px] lg:rounded-bl-[60px] rounded-[10px] bg-transparent with-vector2 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+            <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-10">
               <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Interviewer
               </Button>
-              <div className="absolute top-0 right-0 bg-[#17181E] p-4 md:p-6 rounded-full arrow-icon z-900">
-                <ArrowDown className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white -left-20" />
+              <div className="absolute -top-4 -right-2 bg-[#27292F] p-4 md:p-6 rounded-full z-900 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
+                <ArrowDown className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
               </div>
             </div>
           </div>
@@ -86,12 +86,12 @@ export const HeroSection = () => {
               quality={80}
             />
           </div>
-          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-[#AC9AFF] card-noise with-vector3 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-transparent with-vector3 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-10">
               <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Candidate
               </Button>
-              <div className="absolute top-0 right-0 bg-[#2E2C45] p-4 md:p-6 rounded-full arrow-icon z-900">
+              <div className="absolute -top-4 -right-2 bg-[#27292F] p-4 md:p-6 rounded-full z-900 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
                 <ArrowUp className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
               </div>
             </div>

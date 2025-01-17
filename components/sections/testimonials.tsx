@@ -89,8 +89,8 @@ export default function Testimonials() {
                     <Image
                       src="/assets/abc.png"
                       alt="abc"
-                      width={127} // Adjust the width to match the original image size
-                      height={100} // Adjust the height to maintain the aspect ratio
+                      width={127} 
+                      height={100} 
                       className="absolute lg:-top-2 lg:right-4 lg:w-[125px] lg:h-auto w-[100px] h-auto -top-2 right-4"
                     />
                     <CardContent className="lg:p-8 md:p-6 p-4 relative flex-grow">

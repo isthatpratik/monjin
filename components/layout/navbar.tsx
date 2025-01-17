@@ -78,7 +78,7 @@ export function NavBar() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="#jobs" className="text-gray-300 hover:text-white transition-colors">
-                  Jobs
+                  Careers
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -119,7 +119,7 @@ export function NavBar() {
                 Interviewer
               </Link>
               <Link href="#jobs" className="hover:text-gray-400 transition-colors">
-                Jobs
+                Careers
               </Link>
             </div>
           </SheetContent>
