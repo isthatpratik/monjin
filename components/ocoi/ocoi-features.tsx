@@ -109,13 +109,13 @@ export default function OcoiFeatures() {
         {/* Desktop View */}
         <div className="hidden lg:block" >
           <Tabs defaultValue="ready-interviews" className="w-full" onValueChange={setActiveTab}>
-            <TabsList className="w-full flex mb-8 h-full border-b gap-10    ">
+            <TabsList className="min-w-full flex mb-8 h-full border-b gap-4">
               {tabs.map((tab) => (
                 <TabsTrigger
                 key={tab.id}
                 value={tab.id}
                 className={cn(
-                  "relative flex items-center lg:gap-2 md:gap-4 gap-4 p-2",
+                  "relative flex items-center lg:gap-2 md:gap-4 gap-4 p-2 text-wrap",
                   "data-[state=active]:text-primary font-medium",
                   "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5",
                   "after:scale-x-0 data-[state=active]:after:scale-x-100",

@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/sections/testimonials";
 import OcoiFeatures from "@/components/ocoi/ocoi-features";
 import Image from "next/image";
 import Testimonials2 from "@/components/sections/testimonials2";
+import InterviewSolution from "@/components/ycoi/interview-solution";
 
 export default function Home() {
   return (
@@ -49,7 +50,8 @@ export default function Home() {
 
         {/* <Testimonials2 /> */}
 
-        <OcoiFeatures />
+        {/* <OcoiFeatures /> */}
+        <InterviewSolution />
       </div>
 
       <footer>
