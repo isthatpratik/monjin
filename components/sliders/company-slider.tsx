@@ -46,15 +46,15 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-[#F5FAF9] relative flex h-[10vh] w-[10vw] cursor-pointer overflow-hidden rounded-[18px] p-4",
-        "items-center justify-center hover:bg-[#e0fff9] hover:scale-1 transition-all transition-300",
+        "bg-[#F5FAF9] relative flex h-[12vh] w-[10vw] cursor-pointer overflow-hidden rounded-[18px] p-4",
+        "items-center justify-center hover:bg-[#e0fff9] transition-all transition-300",
       )}
     >
       <div className="flex items-center justify-center w-full h-full ">
         <Image
           className="object-contain opacity-70 hover:opacity-100 grayscale-hover grayscale transition duration-300 ease-in-out hover:grayscale-0"
-          width={100}
-          height={100}
+          width={120}
+          height={120}
           alt=""
           src={img}
         />
@@ -67,7 +67,7 @@ const ReviewCard = ({ img }: { img: string }) => {
 export function CompanySlider() {
   return (
     <div className="relative flex flex-col items-center justify-center space-y-8 bg-transparent">
-      <div className="relative flex h-[50vh] w-full flex-row items-center justify-center overflow-hidden bg-transparent">
+      <div className="relative flex lg:h-[540px] md:h-[440px] w-full flex-row items-center justify-center overflow-hidden bg-transparent">
         <Marquee pauseOnHover vertical className="[--duration:90s]">
           {clientsSet1.map((client) => (
             <ReviewCard key={client.img} {...client} />

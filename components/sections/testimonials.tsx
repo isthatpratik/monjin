@@ -70,7 +70,7 @@ export default function Testimonials() {
         <p className="text-lg lg:text-base text-center mb-12 max-w-3xl mx-auto font-figtree">
           Uncover how our expert interviews have transformed hiring processes,
           helping businesses tap into top talent and make confident decisions.
-          Listen to firsthand accounts of the impact we`&apos;`ve made.
+          Listen to firsthand accounts of the impact we&apos;ve made.
         </p>
 
         <Carousel

@@ -101,7 +101,7 @@
     background-image: url("/assets/hero_images/employer-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: -5;
   }
 
   .with-vector2::after {
@@ -116,6 +116,7 @@
     background-image: url("/assets/hero_images/interviewer-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: -5;
   }
 
   .with-vector3::after {
@@ -130,13 +131,18 @@
     background-image: url("/assets/hero_images/candidate-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: -5;
   }
 
   .footer-bg-web::after {
     content: "";
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     inset: 0;
-    background-image: url("/assets/footer-bg-web.png");
+    background-image: url("/assets/footer-bg-web.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
@@ -148,7 +154,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("/assets/footer-bg-mobile.png");
+    background-image: url("/assets/footer-bg-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;

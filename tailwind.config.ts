@@ -71,6 +71,9 @@ export default {
   			'color-4': 'hsl(var(--color-4))',
   			'color-5': 'hsl(var(--color-5))'
   		},
+		boxShadow: {
+			'monjin': '0px 6px 0px rgba(0,0,0,0.3)'
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

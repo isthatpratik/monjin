@@ -48,7 +48,21 @@ const locations = ["INDIA", "USA", "MALTA", "UK"];
 
 export function Footer() {
   return (
-    <footer className="w-full text-gray-100 rounded-t-[32px] relative md:footer-bg-web footer-bg-mobile">
+    <footer className="w-full text-gray-100 lg:rounded-t-[32px] rounded-t-3xl relative">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <Image
+          src={'/assets/footer-bg-web.jpg'}    
+          fill
+          alt="Footer Background"
+          className="object-cover object-top lg:block md:block hidden"
+        />
+        <Image
+          src={'/assets/footer-bg-mobile.jpg'}
+          fill
+          alt="Footer Background"
+          className="object-fill object-top md:hidden lg:hidden"
+        />
+      </div>
       <div className="container mx-auto px-4 py-8 relative z-10">
         {/* Top Section */}
         <div className="md:flex md:justify-between md:items-center mb-8 mt-8">
@@ -165,7 +179,7 @@ export function Footer() {
         {/* Footer Bottom */}
         <div className="text-sm text-white mb-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex lg:flex-nowrap flex-wrap justify-center items-center gap-1">
+            <div className="flex flex-wrap justify-center items-center gap-1">
               <Link href="#" className="hover:text-white underline">
                 Terms of Service
               </Link>

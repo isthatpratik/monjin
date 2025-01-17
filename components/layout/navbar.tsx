@@ -35,7 +35,7 @@ export function NavBar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-10 font-figtree font-light ml-auto mr-8">
           <NavigationMenu>
-            <NavigationMenuList className="flex items-center gap-8">
+            <NavigationMenuList className="flex items-center gap-8 z-1000">
               {/* Products with Dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-300 hover:text-white transition-colors bg-transparent border-none">

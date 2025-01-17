@@ -1,6 +1,8 @@
 import { NavBarProducts } from '@/components/layout/navbar-products';
 import MonjinSuiteHero from '@/components/MonjinSuite/hero-section';
+import MonjinSuitePricing from '@/components/MonjinSuite/monjin-suite-pricing';
 import MonjinSuiteProducts from '@/components/MonjinSuite/monjin-suite-products';
+import PricingSection from '@/components/sections/pricing-section';
 import Image from 'next/image';
 import React from 'react';
 
@@ -14,7 +16,7 @@ const MonjinSuite = () => {
             <Image
               src="/assets/MonjinSuite/background-web.png"
               alt="Background"
-              layout="fill"
+              fill
               quality={100}
               className="background-desktop object-cover object-top"
             />
@@ -23,7 +25,7 @@ const MonjinSuite = () => {
             <Image
               src="/assets/MonjinSuite/background-mobile.png"
               alt="Background"
-              layout="fill"
+              fill
               quality={100}
               className="background-mobile object-cover object-top"
             />
@@ -33,6 +35,7 @@ const MonjinSuite = () => {
         <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
           <MonjinSuiteHero />
           <MonjinSuiteProducts />
+          <MonjinSuitePricing />
         </div>
       </main>
   );

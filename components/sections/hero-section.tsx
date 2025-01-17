@@ -39,7 +39,7 @@ export const HeroSection = () => {
             />
           </div>
           <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-transparent with-vector1 hover:cursor-pointer flex-grow h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
-            <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-10">
+            <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-5">
               <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Employer
               </Button>
@@ -53,7 +53,7 @@ export const HeroSection = () => {
         {/* Interviewer Card */}
         <div className="space-y-2 sm:space-y-4 md:space-y-10 group flex flex-col min-h-full">
           <div className="group relative overflow-hidden rounded-bl-[30px] sm:rounded-bl-[45px] lg:rounded-bl-[60px] rounded-[10px] bg-transparent with-vector2 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
-            <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-10">
+            <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-5">
               <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Interviewer
               </Button>
@@ -87,7 +87,7 @@ export const HeroSection = () => {
             />
           </div>
           <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-transparent with-vector3 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
-            <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-10">
+            <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-5">
               <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Candidate
               </Button>

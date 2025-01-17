@@ -17,8 +17,8 @@ const FeatureSection = () => {
         />
         <Image
           quality={100}
-          width={1200}
-          height={1200}
+          width={1300}
+          height={1300}
           alt="Feature Section illustration"
           src="/assets/feature-illustration.png"
           className="object-contain desktop-image"

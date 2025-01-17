@@ -14,8 +14,8 @@ export default function Home() {
       <div className="absolute inset-0 -z-10 lg:hidden">
         <Image
           alt="gradient-mobile-bg"
-          src={"/assets/gradient-mobile.png"}
-          quality={50}
+          src={"/assets/gradient-mobile.jpg"}
+          quality={100}
           fill
           sizes="100vw"
           priority
@@ -25,8 +25,8 @@ export default function Home() {
       <div className="absolute inset-0 -z-10 lg:block hidden md:block">
         <Image
           alt="gradient-mobile-bg"
-          src={"/assets/gradient-web.png"}
-          quality={50}
+          src={"/assets/gradient-web.jpg"}
+          quality={100}
           fill
           sizes="100vw"
           className="object-cover object-top"
@@ -68,7 +68,7 @@ export default function Home() {
 
       <NavBar />
 
-      <div className="md:max-w-[1600px] mx-auto px-6 py-10 z-10">
+      <div className="md:max-w-[1600px] mx-auto px-6 py-10">
         <HeroSection />
         <Clients />
         <FeatureSection />
