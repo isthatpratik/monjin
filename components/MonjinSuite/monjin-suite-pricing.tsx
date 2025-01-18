@@ -10,7 +10,7 @@ export default function MonjinSuitePricing() {
       name: "LITE",
       tagline: "Ideal for Small Teams",
       monthlyPrice: 409,
-      annualPrice: 4090,
+      annualPrice: 349,
       features: [
         { name: "Spotlight Unlimited" },
         { name: "Basics Unlimited" },
@@ -23,7 +23,7 @@ export default function MonjinSuitePricing() {
       name: "ESSENTIAL",
       tagline: "Ideal for Growing Teams",
       monthlyPrice: 649,
-      annualPrice: 6490,
+      annualPrice: 549,
       features: [
         { name: "Spotlight Unlimited" },
         { name: "Basics Unlimited" },
@@ -37,8 +37,8 @@ export default function MonjinSuitePricing() {
     professional: {
       name: "PROFESSIONAL",
       tagline: "Made for Enterprises",
-      monthlyPrice: 999,
-      annualPrice: 9990,
+      monthlyPrice: null,
+      annualPrice: null,
       features: [
         { name: "Spotlight Unlimited" },
         { name: "Basics Unlimited" },

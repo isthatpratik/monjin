@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -53,16 +53,10 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
-
-  useEffect(() => {
-    if (emblaApi) {
-      emblaApi.reInit();
-    }
-  }, [emblaApi]);
+  const plugin = useRef(Autoplay({ delay: 9000, stopOnInteraction: true }));
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-[url('/assets/bg-testimonial.png')] bg-cover bg-center bg-no-repeat rounded-3xl mt-16">
+    <section className="py-16 px-4 md:px-8 bg-[url('/assets/bg-testimonial.png')] bg-cover bg-center bg-no-repeat rounded-2xl mt-16">
       <div className="container mx-auto">
         <h2 className="md:text-4xl text-center mb-4 font-Onest lg:text-5xl text-3xl tracking-tighter">
           Client Journeys That Define Success
@@ -74,8 +68,8 @@ export default function Testimonials() {
         </p>
 
         <Carousel
-          ref={emblaRef}
-          className="w-full max-w-5xl mx-auto"
+          plugins={[plugin.current]}
+          className="w-full max-w-6xl mx-auto"
           opts={{
             align: "start",
             loop: true,
@@ -85,27 +79,26 @@ export default function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
                 <div className="p-1 h-full">
-                  <Card className="testimonial-bg backdrop-blur-sm border-none h-full flex flex-col relative">
+                  <Card className="testimonial-bg backdrop-blur-md border-[#1D1E23]/10 h-full flex flex-col relative">
                     <Image
-                      src="/assets/abc.png"
+                      src="/assets/quote.png"
                       alt="abc"
-                      width={127} 
-                      height={100} 
-                      className="absolute lg:-top-2 lg:right-4 lg:w-[125px] lg:h-auto w-[100px] h-auto -top-2 right-4"
+                      width={127}
+                      height={100}
+                      className="absolute lg:top-0 lg:right-4 lg:w-[125px] lg:h-auto w-[100px] h-auto top-0 right-4 overflow-hidden"
                     />
-                    <CardContent className="lg:p-8 md:p-6 p-4 relative flex-grow">
-                      <QuoteIcon className="absolute top-4 left-4 w-8 h-16 text-white/20" />
+                    <CardContent className="lg:p-12 md:p-8 p-4 relative flex-grow">
                       <div className="mt-8 flex flex-col gap-2">
-                        <h3 className="text-xl lg:text-3xl md:text-2xl font-medium">
+                        <h3 className="text-xl lg:text-3xl md:text-2xl font-semibold font-figtree">
                           {testimonial.name}
                         </h3>
-                        <p className="text-sm text-[#636671]">
+                        <p className="text-sm lg:text-base font-figtree figtree-light text-[#636671]">
                           {testimonial.position}
                         </p>
-                        <p className="text-sm opacity-75 mb-4">
+                        <p className="text-sm text-[#101010] mb-4 font-figtree lg:text-base uppercase tracking-widest">
                           {testimonial.company}
                         </p>
-                        <p className="text-sm leading-relaxed">
+                        <p className="text-sm leading-relaxed text-[#1D1E23]">
                           {testimonial.description}
                         </p>
                       </div>
@@ -115,8 +108,8 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex bg-white border-none [&>svg]:text-black" />
-          <CarouselNext className="hidden md:flex bg-white border-none [&>svg]:text-black" />
+          <CarouselPrevious className="hidden md:flex bg-[#1F1F1F] hover:bg-[#1F1F1F]/90 border-none [&>svg]:text-[#D0F16C] lg:scale-125" />
+          <CarouselNext className="hidden md:flex bg-[#1F1F1F] hover:bg-[#1F1F1F]/90 border-none [&>svg]:text-[#D0F16C] lg:scale-125" />
         </Carousel>
       </div>
     </section>

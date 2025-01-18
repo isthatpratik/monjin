@@ -7,7 +7,7 @@ export const HeroSection = () => {
   return (
     <div className="mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 justify-between px-4 lg:px-2 h-full">
       {/* Left Section */}
-      <div className="space-y-4 lg:space-y-6 flex flex-col justify-center text-center lg:text-left lg:w-1/2">
+      <div className="space-y-4 lg:space-y-6 flex flex-col justify-center text-center lg:text-left lg:w-2/5">
         <h1 className="text-5xl md:text-5xl lg:text-6xl xl:text-[78px] max-w-full lg:max-w-xl text-white font-Onest font-bold tracking-tighter leading-tight">
           Unleash the Power of Talent Seamlessly
         </h1>
@@ -25,10 +25,10 @@ export const HeroSection = () => {
       </div>
 
       {/* Right Section: Bento Grid */}
-      <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6 mt-4 lg:mt-0 lg:w-2/3 h-full my-20">
+      <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6 mt-4 lg:mt-6 lg:w-3/5 min-h-min my-20">
         {/* Employer Card */}
         <div className="space-y-2 sm:space-y-4 md:space-y-10 group flex flex-col min-h-full">
-          <div className="relative overflow-hidden rounded-[10px] rounded-br-[50px] sm:rounded-br-[75px] lg:rounded-br-[100px] bg-[#FADADA] h-[220px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[380px]">
+          <div className="relative overflow-hidden rounded-[10px] rounded-br-[50px] sm:rounded-br-[75px] lg:rounded-br-[100px] bg-[#FADADA] h-[220px] sm:h-[240px] md:h-[280px] lg:h-[280px] xl:h-[380px] hidden md:block">
             <Image
               src="/assets/hero_images/employer.png"
               alt="Professional in business attire"
@@ -38,9 +38,9 @@ export const HeroSection = () => {
               priority
             />
           </div>
-          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-transparent with-vector1 hover:cursor-pointer flex-grow h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-transparent with-vector1 hover:cursor-pointer flex-grow h-[160px] sm:h-[180px] md:h-[200px] lg:h-[200px] xl:h-[260px]">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-5">
-              <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
+              <Button className="text-xs lg:text-lg xl:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Employer
               </Button>
               <div className="absolute -top-4 -right-2 bg-[#27292F] p-4 md:p-6 rounded-full z-900 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
@@ -52,9 +52,9 @@ export const HeroSection = () => {
 
         {/* Interviewer Card */}
         <div className="space-y-2 sm:space-y-4 md:space-y-10 group flex flex-col min-h-full">
-          <div className="group relative overflow-hidden rounded-bl-[30px] sm:rounded-bl-[45px] lg:rounded-bl-[60px] rounded-[10px] bg-transparent with-vector2 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+          <div className="group relative overflow-hidden rounded-bl-[30px] sm:rounded-bl-[45px] lg:rounded-bl-[60px] rounded-[10px] bg-transparent with-vector2 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[200px] xl:h-[260px] ">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-5">
-              <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
+              <Button className="text-xs lg:text-lg xl:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Interviewer
               </Button>
               <div className="absolute -top-4 -right-2 bg-[#27292F] p-4 md:p-6 rounded-full z-900 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
@@ -62,7 +62,7 @@ export const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-tl-[30px] sm:rounded-tl-[45px] lg:rounded-tl-[60px] rounded-[10px] bg-[#EDFEC6] h-[220px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[380px]">
+          <div className="relative overflow-hidden rounded-tl-[30px] sm:rounded-tl-[45px] lg:rounded-tl-[60px] rounded-[10px] bg-[#EDFEC6] h-[220px] sm:h-[240px] md:h-[280px] lg:h-[280px] xl:h-[380px] hidden md:block">
             <Image
               src="/assets/hero_images/interviewer.png"
               alt="Professional with glasses"
@@ -76,7 +76,7 @@ export const HeroSection = () => {
 
         {/* Candidate Card */}
         <div className="space-y-2 sm:space-y-4 md:space-y-10 group flex flex-col min-h-full">
-          <div className="relative overflow-hidden rounded-tr-[50px] sm:rounded-tr-[75px] lg:rounded-tr-[100px] rounded-[10px] bg-[#E3DCFF] h-[220px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[380px]">
+          <div className="relative overflow-hidden rounded-tr-[50px] md:rounded-tr-[75px] lg:rounded-tr-[100px] rounded-[10px] bg-[#E3DCFF] h-[220px] sm:h-[240px] md:h-[280px] lg:h-[280px] xl:h-[380px] hidden md:block">
             <Image
               src="/assets/hero_images/candidate.png"
               alt="Professional with laptop"
@@ -86,13 +86,13 @@ export const HeroSection = () => {
               quality={80}
             />
           </div>
-          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-transparent with-vector3 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[260px]">
+          <div className="group relative overflow-hidden rounded-bl-[50px] sm:rounded-bl-[75px] lg:rounded-bl-[100px] rounded-[10px] bg-transparent with-vector3 hover:cursor-pointer flex-grow group card-hover h-[160px] sm:h-[180px] md:h-[200px] lg:h-[200px] xl:h-[260px]">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative z-5">
-              <Button className="text-xs md:text-lg lg:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
+              <Button className="text-xs lg:text-lg xl:text-xl p-6 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">
                 Candidate
               </Button>
-              <div className="absolute -top-4 -right-2 bg-[#27292F] p-4 md:p-6 rounded-full z-900 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
-                <ArrowUp className="w-3 sm:w-4 lg:w-6 h-3 sm:h-4 lg:h-6 text-white" />
+              <div className="absolute lg:-top-4 lg:-right-3 bg-[#27292F] p-3 md:p-4 lg:p-5  rounded-full z-900 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
+                <ArrowUp className="w-3 lg:w-5 h-3 lg:h-5 text-white" />
               </div>
             </div>
           </div>

@@ -28,11 +28,11 @@ export function PricingSectionMobile({
   );
 
   const getPrice = (monthly: number, annual: number) => {
-    return billingCycle === "monthly" ? monthly : Math.floor(annual / 12);
+    return billingCycle === "monthly" ? monthly : annual;
   };
 
   return (
-    <section className="py-16 lg:px-4 md:px-2 px-0 w-full lg:max-w-7xl lg:mx-auto">
+    <section className="py-12 lg:px-4 md:px-2 px-0 w-full lg:max-w-7xl lg:mx-auto">
       <h2 className="text-4xl font-medium text-center mb-12 font-onest lg:text-5xl tracking-tighter">
         {title}
       </h2>
@@ -82,7 +82,7 @@ export function PricingSectionMobile({
         loop
       >
         <SwiperSlide>
-          <Card className="relative overflow-hidden rounded-[32px] border border-black/20 bg-transparent flex flex-col p-2 h-[48vh]">
+          <Card className="relative overflow-hidden rounded-[32px] border border-black/20 bg-transparent flex flex-col p-2 h-[500px]">
             <div className="absolute inset-0 -z-10">
               <Image
                 src={"/assets/pricing/lite.jpg"}
@@ -146,7 +146,7 @@ export function PricingSectionMobile({
 
         <SwiperSlide>
           {/* ESSENTIAL Plan */}
-          <Card className="relative overflow-hidden rounded-[32px] border-black/20 bg-transparent flex flex-col p-2 h-[48vh]">
+          <Card className="relative overflow-hidden rounded-[32px] border-black/20 bg-transparent flex flex-col p-2 h-[500px]">
             <div className="absolute inset-0 -z-10">
               <Image
                 src={"/assets/pricing/essential.jpg"}
@@ -197,7 +197,7 @@ export function PricingSectionMobile({
           </Card>
         </SwiperSlide>
         <SwiperSlide>
-          <Card className="relative overflow-hidden rounded-[32px] border-black/20 bg-transparent flex flex-col p-2 h-[48vh]">
+          <Card className="relative overflow-hidden rounded-[32px] border-black/20 bg-transparent flex flex-col p-2 h-[510px]">
             <div className="absolute inset-0 -z-10">
               <Image
                 src={"/assets/pricing/professional.jpg"}

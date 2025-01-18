@@ -104,7 +104,7 @@ const ProductsSection = () => {
       title: "OCOI",
       subtitle: "OUR CANDIDATE OUR INTERVIEWERS",
       description:
-        "Schedule an interview for your applicants via Monjin's video platform – all without having to reach out to the candidate yourself",
+        "OCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video interview platform.",
       circleColor: "bg-[#9F8AFF]",
       subtitleBorderColor: "border-[#8B72FF]/30",
       buttonText1: "Start Trial",
@@ -113,55 +113,44 @@ const ProductsSection = () => {
     {
       icon: "/assets/product-icons/ycoi.png",
       title: "YCOI",
-      subtitle: "YOUR CANDIDATE YOUR INTERVIEWERS",
+      subtitle: "YOUR CANDIDATE OUR INTERVIEWERS",
       description:
-        "Schedule an interview for your applicants via Monjin's video platform – all without having to reach out to the candidate yourself",
+        "OCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video interview platform.",
       circleColor: "bg-[#B7D659]",
       subtitleBorderColor: "border-[#B7D659]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
     {
-      icon: "/assets/product-icons/basics.png",
-      title: "Basics",
-      subtitle: "SCHEDULE INTERVIEWS REMOTELY",
-      description:
-        "Coordinate interviews effortlessly with Monjin, no direct candidate contact required",
-      circleColor: "bg-[#F46D70]",
-      subtitleBorderColor: "border-[#F46D70]/30",
-      buttonText1: "Start Trial",
-      buttonText2: "Learn More",
-    },
-    {
       icon: "/assets/product-icons/spotlight.png",
       title: "Spotlight",
-      subtitle: "AUTOMATE INTERVIEWS WITH MONJIN",
+      subtitle: "ACCELERATE EFFICIENT SCREENING",
       description:
-        "Effortlessly arrange interviews for your candidates through Monjin's video platform, eliminating the need for direct outreach.",
+        "Screen candidates efficiently, customize interview questions, and watch video interviews to fast-track your hiring process.",
       circleColor: "bg-[#FFB14A]",
       subtitleBorderColor: "border-[#FFB14A]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
     {
-      icon: "/assets/product-icons/assessment.png",
-      title: "Assessment",
-      subtitle: "STREAMLINE INTERVIEWS EFFORTLESSLY",
+      icon: "/assets/product-icons/performance_management.png",
+      title: "Performance Management",
+      subtitle: "PRE-ASSESSED CANDIDATURES",
       description:
-        "Streamline interview scheduling with Monjin's platform, no candidate outreach necessary.",
-      circleColor: "bg-[#78DCDD]",
-      subtitleBorderColor: "border-[#78DCDD]/30",
+        "Ensuring every candidate is rigorously assessed, skip the screening process and access a pool of curated talent.",
+      circleColor: "bg-[#BA57D3]",
+      subtitleBorderColor: "border-[#BA57D3]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
     {
-      icon: "/assets/product-icons/performance_management.png",
-      title: "Performance Management",
-      subtitle: "AUTOMATE APPLICANT INTERVIEWS",
+      icon: "/assets/product-icons/basics.png",
+      title: "Basics",
+      subtitle: "STREAMLINE EFFORTLESS HIRING",
       description:
-        "Seamlessly book interviews through Monjin's platform, bypassing direct candidate contact",
-      circleColor: "bg-[#BA57D3]",
-      subtitleBorderColor: "border-[#BA57D3]/30",
+        "Conduct video interviews on the fly without requiring any registration, making the process quicker and more accessible.",
+      circleColor: "bg-[#F46D70]",
+      subtitleBorderColor: "border-[#F46D70]/30",
       buttonText1: "Start Trial",
       buttonText2: "Learn More",
     },
@@ -260,3 +249,4 @@ const ProductsSection = () => {
 };
 
 export default ProductsSection;
+

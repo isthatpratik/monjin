@@ -3,6 +3,7 @@ import { NavBarProducts } from '@/components/layout/navbar-products';
 import MonjinSuiteHero from '@/components/MonjinSuite/hero-section';
 import MonjinSuitePricing from '@/components/MonjinSuite/monjin-suite-pricing';
 import MonjinSuiteProducts from '@/components/MonjinSuite/monjin-suite-products';
+import { ClientsSlider } from '@/components/sliders/clients-slider';
 import Image from 'next/image';
 import React from 'react';
 
@@ -39,7 +40,11 @@ const MonjinSuite = () => {
           <MonjinSuiteProducts />
           <MonjinSuitePricing />
         </div>
+        <div className='flex flex-col gap-8'>
+
+          <ClientsSlider />
           <Footer />
+        </div>
       </main>
   );
 };

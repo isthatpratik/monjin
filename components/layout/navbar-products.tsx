@@ -13,6 +13,7 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 
 export function NavBarProducts() {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,6 +92,9 @@ export function NavBarProducts() {
         </Button>
 
         {/* Mobile Drawer Navigation */}
+        <div>
+
+        </div>
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <button
@@ -106,9 +110,30 @@ export function NavBarProducts() {
             className="w-[300px] sm:w-[400px] bg-white pr-0 text-[#222222] flex flex-col justify-center items-center border-none shadow-none"
           >
             <div className="h-[80%] flex flex-col justify-evenly py-10 font-figtree font-semibold text-center">
-              <Link href="#product" className="hover:text-gray-400 transition-colors">
-                Product
-              </Link>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="product">
+                  <AccordionTrigger className="items-center text-center">Product</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="mt-2 ml-4">
+                      <Link href="#monjin-suite" className="block hover:text-gray-400 transition-colors">
+                        Monjin Suite
+                      </Link>
+                      <Link href="#ocoi" className="block hover:text-gray-400 transition-colors">
+                        OCOI
+                      </Link>
+                      <Link href="#ycoi" className="block hover:text-gray-400 transition-colors">
+                        YCOI
+                      </Link>
+                      <Link href="#spotlight" className="block hover:text-gray-400 transition-colors">
+                        Spotlight
+                      </Link>
+                      <Link href="#performance-management" className="block hover:text-gray-400 transition-colors">
+                        Performance Management
+                      </Link>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
               <Link href="#company" className="hover:text-gray-400 transition-colors">
                 Company
               </Link>
