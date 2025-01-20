@@ -3,6 +3,7 @@ import { NavBarProducts } from '@/components/layout/navbar-products';
 import { ClientsSlider } from '@/components/sliders/clients-slider';
 import Image from 'next/image';
 import React from 'react';
+import SpotlightFeatures from '@/components/spotlight/spotlight-features';
 
 const MonjinSuite = () => {
   return (
@@ -31,7 +32,7 @@ const MonjinSuite = () => {
             />
           </div>
         </div>
-
+          <SpotlightFeatures />
         <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
 
         </div>

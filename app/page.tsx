@@ -7,6 +7,7 @@ import CaseStudies from "@/components/sections/case-studies";
 import { Footer } from "@/components/layout/footer";
 import Testimonials from "@/components/sections/testimonials";
 import Image from "next/image";
+import SpotlightFeatures from "@/components/spotlight/spotlight-features";
 
 export default function Home() {
   return (
@@ -75,6 +76,8 @@ export default function Home() {
         <ProdcutsSection />
         <CaseStudies />
         <Testimonials />
+
+  
       </div>
 
       <footer>
