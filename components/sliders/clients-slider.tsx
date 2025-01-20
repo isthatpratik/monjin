@@ -13,7 +13,6 @@ const clientsSet1 = [
   { img: "/assets/clients/cognizant.png" },
   { img: "/assets/clients/cyient.png" },
   { img: "/assets/clients/emids.png" },
-  { img: "/assets/clients/evry.png" },
   { img: "/assets/clients/netsurion.png" },
   { img: "/assets/clients/peoplefy.png" },
   { img: "/assets/clients/persistent.png" },
@@ -29,6 +28,7 @@ const clientsSet1 = [
   { img: "/assets/clients/intraedge.png" },
   { img: "/assets/clients/itc.png" },
   { img: "/assets/clients/L&T.png" },
+  { img: "/assets/clients/evry.png" },
   { img: "/assets/clients/Mastek.png" },
   { img: "/assets/clients/mgneto.png" },
   { img: "/assets/clients/redington.png" },
@@ -41,7 +41,7 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-transparent relative flex h-[100px] w-[160px] cursor-pointer overflow-hidden rounded-[18px] p-4 xl:scale-150 lg:scale-125 scale-110",
+        "bg-transparent relative flex h-[100px] w-[160px] cursor-pointer overflow-hidden rounded-[18px] p-4 xl:scale-150 lg:scale-125 scale-110 lg:m-6 m-4",
         "items-center justify-center hover:scale-1 transition-all duration-300"
       )}
     >

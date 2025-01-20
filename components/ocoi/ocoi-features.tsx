@@ -103,21 +103,22 @@ export default function OcoiFeatures() {
   return (
     <div className="min-h-auto bg-white rounded-3xl mx-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl md:text-5xl font-onest font-medium text-center mb-12 tracking-tighter">
-          Unlock Smarter Hiring with Curated Interviews, Real-Time Feedback, and Seamless Scheduling
+        <h1 className="text-4xl md:text-5xl flex flex-row items-center justify-center font-onest font-medium text-center mb-12 tracking-tighter">
+        Simplify Hiring with Curated Interviews, 
+        Instant Feedback, and Easy Scheduling
         </h1>
 
         {/* Desktop View */}
         <div className="hidden lg:block" >
           <Tabs defaultValue="ready-interviews" className="w-full" onValueChange={setActiveTab}>
-            <TabsList className="w-full flex mb-8 h-full border-b gap-10">
+            <TabsList className="w-full flex mb-8 h-full border-b justify-between">
               {tabs.map((tab) => (
                 <TabsTrigger
                 key={tab.id}
                 value={tab.id}
                 className={cn(
-                  "relative flex items-center lg:gap-2 md:gap-4 gap-4 p-2",
-                  "data-[state=active]:text-primary font-medium",
+                  "relative flex items-center lg:gap-1 md:gap-2 gap-2 p-2",
+                  "data-[state=active]:text-primary font-light font-figtree text-base",
                   "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5",
                   "after:scale-x-0 data-[state=active]:after:scale-x-100",
                   "after:bg-primary after:transition-transform"

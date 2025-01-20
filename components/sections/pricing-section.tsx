@@ -175,8 +175,17 @@ export function PricingSection({
               {professional.name}
             </span>
             <div className="text-black">
-              <p className="text-xs mb-4 font-figtree">
-                {professional.tagline}
+              <p className="text-xs mb-4 font-figtree">{professional.tagline}</p>
+              <div className="flex items-baseline">
+                <span className="lg:text-6xl md:text-5xl text-4xl font-bold font-onest">
+                  <sup className="lg:text-4xl md:text-3xl text-2xl font-figtree font-bold">$</sup>
+                  {getPrice(professional.monthlyPrice, professional.annualPrice)}
+                </span>
+                <span className="ml-2 text-sm text-gray-600">/ mo</span>
+              </div>
+              <p className="text-sm text-gray-600 mt-2">
+                Per month per user, billed{" "}
+                {billingCycle === "monthly" ? "monthly" : "annually"}
               </p>
             </div>
           </CardHeader>
@@ -202,6 +211,7 @@ export function PricingSection({
       </div>
 
       <div className="mt-8 text-center text-sm text-gray-500 space-y-2">
+        <p>* Minimum 3 Users</p>
         <p>* Plus applicable taxes</p>
         <p>*Cancel your subscription anytime</p>
         <p>
