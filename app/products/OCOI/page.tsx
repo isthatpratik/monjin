@@ -1,6 +1,8 @@
 import { Footer } from '@/components/layout/footer';
 import { NavBarProducts } from '@/components/layout/navbar-products';
+import OcoiHeroSection from '@/components/ocoi/hero-section';
 import OcoiFeatures from '@/components/ocoi/ocoi-features';
+import OcoiPricing from '@/components/ocoi/ocoi-pricing';
 import { ClientsSlider } from '@/components/sliders/clients-slider';
 import Image from 'next/image';
 import React from 'react';
@@ -34,10 +36,11 @@ const MonjinSuite = () => {
         </div>
 
         <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
-
+        <OcoiHeroSection />
+        <OcoiFeatures />
         </div>
         <div className='flex flex-col gap-8'>
-        <OcoiFeatures />
+        <OcoiPricing />
           <ClientsSlider />
           <Footer />
         </div>

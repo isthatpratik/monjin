@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/product-tabs"
 import { cn } from "@/lib/utils"
 import { MobileSlider } from '@/components/ocoi/mobile-slider-ocoi-features'
-import { PlayCircle, Star, Search, UserCircle, FileText, Video } from 'lucide-react'
+import { PlayCircle, Star, Search, UserCircle, FileText, CircleCheck } from 'lucide-react'
 import Image from 'next/image'
 
 export interface Tab {
@@ -30,7 +30,7 @@ const tabs: Tab[] = [
       ['Seamless Sharing', 'Detailed Feedback'],
       ['Granular Assessments', 'Summaries & Closed Captions'],
     ],
-    icon: <PlayCircle className="w-5 h-5" />,
+    icon: <CircleCheck className="w-5 h-5" />,
     imageUrl: '/assets/ocoi/ready-interviews.png'
   },
   {
@@ -47,7 +47,7 @@ const tabs: Tab[] = [
     imageUrl: '/assets/ocoi/ratings-feedback.png'  },
   {
     id: 'advance-search',
-    label: 'Advance Search',
+    label: 'Advanced Search',
     title: 'Advanced Search',
     description: "Experience the most efficient and tailored search options with Monjin's advanced search capabilities, designed to provide users with the best search experience possible.",
     features: [
@@ -90,8 +90,8 @@ const tabs: Tab[] = [
       ['Emotional Analysis', 'Visual Analysis'],
       ['Object Identification', 'Gesture & Expression Analysis'],
     ],
-    icon: <Video className="w-5 h-5" />,
-    imageUrl: '/assets/ocoi/audio-video.jpg'  }
+    icon: <PlayCircle className="w-5 h-5" />,
+    imageUrl: '/assets/ocoi/audio-video-analytics.png'  }
 ];
 
 
@@ -101,16 +101,16 @@ export default function OcoiFeatures() {
   const [activeTab, setActiveTab] = useState('ready-interviews')
 
   return (
-    <div className="min-h-auto bg-white rounded-3xl">
+    <div className="min-h-auto bg-white rounded-3xl mx-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl md:text-5xl font-onest text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-onest font-medium text-center mb-12 tracking-tighter">
           Unlock Smarter Hiring with Curated Interviews, Real-Time Feedback, and Seamless Scheduling
         </h1>
 
         {/* Desktop View */}
         <div className="hidden lg:block" >
           <Tabs defaultValue="ready-interviews" className="w-full" onValueChange={setActiveTab}>
-            <TabsList className="w-full flex mb-8 h-full border-b gap-10    ">
+            <TabsList className="w-full flex mb-8 h-full border-b gap-10">
               {tabs.map((tab) => (
                 <TabsTrigger
                 key={tab.id}
@@ -144,7 +144,7 @@ export default function OcoiFeatures() {
                   <div className="space-y-6">
                     <h2 className="font-figtree font-medium text-2xl tracking-tighter">{tab.title}</h2>
                     <p className="text-lg font-figtree font-light text-[#353535] leading-loose">{tab.description}</p>
-                    <div className="grid lg:grid-cols-2 gap-4 text-lg font-figtree">
+                    <div className="grid lg:grid-cols-2 gap-4 text-lg font-figtree font-light">
                       {tab.features.map((featurePair, idx) => (
                         <div key={idx} className="space-y-4">
                           {featurePair.map(
@@ -164,8 +164,9 @@ export default function OcoiFeatures() {
                       src={tab.imageUrl || "/placeholder.svg"}
                       alt={tab.title}
                       className="w-full h-full object-contain"
-                      height={40}
-                      width={40}
+                      height={1000}
+                      width={1000}
+                      quality={70}
                     />
                   </div>
                 </div>
