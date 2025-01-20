@@ -31,7 +31,7 @@ const tabs: Tab[] = [
       ['', ''],
     ],
     icon: <CircleCheck className="w-5 h-5" />,
-    imageUrl: '/assets/spotlight/customize-interview.png'
+    imageUrl: '/assets/basics/otp-interviews.png'
   },
   {
     id: 'invite-candidates',
@@ -39,25 +39,27 @@ const tabs: Tab[] = [
     title: 'Multi-Panel Interview',
     description: "Enhance your hiring process with Basics' multi-panel feature, allowing you to add multiple interviewers to a single session for a more comprehensive and collaborative evaluation.",
     features: [
-      ['Single Invite', 'Bulk Invite'],
+      ['Collaborative Scheduling', 'Screen Sharing'],
+      ['Time Zone Management', 'Granular Feedback'],
+      ['Proctoring', ''],
     ],
     icon: <UserCircle className="w-5 h-5" />,
     imageUrl: '/assets/spotlight/invite-candidates.png'  },
   {
     id: 'assessment',
-    label: 'Assessment',
-    title: 'Assessment',
-    description: "Spot Light offers comprehensive candidate evaluations using advanced AI and expert assessments to ensure the best hiring decisions.",
+    label: 'Scheduling an Interview',
+    title: 'Scheduling an Interview',
+    description: "Streamline your interview scheduling with easy-to-use online tools, making it quick and efficient to set up interviews.With an intuitive interface, you can quickly set up interview sessions and ensure a smooth process for both candidates and interviewers.",
     features: [
-      ['AI Based Assessment', 'Assesment by Experts'],
+      ['Matching Interviewers', 'Online Calendar'],
     ],
     icon: <StarIcon className="w-5 h-5" />,
     imageUrl: '/assets/spotlight/assessment.png'  },
   {
     id: 'collaboration',
-    label: 'Collaboration',
-    title: 'Collaboration',
-    description: 'Spot Light offers comprehensive candidate evaluations using advanced AI and expert assessments to ensure the best hiring decisions.',
+    label: 'Video Conclave',
+    title: 'Video Conclave',
+    description: "The heart of your interview process, the Conclave is where the actual interview takes place. Whether you're conducting a one-on-one or a multi-panel session, the Conclave offers a seamless space for interviewers to collaborate and assess candidates in real-time.",
     features: [
       ['Sharing', 'Move Forward'],
     ],

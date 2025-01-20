@@ -1,4 +1,5 @@
 import BasicsFeatures from '@/components/basics/basics-features';
+import BasicsPricing from '@/components/basics/basics-pricing';
 import BasicsHeroSection from '@/components/basics/hero-section';
 import { Footer } from '@/components/layout/footer';
 import { NavBarProducts } from '@/components/layout/navbar-products';
@@ -37,6 +38,7 @@ const MonjinSuite = () => {
         <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
         <BasicsHeroSection />
         <BasicsFeatures />
+        <BasicsPricing />
         </div>
         <div className='flex flex-col gap-8'>
 

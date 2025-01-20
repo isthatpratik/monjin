@@ -111,8 +111,8 @@ export default function Testimonials() {
                         <p className="text-sm text-[#101010] mb-4 font-figtree lg:text-base uppercase tracking-widest">
                           {testimonial.company}
                         </p>
-                        <p className="text-sm leading-relaxed text-[#1D1E23]">
-                          {testimonial.description}
+                        <p className="text-lg font-figtree font-light leading-relaxed text-[#1D1E23]">
+                        &quot;{testimonial.description}&quot;
                         </p>
                       </div>
                     </CardContent>
