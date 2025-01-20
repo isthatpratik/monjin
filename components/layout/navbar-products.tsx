@@ -79,6 +79,13 @@ export function NavBarProducts() {
                         </NavigationMenuLink>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/products/PerformanceManagement" passHref>
+                        <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
+                          Performance Management
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
