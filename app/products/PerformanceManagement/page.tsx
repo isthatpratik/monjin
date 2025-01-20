@@ -4,6 +4,7 @@ import { ClientsSlider } from '@/components/sliders/clients-slider';
 import Image from 'next/image';
 import React from 'react';
 import WhyMonjin from '@/components/performace-management/why-monjin';
+import AlwaysReady from '@/components/performace-management/always-ready';
 
 const MonjinSuite = () => {
   return (
@@ -37,6 +38,7 @@ const MonjinSuite = () => {
         <WhyMonjin />
         </div>
         <div className='flex flex-col gap-8'>
+            <AlwaysReady />
           <ClientsSlider />
           <Footer />
         </div>
