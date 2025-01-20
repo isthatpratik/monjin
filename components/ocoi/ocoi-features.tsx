@@ -5,6 +5,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/produc
 import { cn } from "@/lib/utils"
 import { MobileSlider } from '@/components/ocoi/mobile-slider-ocoi-features'
 import { PlayCircle, Star, Search, UserCircle, FileText, Video } from 'lucide-react'
+import Image from 'next/image'
 
 export interface Tab {
   id: string
@@ -30,7 +31,7 @@ const tabs: Tab[] = [
       ['Granular Assessments', 'Summaries & Closed Captions'],
     ],
     icon: <PlayCircle className="w-5 h-5" />,
-    imageUrl: '/assets/ocoi/ready-interview.jpg'
+    imageUrl: '/assets/ocoi/ready-interviews.png'
   },
   {
     id: 'ratings-feedback',
@@ -43,7 +44,7 @@ const tabs: Tab[] = [
       ['Candidate Ratings Guide', ''],
     ],
     icon: <Star className="w-5 h-5" />,
-    imageUrl: '/assets/ocoi/ratings.jpg'  },
+    imageUrl: '/assets/ocoi/ratings-feedback.png'  },
   {
     id: 'advance-search',
     label: 'Advance Search',
@@ -54,7 +55,7 @@ const tabs: Tab[] = [
       ['Skills & Subskills', 'Search by Location'],
     ],
     icon: <Search className="w-5 h-5" />,
-    imageUrl: '/assets/ocoi/jd-based.jpg'  },
+    imageUrl: '/assets/ocoi/advanced-search.png'  },
   {
     id: 'reserve-interviewer',
     label: 'Reserve Interviewer',
@@ -65,7 +66,7 @@ const tabs: Tab[] = [
       ['On-Demand Interviews', ''],
     ],
     icon: <UserCircle className="w-5 h-5" />,
-    imageUrl: '/assets/ocoi/reserve-your-interviewer.jpg'  },
+    imageUrl: '/assets/ocoi/reserve-interviewer.png'  },
   {
     id: 'jd-based',
     label: 'JD Based OCOI',
@@ -77,7 +78,7 @@ const tabs: Tab[] = [
       ['Seamless Integration'],
     ],
     icon: <FileText className="w-5 h-5" />,
-    imageUrl: '/assets/ocoi/jd-based.jpg'  },
+    imageUrl: '/assets/ocoi/jd-based-ocoi.png'  },
   {
     id: 'audio-video',
     label: 'Audio/Video Analytics',
@@ -159,10 +160,12 @@ export default function OcoiFeatures() {
                     </div>
                   </div>
                   <div className="relative h-[400px] rounded-lg overflow-hidden">
-                    <img
+                    <Image
                       src={tab.imageUrl || "/placeholder.svg"}
                       alt={tab.title}
                       className="w-full h-full object-contain"
+                      height={40}
+                      width={40}
                     />
                   </div>
                 </div>

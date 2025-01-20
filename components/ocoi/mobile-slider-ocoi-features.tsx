@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { type Tab } from '@/components/ocoi/ocoi-features'
+import Image from "next/image"
 
 interface MobileSliderProps {
   tabs: Tab[]
@@ -42,10 +43,12 @@ export function MobileSlider({ tabs }: MobileSliderProps) {
                 ))}
               </div>
               <div className="relative h-[300px] rounded-lg overflow-hidden mt-6">
-                <img
+                <Image
                   src={tab.imageUrl || "/placeholder.svg"}
                   alt={tab.title}
                   className="w-full h-full object-contain"
+                  height={50}
+                  width={50}
                 />
               </div>
             </div>
