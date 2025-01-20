@@ -31,7 +31,7 @@ const FeatureSection = () => {
         </h2>
         <p className="font-figtree font-normal text-[#1D1E23] tracking-tight text-center lg:max-w-[50%] max-w-[95%] text-xl lg:text-xl">
           Intuitive and efficient solution for hiring and talent assessment.
-          Access to Video interviews, AI-powered scheduling, multi-panel
+          Access to video interviews, AI-powered scheduling, multi-panel
           collaboration, and real-time feedback.
         </p>
       </div>
@@ -39,19 +39,19 @@ const FeatureSection = () => {
       {/* Three Divs Section with Responsive Layout */}
       <div className="flex flex-col lg:flex-row justify-between gap-2 mt-6 w-full lg:w-[90%] md:flex-col">
         {/* Div 1 */}
-        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[500px] justify-center">
+        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[600px] justify-center">
           <Image
             quality={100}
-            width={500}
-            height={500}
+            width={355}
+            height={230}
             alt="Feature 1"
             src="/assets/feature-1.png"
-            className="object-contain"
+            className="object-contain aspect-[4/3]"
           />
           <h3 className="font-Onest font-semibold text-[#1D1E23] text-[28px] mt-4 text-center">
-            On-demand Interview
+            On Demand Interview
           </h3>
-          <p className="font-figtree font-normal text-center text-[#828489] text-sm text-md mt-2 max-w-[75%]">
+          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-base mt-2 max-w-[75%]">
             Conduct interviews on-demand, whenever it suits you.
           </p>
         </div>
@@ -60,19 +60,19 @@ const FeatureSection = () => {
         <div className="hidden self-center lg:block lg:w-[1px] lg:h-[200px] lg:bg-[#23252F]/20 lg:mx-8"></div>
 
         {/* Div 2 */}
-        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[500px] justify-center">
+        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[600px] justify-center">
           <Image
             quality={100}
-            width={500}
-            height={500}
+            width={355}
+            height={230}
             alt="Feature 2"
             src="/assets/feature-2.png"
-            className="object-contain"
+            className="object-contain aspect-[4/3]"
           />
           <h3 className="font-Onest font-semibold text-[#1D1E23] text-[28px] mt-4 text-center">
             Vetted Experts
           </h3>
-          <p className="font-figtree font-normal text-center text-[#828489] text-sm text-md mt-2 max-w-[75%]">
+          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-base mt-2 max-w-[75%]">
             Connect with carefully vetted experts for reliable insights and
             guidance.
           </p>
@@ -82,21 +82,20 @@ const FeatureSection = () => {
         <div className="hidden self-center lg:block lg:w-[1px] lg:h-[200px] lg:bg-[#23252F]/20 lg:mx-8"></div>
 
         {/* Div 3 */}
-        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[500px] justify-center">
+        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[600px] justify-center">
           <Image
             quality={100}
-            width={500}
-            height={500}
+            width={355}
+            height={230}
             alt="Feature 3"
             src="/assets/feature-3.png"
-            className="object-contain"
+            className="object-contain aspect-[4/3]"
           />
-          <h3 className="font-Onest font-semibold text-[#1D1E23] text-[24px] mt-4 text-center lg:text-2xl">
+          <h3 className="font-Onest font-semibold text-[#1D1E23] text-[28px] mt-4 text-center">
             Rich Talent Dataset
           </h3>
-          <p className="font-figtree font-normal text-center text-[#828489] text-sm  mt-2 max-w-[75%] lg:text-base">
-            Connect with carefully vetted experts for reliable insights and
-            guidance.
+          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-base mt-2 max-w-[75%]">
+          Leverage a rich talent dataset to access highly qualified candidates.
           </p>
         </div>
       </div>

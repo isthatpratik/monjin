@@ -23,7 +23,7 @@ export function PricingSection({
   );
 
   const getPrice = (monthly: number, annual: number) => {
-    return billingCycle === "monthly" ? monthly : Math.floor(annual / 12);
+    return billingCycle === "monthly" ? monthly : annual;
   };
 
   return (

@@ -42,8 +42,8 @@ export function NavBarProducts() {
                 <NavigationMenuTrigger className="text-[#16171D] hover:text-[#16171D]/80 transition-colors bg-transparent border-none font-figtree">
                   Products
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white p-4 rounded-md shadow-lg w-[300px] h-[300px] border-none font-figtree">
-                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <NavigationMenuContent className="bg-white p-4 rounded-md shadow-lg w-[300px] h-auto border-none font-figtree">
+                  <ul className="flex flex-col gap-3 p-4 md:w-[400px] lg:w-[500px]">
                     <li>
                       <Link href="/products/MonjinSuite" passHref>
                         <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
@@ -52,9 +52,30 @@ export function NavBarProducts() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/products/AnotherProduct" passHref>
+                      <Link href="/products/OCOI" passHref>
                         <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
-                          Another Product
+                          OCOI
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/products/YCOI" passHref>
+                        <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
+                          YCOI
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/products/Spotlight" passHref>
+                        <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
+                          Spotlight
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/products/Basics" passHref>
+                        <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
+                          Basics
                         </NavigationMenuLink>
                       </Link>
                     </li>

@@ -9,10 +9,10 @@ const clientsSet1 = [
   { img: "/assets/clients/birlasoft.png" },
   { img: "/assets/clients/brillio.png" },
   { img: "/assets/clients/calsoft.png" },
+  { img: "/assets/clients/tcs.png" },
   { img: "/assets/clients/cognizant.png" },
   { img: "/assets/clients/cyient.png" },
   { img: "/assets/clients/emids.png" },
-  { img: "/assets/clients/evry.png" },
 ];
 
 const clientsSet2 = [
@@ -21,12 +21,12 @@ const clientsSet2 = [
   { img: "/assets/clients/GlobalLogic.png" },
   { img: "/assets/clients/guardian.png" },
   { img: "/assets/clients/hexaware.png" },
+  { img: "/assets/clients/evry.png" },
   { img: "/assets/clients/infosys.png" },
   { img: "/assets/clients/intraedge.png" },
   { img: "/assets/clients/itc.png" },
   { img: "/assets/clients/L&T.png" },
   { img: "/assets/clients/Mastek.png" },
-  { img: "/assets/clients/mgneto.png" },
 ];
 
 const clientsSet3 = [
@@ -38,7 +38,7 @@ const clientsSet3 = [
   { img: "/assets/clients/redington.png" },
   { img: "/assets/clients/talent500.png" },
   { img: "/assets/clients/tata-tech.png" },
-  { img: "/assets/clients/tcs.png" },
+  { img: "/assets/clients/mgneto.png" },
   { img: "/assets/clients/tavant.png" },
 ];
 

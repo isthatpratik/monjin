@@ -11,6 +11,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -19,6 +20,7 @@ const testimonials = [
     company: "Samartha Infosolutions",
     description:
       "Finding Monjin was one of the best decisions of our business career to find the best talent for growing our business with quality and trust. We’re scaling every part of the business very quickly with the help of their creative and unique techniques. I am very pleased with the way Monjin structures their professional interview panel and the team to provide us quick and precise comments / feedback on interview execution. I am absolutely delighted with the quality of work I have received from Monjin. I look forward to future projects with Monjin and it is a pleasure to work with such a professional team of experts.",
+    linkedIn: "https://www.linkedin.com/in/shashi-reddy-04463b48/", // Replace with actual LinkedIn URL
   },
   {
     name: "Thijs Van Dooren",
@@ -26,6 +28,7 @@ const testimonials = [
     company: "The Williams Club",
     description:
       "Every company is different and has different needs, Monjin understands that and caters accordingly. Working with Monjin has really helped my organization. I want to thank you all for a pleasant cooperation. Whenever required, I received a timely response. I don't think there's another platform which provides the customer service you do. It's been very nice working with everyone at Monjin. Let us continue to strive together and bring a new revolution in the recruitment process.",
+    linkedIn: "https://www.linkedin.com/in/thijs-profile", // Replace with actual LinkedIn URL
   },
   {
     name: "Mandar Dixit",
@@ -33,6 +36,7 @@ const testimonials = [
     company: "Giving Force",
     description:
       "Finding a talent in india is difficult. With Monjin, you get to see the candidates before meeting them. They are pre-assessed by monjin’s experienced technical interviewers. This improves the selection ratio and optimizes the time to hire.",
+    linkedIn: "https://www.linkedin.com/in/mandar-profile", // Replace with actual LinkedIn URL
   },
   {
     name: "Praveen Siddannavar",
@@ -40,6 +44,7 @@ const testimonials = [
     company: "KPIT",
     description:
       "Digital recruiting is a true game changer and provides competitive advantage to us. By utilizing Monjin, the evaluation cycle time per candidate is reduced, as only pre-screened and pre-vetted profiles are now received by our recruiters and interview panel. This therefore releases some bandwidth of the stakeholders, and also provides cost savings.",
+    linkedIn: "https://www.linkedin.com/in/praveen-siddannavar-8280b536/", // Replace with actual LinkedIn URL
   },
   {
     name: "Capt. Surender Saini",
@@ -47,6 +52,7 @@ const testimonials = [
     company: "Pegasus Yachts",
     description:
       "I have been working with monjin since the inception and it is an excellent platform for candidates. We have been very impressed with such a disruptive tech platform for interviewing. I highly recommend monjin for Yachting, IT as well as other industries.",
+    linkedIn: "https://www.linkedin.com/in/surender-saini-b6b17b56/", // Replace with actual LinkedIn URL
   },
 ];
 
@@ -87,8 +93,17 @@ export default function Testimonials() {
                     />
                     <CardContent className="lg:p-12 md:p-8 p-4 relative flex-grow">
                       <div className="mt-8 flex flex-col gap-2">
-                        <h3 className="text-xl lg:text-3xl md:text-2xl font-semibold font-figtree">
+                        <h3 className="text-xl lg:text-3xl md:text-2xl font-semibold font-figtree flex items-center gap-2">
                           {testimonial.name}
+                          <a
+                            href={testimonial.linkedIn}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-[#005582]"
+                            aria-label={`LinkedIn profile of ${testimonial.name}`}
+                          >
+                            <ArrowUpRight className="inline-block w-4 h-4 lg:w-5 lg:h-5 align-super" />
+                          </a>
                         </h3>
                         <p className="text-sm lg:text-base font-figtree figtree-light text-[#636671]">
                           {testimonial.position}

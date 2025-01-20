@@ -41,8 +41,8 @@ export function NavBar() {
                 <NavigationMenuTrigger className="text-gray-300 hover:text-white transition-colors bg-transparent border-none">
                   Products
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-[#16171D] p-4 rounded-md shadow-lg w-[300px] h-[300px] border-none">
-                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <NavigationMenuContent className="bg-[#16171D] p-4 rounded-md shadow-lg w-[300px] h-auto border-none">
+                  <ul className="flex flex-col gap-3 p-4 md:w-[400px] lg:w-[500px]">
                     <li>
                       <Link href="/products/MonjinSuite" passHref>
                         <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors">
@@ -51,9 +51,30 @@ export function NavBar() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/products/AnotherProduct" passHref>
+                      <Link href="/products/OCOI" passHref>
                         <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors">
-                          Another Product
+                          OCOI
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/products/YCOI" passHref>
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors">
+                          YCOI
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/products/Spotlight" passHref>
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors">
+                          Spotlight
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/products/Basics" passHref>
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors">
+                          Basics
                         </NavigationMenuLink>
                       </Link>
                     </li>
@@ -106,19 +127,19 @@ export function NavBar() {
             className="w-[300px] sm:w-[400px] bg-[#16171D] pr-0 text-white flex flex-col justify-center items-center border-none shadow-none"
           >
             <div className="h-[80%] flex flex-col justify-evenly py-10 font-figtree font-semibold text-center">
-              <Link href="#product" className="hover:text-gray-400 transition-colors">
+              <Link href="#" className="hover:text-gray-400 transition-colors">
                 Product
               </Link>
-              <Link href="#company" className="hover:text-gray-400 transition-colors">
+              <Link href="#" className="hover:text-gray-400 transition-colors">
                 Company
               </Link>
-              <Link href="#candidate" className="hover:text-gray-400 transition-colors">
+              <Link href="#" className="hover:text-gray-400 transition-colors">
                 Candidate
               </Link>
-              <Link href="#interviewer" className="hover:text-gray-400 transition-colors">
+              <Link href="#" className="hover:text-gray-400 transition-colors">
                 Interviewer
               </Link>
-              <Link href="#jobs" className="hover:text-gray-400 transition-colors">
+              <Link href="#" className="hover:text-gray-400 transition-colors">
                 Careers
               </Link>
             </div>

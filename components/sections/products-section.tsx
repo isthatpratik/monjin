@@ -157,7 +157,7 @@ const ProductsSection = () => {
   ];
 
   return (
-    <div className="my-20 bg-[#FFFFFF] rounded-3xl border p-8 max-h-1/3 self-center">
+    <div className="my-20 bg-[#FFFFFF] rounded-3xl border lg:p-8 md:p-6 p-2 max-h-1/3 self-center">
       <div className="flex flex-col items-center justify-center gap-4 my-12 ">
         <h2 className="font-Onest font-medium md:text-5xl text-center tracking-tighter text-3xl lg:max-w-[50vw]">
           Powering Achievements with Transformative Tools
@@ -191,15 +191,27 @@ const ProductsSection = () => {
           ))}
         </Swiper>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-[80%] my-12">
-          {productCards.map((card, index) => (
-            <ProductCard key={index} {...card} />
-          ))}
+        <div className="container mx-auto p-6">
+          {/* First row - centered two cards */}
+          <div className="flex justify-center gap-6 mb-6">
+            <div className="grid grid-cols-2 gap-6 lg:max-w-3xl md:max-w-xl">
+              {productCards.slice(0, 2).map((feature, index) => (
+                <ProductCard key={index} {...feature} />
+              ))}
+            </div>
+          </div>
+
+          {/* Second row - three cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:max-w-6xl md:max-w-4xl mx-auto">
+            {productCards.slice(2).map((feature, index) => (
+              <ProductCard key={index} {...feature} />
+            ))}
+          </div>
         </div>
       )}
       {isMobile && <div className="swiper-pagination-custom mt-4"></div>}
 
-      <div className="relative mx-auto rounded-3xl flex flex-col gap-6 lg:max-w-[80%] md:justify-between bg-[url('/assets/monjin-suite-landing-bg.png')] bg-cover bg-center h-auto lg:flex-row lg:mt-2 my-10">
+      <div className="relative mx-auto rounded-3xl flex flex-col gap-6 lg:max-w-[80%] md:justify-between md:bg-[url('/assets/monjin-suite-landing-bg.png')] bg-[url('/assets/monjin-suite-mobile-bg.jpg')] bg-cover bg-center h-auto lg:flex-row lg:mt-10 my-10">
         {/* Monjin Suite Section */}
         <div className="flex flex-col items-center p-10 gap-4 lg:w-1/2 lg:items-start lg:justify-center text-center lg:text-left">
           {/* Logo and Title */}
@@ -209,7 +221,7 @@ const ProductsSection = () => {
               width={40}
               height={40}
               src={"/assets/monjin-suite-logo.png"}
-              className="object-contain"
+              className="object-contain w-50 h-auto"
             />
             <h1 className="sm:text-2xl md:text-3xl font-figtree font-medium tracking-tight leading-tight text-white align-text-bottom">
               Monjin Suite
@@ -218,7 +230,7 @@ const ProductsSection = () => {
 
           {/* Description */}
           <p className="md:text-base text-sm lg:text-lg font-figtree font-light text-gray-300 mt-4 w-full lg:w-4/5">
-            Seamlessly book interviews through Monjin’s platform, bypassing
+            Book interviews seamlessly through Monjin’s platform, bypassing
             direct candidate contact.
           </p>
 
@@ -249,4 +261,3 @@ const ProductsSection = () => {
 };
 
 export default ProductsSection;
-

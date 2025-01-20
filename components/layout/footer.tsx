@@ -42,9 +42,17 @@ const footerLinks = {
     { name: "CSR", href: "#" },
     { name: "Contact Us", href: "#" },
   ],
+  "": [
+    { name: "", href: "#" },
+    { name: "", href: "#" },
+    { name: "", href: "#" },
+    { name: "", href: "#" },
+    { name: "", href: "#" },
+    { name: "", href: "#" },
+  ],
 };
 
-const locations = ["INDIA", "USA", "MALTA", "UK"];
+const locations = ["INDIA", "USA", "UK"];
 
 export function Footer() {
   return (
@@ -126,7 +134,7 @@ export function Footer() {
         <div className="border-b border-[#FFFFFF]/20 mb-8"></div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:grid md:grid-cols-4 gap-8 mb-12 lg:flex lg:flex-row lg:justify-between">
+        <div className="hidden md:grid md:grid-cols-4 gap-12 mb-12 lg:flex lg:flex-row lg:justify-between">
           {/* Products, Interviewer, Candidates, Company sections */}
           {Object.entries(footerLinks).map(([key, links]) => (
             <div key={key}>

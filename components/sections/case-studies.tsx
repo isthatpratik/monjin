@@ -50,7 +50,7 @@ export default function CaseStudies2() {
     <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-16 py-8">
       <div className="text-center mb-16 flex-col self-center">
         <h1 className="text-5xl font-medium mb-4 font-Onest text-[#1D1E23] text-center tracking-tighter">
-          Empowering Hiring Outcomes: Client Insights{" "}
+          The Outcome Chronicles: Shaped by Client Insights{" "}
         </h1>
         <p className="text-[#1D1E23] max-w-3xl mx-auto font-figtree text-base">
           Explore how our partnerships have sparked innovation, driving

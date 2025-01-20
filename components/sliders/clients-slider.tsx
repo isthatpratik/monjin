@@ -41,7 +41,7 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-transparent relative flex h-[100px] w-[160px] cursor-pointer overflow-hidden rounded-[18px] p-4 lg:scale-125 scale-110",
+        "bg-transparent relative flex h-[100px] w-[160px] cursor-pointer overflow-hidden rounded-[18px] p-4 xl:scale-150 lg:scale-125 scale-110",
         "items-center justify-center hover:scale-1 transition-all duration-300"
       )}
     >
@@ -62,14 +62,14 @@ export function ClientsSlider() {
   return (
     <div className="relative flex flex-col items-center justify-center bg-transparent overflow-hidden">
       <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden bg-transparent gap-8">
-        <Marquee pauseOnHover className="[--duration:90s] space-x-4">
+        <div className="flex items-center justify-center">
+            <p className="lg:text-xl text-sm font-figtree text-[#5E5E5E] text-center">Enabling Global Leaders to Build Exceptional Teams</p>
+        </div>
+        <Marquee pauseOnHover className="[--duration:90s] xl:space-x-10 lg:space-x-8 space-x-4">
           {clientsSet1.map((client) => (
             <ReviewCard key={client.img} img={client.img} />
           ))}
         </Marquee>
-        <div className="flex items-center justify-center">
-            <p className="lg:text-xl text-sm font-figtree text-[#5E5E5E] text-center">Enabling Global Leaders to Build Exceptional Teams</p>
-        </div>
       </div>
     </div>
   );
