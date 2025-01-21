@@ -110,7 +110,7 @@ export default function OcoiFeatures() {
         {/* Desktop View */}
         <div className="hidden lg:block" >
           <Tabs defaultValue="ready-interviews" className="w-full" onValueChange={setActiveTab}>
-            <TabsList className="w-full flex mb-8 h-full border-b gap-10">
+            <TabsList className="w-full flex mb-8 h-full border-b gap-10 bg-transparent">
               {tabs.map((tab) => (
                 <TabsTrigger
                 key={tab.id}
@@ -149,7 +149,7 @@ export default function OcoiFeatures() {
                         <div key={idx} className="space-y-4">
                           {featurePair.map(
                             (feature, featureIdx) =>
-                              feature && (
+                              feature && ( 
                                 <div key={featureIdx} className="text-lg">
                                   {feature}
                                 </div>

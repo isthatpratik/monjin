@@ -1,5 +1,5 @@
 import { Footer } from '@/components/layout/footer';
-import { NavBarProducts } from '@/components/layout/navbar-products';
+import { NavBarProducts } from '@/components/layout/nav-product-menu';
 import { ClientsSlider } from '@/components/sliders/clients-slider';
 import Image from 'next/image';
 import React from 'react';
