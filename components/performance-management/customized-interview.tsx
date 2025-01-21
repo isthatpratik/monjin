@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function CustomizedInterview() {
   return (
-      <section className="container mx-auto px-4 py-8 md:py-24 bg-[url('/assets/performance-management/bg.png) bg-cover bg-no-repeat]">
+      <section className="container rounded-3xl mx-auto px-4 py-8 md:py-24 bg-[url('/assets/performance-management/bg.png')] bg-cover bg-no-repeat object-contain]">
         <div className="flex flex-row gap-6">
           <div className="relative w-1/2">
             <Image
