@@ -152,7 +152,7 @@ export function NavBarProducts() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/products/spotlight" passHref>
                             <NavigationMenuLink className="text-[#FFB14A] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Spotlight</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -176,7 +176,7 @@ export function NavBarProducts() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/OCOI" passHref>
+                          <Link href="/products/MonjinSuite" passHref>
                             <NavigationMenuLink className="text-[#3B3B3B] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Monjin Suite</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -209,7 +209,7 @@ export function NavBarProducts() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/" passHref>
                             <NavigationMenuLink className="text-[#9F8AFF] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>About Us</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -231,7 +231,7 @@ export function NavBarProducts() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/" passHref>
                             <NavigationMenuLink className="text-[#F46D70] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Culture</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -253,7 +253,7 @@ export function NavBarProducts() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/" passHref>
                             <NavigationMenuLink className="text-[#B7D659] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Our Team</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -275,7 +275,7 @@ export function NavBarProducts() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/" passHref>
                             <NavigationMenuLink className="text-[#FCB352] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Contact Us</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -291,7 +291,15 @@ export function NavBarProducts() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link
-                  href="#candidate"
+                  href="/support"
+                  className="text-black hover:text-black/80 transition-colors font-figtree"
+                >
+                  Support
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link
+                  href="/candidate"
                   className="text-black hover:text-black/80 transition-colors font-figtree"
                 >
                   Candidate
@@ -299,7 +307,7 @@ export function NavBarProducts() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link
-                  href="#interviewer"
+                  href="/interviewer"
                   className="text-black hover:text-black/80 transition-colors font-figtree"
                 >
                   Interviewer
@@ -307,7 +315,7 @@ export function NavBarProducts() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link
-                  href="#jobs"
+                  href="/careers"
                   className="text-black hover:text-black/80 transition-colors font-figtree"
                 >
                   Careers

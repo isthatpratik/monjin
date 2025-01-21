@@ -209,7 +209,7 @@ export function NavBar() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/" passHref>
                             <NavigationMenuLink className="text-[#9F8AFF] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>About Us</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -231,7 +231,7 @@ export function NavBar() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/" passHref>
                             <NavigationMenuLink className="text-[#F46D70] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Culture</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -253,7 +253,7 @@ export function NavBar() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/" passHref>
                             <NavigationMenuLink className="text-[#B7D659] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Our Team</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -275,7 +275,7 @@ export function NavBar() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/" passHref>
                             <NavigationMenuLink className="text-[#FCB352] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Contact Us</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -288,6 +288,14 @@ export function NavBar() {
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuTrigger>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link
+                  href="/support"
+                  className="text-gray-300 hover:text-white transition-colors font-figtree"
+                >
+                  Support
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link

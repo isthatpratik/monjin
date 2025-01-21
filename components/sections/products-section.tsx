@@ -16,7 +16,8 @@ const ProductCard = ({
   description,
   circleColor,
   subtitleBorderColor,
-  buttonText
+  buttonText,
+  buttonHover
 }: {
   icon: string;
   title: string;
@@ -25,6 +26,7 @@ const ProductCard = ({
   circleColor: string;
   subtitleBorderColor: string;
   buttonText: string;
+  buttonHover: string;
 }) => {
   return (
     <Card className="relative bg-white p-4 rounded-2xl shadow-sm flex flex-col items-center overflow-hidden h-full min-w-[240px]">
@@ -61,14 +63,12 @@ const ProductCard = ({
         </div>
       </div>
 
-      <div className="md:flex-row flex flex-col gap-4 mt-2 justify-center pb-2 w-[80%]">
+      <div className="md:flex-row flex flex-col gap-4 mt-2 justify-center pb-2 w-[90%]">
         <Button
-          variant="default"
-          className="bg-transparent border border-black/30 shadow-none rounded-[8px] w-full text-black font-Onest font-normal text-xs px-6 py-4 transition-all duration-300 ease-in-out hover:bg-transparent hover:shadow-md"
+          className={`bg-white border border-black/30 rounded-[8px] w-full text-black font-Onest font-normal text-xs px-6 py-4 transition-all duration-300 ease-in-out ${buttonHover} hover:text-white hover:shadow-md`}
         >
           {buttonText}
         </Button>
-
       </div>
     </Card>
   );
@@ -99,17 +99,19 @@ const ProductsSection = () => {
         "OCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video interview platform.",
       circleColor: "bg-[#9F8AFF]",
       subtitleBorderColor: "border-[#8B72FF]/30",
-      buttonText: "Discover More"
+      buttonText: "Discover More",
+      buttonHover: "hover:bg-[#947EFF]"
     },
     {
       icon: "/assets/product-icons/ycoi.png",
       title: "YCOI",
       subtitle: "YOUR CANDIDATE OUR INTERVIEWERS",
       description:
-        "OCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video interview platform.",
+        "YCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video interview platform.",
       circleColor: "bg-[#B7D659]",
       subtitleBorderColor: "border-[#B7D659]/30",
-      buttonText: "Discover More"
+      buttonText: "Discover More",
+      buttonHover: "hover:bg-[#B7D659]"
     },
     {
       icon: "/assets/product-icons/spotlight.png",
@@ -119,7 +121,8 @@ const ProductsSection = () => {
         "Screen candidates efficiently, customize interview questions, and watch video interviews to fast-track your hiring process.",
       circleColor: "bg-[#FFB14A]",
       subtitleBorderColor: "border-[#FFB14A]/30",
-      buttonText: "Discover More"
+      buttonText: "Discover More",
+      buttonHover: "hover:bg-[#FFB14A]"
     },
     {
       icon: "/assets/product-icons/performance_management.png",
@@ -129,7 +132,8 @@ const ProductsSection = () => {
         "Ensuring every candidate is rigorously assessed, skip the screening process and access a pool of curated talent.",
       circleColor: "bg-[#BA57D3]",
       subtitleBorderColor: "border-[#BA57D3]/30",
-      buttonText: "Discover More"
+      buttonText: "Discover More",
+      buttonHover: "hover:bg-[#BA57D3]"
     },
     {
       icon: "/assets/product-icons/basics.png",
@@ -139,8 +143,9 @@ const ProductsSection = () => {
         "Conduct video interviews on the fly without requiring any registration, making the process quicker and more accessible.",
       circleColor: "bg-[#F46D70]",
       subtitleBorderColor: "border-[#F46D70]/30",
-      buttonText: "Discover More"
-    },
+      buttonText: "Discover More",
+      buttonHover: "hover:bg-[#F46D70]"
+    }
   ];
 
   return (
@@ -179,7 +184,6 @@ const ProductsSection = () => {
         </Swiper>
       ) : (
         <div className="container mx-auto p-6">
-          {/* First row - centered two cards */}
           <div className="flex justify-center gap-6 mb-6">
             <div className="grid grid-cols-2 gap-6 lg:max-w-3xl md:max-w-xl">
               {productCards.slice(0, 2).map((feature, index) => (
@@ -187,8 +191,6 @@ const ProductsSection = () => {
               ))}
             </div>
           </div>
-
-          {/* Second row - three cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:max-w-6xl md:max-w-4xl mx-auto">
             {productCards.slice(2).map((feature, index) => (
               <ProductCard key={index} {...feature} />
@@ -197,48 +199,6 @@ const ProductsSection = () => {
         </div>
       )}
       {isMobile && <div className="swiper-pagination-custom mt-4"></div>}
-
-      <div className="relative mx-auto rounded-3xl flex flex-col gap-6 lg:max-w-[80%] md:justify-between md:bg-[url('/assets/monjin-suite-landing-bg.png')] bg-[url('/assets/monjin-suite-mobile-bg.jpg')] bg-cover bg-center h-auto lg:flex-row lg:mt-10 my-10">
-        {/* Monjin Suite Section */}
-        <div className="flex flex-col items-center p-10 gap-4 lg:w-1/2 lg:items-start lg:justify-center text-center lg:text-left">
-          {/* Logo and Title */}
-          <div className="flex items-center gap-4">
-            <Image
-              alt="Monjin Suite Logo"
-              width={40}
-              height={40}
-              src={"/assets/monjin-suite-logo.png"}
-              className="object-contain w-50 h-auto"
-            />
-            <h1 className="sm:text-2xl md:text-3xl font-figtree font-medium tracking-tight leading-tight text-white align-text-bottom">
-              Monjin Suite
-            </h1>
-          </div>
-
-          {/* Description */}
-          <p className="md:text-base text-sm lg:text-lg font-figtree font-light text-gray-300 mt-4 w-full lg:w-4/5">
-          Experience a comprehensive solution designed to attract, engage, and retain top talent across multiple channels.
-          </p>
-
-          {/* Buttons */}
-          <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3">
-            <Button className="flex-1 bg-[#FFFFFF] text-black rounded-[8px] p-6 font-Onest text-sm transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-white">
-              Discover More
-            </Button>
-          </div>
-        </div>
-
-        {/* Illustration for Larger Devices */}
-        <div className="hidden lg:flex lg:w-1/2 relative justify-start items-center p-10">
-          <Image
-            src="/assets/monjin-suite-landing-illustration.png"
-            alt="Monjin Suite Illustration"
-            width={520}
-            height={365}
-            className="object-contain"
-          />
-        </div>
-      </div>
     </div>
   );
 };
