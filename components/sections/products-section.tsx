@@ -16,8 +16,7 @@ const ProductCard = ({
   description,
   circleColor,
   subtitleBorderColor,
-  buttonText1,
-  buttonText2,
+  buttonText
 }: {
   icon: string;
   title: string;
@@ -25,8 +24,7 @@ const ProductCard = ({
   description: string;
   circleColor: string;
   subtitleBorderColor: string;
-  buttonText1: string;
-  buttonText2: string;
+  buttonText: string;
 }) => {
   return (
     <Card className="relative bg-white p-4 rounded-2xl shadow-sm flex flex-col items-center overflow-hidden h-full min-w-[240px]">
@@ -66,17 +64,11 @@ const ProductCard = ({
       <div className="md:flex-row flex flex-col gap-4 mt-2 justify-center pb-2 w-[80%]">
         <Button
           variant="default"
-          className="bg-[#2A2A2A] w-full text-white font-Onest font-normal text-xs px-6 py-4 rounded-[65px] transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(0,0,0,0.3)]"
+          className="bg-transparent border border-black/30 shadow-none rounded-[8px] w-full text-black font-Onest font-normal text-xs px-6 py-4 transition-all duration-300 ease-in-out hover:bg-transparent hover:shadow-md"
         >
-          {buttonText1}
+          {buttonText}
         </Button>
 
-        <Button
-          variant="outline"
-          className="border-[#0000001A]/10 w-full border-b-2 text-[#565656] font-Onest font-normal text-xs px-6 py-4 rounded-[65px] transition-all duration-300 ease-in-out hover:border-black"
-        >
-          {buttonText2}
-        </Button>
       </div>
     </Card>
   );
@@ -107,8 +99,7 @@ const ProductsSection = () => {
         "OCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video interview platform.",
       circleColor: "bg-[#9F8AFF]",
       subtitleBorderColor: "border-[#8B72FF]/30",
-      buttonText1: "Start Trial",
-      buttonText2: "Learn More",
+      buttonText: "Discover More"
     },
     {
       icon: "/assets/product-icons/ycoi.png",
@@ -118,8 +109,7 @@ const ProductsSection = () => {
         "OCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video interview platform.",
       circleColor: "bg-[#B7D659]",
       subtitleBorderColor: "border-[#B7D659]/30",
-      buttonText1: "Start Trial",
-      buttonText2: "Learn More",
+      buttonText: "Discover More"
     },
     {
       icon: "/assets/product-icons/spotlight.png",
@@ -129,8 +119,7 @@ const ProductsSection = () => {
         "Screen candidates efficiently, customize interview questions, and watch video interviews to fast-track your hiring process.",
       circleColor: "bg-[#FFB14A]",
       subtitleBorderColor: "border-[#FFB14A]/30",
-      buttonText1: "Start Trial",
-      buttonText2: "Learn More",
+      buttonText: "Discover More"
     },
     {
       icon: "/assets/product-icons/performance_management.png",
@@ -140,8 +129,7 @@ const ProductsSection = () => {
         "Ensuring every candidate is rigorously assessed, skip the screening process and access a pool of curated talent.",
       circleColor: "bg-[#BA57D3]",
       subtitleBorderColor: "border-[#BA57D3]/30",
-      buttonText1: "Start Trial",
-      buttonText2: "Learn More",
+      buttonText: "Discover More"
     },
     {
       icon: "/assets/product-icons/basics.png",
@@ -151,8 +139,7 @@ const ProductsSection = () => {
         "Conduct video interviews on the fly without requiring any registration, making the process quicker and more accessible.",
       circleColor: "bg-[#F46D70]",
       subtitleBorderColor: "border-[#F46D70]/30",
-      buttonText1: "Start Trial",
-      buttonText2: "Learn More",
+      buttonText: "Discover More"
     },
   ];
 
@@ -162,7 +149,7 @@ const ProductsSection = () => {
         <h2 className="font-Onest font-medium md:text-5xl text-center tracking-tighter text-3xl lg:max-w-[50vw]">
           Powering Achievements with Transformative Tools
         </h2>
-        <p className="font-figtree tracking-tight text-center lg:max-w-[40vw] max-w-[80vw] sm:text-sm md:text-base">
+        <p className="font-figtree tracking-tight text-center lg:max-w-[40vw] max-w-[80vw] sm:text-sm md:text-lg">
           Unleash the true power of your processes with solutions built for
           rapid execution, flawless precision, and transformative results
         </p>
@@ -235,11 +222,8 @@ const ProductsSection = () => {
 
           {/* Buttons */}
           <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3">
-            <Button className="w-full bg-[#FFFFFF] text-black rounded-full p-6 font-Onest text-sm transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-white">
-              Start Trial
-            </Button>
-            <Button className="w-full bg-transparent border border-[#FFFFFF]/20 text-[#FFFFFF] rounded-full p-6 text-sm font-Onest transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-transparent hover:border-white">
-              Learn More
+            <Button className="flex-1 bg-[#FFFFFF] text-black rounded-[8px] p-6 font-Onest text-sm transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-white">
+              Discover More
             </Button>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function OcoiHeroSection() {
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center py-12">
         <div className="space-y-6">
           <div className="inline-flex rounded-xl border-[#9F8AFF] border p-1">
-            <button className="px-4 py-2 font-figree text-[#9F8AFF] font-medium">
+            <button className="px-4 py-2 font-figree text-[#9F8AFF] font-medium cursor-default">
               <strong>OCOI</strong>- OUR CANDIDATES OUR INTERVIEWERS
             </button>
           </div>
@@ -17,7 +17,7 @@ export default function OcoiHeroSection() {
           <p className="text-[#353535] font-light text-lg font-figtree">
           Turn opportunities into success with Monjin&apos;s OCOI — a smart solution designed to transform your hiring process. Discover how Monjin OCOI empowers your team to hire better, faster, and smarter.
           </p>
-          <Button className="bg-black text-white hover:bg-gray-800 rounded-full px-6 py-3">
+          <Button className="bg-black text-white hover:bg-gray-800 rounded-[8px] px-6 py-3">
             Watch Free For 15 Days
           </Button>
         </div>

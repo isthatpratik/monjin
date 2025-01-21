@@ -25,7 +25,7 @@ const FeatureSection = () => {
         />
       </div>
 
-      <div className="flex flex-col gap-8 items-center mt-10 py-6">
+      <div className="flex flex-col gap-8 items-center mt-10 pt-6">
         <h2 className="font-Onest font-medium text-[#1D1E23] lg:text-5xl text-center tracking-tighter text-4xl lg:max-w-[60%] max-w-[95%] leading-normal">
           Simplify Your Hiring Process with AI-Powered Interview Scheduling.
         </h2>
@@ -39,7 +39,7 @@ const FeatureSection = () => {
       {/* Three Divs Section with Responsive Layout */}
       <div className="flex flex-col lg:flex-row justify-between gap-2 mt-6 w-full lg:w-[90%] md:flex-col">
         {/* Div 1 */}
-        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[600px] justify-center">
+        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto justify-center">
           <Image
             quality={100}
             width={355}
@@ -60,7 +60,7 @@ const FeatureSection = () => {
         <div className="hidden self-center lg:block lg:w-[1px] lg:h-[200px] lg:bg-[#23252F]/20 lg:mx-8"></div>
 
         {/* Div 2 */}
-        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[600px] justify-center">
+        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto justify-center">
           <Image
             quality={100}
             width={355}
@@ -82,7 +82,7 @@ const FeatureSection = () => {
         <div className="hidden self-center lg:block lg:w-[1px] lg:h-[200px] lg:bg-[#23252F]/20 lg:mx-8"></div>
 
         {/* Div 3 */}
-        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto lg:h-[600px] justify-center">
+        <div className="flex flex-col items-center w-full lg:w-1/3 h-auto justify-center">
           <Image
             quality={100}
             width={355}

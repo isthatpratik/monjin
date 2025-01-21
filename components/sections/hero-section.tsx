@@ -17,7 +17,7 @@ export const HeroSection = () => {
           decisions.
         </p>
         <div className="hidden lg:block">
-          <Button className="bg-[#D0F16C] w-full sm:w-auto text-black hover:bg-[#D0F16C] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 text-xs sm:text-sm lg:text-base font-Onest font-light transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#D0F16C]/50 hover:cursor-pointer">
+          <Button className="bg-[#D0F16C] w-full sm:w-auto text-black hover:bg-[#D0F16C] rounded-[8px] px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 text-xs sm:text-sm lg:text-base font-Onest font-light transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#D0F16C]/50 hover:cursor-pointer">
             Experience Monjin
           </Button>
         </div>
@@ -100,7 +100,7 @@ export const HeroSection = () => {
 
       {/* Button for mobile view (below bento grid) */}
       <div className="block lg:hidden mt-6">
-        <Button className="bg-[#D0F16C] w-full text-black hover:bg-[#D0F16C] rounded-full px-4 sm:px-6 py-6 sm:py-6 text-base font-Onest font-light transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#D0F16C]/50 hover:cursor-pointer">
+        <Button className="bg-[#D0F16C] w-full text-black hover:bg-[#D0F16C] rounded-[8px] px-4 sm:px-6 py-6 sm:py-6 text-base font-Onest font-light transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#D0F16C]/50 hover:cursor-pointer">
           Experience Monjin
         </Button>
       </div>

@@ -180,19 +180,19 @@ export function Footer() {
         <div className="text-sm text-white mb-8">
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-start gap-4">
             <div className="flex flex-col lg:flex-row md:flex-row lg:justify-start justify-center items-center lg:items-start md:items-start gap-1 w-1/2">
-              <Link href="#" className="hover:text-white underline">
+              <Link href="#" className="hover:text-white hover:underline">
                 Terms of Service
               </Link>
               -
-              <Link href="#" className="hover:text-white underline">
+              <Link href="#" className="hover:text-white hover:underline">
                 Privacy Notice
               </Link>
               -
-              <Link href="#" className="hover:text-white underline">
+              <Link href="#" className="hover:text-white hover:underline">
                 GDPR
               </Link>
             </div>
-            <div className="flex text-center underline max-w-[80%] lg:w-full justify-end">© 2023 Monjin Interviews Pvt. Ltd. All Rights Reserved</div>
+            <div className="flex text-center hover:underline max-w-[80%] lg:w-full justify-end">© 2023 Monjin Interviews Pvt. Ltd. All Rights Reserved</div>
           </div>
         </div>
       </div>

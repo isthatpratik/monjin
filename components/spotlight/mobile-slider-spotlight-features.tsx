@@ -29,15 +29,17 @@ export function MobileSlider({ tabs }: MobileSliderProps) {
               </div>
               <p className="text-lg text-gray-600">{tab.description}</p>
               <div className="grid grid-cols-1 gap-4">
-                {tab.features.map((featurePair, idx) => (
-                  <div key={idx} className="space-y-4">
-                    {featurePair.map(
+                {tab.features.map((feature, index) => (
+                  <div key={index} className="space-y-4">
+                    {Array.isArray(feature) ? feature.map(
                       (feature, featureIdx) =>
                         feature && (
                           <div key={featureIdx} className="text-lg">
                             {feature}
                           </div>
                         )
+                    ) : (
+                      <div className="text-lg">{feature}</div>
                     )}
                   </div>
                 ))}

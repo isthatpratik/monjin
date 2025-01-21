@@ -17,28 +17,28 @@ const slides = [
     title: "On-demand Panels for Neutrally Assessed Candidates",
     description:
       "Futuristic Hiring Route.",
-    buttonText: "Read Case Study",
+    buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-1.png",
   },
   {
     title: "Futuristic Hiring Route",
     description:
       "Revolutionized Just-In-Time resourcing, addressing rapid hiring demands in the growing Tech sector.",
-    buttonText: "Read Case Study",
+    buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-2.png",
   },
   {
     title: "Quality hiring for the digital skills",
     description:
       "Delivering higher selection ratio.",
-    buttonText: "Read Case Study",
+    buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-3.png",
   },
   {
     title: "Propelling Hiring Demands",
     description:
       "Provided a neutral assessment platform to help the world's leading IT company.",
-    buttonText: "Read Case Study",
+    buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-4.png",
   },
 ];

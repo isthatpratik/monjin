@@ -109,7 +109,7 @@ export function PricingSection({
           <CardFooter className="mt-auto pt-6">
             <Button
               onClick={lite.ctaAction}
-              className="w-full bg-black text-white hover:shadow-monjin transition-all duration-300 rounded-full h-12 font-figtree"
+              className="w-full bg-black text-white hover:shadow-monjin transition-all duration-300 rounded-[8px] h-12 font-figtree"
             >
               {lite.ctaLabel}
             </Button>
@@ -160,7 +160,7 @@ export function PricingSection({
           <CardFooter className="mt-auto pt-6">
             <Button
               onClick={essential.ctaAction}
-              className="w-full bg-white text-black hover:shadow-monjin hover:bg-white transition-all duration-300 rounded-full h-12 font-figtree"
+              className="w-full bg-white text-black hover:shadow-monjin hover:bg-white transition-all duration-300 rounded-[8px] h-12 font-figtree"
             >
               {essential.ctaLabel}
             </Button>
@@ -211,7 +211,7 @@ export function PricingSection({
           <CardFooter className="mt-auto pt-6">
             <Button
               onClick={professional.ctaAction}
-              className="w-full bg-black text-white hover:shadow-monjin transition-all duration-300 rounded-full h-12 font-Onest font-light"
+              className="w-full bg-black text-white hover:shadow-monjin transition-all duration-300 rounded-[8px] h-12 font-Onest font-light"
             >
               {professional.ctaLabel}
             </Button>

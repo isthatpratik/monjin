@@ -61,15 +61,21 @@ export function ClientsSlider() {
   return (
     <div className="relative flex flex-col items-center justify-center bg-transparent overflow-hidden">
       <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden bg-transparent gap-2">
-        <div className="flex items-center justify-center w-[70%] relative">
-          <div className="absolute left-5 h-0.5 w-1/3 bg-gradient-to-r from-transparent 80% to-[#666666]/50"></div>
-          <p className="lg:text-[18px] text-sm font-figtree text-[#5E5E5E] text-center mx-6">
-            Enabling Global Leaders to Build Exceptional Teams
-          </p>
-          <div className="absolute right-5 h-0.5 w-1/3 bg-gradient-to-l from-transparent 80% to-[#666666]/50"></div>
+        <div className="flex items-center justify-center w-[80%] relative">
+          <div className="flex items-center justify-center w-full relative">
+            {/* Left Line */}
+            <div className="h-0.5 xl:w-1/3 lg:w-1/3 w-1/3 bg-gradient-to-r from-transparent to-[#666666]/50"></div>
+
+            {/* Center Text */}
+            <p className="lg:text-[18px] text-sm font-figtree text-[#5E5E5E] text-center mx-4 px-2 w-max">
+              Enabling Global Leaders to Build Exceptional Teams
+            </p>
+
+            {/* Right Line */}
+            <div className="h-0.5 xl:w-1/3 lg:w-1/3 w-1/3 bg-gradient-to-l from-transparent to-[#666666]/50"></div>
+          </div>
         </div>
         <Marquee
-          pauseOnHover
           className="[--duration:90s] xl:space-x-10 lg:space-x-8 space-x-4"
         >
           {clientsSet1.map((client) => (

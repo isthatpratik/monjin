@@ -1,18 +1,19 @@
 'use client'
 
+import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/product-tabs"
 import { cn } from "@/lib/utils"
-import { MobileSlider } from '@/components/ocoi/mobile-slider-ocoi-features'
 import { FileText, StarIcon, SquarePen, CircleCheck, CircleUser } from 'lucide-react'
 import Image from 'next/image'
+import { Separator } from '../ui/separator'
 
 export interface Tab {
     id: string
     label: string
     title: string
     description: string
-    features: string[][]
+    features: string[]
     icon: React.ReactNode
     imageUrl: string
   }
@@ -24,8 +25,8 @@ const tabs: Tab[] = [
     title: 'Expert Assessments',
     description: 'Leverage Industry Expertise for Superior Candidate Evaluation.',
     features: [
-      ['Top-Tier Assessments', 'Comprehensive Skill Evaluation'],
-      ['Video Feedback & Insights', 'Customizable Assessments'],
+      'Top-Tier Assessments', 'Comprehensive Skill Evaluation',
+      'Video Feedback & Insights', 'Customizable Assessments',
     ],
     icon: <StarIcon className="w-5 h-5" />,
     imageUrl: '/assets/ycoi/expert-assessments.png'
@@ -36,9 +37,9 @@ const tabs: Tab[] = [
     title: 'Smart Scheduling & Interviewing with Monjin',
     description: "Optimize your interview process with flexible, efficient, and intelligent scheduling features designed for both candidates and interviewers.",
     features: [
-      ['Candidate-Driven Scheduling', 'AI-Powered Auto Matching'],
-      ['Interviewer-Driven Scheduling', 'Live Interview Viewing', ],
-      [  'Customized Scheduling Support', 'Recorded & Indexed Interviews'],
+      'Candidate-Driven Scheduling', 'AI-Powered Auto Matching',
+      'Interviewer-Driven Scheduling', 'Live Interview Viewing', 
+        'Customized Scheduling Support', 'Recorded & Indexed Interviews',
     ],
     icon: <SquarePen className="w-5 h-5" />,
     imageUrl: '/assets/ycoi/scheduling-interviewing.png'  },
@@ -48,8 +49,8 @@ const tabs: Tab[] = [
     title: 'Effortless Job Posting',
     description: "Attract top talent with Monjin's streamlined job posting tools, designed to enhance your hiring strategy and brand visibility.",
     features: [
-      ['Create or Import JD’s', 'Publish Seamlessly'],
-      ['Video Job Descriptions', 'Candidate Invitations'],
+      'Create or Import JD’s', 'Publish Seamlessly',
+      'Video Job Descriptions', 'Candidate Invitations',
     ],
     icon: <CircleUser className="w-5 h-5" />,
     imageUrl: '/assets/ycoi/job-posting.png'  },
@@ -59,9 +60,9 @@ const tabs: Tab[] = [
     title: 'Collaboration for Swift Hiring Decisions',
     description: 'Enhance teamwork and streamline hiring with Monjin’s collaborative features designed to bring candidates, hiring managers, and recruiters together effortlessly.',
     features: [
-      ['Sharing', ''],
-      ['Comments & Feedback', ''],
-      ['Playback & verdict', ''],
+      'Sharing',
+      'Comments & Feedback',
+      'Playback & verdict', 
     ],
     icon: <CircleCheck className="w-5 h-5" />,
     imageUrl: '/assets/ycoi/hiring-decisions.png'  },
@@ -71,8 +72,8 @@ const tabs: Tab[] = [
     title: 'Reports & Analytics for Data-Driven Hiring',
     description: "Gain valuable insights into your hiring process with Monjin’s comprehensive Reports & Analytics module. From standard reports to customized insights, we provide the data you need to optimize talent acquisition.",
     features: [
-      ['Customized Reports' ],
-      ['Real-Time Updates' ],
+      'Customized Reports' ,
+      'Real-Time Updates'
     ],
     icon: <FileText className="w-5 h-5" />,
     imageUrl: '/assets/ycoi/data-driven-hiring.png'  }
@@ -146,50 +147,60 @@ export default function YcoiFeatures() {
               </TabsList>
   
               {tabs.map((tab) => (
-                <TabsContent key={tab.id} value={tab.id} className="space-y-8 px-10 pt-4">
-                  <div className="grid lg:grid-cols-2 gap-12">
-                    <div className="space-y-6">
-                      <h2 className="font-figtree font-medium text-2xl tracking-tighter">
-                        {tab.title}
-                      </h2>
-                      <p className="text-lg font-figtree font-light text-[#353535] leading-loose">
-                        {tab.description}
-                      </p>
-                      <div className="grid lg:grid-cols-2 gap-6 text-lg font-figtree font-normal pt-2 tracking-wide">
-                        {tab.features.map((featurePair, idx) => (
-                          <div key={idx} className="space-y-4">
-                            {featurePair.map(
-                              (feature, featureIdx) =>
-                                feature && (
-                                  <div key={featureIdx} className="text-lg">
-                                    {feature}
-                                  </div>
-                                )
+              <TabsContent
+                key={tab.id}
+                value={tab.id}
+                className="space-y-8 pt-4 justify-between"
+              >
+                <div className="grid lg:grid-cols-2 gap-12">
+                  <div className="space-y-6">
+                    <h2 className="font-figtree font-medium text-2xl tracking-tighter">
+                      {tab.title}
+                    </h2>
+                    <p className="text-lg font-figtree font-light text-[#353535] leading-loose">
+                      {tab.description}
+                    </p>
+                    <div className="grid lg:grid-cols-2 gap-4 text-lg font-figtree font-normal pt-2 tracking-wide relative">
+                      {tab.features.map((feature, index) => (
+                        <React.Fragment key={index}>
+                          <div
+                            className={cn(
+                              "space-y-6",
+                              index % 2 === 1 ? "pl-14" : ""
                             )}
+                          >
+                            <div className="text-lg">{feature}</div>
                           </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="relative h-[400px] rounded-lg overflow-hidden">
-                      <Image
-                        src={tab.imageUrl || "/placeholder.svg"}
-                        alt={tab.title}
-                        className="w-full h-full object-contain"
-                        height={1000}
-                        width={1000}
-                        quality={70}
-                      />
+                          {index % 2 === 1 &&
+                            index < tab.features.length - 1 && (
+                              <Separator className="col-span-2 my-1" />
+                            )}
+                        </React.Fragment>
+                      ))}
+                      {tab.features.length > 1 && (
+                        <Separator
+                          orientation="vertical"
+                          className="absolute left-1/2 top-0 h-full"
+                        />
+                      )}
                     </div>
                   </div>
-                </TabsContent>
-              ))}
+                  <div className="relative h-[400px] rounded-lg overflow-hidden">
+                    <Image
+                      src={tab.imageUrl || "/placeholder.svg"}
+                      alt={tab.title}
+                      className="w-full h-full object-contain"
+                      height={1000}
+                      width={1000}
+                      quality={70}
+                    />
+                  </div>
+                </div>
+              </TabsContent>
+            ))}
             </Tabs>
           </div>
   
-          {/* Mobile View */}
-          <div className="lg:hidden">
-            <MobileSlider tabs={tabs} />
-          </div>
         </div>
       </div>
     )

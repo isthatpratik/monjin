@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import React from "react";
 import {
   Tabs,
   TabsList,
@@ -8,38 +9,39 @@ import {
   TabsContent,
 } from "@/components/ui/product-tabs";
 import { cn } from "@/lib/utils";
-import { MobileSlider } from "@/components/ocoi/mobile-slider-ocoi-features";
 import {
   CircleCheck,
   Files,
-  FileChartColumn,
+  FileBarChartIcon as FileChartColumn,
   FileStackIcon,
   CalendarCheck,
   SquarePlay,
 } from "lucide-react";
 import Image from "next/image";
+import { Separator } from "../ui/separator";
 
 export interface Tab {
   id: string;
   label: string;
   title: string;
   description: string;
-  features: string[][];
+  features: string[];
   icon: React.ReactNode;
   imageUrl: string;
 }
-<div></div>;
+
 const tabs: Tab[] = [
   {
-    id: "customize-interview",
+    id: "otp-interviews",
     label: "OTP-Based Interviews",
     title: "OTP-Based Interviews",
     description:
-      "Simplify your interview process with instant, secure invites. Share a unique OTP  for candidates to join video interviews seamlessly. No registration required — just enter the code and connect instantly, ensuring a fast and frictionless experience for both interviewers and candidates.",
+      "Simplify your interview process with instant, secure invites. Share a unique OTP for candidates to join video interviews seamlessly. No registration required — just enter the code and connect instantly, ensuring a fast and frictionless experience for both interviewers and candidates.",
     features: [
-      ["Simple Code Login", "Calendar Integration"],
-      ["Interviewer Access", "Lightning-Fast Setup"],
-      ["", ""],
+      "Simple Code Login",
+      "Calendar Integration",
+      "Interviewer Access",
+      "Lightning-Fast Setup",
     ],
     icon: <CircleCheck className="w-5 h-5" />,
     imageUrl: "/assets/basics/otp-interviews.png",
@@ -51,9 +53,11 @@ const tabs: Tab[] = [
     description:
       "Enhance your hiring process with Basics' multi-panel feature, allowing you to add multiple interviewers to a single session for a more comprehensive and collaborative evaluation.",
     features: [
-      ["Collaborative Scheduling", "Screen Sharing"],
-      ["Time Zone Management", "Granular Feedback"],
-      ["Proctoring", ""],
+      "Collaborative Scheduling",
+      "Screen Sharing",
+      "Time Zone Management",
+      "Granular Feedback",
+      "Proctoring",
     ],
     icon: <FileStackIcon className="w-5 h-5" />,
     imageUrl: "/assets/basics/multipanel-interviews.png",
@@ -64,7 +68,7 @@ const tabs: Tab[] = [
     title: "Scheduling an Interview",
     description:
       "Streamline your interview scheduling with easy-to-use online tools, making it quick and efficient to set up interviews.With an intuitive interface, you can quickly set up interview sessions and ensure a smooth process for both candidates and interviewers.",
-    features: [["Matching Interviewers", "Online Calendar"]],
+    features: ["Matching Interviewers", "Online Calendar"],
     icon: <CalendarCheck className="w-5 h-5" />,
     imageUrl: "/assets/basics/schedule-interview.png",
   },
@@ -75,8 +79,10 @@ const tabs: Tab[] = [
     description:
       "The heart of your interview process, the Conclave is where the actual interview takes place. Whether you're conducting a one-on-one or a multi-panel session, the Conclave offers a seamless space for interviewers to collaborate and assess candidates in real-time.",
     features: [
-      ["Creating Timestamps", "Screen Sharing"],
-      ["Code and Chat", "Granular Feedback"],
+      "Creating Timestamps",
+      "Screen Sharing",
+      "Code and Chat",
+      "Granular Feedback",
     ],
     icon: <SquarePlay className="w-5 h-5" />,
     imageUrl: "/assets/basics/video-conclave.png",
@@ -87,7 +93,7 @@ const tabs: Tab[] = [
     title: "Collaboration",
     description:
       "Monjin Basics enhances your hiring process with powerful collaboration features, allowing seamless feedback collection from key stakeholders. The platform allows feedback to be provided in both textual and video formats, ensuring that all perspectives are captured.",
-    features: [["Sharing Interview Visuals", "Verdict"]],
+    features: ["Sharing Interview Visuals", "Verdict"],
     icon: <Files className="w-5 h-5" />,
     imageUrl: "/assets/basics/collaboration.png",
   },
@@ -97,14 +103,14 @@ const tabs: Tab[] = [
     title: "Reports & Analytics ",
     description:
       "Make data-driven hiring decisions with Basics' advanced reporting and analytics features. With advanced reporting capabilities, you can visually track key metrics such as candidate ratings, performance scores, and the overall efficiency of your hiring operations. These insights allow you to make data-driven decisions and improve your recruitment strategy.",
-    features: [["Advanced Reports", "Sharing and Collaboration"]],
+    features: ["Advanced Reports", "Sharing and Collaboration"],
     icon: <FileChartColumn className="w-5 h-5" />,
     imageUrl: "/assets/basics/reports-analytics.png",
   },
 ];
 
 export default function BasicsFeatures() {
-  const [activeTab, setActiveTab] = useState("multi-panel");
+  const [activeTab, setActiveTab] = useState("otp-interviews");
   const [indicatorStyle, setIndicatorStyle] = useState<React.CSSProperties>({});
   const tabsListRef = useRef<HTMLDivElement>(null);
 
@@ -140,7 +146,7 @@ export default function BasicsFeatures() {
         {/* Desktop View */}
         <div className="hidden lg:block">
           <Tabs
-            defaultValue="multi-panel"
+            defaultValue="otp-interviews"
             className="w-full"
             onValueChange={setActiveTab}
           >
@@ -179,7 +185,7 @@ export default function BasicsFeatures() {
               <TabsContent
                 key={tab.id}
                 value={tab.id}
-                className="space-y-8 px-10 pt-4"
+                className="space-y-8 pt-4 justify-between"
               >
                 <div className="grid lg:grid-cols-2 gap-12">
                   <div className="space-y-6">
@@ -189,19 +195,29 @@ export default function BasicsFeatures() {
                     <p className="text-lg font-figtree font-light text-[#353535] leading-loose">
                       {tab.description}
                     </p>
-                    <div className="grid lg:grid-cols-2 gap-6 text-lg font-figtree font-normal pt-2 tracking-wide">
-                      {tab.features.map((featurePair, idx) => (
-                        <div key={idx} className="space-y-4">
-                          {featurePair.map(
-                            (feature, featureIdx) =>
-                              feature && (
-                                <div key={featureIdx} className="text-lg">
-                                  {feature}
-                                </div>
-                              )
-                          )}
-                        </div>
+                    <div className="grid lg:grid-cols-2 gap-4 text-lg font-figtree font-normal pt-2 tracking-wide relative">
+                      {tab.features.map((feature, index) => (
+                        <React.Fragment key={index}>
+                          <div
+                            className={cn(
+                              "space-y-6",
+                              index % 2 === 1 ? "pl-14" : ""
+                            )}
+                          >
+                            <div className="text-lg">{feature}</div>
+                          </div>
+                          {index % 2 === 1 &&
+                            index < tab.features.length - 1 && (
+                              <Separator className="col-span-2 my-1" />
+                            )}
+                        </React.Fragment>
                       ))}
+                      {tab.features.length > 1 && (
+                        <Separator
+                          orientation="vertical"
+                          className="absolute left-1/2 top-0 h-full"
+                        />
+                      )}
                     </div>
                   </div>
                   <div className="relative h-[400px] rounded-lg overflow-hidden">
@@ -218,11 +234,6 @@ export default function BasicsFeatures() {
               </TabsContent>
             ))}
           </Tabs>
-        </div>
-
-        {/* Mobile View */}
-        <div className="lg:hidden">
-          <MobileSlider tabs={tabs} />
         </div>
       </div>
     </div>

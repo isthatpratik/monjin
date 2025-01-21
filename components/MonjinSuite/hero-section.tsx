@@ -28,8 +28,8 @@ const MonjinSuiteHero = () => {
         with our all-in-one platform designed to streamline your processes and
         deliver exceptional results.
       </p>
-      <Button className="rounded-full bg-[#1B1B1B] text-white px-6 py-6 w-full md:w-auto font-Onest text-sm">
-        Start Trial
+      <Button className="rounded-[8px] bg-[#1B1B1B] text-white px-6 py-6 w-full md:w-auto font-Onest text-sm">
+        Start Exploring
       </Button>
     </div>
   );
