@@ -6,12 +6,9 @@ export default function OcoiHeroSection() {
     <main className="min-h-screen mb-20">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center py-12">
         <div className="space-y-6">
-          <div className="flex justify-between items-center">
-            <h1 className="text-6xl font-medium ">OCOI</h1>
-          </div>
-          <div className="inline-flex rounded-xl border-purple-600 border p-1">
-            <button className="px-4 py-2 font-figree text-purple-600 font-medium">
-              OUR CANDIDATES OUR INTERVIEWERS
+          <div className="inline-flex rounded-xl border-[#9F8AFF] border p-1">
+            <button className="px-4 py-2 font-figree text-[#9F8AFF] font-medium">
+              <strong>OCOI</strong>- OUR CANDIDATES OUR INTERVIEWERS
             </button>
           </div>
           <h2 className="text-5xl font-bold font-onest lg:text-7xl text-[#353535] tracking-tighter leading-tight">

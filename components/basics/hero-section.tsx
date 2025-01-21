@@ -8,7 +8,7 @@ export default function BasicsHeroSection() {
         <div className="space-y-6">
           <div className="inline-flex rounded-xl border-[#F18800] border p-1">
             <button className="px-4 py-2 font-figree text-[#F18800] text-lg font-medium uppercase">
-              <strong>Basics</strong> - Accelerate Efficient Screening
+              <strong>Basics</strong> - Streamline Effortless Hiring
             </button>
           </div>
           <h2 className="text-5xl font-bold font-onest lg:text-7xl text-[#353535] leading-tight tracking-tighter">

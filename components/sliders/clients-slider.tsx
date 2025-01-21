@@ -36,7 +36,6 @@ const clientsSet1 = [
   { img: "/assets/clients/tavant.png" },
 ];
 
-
 const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
@@ -61,11 +60,18 @@ const ReviewCard = ({ img }: { img: string }) => {
 export function ClientsSlider() {
   return (
     <div className="relative flex flex-col items-center justify-center bg-transparent overflow-hidden">
-      <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden bg-transparent gap-8">
-        <div className="flex items-center justify-center">
-            <p className="lg:text-xl text-sm font-figtree text-[#5E5E5E] text-center">Enabling Global Leaders to Build Exceptional Teams</p>
+      <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden bg-transparent gap-2">
+        <div className="flex items-center justify-center w-[70%] relative">
+          <div className="absolute left-5 h-0.5 w-1/3 bg-gradient-to-r from-transparent 80% to-[#666666]/50"></div>
+          <p className="lg:text-[18px] text-sm font-figtree text-[#5E5E5E] text-center mx-6">
+            Enabling Global Leaders to Build Exceptional Teams
+          </p>
+          <div className="absolute right-5 h-0.5 w-1/3 bg-gradient-to-l from-transparent 80% to-[#666666]/50"></div>
         </div>
-        <Marquee pauseOnHover className="[--duration:90s] xl:space-x-10 lg:space-x-8 space-x-4">
+        <Marquee
+          pauseOnHover
+          className="[--duration:90s] xl:space-x-10 lg:space-x-8 space-x-4"
+        >
           {clientsSet1.map((client) => (
             <ReviewCard key={client.img} img={client.img} />
           ))}

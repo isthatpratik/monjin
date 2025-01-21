@@ -41,7 +41,7 @@ export function NavBar() {
                 <NavigationMenuTrigger className="text-gray-300 hover:text-white transition-colors bg-transparent border-none">
                   Products
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-[#16171D] p-4 rounded-md shadow-lg w-[300px] h-auto border-none">
+                <NavigationMenuContent className="bg-[#1B1B1B] p-4 rounded-md shadow-lg w-[300px] h-auto border-none">
                   <ul className="flex flex-col gap-3 p-4 md:w-[400px] lg:w-[500px]">
                     <li>
                       <Link href="/products/MonjinSuite" passHref>
@@ -59,22 +59,29 @@ export function NavBar() {
                     </li>
                     <li>
                       <Link href="/products/YCOI" passHref>
-                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors">
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors font-figtree">
                           YCOI
                         </NavigationMenuLink>
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/Spotlight" passHref>
-                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors">
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors font-figtree">
                           Spotlight
                         </NavigationMenuLink>
                       </Link>
                     </li>
                     <li>
                       <Link href="/products/Basics" passHref>
-                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors">
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors font-figtree">
                           Basics
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/products/Basics" passHref>
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors font-figtree">
+                          Performance Management
                         </NavigationMenuLink>
                       </Link>
                     </li>
@@ -83,22 +90,40 @@ export function NavBar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="#company" className="text-gray-300 hover:text-white transition-colors">
+              <NavigationMenuTrigger className="text-gray-300 hover:text-white transition-colors bg-transparent border-none font-figtree">
                   Company
-                </Link>
+                  <NavigationMenuContent className="bg-[#1B1B1B] p-4 rounded-md shadow-lg w-[300px] h-auto border-none font-figtree">
+                  <ul className="flex flex-col gap-3 p-4 md:w-[400px] lg:w-[500px]">
+                    <li>
+                      <Link href="/company/about" passHref>
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors font-figtree">
+                          About
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/company/culture" passHref>
+                        <NavigationMenuLink className="text-gray-300 hover:text-white transition-colors font-figtree">
+                          Culture
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+                </NavigationMenuTrigger>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#candidate" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="#candidate" className="text-gray-300 hover:text-white transition-colors font-figtree">
                   Candidate
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#interviewer" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="#interviewer" className="text-gray-300 hover:text-white transition-colors font-figtree">
                   Interviewer
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#jobs" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="#jobs" className="text-gray-300 hover:text-white transition-colors font-figtree">
                   Careers
                 </Link>
               </NavigationMenuItem>

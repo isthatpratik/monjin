@@ -22,9 +22,12 @@ export function PricingSection({
     "monthly"
   );
 
-  const getPrice = (monthly: number, annual: number) => {
-    return billingCycle === "monthly" ? monthly : annual;
+  const getPrice = (monthly: string, annual: string) => {
+    const price = billingCycle === "monthly" ? monthly : annual;
+    return price || ""; // Return an empty string if the price is empty
   };
+
+  const showPriceDetails = (price: string) => price !== "";
 
   return (
     <section className="py-16 lg:px-4 md:px-2 px-0 w-full lg:max-w-7xl lg:mx-auto">
@@ -40,20 +43,20 @@ export function PricingSection({
         }
         className="w-full max-w-full flex justify-center mx-auto mb-12"
       >
-        <TabsList className="ld:grid ld:grid-cols-2 lg:w-[40vw] md:w-[50vw] w-[100vw] md:grid md:grid-cols-2 grid grid-cols-1 lg:rounded-full rounded-[42px] lg:h-20 md:h-20 h-40">
+        <TabsList className="ld:grid ld:grid-cols-2 lg:w-[40vw] md:w-[50vw] w-[100vw] md:grid md:grid-cols-2 grid grid-cols-1 lg:h-20 md:h-20 h-40 border-none">
           <TabsTrigger
-            className="rounded-full px-8 font-figtree font-normal tracking-tighter py-4 h-full lg:text-2xl md:text-xl text-sm"
+            className="px-8 font-figtree font-normal tracking-tighter py-4 h-full lg:text-2xl md:text-xl text-sm"
             value="monthly"
           >
             Monthly
           </TabsTrigger>
           <TabsTrigger
-            className="rounded-full px-8 font-figtree font-normal tracking-tighter py-4 flex items-center gap-2 h-full lg:text-2xl md:text-xl text-sm"
+            className="px-8 font-figtree font-normal tracking-tighter py-4 flex items-center gap-2 h-full lg:text-2xl md:text-xl text-sm"
             value="annual"
           >
             Annually
             {billingCycle === "annual" && (
-              <span className="px-2 py-1 border-[#D0F16C] border rounded-full text-[#D0F16C] text-xs whitespace-nowrap tracking-wider">
+              <span className="px-2 py-1 border-[#abd62b] border rounded-full text-[#abd62b] text-xs whitespace-nowrap tracking-wider">
                 SAVE UPTO 30%
               </span>
             )}
@@ -77,14 +80,16 @@ export function PricingSection({
               {lite.name}
             </span>
             <div className="text-black">
-              <p className="text-xs mb-4 font-figtree">{lite.tagline}</p>
-              <div className="flex items-baseline">
-                <span className="lg:text-6xl md:text-5xl text-4xl font-figtree font-bold">
-                  <sup className="lg:text-4xl md:text-3xl text-2xl font-figtree font-bold">$</sup>
-                  {getPrice(lite.monthlyPrice, lite.annualPrice)}
-                </span>
-                <span className="ml-2 text-sm text-gray-600">/ mo</span>
-              </div>
+            <p className="text-xs mb-4 font-figtree">{lite.tagline}</p>
+              {showPriceDetails(getPrice(lite.monthlyPrice, lite.annualPrice)) && (
+                <div className="flex items-baseline">
+                  <span className="lg:text-6xl md:text-5xl text-4xl font-figtree font-bold">
+                    <sup className="lg:text-4xl md:text-3xl text-2xl font-figtree font-bold">$</sup>
+                    {getPrice(lite.monthlyPrice, lite.annualPrice)}
+                  </span>
+                  <span className="ml-2 text-sm text-gray-600">/ mo</span>
+                </div>
+              )}
               <p className="text-sm text-gray-600 mt-2">
                 Per month per user, billed{" "}
                 {billingCycle === "monthly" ? "monthly" : "annually"}
@@ -126,15 +131,17 @@ export function PricingSection({
               {essential.name}
             </span>
             <div className="text-white">
-              <p className="text-xs mb-4 font-figtree">{essential.tagline}</p>
-              <div className="flex items-baseline">
-                <span className="lg:text-6xl md:text-5xl text-4xl font-bold font-onest">
-                  <sup className="lg:text-4xl md:text-3xl text-2xl font-figtree font-bold">$</sup>
-                  {getPrice(essential.monthlyPrice, essential.annualPrice)}
-                </span>
-                <span className="ml-2 text-sm text-gray-300">/ mo</span>
-              </div>
-              <p className="text-sm text-gray-300 mt-2">
+            <p className="text-xs mb-4 font-figtree">{essential.tagline}</p>
+              {showPriceDetails(getPrice(essential.monthlyPrice, essential.annualPrice)) && (
+                <div className="flex items-baseline">
+                  <span className="lg:text-6xl md:text-5xl text-4xl font-figtree font-bold">
+                    <sup className="lg:text-4xl md:text-3xl text-2xl font-figtree font-bold">$</sup>
+                    {getPrice(essential.monthlyPrice, essential.annualPrice)}
+                  </span>
+                  <span className="ml-2 text-sm text-white">/ mo</span>
+                </div>
+              )}
+              <p className="text-sm text-white mt-2">
                 Per month per user, billed{" "}
                 {billingCycle === "monthly" ? "monthly" : "annually"}
               </p>
@@ -175,14 +182,16 @@ export function PricingSection({
               {professional.name}
             </span>
             <div className="text-black">
-              <p className="text-xs mb-4 font-figtree">{professional.tagline}</p>
-              <div className="flex items-baseline">
-                <span className="lg:text-6xl md:text-5xl text-4xl font-bold font-onest">
-                  <sup className="lg:text-4xl md:text-3xl text-2xl font-figtree font-bold">$</sup>
-                  {getPrice(professional.monthlyPrice, professional.annualPrice)}
-                </span>
-                <span className="ml-2 text-sm text-gray-600">/ mo</span>
-              </div>
+            <p className="text-xs mb-4 font-figtree">{professional.tagline}</p>
+              {showPriceDetails(getPrice(professional.monthlyPrice, professional.annualPrice)) && (
+                <div className="flex items-baseline">
+                  <span className="lg:text-6xl md:text-5xl text-4xl font-figtree font-bold">
+                    <sup className="lg:text-4xl md:text-3xl text-2xl font-figtree font-bold">$</sup>
+                    {getPrice(professional.monthlyPrice, professional.annualPrice)}
+                  </span>
+                  <span className="ml-2 text-sm text-gray-600">/ mo</span>
+                </div>
+              )}
               <p className="text-sm text-gray-600 mt-2">
                 Per month per user, billed{" "}
                 {billingCycle === "monthly" ? "monthly" : "annually"}
@@ -210,8 +219,7 @@ export function PricingSection({
         </Card>
       </div>
 
-      <div className="mt-8 text-center text-sm text-gray-500 space-y-2">
-        <p>* Minimum 3 Users</p>
+      <div className="mt-8 text-center lg:text-[18px] text-base text-gray-500 space-y-2">
         <p>* Plus applicable taxes</p>
         <p>*Cancel your subscription anytime</p>
         <p>

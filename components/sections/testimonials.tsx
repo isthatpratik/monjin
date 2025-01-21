@@ -11,7 +11,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 const testimonials = [
   {
@@ -93,16 +93,16 @@ export default function Testimonials() {
                     />
                     <CardContent className="lg:p-12 md:p-8 p-4 relative flex-grow">
                       <div className="mt-8 flex flex-col gap-2">
-                        <h3 className="text-xl lg:text-3xl md:text-2xl font-semibold font-figtree flex items-center gap-2">
+                        <h3 className="text-xl lg:text-3xl md:text-2xl font-Onest font-medium tracking-tighter flex items-center gap-2">
                           {testimonial.name}
                           <a
                             href={testimonial.linkedIn}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-600 hover:text-[#005582]"
+                            className="text-[#A5A5A5] hover:text-[#005582] transition-all duration-300"
                             aria-label={`LinkedIn profile of ${testimonial.name}`}
                           >
-                            <ArrowUpRight className="inline-block w-4 h-4 lg:w-5 lg:h-5 align-super" />
+                            <LinkedInLogoIcon className="inline-block w-4 h-4 lg:w-8 lg:h-8 pl-1" />
                           </a>
                         </h3>
                         <p className="text-sm lg:text-base font-figtree figtree-light text-[#636671]">

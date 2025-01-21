@@ -8,7 +8,7 @@ export default function SpotlightHeroSection() {
         <div className="space-y-6">
           <div className="inline-flex rounded-xl border-[#F18800] border p-1">
             <button className="px-4 py-2 font-figree text-[#F18800] text-lg font-medium uppercase">
-              Spotlight - Accelerate Efficient Screening
+              <strong>Spotlight</strong> - Accelerate Efficient Screening
             </button>
           </div>
           <h2 className="text-5xl font-bold font-onest lg:text-7xl text-[#353535] leading-tight tracking-tighter">
@@ -18,7 +18,7 @@ export default function SpotlightHeroSection() {
           Spotlight streamlines your hiring process with one-way video interviews that are quick, efficient, and simple to schedule. With flexible scheduling and user-friendly features, Spotlight empowers teams to efficiently assess candidates without the need for real-time interaction.
           </p>
           <Button className="bg-[#1B1B1B] text-white hover:bg-gray-800 rounded-full px-6 py-6 text-base font-Onest font-normal">
-            Watch Free For 15 Days
+            15 Days Free
           </Button>
           <p className="font-figtree text-[#353535] italic font-light pt-4">
           Starting at $24* per month after 15 day free trial period.

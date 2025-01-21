@@ -49,15 +49,15 @@ const ProductCard = ({
         </h3>
 
         <div
-          className={`border ${subtitleBorderColor} p-2 mt-2 rounded-2xl w-[80%]`}
+          className={`border ${subtitleBorderColor} p-2 mt-2 rounded-3xl w-[90%]`}
         >
-          <p className="font-figtree text-[#565656] text-xs text-center">
+          <p className="font-figtree text-[#565656] text-sm text-center">
             {subtitle}
           </p>
         </div>
 
         <div className="flex flex-col justify-center items-center mt-2 mb-2 flex-grow">
-          <p className="font-figtree text-center text-[#636671] text-sm mt-2 max-w-[90%]">
+          <p className="font-figtree text-center text-[#636671] text-base mt-2 max-w-[90%]">
             {description}
           </p>
         </div>
@@ -230,8 +230,7 @@ const ProductsSection = () => {
 
           {/* Description */}
           <p className="md:text-base text-sm lg:text-lg font-figtree font-light text-gray-300 mt-4 w-full lg:w-4/5">
-            Book interviews seamlessly through Monjin’s platform, bypassing
-            direct candidate contact.
+          Experience a comprehensive solution designed to attract, engage, and retain top talent across multiple channels.
           </p>
 
           {/* Buttons */}

@@ -29,7 +29,7 @@ const FeatureSection = () => {
         <h2 className="font-Onest font-medium text-[#1D1E23] lg:text-5xl text-center tracking-tighter text-4xl lg:max-w-[60%] max-w-[95%] leading-normal">
           Simplify Your Hiring Process with AI-Powered Interview Scheduling.
         </h2>
-        <p className="font-figtree font-normal text-[#1D1E23] tracking-tight text-center lg:max-w-[50%] max-w-[95%] text-xl lg:text-xl">
+        <p className="font-figtree font-normal text-[#1D1E23] tracking-tight text-center lg:max-w-[50%] max-w-[95%] text-base lg:text-[18px]">
           Intuitive and efficient solution for hiring and talent assessment.
           Access to video interviews, AI-powered scheduling, multi-panel
           collaboration, and real-time feedback.
@@ -48,10 +48,10 @@ const FeatureSection = () => {
             src="/assets/feature-1.png"
             className="object-contain aspect-[4/3]"
           />
-          <h3 className="font-Onest font-semibold text-[#1D1E23] text-[28px] mt-4 text-center">
+          <h3 className="font-Onest font-semibold text-[#1D1E23] lg:text-3xl text-2xl mt-4 text-center">
             On Demand Interview
           </h3>
-          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-base mt-2 max-w-[75%]">
+          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-lg mt-2 max-w-[75%]">
             Conduct interviews on-demand, whenever it suits you.
           </p>
         </div>
@@ -69,10 +69,10 @@ const FeatureSection = () => {
             src="/assets/feature-2.png"
             className="object-contain aspect-[4/3]"
           />
-          <h3 className="font-Onest font-semibold text-[#1D1E23] text-[28px] mt-4 text-center">
+          <h3 className="font-Onest font-semibold text-[#1D1E23] lg:text-3xl text-2xl mt-4 text-center">
             Vetted Experts
           </h3>
-          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-base mt-2 max-w-[75%]">
+          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-lg mt-2 max-w-[75%]">
             Connect with carefully vetted experts for reliable insights and
             guidance.
           </p>
@@ -91,10 +91,10 @@ const FeatureSection = () => {
             src="/assets/feature-3.png"
             className="object-contain aspect-[4/3]"
           />
-          <h3 className="font-Onest font-semibold text-[#1D1E23] text-[28px] mt-4 text-center">
+          <h3 className="font-Onest font-semibold text-[#1D1E23] text-2xl lg:text-3xl mt-4 text-center">
             Rich Talent Dataset
           </h3>
-          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-base mt-2 max-w-[75%]">
+          <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-lg mt-2 max-w-[75%]">
           Leverage a rich talent dataset to access highly qualified candidates.
           </p>
         </div>

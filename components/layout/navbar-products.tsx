@@ -79,27 +79,52 @@ export function NavBarProducts() {
                         </NavigationMenuLink>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/products/PerformanceManagement" passHref>
+                        <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
+                          Performance Management
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="#company" className="text-[#16171D] hover:text-[#16171D]/80 transition-colors">
+              <NavigationMenuTrigger className="text-[#16171D] hover:text-[#16171D]/80 transition-colors bg-transparent border-none font-figtree">
                   Company
-                </Link>
+                  <NavigationMenuContent className="bg-white p-4 rounded-md shadow-lg w-[300px] h-auto border-none font-figtree">
+                  <ul className="flex flex-col gap-3 p-4 md:w-[400px] lg:w-[500px]">
+                    <li>
+                      <Link href="/company/about" passHref>
+                        <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
+                          About
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/company/culture" passHref>
+                        <NavigationMenuLink className="text-[#16171D] hover:text-[#16171D]/80 transition-colors font-figtree">
+                          Culture
+                        </NavigationMenuLink>
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+                </NavigationMenuTrigger>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#candidate" className="text-[#16171D] hover:text-black transition-colors">
+                <Link href="#candidate" className="text-[#16171D] hover:text-black transition-colors font-figtree">
                   Candidate
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#interviewer" className="text-[#16171D] hover:text-black transition-colors">
+                <Link href="#interviewer" className="text-[#16171D] hover:text-black transition-colors font-figtree">
                   Interviewer
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#jobs" className="text-[#16171D] hover:text-black transition-colors">
+                <Link href="#jobs" className="text-[#16171D] hover:text-black transition-colors font-figtree">
                   Careers
                 </Link>
               </NavigationMenuItem>
@@ -112,10 +137,6 @@ export function NavBarProducts() {
           Get started
         </Button>
 
-        {/* Mobile Drawer Navigation */}
-        <div>
-
-        </div>
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <button

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/product-tabs"
 import { cn } from "@/lib/utils"
 import { MobileSlider } from '@/components/ocoi/mobile-slider-ocoi-features'
@@ -8,17 +8,15 @@ import { FileText, StarIcon, SquarePen, CircleCheck, CircleUser } from 'lucide-r
 import Image from 'next/image'
 
 export interface Tab {
-  id: string
-  label: string
-  title: string
-  description: string
-  features: string[][]
-  icon: React.ReactNode
-  imageUrl: string
-}
-<div>
-    
-</div>
+    id: string
+    label: string
+    title: string
+    description: string
+    features: string[][]
+    icon: React.ReactNode
+    imageUrl: string
+  }
+
 const tabs: Tab[] = [
   {
     id: 'expert-assessments',
@@ -81,89 +79,118 @@ const tabs: Tab[] = [
 ];
 
 export default function YcoiFeatures() {
-  const [activeTab, setActiveTab] = useState('expert-assessments')
-
-  return (
-    <div className="min-h-auto bg-white rounded-3xl mx-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl md:text-5xl flex flex-row items-center justify-center font-onest font-medium text-center mb-12 tracking-tighter">
-        Simplify Hiring with Curated Interviews, 
-        Instant Feedback, and Easy Scheduling
-        </h1>
-
-        {/* Desktop View */}
-        <div className="hidden lg:block" >
-          <Tabs defaultValue="expert-assessments" className="w-full" onValueChange={setActiveTab}>
-            <TabsList className="w-full flex mb-8 h-full border-b justify-between">
-              {tabs.map((tab) => (
-                <TabsTrigger
-                key={tab.id}
-                value={tab.id}
-                className={cn(
-                  "relative flex items-center lg:gap-2 md:gap-4 gap-4 p-2",
-                  "data-[state=active]:text-primary font-light font-figtree text-base",
-                  "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5",
-                  "after:scale-x-0 data-[state=active]:after:scale-x-100",
-                  "after:bg-primary after:transition-transform"
-                )}
+    const [activeTab, setActiveTab] = useState('expert-assessments')
+    const [indicatorStyle, setIndicatorStyle] = useState<React.CSSProperties>({})
+    const tabsListRef = useRef<HTMLDivElement>(null)
+  
+    useEffect(() => {
+      const updateIndicator = () => {
+        const activeTabElement = tabsListRef.current?.querySelector(
+          `[data-state="active"]`
+        ) as HTMLElement
+  
+        if (activeTabElement) {
+          const { offsetLeft, offsetWidth } = activeTabElement
+          setIndicatorStyle({
+            transform: `translateX(${offsetLeft}px)`,
+            width: `${offsetWidth}px`,
+            transition: 'transform 0.3s ease, width 0.3s ease',
+          })
+        }
+      }
+  
+      updateIndicator()
+      window.addEventListener('resize', updateIndicator)
+      return () => window.removeEventListener('resize', updateIndicator)
+    }, [activeTab])
+  
+    return (
+      <div className="min-h-auto bg-white rounded-3xl mx-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h1 className="text-4xl md:text-5xl flex flex-row items-center justify-center font-onest font-medium text-center mb-12 tracking-tighter">
+          Transform hiring with tailored interviews, instant feedback, and seamless scheduling
+          </h1>
+  
+          {/* Desktop View */}
+          <div className="hidden lg:block">
+            <Tabs defaultValue="expert-assessments" className="w-full" onValueChange={setActiveTab}>
+              <TabsList
+                ref={tabsListRef}
+                className="relative w-full flex mb-8 h-full border-b justify-between bg-transparent"
               >
-                <span
-                  className={cn(
-                    "p-1 rounded-full",
-                    "data-[state=active]:bg-primary/10",
-                    tab.id === activeTab ? "text-[#8B72FF]" : "text-gray-600" // Apply color conditionally
-                  )}
-                >
-                  {tab.icon}
-                </span>
-                {tab.label}
-              </TabsTrigger>
-              
-              ))}
-            </TabsList>
-
-            {tabs.map((tab) => (
-              <TabsContent key={tab.id} value={tab.id} className="space-y-8 px-10 pt-4">
-                <div className="grid lg:grid-cols-2 gap-12">
-                  <div className="space-y-6">
-                    <h2 className="font-figtree font-medium text-2xl tracking-tighter">{tab.title}</h2>
-                    <p className="text-lg font-figtree font-light text-[#353535] leading-loose">{tab.description}</p>
-                    <div className="grid lg:grid-cols-2 gap-6 text-lg font-figtree font-normal pt-2 tracking-wide">
-                      {tab.features.map((featurePair, idx) => (
-                        <div key={idx} className="space-y-4">
-                          {featurePair.map(
-                            (feature, featureIdx) =>
-                              feature && (
-                                <div key={featureIdx} className="text-lg">
-                                  {feature}
-                                </div>
-                              )
-                          )}
-                        </div>
-                      ))}
+                <div
+                  className="absolute bottom-0 left-0 h-0.5 bg-primary z-10"
+                  style={indicatorStyle}
+                />
+                {tabs.map((tab) => (
+                  <TabsTrigger
+                    key={tab.id}
+                    value={tab.id}
+                    className={cn(
+                      "relative flex items-center lg:gap-2 md:gap-4 gap-4 p-2",
+                      "data-[state=active]:text-primary font-light font-figtree text-base"
+                    )}
+                  >
+                    <span
+                      className={cn(
+                        "p-1 rounded-full",
+                        "data-[state=active]:bg-primary/10",
+                        tab.id === activeTab ? "text-[#8B72FF]" : "text-gray-600"
+                      )}
+                    >
+                      {tab.icon}
+                    </span>
+                    {tab.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+  
+              {tabs.map((tab) => (
+                <TabsContent key={tab.id} value={tab.id} className="space-y-8 px-10 pt-4">
+                  <div className="grid lg:grid-cols-2 gap-12">
+                    <div className="space-y-6">
+                      <h2 className="font-figtree font-medium text-2xl tracking-tighter">
+                        {tab.title}
+                      </h2>
+                      <p className="text-lg font-figtree font-light text-[#353535] leading-loose">
+                        {tab.description}
+                      </p>
+                      <div className="grid lg:grid-cols-2 gap-6 text-lg font-figtree font-normal pt-2 tracking-wide">
+                        {tab.features.map((featurePair, idx) => (
+                          <div key={idx} className="space-y-4">
+                            {featurePair.map(
+                              (feature, featureIdx) =>
+                                feature && (
+                                  <div key={featureIdx} className="text-lg">
+                                    {feature}
+                                  </div>
+                                )
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="relative h-[400px] rounded-lg overflow-hidden">
+                      <Image
+                        src={tab.imageUrl || "/placeholder.svg"}
+                        alt={tab.title}
+                        className="w-full h-full object-contain"
+                        height={1000}
+                        width={1000}
+                        quality={70}
+                      />
                     </div>
                   </div>
-                  <div className="relative h-[400px] rounded-lg overflow-hidden">
-                    <Image
-                      src={tab.imageUrl || "/placeholder.svg"}
-                      alt={tab.title}
-                      className="w-full h-full object-contain"
-                      height={1000}
-                      width={1000}
-                      quality={70}
-                    />
-                  </div>
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </div>
-
-        {/* Mobile View */}
-        <div className="lg:hidden">
-          <MobileSlider tabs={tabs} />
+                </TabsContent>
+              ))}
+            </Tabs>
+          </div>
+  
+          {/* Mobile View */}
+          <div className="lg:hidden">
+            <MobileSlider tabs={tabs} />
+          </div>
         </div>
       </div>
-    </div>
-  )
-}
+    )
+  }

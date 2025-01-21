@@ -42,14 +42,6 @@ const footerLinks = {
     { name: "CSR", href: "#" },
     { name: "Contact Us", href: "#" },
   ],
-  "": [
-    { name: "", href: "#" },
-    { name: "", href: "#" },
-    { name: "", href: "#" },
-    { name: "", href: "#" },
-    { name: "", href: "#" },
-    { name: "", href: "#" },
-  ],
 };
 
 const locations = ["INDIA", "USA", "UK"];
