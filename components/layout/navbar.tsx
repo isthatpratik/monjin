@@ -53,6 +53,11 @@ export function NavBar() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
+                <Link href="/support" className="text-gray-300 hover:text-white transition-colors">
+                  Support
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Link href="#candidate" className="text-gray-300 hover:text-white transition-colors">
                   Candidate
                 </Link>

@@ -70,12 +70,12 @@ export default function Home() {
       <NavBar />
 
       <div className="md:max-w-[1600px] mx-auto px-6 py-10">
-        <HeroSection />
+        {/* <HeroSection />
         <Clients />
         <FeatureSection />
         <ProdcutsSection />
-        <CaseStudies />
-        <Testimonials />
+        <CaseStudies /> */}
+        {/* <Testimonials /> */}
 
   
       </div>

@@ -1,6 +1,8 @@
 import { Footer } from '@/components/layout/footer';
 import NavBarProducts from '@/components/layout/nav-product-menu';
 import { ClientsSlider } from '@/components/sliders/clients-slider';
+import SupportHero from '@/components/support/general';
+import FAQ from '@/components/support/general';
 import Image from 'next/image';
 import React from 'react';
 
@@ -33,12 +35,14 @@ const MonjinSuite = () => {
         </div>
 
         <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
-
+            <FAQ />
         </div>
         <div className='flex flex-col gap-8'>
 
           <ClientsSlider />
           <Footer />
+          <SupportHero />
+
         </div>
       </main>
   );
