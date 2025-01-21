@@ -18,7 +18,7 @@ export default function NavProductMenu() {
 
       {isOpen && (
         <div
-          className="absolute left-1/2 -translate-x-1/2 z-50"
+          className="absolute left-1/2 -translate-x-1/2 z-50 mt-2"
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
