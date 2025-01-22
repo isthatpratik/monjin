@@ -19,7 +19,7 @@ export function NavBarProducts() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full py-10 px-6 md:my-0 my-4 z-1000">
+    <nav className="w-full py-8 px-6 md:my-0 my-4 z-1000 bg-white">
       <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -313,22 +313,20 @@ export function NavBarProducts() {
                   Interviewer
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link
-                  href="/careers"
-                  className="text-black hover:text-black/80 transition-colors font-figtree"
-                >
-                  Careers
-                </Link>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
 
         {/* CTA Button */}
-        <Button className="hidden md:block bg-[#1B1B1B] text-white rounded-lg font-Onest font-light transition-shadow duration-300 ease-in-out hover:shadow-lg">
+        <div className="flex flex-row gap-6">
+
+        <Button className="hidden md:block bg-transparent text-black rounded-[8px] border border-black hover:bg-gray-200 font-Onest font-light transition-all duration-300 ease-in-out">
+          Contact Us
+        </Button>
+        <Button className="hidden md:block bg-[#1B1B1B] text-white rounded-[8px] font-Onest font-light transition-all duration-300 ease-in-out hover:shadow-lg">
           Get started
         </Button>
+        </div>
 
         {/* Mobile Drawer Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>

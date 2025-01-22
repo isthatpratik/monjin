@@ -10,7 +10,7 @@ import {
 export default function InterviewerFAQ() {
   return (
     <div className="w-full max-w-5xl mx-auto">
-      <Accordion type="single" collapsible>
+      <Accordion type="single" collapsible defaultValue="interviewer-faq">
         <AccordionItem
           value="interviewer-faq"
           className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-2"
@@ -51,7 +51,7 @@ export default function InterviewerFAQ() {
               </li>
               <li>
                 <strong>Use Behavioral Interview Techniques</strong> - Gather
-                detailed "STAR" information:
+                detailed &quot;STAR&quot; information:
                 <ul className="list-disc list-inside pl-6 space-y-2 mt-2">
                   <li>
                     <strong>Situation:</strong> Context of the task.

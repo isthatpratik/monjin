@@ -59,7 +59,7 @@ export function NavBar() {
                           <Link href="/products/OCOI" passHref>
                             <NavigationMenuLink className="text-[#7D65EA] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>OCOI</span>
-                              <ArrowRight className="h-5 w-5"/>
+                              <ArrowRight className="h-5 w-5" />
                             </NavigationMenuLink>
                           </Link>
                           <p className="text-[#6F6C90] text-xs">
@@ -83,7 +83,7 @@ export function NavBar() {
                           <Link href="/products/Basics" passHref>
                             <NavigationMenuLink className="text-[#F46D70] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Basics</span>
-                              <ArrowRight className="h-5 w-5"/>
+                              <ArrowRight className="h-5 w-5" />
                             </NavigationMenuLink>
                           </Link>
                           <p className="text-[#6F6C90] text-xs">
@@ -107,7 +107,7 @@ export function NavBar() {
                           <Link href="/products/YCOI" passHref>
                             <NavigationMenuLink className="text-[#B7D659] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>YCOI</span>
-                              <ArrowRight className="h-5 w-5"/>
+                              <ArrowRight className="h-5 w-5" />
                             </NavigationMenuLink>
                           </Link>
                           <p className="text-[#6F6C90] text-xs">
@@ -131,7 +131,7 @@ export function NavBar() {
                           <Link href="/products/PerformanceManagement" passHref>
                             <NavigationMenuLink className="text-[#BA57D3] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Performance Management</span>
-                              <ArrowRight className="h-5 w-5"/>
+                              <ArrowRight className="h-5 w-5" />
                             </NavigationMenuLink>
                           </Link>
                           <p className="text-[#6F6C90] text-xs">
@@ -155,7 +155,7 @@ export function NavBar() {
                           <Link href="/products/Spotlight" passHref>
                             <NavigationMenuLink className="text-[#FFB14A] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Spotlight</span>
-                              <ArrowRight className="h-5 w-5"/>
+                              <ArrowRight className="h-5 w-5" />
                             </NavigationMenuLink>
                           </Link>
                           <p className="text-[#6F6C90] text-xs">
@@ -179,11 +179,13 @@ export function NavBar() {
                           <Link href="/products/OCOI" passHref>
                             <NavigationMenuLink className="text-[#3B3B3B] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Monjin Suite</span>
-                              <ArrowRight className="h-5 w-5"/>
+                              <ArrowRight className="h-5 w-5" />
                             </NavigationMenuLink>
                           </Link>
                           <p className="text-[#6F6C90] text-xs">
-                          Experience a comprehensive solution designed to attract, engage, and retain top talent across multiple channels.
+                            Experience a comprehensive solution designed to
+                            attract, engage, and retain top talent across
+                            multiple channels.
                           </p>
                         </div>
                       </div>
@@ -198,92 +200,88 @@ export function NavBar() {
                   <NavigationMenuContent className="bg-white p-4 rounded-md shadow-lg w-[300px] h-auto border-none font-figtree">
                     <ul className="flex flex-col gap-3 p-2 md:w-[400px] lg:w-full justify-center">
                       <li>
-                      <div className="flex items-center gap-4 p-2 rounded-lg transition-colors ">
-                        <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#F4F2FF] flex items-center justify-center">
-                          <Image
-                            src="/assets/dropdown/about-us.png"
-                            alt="Company Icon"
-                            width={30}
-                            height={30}
-                            className="object-contain"
-                          />
+                        <div className="flex items-center gap-4 p-2 rounded-lg transition-colors ">
+                          <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#F4F2FF] flex items-center justify-center">
+                            <Image
+                              src="/assets/dropdown/about-us.png"
+                              alt="Company Icon"
+                              width={30}
+                              height={30}
+                              className="object-contain"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <Link href="/" passHref>
+                              <NavigationMenuLink className="text-[#9F8AFF] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
+                                <span>About Us</span>
+                                <ArrowRight className="h-5 w-5" />
+                              </NavigationMenuLink>
+                            </Link>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <Link href="/" passHref>
-                            <NavigationMenuLink className="text-[#9F8AFF] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
-                              <span>About Us</span>
-                              <ArrowRight className="h-5 w-5"/>
-                            </NavigationMenuLink>
-                          </Link>
-                          
-                        </div>
-                      </div>
                       </li>
                       <li>
-                      <div className="flex items-center gap-4 p-2 rounded-lg transition-colors ">
-                        <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#FEF0F1] flex items-center justify-center">
-                          <Image
-                            src="/assets/dropdown/culture.png"
-                            alt="Company Icon"
-                            width={30}
-                            height={30}
-                            className="object-contain"
-                          />
+                        <div className="flex items-center gap-4 p-2 rounded-lg transition-colors ">
+                          <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#FEF0F1] flex items-center justify-center">
+                            <Image
+                              src="/assets/dropdown/culture.png"
+                              alt="Company Icon"
+                              width={30}
+                              height={30}
+                              className="object-contain"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <Link href="/" passHref>
+                              <NavigationMenuLink className="text-[#F46D70] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
+                                <span>Culture</span>
+                                <ArrowRight className="h-5 w-5" />
+                              </NavigationMenuLink>
+                            </Link>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <Link href="/" passHref>
-                            <NavigationMenuLink className="text-[#F46D70] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
-                              <span>Culture</span>
-                              <ArrowRight className="h-5 w-5"/>
-                            </NavigationMenuLink>
-                          </Link>
-                  
-                        </div>
-                      </div>
                       </li>
                       <li>
-                      <div className="flex items-center gap-4 p-2 rounded-lg transition-colors ">
-                        <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#F8FBEE] flex items-center justify-center">
-                          <Image
-                            src="/assets/dropdown/team.png"
-                            alt="Company Icon"
-                            width={30}
-                            height={30}
-                            className="object-contain"
-                          />
+                        <div className="flex items-center gap-4 p-2 rounded-lg transition-colors ">
+                          <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#F8FBEE] flex items-center justify-center">
+                            <Image
+                              src="/assets/dropdown/team.png"
+                              alt="Company Icon"
+                              width={30}
+                              height={30}
+                              className="object-contain"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <Link href="/" passHref>
+                              <NavigationMenuLink className="text-[#B7D659] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
+                                <span>Our Team</span>
+                                <ArrowRight className="h-5 w-5" />
+                              </NavigationMenuLink>
+                            </Link>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <Link href="/" passHref>
-                            <NavigationMenuLink className="text-[#B7D659] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
-                              <span>Our Team</span>
-                              <ArrowRight className="h-5 w-5"/>
-                            </NavigationMenuLink>
-                          </Link>
-                  
-                        </div>
-                      </div>
                       </li>
                       <li>
-                      <div className="flex items-center gap-4 p-2 rounded-lg transition-colors ">
-                        <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#FFF7ED] flex items-center justify-center">
-                          <Image
-                            src="/assets/dropdown/contact.png"
-                            alt="Company Icon"
-                            width={30}
-                            height={30}
-                            className="object-contain"
-                          />
+                        <div className="flex items-center gap-4 p-2 rounded-lg transition-colors ">
+                          <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#FFF7ED] flex items-center justify-center">
+                            <Image
+                              src="/assets/dropdown/contact.png"
+                              alt="Company Icon"
+                              width={30}
+                              height={30}
+                              className="object-contain"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <Link href="/" passHref>
+                              <NavigationMenuLink className="text-[#FCB352] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
+                                <span>Contact Us</span>
+                                <ArrowRight className="h-5 w-5" />
+                              </NavigationMenuLink>
+                            </Link>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <Link href="/" passHref>
-                            <NavigationMenuLink className="text-[#FCB352] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
-                              <span>Contact Us</span>
-                              <ArrowRight className="h-5 w-5"/>
-                            </NavigationMenuLink>
-                          </Link>
-                  
-                        </div>
-                      </div>
                       </li>
                     </ul>
                   </NavigationMenuContent>
@@ -313,22 +311,19 @@ export function NavBar() {
                   Interviewer
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link
-                  href="#jobs"
-                  className="text-gray-300 hover:text-white transition-colors font-figtree"
-                >
-                  Careers
-                </Link>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
 
         {/* CTA Button */}
-        <Button className="hidden md:block bg-[#D3F56A] text-black rounded-lg font-Onest font-light transition-shadow duration-300 ease-in-out hover:bg-[#D0F16C] hover:shadow-lg hover:shadow-[#D0F16C]/50">
-          Get started
-        </Button>
+        <div className="flex flex-row gap-6">
+          <Button className="hidden md:block bg-transparent border border-white hover:bg-[#D3F56A]/50 hover:border-none text-white hover:text-black rounded-[8px] font-Onest font-light transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#AC9AFF]/50">
+            Contact Us
+          </Button>
+          <Button className="hidden md:block bg-[#D3F56A] text-black rounded-[8px] font-Onest font-light transition-all duration-300 ease-in-out hover:bg-[#D0F16C] hover:shadow-lg hover:shadow-[#D0F16C]/50">
+            Get started
+          </Button>
+        </div>
 
         {/* Mobile Drawer Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -353,13 +348,13 @@ export function NavBar() {
                 Company
               </Link>
               <Link href="#" className="hover:text-gray-400 transition-colors">
+                Support
+              </Link>
+              <Link href="#" className="hover:text-gray-400 transition-colors">
                 Candidate
               </Link>
               <Link href="#" className="hover:text-gray-400 transition-colors">
                 Interviewer
-              </Link>
-              <Link href="#" className="hover:text-gray-400 transition-colors">
-                Careers
               </Link>
             </div>
           </SheetContent>
