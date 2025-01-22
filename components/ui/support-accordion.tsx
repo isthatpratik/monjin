@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { Plus, Minus } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -11,7 +12,11 @@ const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item ref={ref} className={cn("border-none", className)} {...props} />
+  <AccordionPrimitive.Item
+    ref={ref}
+    className={cn("border-b", className)}
+    {...props}
+  />
 ))
 AccordionItem.displayName = "AccordionItem"
 
@@ -23,16 +28,19 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between p-5 text-base font-medium border rounded-lg transition-all [&[data-state=open]>div]:rotate-180",
-        className,
+        "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left",
+        "[&[data-state=open]>svg]:hidden", // Hide the Plus icon when open
+        className
       )}
       {...props}
     >
       {children}
+      <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 data-[state=open]:hidden" />
+      <Minus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 hidden data-[state=open]:block" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
-AccordionTrigger.displayName = "AccordionTrigger"
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
@@ -46,7 +54,6 @@ const AccordionContent = React.forwardRef<
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
 ))
-AccordionContent.displayName = "AccordionContent"
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-
