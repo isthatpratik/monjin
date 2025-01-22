@@ -17,7 +17,7 @@ export default function LoginForm() {
         {/* Logo */}
         <div className="flex justify-center">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/form1-wWjsVGlY4mI9QF93tsH8jRMu3Ba1o8.png"
+            src="@/assets/monjin-logo.png"
             alt="Monjin Logo"
             width={150}
             height={40}

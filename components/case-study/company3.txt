@@ -1,0 +1,193 @@
+"use client";
+
+import { Search } from "lucide-react";
+import { Input } from "../ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  EyeIcon,
+  EyeOffIcon,
+  UserIcon,
+  Users,
+  Clock,
+  Target,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+
+export default function CaseStudyHero() {
+  return (
+    <section className="w-full relative grid items-center justify-center overflow-hidden">
+      <div className="container px-8 py-24 relative">
+        <div className="text-center space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            Futuristic Hiring Route
+          </h1>
+          <h2 className="text-lg md:text-xl font-figtree font-light text-white ">
+            Delivering higher selection ratio.
+          </h2>
+          <div className="max-w-2xl mx-auto mt-8 pt-20"></div>
+        </div>
+      </div>
+
+      <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 p-4 md:p-8">
+        <div className="mx-auto max-w-5xl space-y-16">
+          {/* Overview Section */}
+          <Card className="overflow-hidden bg-[url('/assets/bg/casestudy1.png')] bg-cover bg-center">
+            <CardContent className="p-6 md:p-8">
+              <div className="grid gap-8 md:grid-cols-2 items-center">
+                <div className="space-y-4">
+                  <h1 className="text-5xl font-medium font-onest">Overview</h1>
+                  <p className="text-gray-600">
+                    One of the largest professional services firm in the world
+                    and a part of the “Big Four” accounting firms were in search
+                    of Just In Time (JIT) resourcing to meet the demand
+                    pipeline. As the professional services space is
+                    transforming, the hiring demand is predict- ed to experience
+                    a rapid growth in the coming years. The market forecasts a
+                    5.4% global growth rate from 2016 to 2020, reading almost $5
+                    trillion. Monjin seized the opportunity to resolve the
+                    hiring challenges faced in the professional services sector.
+                  </p>
+                </div>
+                <div className="flex justify-center">
+                  <Image
+                    src="/assets/case-study/company3.png"
+                    alt="Empower Professionals Logo"
+                    width={200}
+                    height={200}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Challenges Section */}
+          <section className="space-y-8">
+            <h2 className="text-5xl font-medium font-onest">Challenges</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: "👥",
+                  title: "Attention Ratio",
+                  bgColor: "bg-pink-100",
+                },
+                {
+                  icon: "⏰",
+                  title:
+                    "Delayed interviews due to unavailability of interview panel",
+                  bgColor: "bg-green-100",
+                },
+                {
+                  icon: "🎯",
+                  title: "Selection Ratio",
+                  bgColor: "bg-purple-100",
+                },
+              ].map((challenge, index) => (
+                <Card key={index} className="overflow-hidden">
+                  <CardContent className="p-6 text-center space-y-4">
+                    <div
+                      className={`w-12 h-12 mx-auto rounded-lg ${challenge.bgColor} flex items-center justify-center text-2xl`}
+                    >
+                      {challenge.icon}
+                    </div>
+                    <p className="font-medium">{challenge.title}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Method Section */}
+          <section className="space-y-4">
+            <h2 className="text-4xl font-medium font-onest">Monjin Approach</h2>
+            <p className="text-xl font-normal font-figtree text-gray-600">
+              Monjin conducted a market research to provide the accurate
+              assistance to Persistent. The company setup a process to reduce
+              the Turn-around-time for any action items and timely support.
+              Monjin’s team started with one Business Unit of Persistent and
+              based on the calibration ratio and utilising the rapport with the
+              stakeholders it got 3 more Business Unit projects. The team
+              ensured good interviewer quality, timely scheduling and feedbacks
+              communicated to client.
+            </p>
+          </section>
+
+          {/* Benefits and Highlights Section */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="bg-pink-100">
+              <CardContent className="p-6 space-y-6">
+                <h2 className="text-5xl font-medium font-onest text-[#742325]">
+                  Benefits
+                </h2>
+                <ul className="space-y-4 text-white">
+                  {[
+                    "Neutrally assessed candidates",
+                    "Increased technical fitment of candidates with job role",
+                    "Faster hiring process",
+                    "Reducing costs and closing positions in a time effective manner.",
+                  ].map((benefit, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <div className="mt-1 w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                        <div className="w-2 h-2 rounded-full bg-pink-500" />
+                      </div>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-purple-100">
+              <CardContent className="p-6 space-y-6">
+                <h2 className="text-5xl font-medium font-onest text-[#41308F]">
+                  Highlights
+                </h2>
+                <ul className="space-y-4 text-white">
+                  {[
+                    "L2 select ratio is over 80%",
+                    "897+ Interviews conducted within 4 months",
+                    "Large retail companies shortlisted pre-assessed candidates from Monjin",
+                  ].map((highlight, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <div className="mt-1 w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                        <div className="w-2 h-2 rounded-full bg-purple-500" />
+                      </div>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* About Client Section */}
+          <section>
+            <Card className="overflow-hidden bg-[url('/assets/bg/casestudy3.png')] bg-cover bg-center">
+              <CardContent className="px-40 py-20">
+                <div className="grid gap-8 items-center">
+                  <div className="space-y-4">
+                    <h1 className="text-5xl font-medium font-onest text-black">
+                      Conclusion
+                    </h1>
+                    <p className="text-black">
+                      Persistent was extremely satisfied with Monjin’s
+                      interviewer quality and service and based on it the
+                      company gave a task of L2 selection to team Monjin. The
+                      team successfully completed the task in a very short
+                      duration of time which saved a tremendous amount of cost
+                      and efforts.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -11,12 +11,12 @@ export default function SignupForm() {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-purple-900 via-slate-900 to-green-900">
+    <div className="min-h-screen w-full flex items-center justify-center">
       <div className="w-full max-w-md p-8 space-y-8">
         {/* Logo */}
         <div className="flex justify-center">
           <Image
-            src="@/assets/monjin-logo.png"
+            src="/assets/monjin-logo.png" // Corrected path
             alt="Monjin Logo"
             width={150}
             height={40}
@@ -26,40 +26,40 @@ export default function SignupForm() {
 
         {/* Headings */}
         <div className="text-center space-y-2">
-          <h1 className="text-2xl font-bold text-white font-onest">Welcome to Monjin</h1>
-          <p className="text-base text-gray-300 font-figtree">Create Your Account</p>
+          <h1 className="text-2xl font-bold text-gray-900 font-onest">Welcome to Monjin</h1>
+          <p className="text-base text-gray-600 font-figtree">Create Your Account</p>
         </div>
 
         {/* Form */}
         <form className="space-y-6">
           <div className="space-y-2">
-            <label className="text-sm font-medium text-white font-onest">Name</label>
+            <label className="text-sm font-medium text-gray-900 font-onest">Name</label>
             <div className="relative">
               <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
               <Input
                 type="text"
                 placeholder="Enter your full name"
-                className="pl-10 bg-white/10 border-0 text-white placeholder:text-gray-400"
+                className="pl-10 bg-gray-100 border border-gray-300 text-gray-900 placeholder:text-gray-400"
               />
             </div>
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-white font-onest">Email Address</label>
+            <label className="text-sm font-medium text-gray-900 font-onest">Email Address</label>
             <div className="relative">
               <MailIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
               <Input
                 type="email"
                 placeholder="Enter your work mail"
-                className="pl-10 bg-white/10 border-0 text-white placeholder:text-gray-400"
+                className="pl-10 bg-gray-100 border border-gray-300 text-gray-900 placeholder:text-gray-400"
               />
             </div>
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-white font-onest">Password</label>
+            <label className="text-sm font-medium text-gray-900 font-onest">Password</label>
             <div className="relative">
-              <Input type={showPassword ? "text" : "password"} className="bg-white/10 border-0 text-white pr-10" />
+              <Input type={showPassword ? "text" : "password"} className="bg-gray-100 border border-gray-300 text-gray-900 pr-10" />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
@@ -80,7 +80,7 @@ export default function SignupForm() {
         </form>
 
         {/* Login Link */}
-        <p className="text-center text-white">
+        <p className="text-center text-gray-900">
           Already have an account?{" "}
           <Link href="/login" className="text-[#CDEA68] hover:underline">
             Login
@@ -90,4 +90,3 @@ export default function SignupForm() {
     </div>
   )
 }
-
