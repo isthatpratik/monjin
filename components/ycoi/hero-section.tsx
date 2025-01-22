@@ -22,7 +22,7 @@ export default function YcoiHeroSection() {
           </Button>
         </div>
 
-        <div className="absolute xl:right-[300px] top-[160px] lg:right-[100px]">
+        <div className="absolute xl:right-[300px] top-[160px] lg:right-[100px] -z-10">
           <Image
             src="/assets/ycoi/ycoi-hero-section.png"
             alt="Landing page illustration"

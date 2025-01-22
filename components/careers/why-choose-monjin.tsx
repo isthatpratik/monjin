@@ -71,8 +71,8 @@ export default function WhyChooseMonjin() {
       </div>
 
       {/* Bottom div with gradient */}
-      <div className="relative -mt-8 rounded-b-[32px] overflow-hidden">
-        <div className="bg-gradient-to-r from-[#9747FF] via-[#7C67FF] to-[#FF9D80] py-8">
+      <div className="relative -mt-8 rounded-b-[32px] overflow-hidden bg-[url('/assets/careers/why-choose-monjin-bg.jpg')] bg-cover bg-bottom bg-no-repeat">
+      <div className="py-8">
           <h2 className="text-[28px] font-semibold font-Onest text-white text-center mt-6">- Be a Monjineer. Be the Future! -</h2>
         </div>
       </div>

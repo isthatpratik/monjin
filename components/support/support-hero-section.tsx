@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 
 export default function SupportHero() {
   return (
-    <section
-      className="w-full relative flex items-center justify-center overflow-hidden"
+    <div
+      className="w-full relative flex items-center justify-center overflow-hidden -z-10"
     >
       <div className="container px-4 py-24 relative">
         <div className="mx-auto text-center space-y-4">
@@ -38,7 +38,7 @@ export default function SupportHero() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
   )
 }

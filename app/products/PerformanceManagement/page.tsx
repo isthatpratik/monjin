@@ -1,5 +1,5 @@
 import { Footer } from "@/components/layout/footer";
-import { NavBarProducts } from "@/components/layout/navbar-products";
+import { NavbarProducts } from "@/components/layout/navbar-products";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import Image from "next/image";
 import React from "react";
@@ -11,7 +11,7 @@ import CustomizedInterview from "@/components/performance-management/customized-
 const MonjinSuite = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <NavBarProducts />
+      <NavbarProducts />
 
       <div className="absolute inset-0 -z-50 w-full h-full">
         <div className="hidden md:block w-full h-full">

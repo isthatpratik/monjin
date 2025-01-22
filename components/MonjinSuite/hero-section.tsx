@@ -14,7 +14,7 @@ const MonjinSuiteHero = () => {
           Experience.
         </h1>
       </div>
-      <div>
+      <div className="-z-10">
         <Image
           src={"/assets/MonjinSuite/monjin-suite-hero.png"}
           alt="Monjin Suite Illustration"

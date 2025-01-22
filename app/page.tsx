@@ -1,4 +1,3 @@
-import { NavBar } from "@/components/layout/navbar";
 import { Clients } from "@/components/sections/clients-landing";
 import { HeroSection } from "@/components/sections/hero-section";
 import FeatureSection from "@/components/sections/feature-section";
@@ -7,6 +6,7 @@ import CaseStudies from "@/components/sections/case-studies";
 import { Footer } from "@/components/layout/footer";
 import Testimonials from "@/components/sections/testimonials";
 import Image from "next/image";
+import { Navbar } from "@/components/layout/navbar";
 
 export default function Home() {
   return (
@@ -34,7 +34,7 @@ export default function Home() {
         />
       </div>
 
-      <NavBar />
+      <Navbar/>
 
       <div className="md:max-w-[1600px] mx-auto px-6 py-10">
         <HeroSection />

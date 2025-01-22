@@ -25,7 +25,7 @@ export default function SpotlightHeroSection() {
           </p>
         </div>
 
-        <div className="absolute xl:right-[280px] top-[200px] lg:right-[100px]">
+        <div className="absolute xl:right-[280px] top-[200px] lg:right-[100px] -z-10">
           <Image
             src="/assets/spotlight/spotlight-hero-section.png"
             alt="Spotlight illustration"

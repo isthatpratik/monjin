@@ -1,5 +1,5 @@
 import { Footer } from "@/components/layout/footer";
-import { NavBarProducts } from "@/components/layout/navbar-products";
+import { NavbarProducts } from "@/components/layout/navbar-products";
 import YcoiFeatures from "@/components/ycoi/ycoi-features";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import YcoiHeroSection from "@/components/ycoi/hero-section";
@@ -10,7 +10,7 @@ import InterviewSolutions from "@/components/ycoi/interview-solutions";
 const MonjinSuite = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <NavBarProducts />
+      <NavbarProducts />
 
       <div className="absolute inset-0 -z-50 w-full h-full">
         <div className="hidden md:block w-full h-full">

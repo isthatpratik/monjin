@@ -13,7 +13,7 @@ const CareersHero = () => {
         </h1>
         <p className="text-center font-light font-figtree text-lg  max-w-full">At Monjin, we believe in empowering professionals to take ownership of their work and time. You understand your peak <br />productivity hours best, so here, you control your schedule. No rigid timelines. No unnecessary alarm bells.</p>
       </div>
-      <div>
+      <div className="-z-10">
         <Image
           src={"/assets/careers/careers-hero.png"}
           alt="Monjin Suite Illustration"

@@ -1,5 +1,5 @@
 import { Footer } from '@/components/layout/footer';
-import { NavBarProducts } from '@/components/layout/navbar-products';
+import { NavbarProducts } from '@/components/layout/navbar-products';
 import MonjinSuiteHero from '@/components/MonjinSuite/hero-section';
 import MonjinSuitePricing from '@/components/MonjinSuite/monjin-suite-pricing';
 import MonjinSuiteProducts from '@/components/MonjinSuite/monjin-suite-products';
@@ -10,7 +10,7 @@ import React from 'react';
 const MonjinSuite = () => {
   return (
       <main className="relative min-h-screen overflow-hidden">
-        <NavBarProducts />
+        <NavbarProducts />
         
         <div className="absolute inset-0 -z-50 w-full h-full">
           <div className="hidden md:block w-full h-full">
