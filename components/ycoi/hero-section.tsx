@@ -6,9 +6,6 @@ export default function YcoiHeroSection() {
     <main className="min-h-screen mb-20">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center py-12">
         <div className="space-y-6">
-          <div className="flex justify-between items-center">
-            <h1 className="text-6xl font-medium ">YCOI</h1>
-          </div>
           <div className="inline-flex rounded-xl border-[#83AB09] border p-1">
             <button className="px-4 py-2 font-figree text-[#83AB09] font-medium cursor-default">
               <strong>YCOI</strong>- YOUR CANDIDATES OUR INTERVIEWERS
@@ -31,7 +28,7 @@ export default function YcoiHeroSection() {
             alt="Landing page illustration"
             width={1000}
             height={1000}
-            className="object-contain w-full h-full"
+            className="object-contain w-[1200px] h-full"
           />
         </div>
       </div>

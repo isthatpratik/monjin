@@ -192,7 +192,7 @@ export function Footer() {
                 GDPR
               </Link>
             </div>
-            <div className="flex text-center hover:underline max-w-[80%] lg:w-full justify-end">© 2023 Monjin Interviews Pvt. Ltd. All Rights Reserved</div>
+            <div className="flex text-center hover:underline max-w-[80%] lg:w-full justify-end">© 2025 Monjin Interviews Pvt. Ltd. All Rights Reserved</div>
           </div>
         </div>
       </div>

@@ -152,8 +152,8 @@ export default function YcoiFeatures() {
                 value={tab.id}
                 className="space-y-8 pt-4 justify-between"
               >
-                <div className="grid lg:grid-cols-2 gap-12">
-                  <div className="space-y-6">
+                <div className="grid lg:grid-cols-2 gap-4">
+                  <div className="space-y-6 col-span-">
                     <h2 className="font-figtree font-medium text-2xl tracking-tighter">
                       {tab.title}
                     </h2>
@@ -185,11 +185,11 @@ export default function YcoiFeatures() {
                       )}
                     </div>
                   </div>
-                  <div className="relative h-[400px] rounded-lg overflow-hidden">
+                  <div className="relative h-[400px] rounded-lg overflow-hidden col-span-[0.5]">
                     <Image
                       src={tab.imageUrl || "/placeholder.svg"}
                       alt={tab.title}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain aspect-[4/3]"
                       height={1000}
                       width={1000}
                       quality={70}

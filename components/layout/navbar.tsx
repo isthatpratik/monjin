@@ -152,7 +152,7 @@ export function NavBar() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/MonjinSuite" passHref>
+                          <Link href="/products/Spotlight" passHref>
                             <NavigationMenuLink className="text-[#FFB14A] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Spotlight</span>
                               <ArrowRight className="h-5 w-5"/>

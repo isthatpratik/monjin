@@ -152,7 +152,7 @@ export function NavBarProducts() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Link href="/products/spotlight" passHref>
+                          <Link href="/products/Spotlight" passHref>
                             <NavigationMenuLink className="text-[#FFB14A] text-2xl font-bold font-figtree flex justify-start gap-2 items-center">
                               <span>Spotlight</span>
                               <ArrowRight className="h-5 w-5"/>
@@ -193,7 +193,7 @@ export function NavBarProducts() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-black hover:text-white transition-colors bg-transparent border-none font-figtree">
+                <NavigationMenuTrigger className="text-black hover:black/80 transition-colors bg-transparent border-none font-figtree">
                   Company
                   <NavigationMenuContent className="bg-white p-4 rounded-md shadow-lg w-[300px] h-auto border-none font-figtree">
                     <ul className="flex flex-col gap-3 p-2 md:w-[400px] lg:w-full">

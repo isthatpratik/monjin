@@ -25,13 +25,13 @@ export default function BasicsHeroSection() {
           </p>
         </div>
 
-        <div className="absolute xl:right-[300px] top-[160px] lg:right-[100px]">
+        <div className="absolute xl:right-[300px] top-[200px] lg:right-[100px]">
           <Image
             src="/assets/basics/basics-hero-section.png"
             alt="Spotlight illustration"
             width={1000}
             height={1000}
-            className="object-contain w-full h-full"
+            className="object-contain w-[1200px] h-full"
           />
         </div>
       </div>
