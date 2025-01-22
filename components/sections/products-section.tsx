@@ -199,6 +199,48 @@ const ProductsSection = () => {
         </div>
       )}
       {isMobile && <div className="swiper-pagination-custom mt-4"></div>}
+
+      <div className="relative mx-auto rounded-3xl flex flex-col gap-6 lg:max-w-[80%] md:justify-between bg-[url('/assets/monjin-suite-landing-bg.png')] bg-cover bg-center h-auto lg:flex-row lg:mt-2 my-10">
+        {/* Monjin Suite Section */}
+        <div className="flex flex-col items-center p-10 gap-4 lg:w-1/2 lg:items-start lg:justify-center text-center lg:text-left">
+          {/* Logo and Title */}
+          <div className="flex items-center gap-4">
+            <Image
+              alt="Monjin Suite Logo"
+              width={40}
+              height={40}
+              src={"/assets/monjin-suite-logo.png"}
+              className="object-contain"
+            />
+            <h1 className="sm:text-2xl md:text-3xl font-figtree font-medium tracking-tight leading-tight text-white align-text-bottom">
+              Monjin Suite
+            </h1>
+          </div>
+
+          {/* Description */}
+          <p className="md:text-base text-sm lg:text-lg font-figtree font-light text-gray-300 mt-4 w-full lg:w-4/5">
+          Experience a comprehensive solution designed to attract, engage, and retain top talent across multiple channels.
+          </p>
+
+          {/* Buttons */}
+          <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3">
+            <Button className="bg-[#FFFFFF] text-black rounded-[8px] p-6 font-Onest text-sm transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-white">
+              Deep Dive In
+            </Button>
+          </div>
+        </div>
+
+        {/* Illustration for Larger Devices */}
+        <div className="hidden lg:flex lg:w-1/2 relative justify-start items-center p-10">
+          <Image
+            src="/assets/monjin-suite-landing-illustration.png"
+            alt="Monjin Suite Illustration"
+            width={520}
+            height={365}
+            className="object-contain"
+          />
+        </div>
+      </div>
     </div>
   );
 };

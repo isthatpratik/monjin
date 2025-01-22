@@ -8,7 +8,7 @@ export default function YcoiHeroSection() {
         <div className="space-y-6">
           <div className="inline-flex rounded-xl border-[#83AB09] border p-1">
             <button className="px-4 py-2 font-figree text-[#83AB09] font-medium cursor-default">
-              <strong>YCOI</strong>- YOUR CANDIDATES OUR INTERVIEWERS
+              <strong>YCOI</strong> - YOUR CANDIDATES OUR INTERVIEWERS
             </button>
           </div>
           <h2 className="text-5xl font-bold font-onest lg:text-7xl text-[#353535] leading-tight tracking-tighter">

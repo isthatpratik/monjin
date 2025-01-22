@@ -9,11 +9,11 @@ export const HeroSection = () => {
       {/* Left Section */}
       <div className="space-y-4 lg:space-y-6 flex flex-col justify-center text-center lg:text-left lg:w-2/5">
         <h1 className="text-5xl md:text-5xl lg:text-6xl xl:text-[78px] max-w-full lg:max-w-xl text-white font-Onest font-bold tracking-tighter leading-tight">
-          Unleash the Power of Talent Seamlessly
+          Unleash the Power of Talent Acquisition
         </h1>
         <p className="md:text-sm text-base lg:text-lg font-figtree font-light text-gray-300 max-w-full lg:max-w-md">
           Connect with exceptional candidates, vetted by trusted experts,
-          delivering insightful assessments for smarter, more confident hiring
+          delivering insightful assessments for smarter hiring
           decisions.
         </p>
         <div className="hidden lg:block">

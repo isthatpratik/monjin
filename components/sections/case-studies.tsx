@@ -50,10 +50,11 @@ export default function CaseStudies2() {
     <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-16 py-8">
       <div className="text-center mb-16 flex-col self-center">
         <h1 className="text-5xl font-medium mb-4 font-Onest text-[#1D1E23] text-center tracking-tighter">
-          The Outcome Chronicles: Shaped by Client Insights{" "}
+        Empowering Hiring Outcomes: <br />
+        Client Insights{" "}
         </h1>
-        <p className="text-[#1D1E23] max-w-3xl mx-auto font-figtree text-base">
-          Explore how our partnerships have sparked innovation, driving
+        <p className="text-[#1D1E23] max-w-3xl mx-auto font-figtree text-lg font-light">
+          Explore how our partnerships have sparked innovation, driving <br />
           exceptional results and redefining success
         </p>
       </div>
@@ -79,7 +80,7 @@ export default function CaseStudies2() {
                     </p>
                   </div>
                   <Button
-                    className="bg-black text-white hover:bg-gray-800 rounded-full px-8 "
+                    className="bg-black text-white hover:bg-gray-800 rounded-[8px] px-8 "
                     size="lg"
                   >
                     {slide.buttonText}

@@ -6,8 +6,8 @@ export default function BasicsHeroSection() {
     <main className="min-h-screen mb-10">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center py-12">
         <div className="space-y-6">
-          <div className="inline-flex rounded-xl border-[#F18800] border p-1">
-            <button className="px-4 py-2 font-figree text-[#F18800] text-lg font-medium uppercase cursor-default">
+          <div className="inline-flex rounded-xl border-[#F46D70] border p-1">
+            <button className="px-4 py-2 font-figree text-[#F46D70] text-lg font-medium uppercase cursor-default">
               <strong>Basics</strong> - Streamline Effortless Hiring
             </button>
           </div>

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Linkedin, Instagram, Youtube, Twitter } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -10,13 +9,12 @@ import {
 
 const footerLinks = {
   products: [
-    { name: "Monjin Suite", href: "#" },
-    { name: "Monjin OCOI", href: "#" },
-    { name: "Monjin YCOI", href: "#" },
-    { name: "Monjin Spot Light", href: "#" },
-    { name: "Monjin Basics", href: "#" },
-    { name: "Monjin Talent Pool", href: "#" },
-    { name: "Monjin Assessment", href: "#" },
+    { name: "Monjin Suite", href: "/products/MonjinSuite" },
+    { name: "OCOI", href: "products/OCOI" },
+    { name: "YCOI", href: "/products/YCOI" },
+    { name: "Spotlight", href: "/products/Spotlight" },
+    { name: "Performance Management", href: "/products/PerformanceManagement" },
+    { name: "Basics", href: "/products/Basics" },
   ],
   interviewer: [
     { name: "Become an Interviewer", href: "#" },
@@ -25,7 +23,7 @@ const footerLinks = {
     { name: "Interviewer Requirement", href: "#" },
     { name: "Bonus", href: "#" },
     { name: "Earnings", href: "#" },
-    { name: "Support", href: "#" },
+    { name: "Support", href: "/support" },
   ],
   candidates: [
     { name: "Give an Interview", href: "#" },
@@ -51,13 +49,13 @@ export function Footer() {
     <footer className="w-full text-gray-100 lg:rounded-t-[32px] rounded-t-3xl relative">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
-          src={'/assets/footer-bg-web.jpg'}    
+          src={"/assets/footer-bg-web.jpg"}
           fill
           alt="Footer Background"
           className="object-cover object-top lg:block md:block hidden"
         />
         <Image
-          src={'/assets/footer-bg-mobile.jpg'}
+          src={"/assets/footer-bg-mobile.jpg"}
           fill
           alt="Footer Background"
           className="object-fill object-top md:hidden lg:hidden"
@@ -84,7 +82,10 @@ export function Footer() {
               className="mx-auto md:mx-0 mb-4 object-contain hidden sm:block"
             />
             <p className="text-xs md:text-base text-[#AAAAAA] font-figtree">
-              Monjin is a dynamic network of expert interviewers spanning diverse skill sets, conducting real-time video interviews that empower businesses to find the right talent faster and more effectively.
+              Monjin is a dynamic network of expert interviewers spanning
+              diverse skill sets, conducting real-time video interviews that
+              empower businesses to find the right talent faster and more
+              effectively.
             </p>
             {/* Locations */}
             <div className="flex flex-wrap justify-center md:justify-start mt-8 gap-2 items-center mb-8">
@@ -100,23 +101,56 @@ export function Footer() {
           </div>
 
           {/* Say Hello Section */}
+          {/* Say Hello Section */}
           <div className="text-center md:text-right mb-8 md:mb-0 md:flex md:flex-col md:items-end md:justify-center">
-            <h2 className="text-lg md:text-5xl font-light font-Onest mb-6">Say hello.</h2>
+            <h2 className="text-lg md:text-5xl font-light font-Onest mb-6">
+              Say hello.
+            </h2>
             <div className="flex justify-center md:justify-end gap-4">
-              <Link href="#" className="p-2 md:p-3 bg-white bg-opacity-10 rounded-full hover:text-gray-300">
-                <Facebook className="w-4 h-4 md:w-5 md:h-5" />
+              <Link href="#">
+                <Image
+                  src="/assets/social-media/facebook.png"
+                  alt="Facebook"
+                  width={48}
+                  height={48}
+                  className="hover:opacity-80"
+                />
               </Link>
-              <Link href="#" className="p-2 md:p-3 bg-white bg-opacity-10 rounded-full hover:text-gray-300">
-                <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
+              <Link href="#">
+                <Image
+                  src="/assets/social-media/linkedIn.png"
+                  alt="LinkedIn"
+                  width={48}
+                  height={48}
+                  className="hover:opacity-80"
+                />
               </Link>
-              <Link href="#" className="p-2 md:p-3 bg-white bg-opacity-10 rounded-full hover:text-gray-300">
-                <Instagram className="w-4 h-4 md:w-5 md:h-5" />
+              <Link href="#">
+                <Image
+                  src="/assets/social-media/instagram.png"
+                  alt="Instagram"
+                  width={48}
+                  height={48}
+                  className="hover:opacity-80"
+                />
               </Link>
-              <Link href="#" className="p-2 md:p-3 bg-white bg-opacity-10 rounded-full hover:text-gray-300">
-                <Youtube className="w-4 h-4 md:w-5 md:h-5" />
+              <Link href="#">
+                <Image
+                  src="/assets/social-media/youtube.png"
+                  alt="YouTube"
+                  width={48}
+                  height={48}
+                  className="hover:opacity-80"
+                />
               </Link>
-              <Link href="#" className="p-2 md:p-3 bg-white bg-opacity-10 rounded-full hover:text-gray-300">
-                <Twitter className="w-4 h-4 md:w-5 md:h-5" />
+              <Link href="#">
+                <Image
+                  src="/assets/social-media/x-twitter.png"
+                  alt="Twitter"
+                  width={48}
+                  height={48}
+                  className="hover:opacity-80"
+                />
               </Link>
             </div>
           </div>
@@ -130,11 +164,16 @@ export function Footer() {
           {/* Products, Interviewer, Candidates, Company sections */}
           {Object.entries(footerLinks).map(([key, links]) => (
             <div key={key}>
-              <h3 className="text-2xl mb-4 font-Onest">{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
+              <h3 className="text-2xl mb-4 font-Onest">
+                {key.charAt(0).toUpperCase() + key.slice(1)}
+              </h3>
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-[#ABABAB] text-base hover:text-white">
+                    <Link
+                      href={link.href}
+                      className="text-[#ABABAB] text-base hover:text-white"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -148,7 +187,12 @@ export function Footer() {
         <div className="md:hidden mb-8">
           <div className="grid grid-cols-2 gap-4 self-center">
             {Object.entries(footerLinks).map(([key, links]) => (
-              <Accordion type="single" collapsible className="w-[60%] mx-auto" key={key}>
+              <Accordion
+                type="single"
+                collapsible
+                className="w-[60%] mx-auto"
+                key={key}
+              >
                 <AccordionItem value={key} className="border-none">
                   <AccordionTrigger className="hover:no-underline">
                     {key.charAt(0).toUpperCase() + key.slice(1)}
@@ -157,7 +201,10 @@ export function Footer() {
                     <ul className="space-y-2">
                       {links.map((link) => (
                         <li key={link.name}>
-                          <Link href={link.href} className="text-gray-400 hover:text-white">
+                          <Link
+                            href={link.href}
+                            className="text-gray-400 hover:text-white"
+                          >
                             {link.name}
                           </Link>
                         </li>
@@ -172,8 +219,20 @@ export function Footer() {
 
         {/* Certifications */}
         <div className="hidden md:flex justify-end gap-4 mb-8">
-          <Image src="/assets/certification-1.png" alt="AICPA SOC" width={80} height={80} className="" />
-          <Image src="/assets/certification-2.png" alt="ISO Certification" width={80} height={80} className="" />
+          <Image
+            src="/assets/certification-1.png"
+            alt="AICPA SOC"
+            width={80}
+            height={80}
+            className=""
+          />
+          <Image
+            src="/assets/certification-2.png"
+            alt="ISO Certification"
+            width={80}
+            height={80}
+            className=""
+          />
         </div>
 
         {/* Footer Bottom */}
@@ -192,7 +251,9 @@ export function Footer() {
                 GDPR
               </Link>
             </div>
-            <div className="flex text-center hover:underline max-w-[80%] lg:w-full justify-end">© 2025 Monjin Interviews Pvt. Ltd. All Rights Reserved</div>
+            <div className="flex text-center hover:underline max-w-[80%] lg:w-full justify-end">
+              © 2025 Monjin Interviews Pvt. Ltd. All Rights Reserved
+            </div>
           </div>
         </div>
       </div>
