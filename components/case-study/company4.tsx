@@ -135,8 +135,14 @@ export default function CaseStudyHero() {
                     "Reduced Hiring Cycle",
                   ].map((benefit, index) => (
                     <li key={index} className="flex items-start gap-2 pb-8">
-                      <div className="mt-1 w-4 h-4 rounded-full bg-white flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-pink-500" />
+                      <div className="mt-1 w-4 h-4 flex items-center justify-center">
+                        <Image
+                          src="/assets/case-study/icons/tick.png"
+                          alt="icon"
+                          width={32} 
+                          height={32}
+                          className="rounded-full"
+                        />
                       </div>
                       <span>{benefit}</span>
                     </li>
@@ -157,8 +163,14 @@ export default function CaseStudyHero() {
                     "Project commencement within 3 Days",
                   ].map((highlight, index) => (
                     <li key={index} className="flex items-start gap-2 pb-8">
-                      <div className="mt-1 w-4 h-4 rounded-full bg-white flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-purple-500" />
+                      <div className="mt-1 w-4 h-4 flex items-center justify-center">
+                        <Image
+                          src="/assets/case-study/icons/light.png"
+                          alt="icon"
+                          width={32} 
+                          height={32}
+                          className="rounded-full"
+                        />
                       </div>
                       <span>{highlight}</span>
                     </li>

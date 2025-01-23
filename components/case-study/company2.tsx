@@ -1,29 +1,15 @@
 "use client";
 
-import { Search } from "lucide-react";
-import { Input } from "../ui/input";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  EyeIcon,
-  EyeOffIcon,
-  UserIcon,
-  Users,
-  Clock,
-  Target,
-} from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function CaseStudyHero() {
   return (
     <section className="w-full relative grid items-center justify-center overflow-hidden">
-      <div className="container px-8 py-24 relative">
+      <div className="container px-8 pt-24 relative">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            Futuristic Hiring Route
+          <h1 className="text-4xl md:text-7xl font-semi-bold text-white">
+            Futuristic Hiring Routes
           </h1>
           <h2 className="text-lg md:text-xl font-figtree font-light text-white ">
             Delivering higher selection ratio.
@@ -32,22 +18,24 @@ export default function CaseStudyHero() {
         </div>
       </div>
 
-      <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 p-4 md:p-8">
+      <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 p-16 rounded-3xl">
         <div className="mx-auto max-w-5xl space-y-16">
           {/* Overview Section */}
-          <Card className="overflow-hidden bg-[url('/assets/bg/casestudy1.png')] bg-cover bg-center">
-            <CardContent className="p-6 md:p-8">
+          <Card className="overflow-hidden bg-[url('/assets/bg/casestudy1.png')] bg-cover bg-center rounded-[32px]">
+            <CardContent className="p-16">
               <div className="grid gap-8 md:grid-cols-2 items-center">
                 <div className="space-y-4">
-                  <h1 className="text-5xl font-medium font-onest">Overview</h1>
-                  <p className="text-gray-600">
+                  <h1 className="text-[72px] font-medium font-onest tracking-tighter">
+                    Overview
+                  </h1>
+                  <p className="text-gray-600 font-figtree font-normal text-xl">
                     Retail Industry has transformed from conventional grocery
                     markets to fast-track hypermarkets in the recent years. The
                     ever-fluctuating sector poses its uniqe challenges –
                     Applicants have multiple options; Low barriers to exit;
                     Candidates market is highly localised. With India being
-                    ranked 1st in the Global Retail Development Index 2017,we
-                    see an opportunity. Monjin looks to resolve hiring
+                    ranked 1st in the Global Retail Development Index 2017.{" "}
+                    <br /> We see an opportunity. Monjin looks to resolve hiring
                     challenges faced specific to retail industry.
                   </p>
                 </div>
@@ -55,8 +43,8 @@ export default function CaseStudyHero() {
                   <Image
                     src="/assets/case-study/company2.png"
                     alt="Empower Professionals Logo"
-                    width={200}
-                    height={200}
+                    width={400}
+                    height={400}
                     className="object-contain"
                   />
                 </div>
@@ -65,40 +53,48 @@ export default function CaseStudyHero() {
           </Card>
 
           {/* Challenges Section */}
-          <section className="space-y-8">
-            <h2 className="text-5xl font-medium font-onest">Challenges</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+          <section className="space-y-8 p-4">
+            <h2 className="text-[72px] font-medium font-onest tracking-tighter">
+              Challenges
+            </h2>
+            <div className="grid md:grid-cols-4 gap-3">
               {[
                 {
-                  icon: "👥",
+                  icon: "/assets/case-study/icons/4.png",
                   title: "Increased burden of bulk hiring demands",
-                  bgColor: "bg-pink-100",
                 },
                 {
-                  icon: "⏰",
+                  icon: "/assets/case-study/icons/5.png",
                   title:
                     "Delayed interviews due to unavailability of interview panel",
-                  bgColor: "bg-green-100",
                 },
                 {
-                  icon: "🎯",
+                  icon: "/assets/case-study/icons/6.png",
                   title: "Lack of qualified and pre-assessed candidates",
-                  bgColor: "bg-purple-100",
                 },
                 {
-                  icon: "🎯",
-                  title: "Lack of qualified and pre-assessed candidates",
-                  bgColor: "bg-purple-100",
+                  icon: "/assets/case-study/icons/7.png",
+                  title: "Lack of connectivityto global retailorganisations",
                 },
               ].map((challenge, index) => (
-                <Card key={index} className="overflow-hidden">
+                <Card
+                  key={index}
+                  className="overflow-hidden bg-transparent shadow-none border-none"
+                >
                   <CardContent className="p-6 text-center space-y-4">
                     <div
-                      className={`w-12 h-12 mx-auto rounded-lg ${challenge.bgColor} flex items-center justify-center text-2xl`}
+                      className={`max-w-3xl h-3xl mx-auto rounded-lg flex items-center justify-center text-2xl`}
                     >
-                      {challenge.icon}
+                      <Image
+                        src={challenge.icon}
+                        alt={"src"}
+                        width={100}
+                        height={100}
+                      />
                     </div>
-                    <p className="font-medium">{challenge.title}</p>
+                    <p className="font-figtree font-normal text-[#383838] text-[20px]">
+                      {challenge.title}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -107,32 +103,37 @@ export default function CaseStudyHero() {
 
           {/* Method Section */}
           <section className="space-y-4">
-            <h2 className="text-4xl font-medium font-onest">Monjin Approach</h2>
-            <p className="text-xl font-normal font-figtree text-gray-600">
+            <h2 className="text-[72px] font-medium font-onest">
+              Monjin Approach
+            </h2>
+            <p className="text-xl font-normal font-figtree text-gray-600 leading-relaxed">
               Travelling to the interview venue involves effort, time, and
               costs. Specially if you are approaching top holding companies in
               the retail sector. Monjin enabled potential candidates to beat
               this challenge with a video platform. The platform was powered
               with an assessment measuring tool which helped in technical
-              fitment of the candidates in the retail industry. Hiring in large
-              numbers is a big challenge, especially in the retail industry. An
-              expert panel of Monjin helped in conducting Level1 interviews.
-              This helped in resolving the burden of bulk hiring demand.Monjin
-              managed services helped manage weekend interview drives without
-              calling hiring managers to conduct the 1st level of interview.
-              This ensured a reduction in hiring cycle for the employers and
-              better technical fitment of candidates. Monjin has achieved
-              resolutions in talent acquisition challenges while enabling
-              candidates to reach top retail companies, and improved employer’s
-              business productivity in the retail industry.
+              fitment of the candidates in the retail industry. <br />
+              Hiring in large numbers is a big challenge, especially in the
+              retail industry. An expert panel of Monjin helped in conducting
+              Level1 interviews. This helped in resolving the burden of bulk
+              hiring demand.Monjin managed services helped manage weekend
+              interview drives without calling hiring managers to conduct the
+              1st level of interview. This ensured a reduction in hiring cycle
+              for the employers and better technical fitment of candidates.{" "}
+              <br />
+              Monjin has achieved resolutions in talent acquisition challenges
+              while enabling candidates to reach top retail companies, and
+              improved employer’s business productivity in the retail industry.
             </p>
           </section>
 
           {/* Benefits and Highlights Section */}
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-pink-100">
-              <CardContent className="p-6 space-y-6">
-                <h2 className="text-5xl font-medium font-onest text-[#742325]">Benefits</h2>
+            <Card className="bg-[url('/assets/case-study/benefits.png')] bg-cover bg-center] rounded-[32px]">
+              <CardContent className="p-12 space-y-6">
+                <h2 className="text-5xl leading-relaxed font-medium font-onest text-[#742325]">
+                  Benefits
+                </h2>
                 <ul className="space-y-4 text-white">
                   {[
                     "Convenience in Candidate Screening",
@@ -140,9 +141,15 @@ export default function CaseStudyHero() {
                     "Hiring Cycle reduced with accurate pre-assessments of candidates",
                     "Increased technical fitment of candidates with job role",
                   ].map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <div className="mt-1 w-4 h-4 rounded-full bg-white flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-pink-500" />
+                    <li key={index} className="flex items-start gap-2 pb-8">
+                      <div className="mt-1 w-4 h-4 flex items-center justify-center">
+                        <Image
+                          src="/assets/case-study/icons/tick.png"
+                          alt="icon"
+                          width={32} 
+                          height={32}
+                          className="rounded-full"
+                        />
                       </div>
                       <span>{benefit}</span>
                     </li>
@@ -151,18 +158,26 @@ export default function CaseStudyHero() {
               </CardContent>
             </Card>
 
-            <Card className="bg-purple-100">
-              <CardContent className="p-6 space-y-6">
-                <h2 className="text-5xl font-medium font-onest text-[#41308F]">Highlights</h2>
-                <ul className="space-y-4 text-white">
+            <Card className="bg-[url('/assets/case-study/highlights.png')]  bg-cover bg-center] rounded-[32px]">
+              <CardContent className="p-12 space-y-6">
+                <h2 className="text-5xl leading-relaxed font-medium font-onest text-[#41308F]">
+                  Highlights
+                </h2>
+                <ul className="space-y-4 leading-loose text-white">
                   {[
                     "Monjin Licenses availability within a month",
                     "300+ Interviews conducted within 6 months",
                     "Large retail companies shortlisted pre-assessed candidates from Monjin",
                   ].map((highlight, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <div className="mt-1 w-4 h-4 rounded-full bg-white flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-purple-500" />
+                    <li key={index} className="flex items-start gap-2 pb-8">
+                      <div className="mt-1 w-4 h-4 flex items-center justify-center">
+                        <Image
+                          src="/assets/case-study/icons/light.png"
+                          alt="icon"
+                          width={32} 
+                          height={32}
+                          className="rounded-full"
+                        />
                       </div>
                       <span>{highlight}</span>
                     </li>
@@ -172,7 +187,6 @@ export default function CaseStudyHero() {
             </Card>
           </div>
 
-          {/* About Client Section */}
           <section>
             <Card className="overflow-hidden bg-[url('/assets/bg/casestudymonjin.png')] bg-cover bg-center">
               <CardContent className="px-40 py-20">
