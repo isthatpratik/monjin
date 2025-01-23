@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/support-accordion";
 import InterviewerFAQ from "./interviewer-FAQ";
 import CandidateFAQ from "./candidate-faq";
+import EmployerFAQ from "./employer-faq";
 
 const faqs = [
   {
@@ -58,17 +59,17 @@ const faqs = [
   {
     question: "What is the Green Room?",
     answer:
-      "The Green Room is a pre-interview space where you can test your audio and video settings.",
+      "The Green Room is your pre-interview waiting area, accessible 24 hours before your interview. Here, you can view a short introduction video of your interviewer and join the live interview.",
   },
   {
     question: "What happens after the interview is completed?",
     answer:
-      "After the interview, your responses will be evaluated and you'll receive feedback through our platform.",
+      "Your video interview is made available to employers seeking candidates like you. Employers will review the video and contact you directly for further discussions.",
   },
   {
     question: "When will I get feedback?",
     answer:
-      "Feedback timing varies but typically you'll receive it within 48-72 hours after the interview.",
+      "Employers usually provide feedback within 2-4 weeks after the interview.",
   },
 ];
 
@@ -122,7 +123,7 @@ export default function SupportSection() {
                 value={`item-${index}`}
                 className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-2"
               >
-                <AccordionTrigger className="hover:no-underline flex justify-between items-center font-Onest font-normal text-2xl tracking-tight bg-white">
+                <AccordionTrigger className="hover:no-underline flex justify-between items-center font-Onest font-normal text-2xl tracking-tight">
                   <span>{faq.question}</span>
                   <div className="shrink-0">
                     <div className="h-8 w-8 rounded-[4px] flex items-center justify-center"></div>
@@ -140,6 +141,14 @@ export default function SupportSection() {
           value="candidate"
           className="flex flex-col items-center justify-center mt-8"
         >
+          <div className="my-12 text-center">
+            <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
+              Candidate
+            </h1>
+            <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
+            Are you looking out for opportunities and want to showcase your skills to top companies? Be a <br />candidate and meet global experts.
+            </p>
+          </div>
           <CandidateFAQ />
         </TabsContent>
         <TabsContent
@@ -151,8 +160,7 @@ export default function SupportSection() {
               Interviewer
             </h1>
             <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
-              Earn Money , Recognition and gratification as a Monjin
-              Interviewer. Be a Monjin interviewer.
+            Earn Money , Recognition and gratification as a Monjin Interviewer. Be a Monjin interviewer.
             </p>
           </div>
           <InterviewerFAQ />
@@ -161,9 +169,15 @@ export default function SupportSection() {
           value="employer"
           className="flex flex-col items-center justify-center mt-8"
         >
-          <div className="flex items-center justify-center h-48 text-gray-500">
-            Employer FAQs coming soon...
+          <div className="my-12 text-center">
+            <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
+              Employer
+            </h1>
+            <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
+            Find answers to all your questions, from posting job openings to understanding <br />our interview process
+            </p>
           </div>
+          <EmployerFAQ />
         </TabsContent>
       </Tabs>
     </div>

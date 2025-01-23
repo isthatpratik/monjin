@@ -14,7 +14,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-b", className)}
+    className={cn("border-b data-[state=open]:bg-[#F4F9F9]", className)}
     {...props}
   />
 ))
@@ -29,14 +29,26 @@ const AccordionTrigger = React.forwardRef<
       ref={ref}
       className={cn(
         "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left",
-        "[&[data-state=open]>svg]:hidden", // Hide the Plus icon when open
         className
       )}
       {...props}
     >
       {children}
-      <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 data-[state=open]:hidden" />
-      <Minus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 hidden data-[state=open]:block" />
+      <div
+        className={cn(
+          "w-8 h-8 flex items-center justify-center rounded-[8px] transition-all duration-200 [&[data-state=open]>svg]:rotate-180",
+          "bg-[#F6FDF1] data-[state=open]:bg-[#FF0006]/50"
+        )}
+      >
+        <Plus
+          className="h-4 w-4 text-[#A9D845] transition-all data-[state=open]:hidden [&[data-state=open]>svg]:rotate-180"
+          aria-hidden="true"
+        />
+        <Minus
+          className="h-4 w-4 text-white transition-all hidden data-[state=open]:block"
+          aria-hidden="true"
+        />
+      </div>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))

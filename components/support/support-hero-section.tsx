@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 export default function SupportHero() {
   return (
     <div
-      className="w-full relative flex items-center justify-center overflow-hidden -z-10"
+      className="w-full relative flex items-center justify-center overflow-hidden"
     >
       <div className="container px-4 py-24 relative">
         <div className="mx-auto text-center space-y-4">

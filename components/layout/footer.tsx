@@ -38,7 +38,7 @@ const footerLinks = {
     { name: "Careers", href: "#" },
     { name: "GDPR", href: "#" },
     { name: "CSR", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "/contact" },
   ],
 };
 

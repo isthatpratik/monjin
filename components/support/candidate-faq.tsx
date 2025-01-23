@@ -73,14 +73,6 @@ const faqs = [
 export default function CandidateFAQ() {
   return (
     <div className="w-full max-w-5xl mx-auto">
-      <div className="my-12 text-center">
-        <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
-          Candidate
-        </h1>
-        <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
-        Are you looking out for opportunities and want to showcase your skills to top companies? Be a <br />candidate and meet global experts.
-        </p>
-      </div>
       <Accordion type="single" collapsible className="w-full max-w-5xl">
         {faqs.map((faq, index) => (
           <AccordionItem
@@ -88,7 +80,7 @@ export default function CandidateFAQ() {
             value={`item-${index}`}
             className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-2"
           >
-            <AccordionTrigger className="hover:no-underline flex justify-between items-center font-Onest font-normal text-2xl tracking-tight bg-white">
+            <AccordionTrigger className="hover:no-underline flex justify-between items-center font-Onest font-normal text-2xl tracking-tight">
               <span>{faq.question}</span>
               <div className="shrink-0">
                 <div className="h-8 w-8 rounded-[4px] flex items-center justify-center"></div>

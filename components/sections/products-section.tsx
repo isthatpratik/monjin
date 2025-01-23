@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -17,7 +18,8 @@ const ProductCard = ({
   circleColor,
   subtitleBorderColor,
   buttonText,
-  buttonHover
+  buttonHover,
+  link,
 }: {
   icon: string;
   title: string;
@@ -27,6 +29,7 @@ const ProductCard = ({
   subtitleBorderColor: string;
   buttonText: string;
   buttonHover: string;
+  link: string;
 }) => {
   return (
     <Card className="relative bg-white p-4 rounded-2xl shadow-sm flex flex-col items-center overflow-hidden h-full min-w-[240px]">
@@ -63,12 +66,14 @@ const ProductCard = ({
         </div>
       </div>
 
-      <div className="md:flex-row flex flex-col gap-4 mt-2 justify-center pb-2 w-[90%]">
-        <Button
-          className={`bg-white border border-black/30 rounded-[8px] w-full text-black font-Onest font-normal text-xs px-6 py-4 transition-all duration-300 ease-in-out ${buttonHover} hover:text-white hover:shadow-md`}
-        >
-          {buttonText}
-        </Button>
+      <div className="md:flex-row flex-1 flex-col gap-4 mt-2 justify-center pb-2 w-[90%]">
+      <Link href={link}>
+          <Button
+            className={`bg-white border border-black/30 rounded-[8px] w-full text-black font-Onest font-normal text-xs px-6 py-4 transition-all duration-300 ease-in-out ${buttonHover} hover:text-white hover:shadow-md`}
+          >
+            {buttonText}
+          </Button>
+        </Link>
       </div>
     </Card>
   );
@@ -100,7 +105,8 @@ const ProductsSection = () => {
       circleColor: "bg-[#9F8AFF]",
       subtitleBorderColor: "border-[#8B72FF]/30",
       buttonText: "Discover More",
-      buttonHover: "hover:bg-[#947EFF]"
+      buttonHover: "hover:bg-[#947EFF]",
+      link: "/products/OCOI"
     },
     {
       icon: "/assets/product-icons/ycoi.png",
@@ -111,7 +117,8 @@ const ProductsSection = () => {
       circleColor: "bg-[#B7D659]",
       subtitleBorderColor: "border-[#B7D659]/30",
       buttonText: "Discover More",
-      buttonHover: "hover:bg-[#B7D659]"
+      buttonHover: "hover:bg-[#B7D659]",
+      link: "/products/YCOI"
     },
     {
       icon: "/assets/product-icons/spotlight.png",
@@ -122,7 +129,8 @@ const ProductsSection = () => {
       circleColor: "bg-[#FFB14A]",
       subtitleBorderColor: "border-[#FFB14A]/30",
       buttonText: "Discover More",
-      buttonHover: "hover:bg-[#FFB14A]"
+      buttonHover: "hover:bg-[#FFB14A]",
+      link: "/products/Spotlight"
     },
     {
       icon: "/assets/product-icons/performance_management.png",
@@ -133,7 +141,8 @@ const ProductsSection = () => {
       circleColor: "bg-[#BA57D3]",
       subtitleBorderColor: "border-[#BA57D3]/30",
       buttonText: "Discover More",
-      buttonHover: "hover:bg-[#BA57D3]"
+      buttonHover: "hover:bg-[#BA57D3]",
+      link: "/products/PerformanceManagement"
     },
     {
       icon: "/assets/product-icons/basics.png",
@@ -144,7 +153,8 @@ const ProductsSection = () => {
       circleColor: "bg-[#F46D70]",
       subtitleBorderColor: "border-[#F46D70]/30",
       buttonText: "Discover More",
-      buttonHover: "hover:bg-[#F46D70]"
+      buttonHover: "hover:bg-[#F46D70]",
+      link: "/products/Basics"
     }
   ];
 

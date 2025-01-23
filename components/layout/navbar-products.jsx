@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
 import Image from "next/image"
-import { Shield, Users, HighlighterIcon as Spotlight, BarChart, Box, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -19,54 +19,49 @@ const products = [
   {
     title: "OCOI",
     description: "Our Candidates Our interviewers",
-    icon: Shield,
-    color: "bg-purple-100",
-    iconColor: "text-purple-500",
-    titleColor: "text-purple-700",
+    imageSrc: "/assets/product-icons/ocoi.png",
+    color: "bg-[#947EFF]/10",
+    titleColor: "text-[#7D65EA]",
     href: "/products/OCOI",
-  },
-  {
-    title: "YCOI",
-    description: "Your Candidates Our interviewers",
-    icon: Users,
-    color: "bg-green-100",
-    iconColor: "text-green-500",
-    titleColor: "text-green-700",
-    href: "/products/YCOI",
-  },
-  {
-    title: "Spotlight",
-    description: "Accelerate Efficient Screening",
-    icon: Spotlight,
-    color: "bg-orange-100",
-    iconColor: "text-orange-500",
-    titleColor: "text-orange-700",
-    href: "/products/Spotlight",
   },
   {
     title: "Basics",
     description: "Streamline Effortless Hiring",
-    icon: Box,
-    color: "bg-red-100",
-    iconColor: "text-red-500",
-    titleColor: "text-red-700",
+    imageSrc: "/assets/product-icons/basics.png",
+    color: "bg-[#FEF0F1]",
+    titleColor: "text-[#F46D70]",
     href: "/products/Basics",
+  },
+  {
+    title: "YCOI",
+    description: "Your Candidates Our interviewers",
+    imageSrc: "/assets/product-icons/ycoi.png",
+    color: "bg-[#F6FAEA]",
+    titleColor: "text-[#899B51]",
+    href: "/products/YCOI",
   },
   {
     title: "Performance Management",
     description: "Accelerate Efficient Screening",
-    icon: BarChart,
-    color: "bg-violet-100",
-    iconColor: "text-violet-500",
-    titleColor: "text-violet-700",
+    imageSrc: "/assets/product-icons/performance_management.png",
+    color: "bg-[#F8EEFB]",
+    titleColor: "text-[#BA57D3]",
     href: "/products/PerformanceManagement",
+  },
+  {
+    title: "Spotlight",
+    description: "Accelerate Efficient Screening",
+    imageSrc: "/assets/product-icons/spotlight.png",
+    color: "bg-[#FCF3E8]",
+    titleColor: "text-[#C28331]",
+    href: "/products/Spotlight",
   },
   {
     title: "Monjin Suite",
     description: "Attract, engage & retain talent",
-    icon: Shield,
-    color: "bg-gray-100",
-    iconColor: "text-gray-500",
+    imageSrc: "/assets/product-icons/monjin-suite.png",
+    bgImage: "/assets/product-icons/monjin-suite-bg.png", // New background image for Monjin Suite
+    hoverColor: "hover:bg-[#2E2F33]", // Custom hover color for Monjin Suite
     titleColor: "text-gray-700",
     href: "/products/MonjinSuite",
   },
@@ -76,56 +71,80 @@ const company = [
   {
     title: "About Us",
     description: "Learn about Monjin's unique story.",
-    icon: Users,
+    imageSrc: "/assets/product-icons/about.png",
     color: "bg-[#9F8AFF]/10",
     iconColor: "text-[#563EC3]",
-    href: "/company",
+    href: "/company/about",
   },
   {
     title: "Culture",
     description: "Discover our vibrant culture",
-    icon: Spotlight,
+    imageSrc: "/assets/product-icons/culture.png",
     color: "bg-[#F6FAEA]",
     iconColor: "text-[#899B51]",
-    href: "/company",
+    href: "/companyculture",
   },
   {
     title: "Our Team",
     description: "Meet our talented team members.",
-    icon: Shield,
+    imageSrc: "/assets/product-icons/our-team.png",
     color: "bg-[#FCF3E8]",
     iconColor: "text-[#C28331]",
-    href: "/company",
+    href: "/company/team",
   },
   {
     title: "Careers",
     description: "Empower Thrive Succeed",
-    icon: Shield,
+    imageSrc: "/assets/product-icons/careers.png",
     color: "bg-[#D9FBFF]",
     iconColor: "text-[#4DACD1]",
-    href: "/careers",
+    href: "/company/careers",
   },
 ]
 
-function ListItem({ title, description, icon: Icon, color, iconColor, titleColor, href }) {
+function ListItem({ title, description, imageSrc, bgImage, color, titleColor, href, hoverColor }) {
   return (
     <li>
       <NavigationMenuLink asChild>
         <a
           href={href}
-          className="block select-none z-2000 space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all hover:bg-[#F4F9F9] hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground group"
+          className={`block select-none z-2000 space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all ${
+            hoverColor || "hover:bg-[#F4F9F9]"
+          } hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground group`}
         >
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-4">
-              <div className={`p-2 rounded-lg ${color}`}>
-                <Icon className={`h-5 w-5 ${iconColor}`} />
+              {/* Image or Background Image */}
+              <div
+                className={`p-2 rounded-lg ${bgImage ? "" : color}`}
+                style={
+                  bgImage
+                    ? {
+                        backgroundImage: `url(${bgImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        width: "36px",
+                        height: "36px",
+                      }
+                    : {}
+                }
+              >
+                {!bgImage && (
+                  <Image src={imageSrc} alt={title} className="h-5 w-5 object-contain" width={20} height={20} />
+                )}
               </div>
               <div>
-                <div className={`text-[15px] font-medium leading-none ${titleColor}`}>{title}</div>
-                <p className="text-sm leading-snug  whitespace-nowrap text-[#6C8888]">{description}</p>
+                <div
+                  className={`text-[15px] font-medium leading-none ${
+                    title == "Monjin Suite" ? "group-hover:text-white" : titleColor
+                  }`}
+                >
+                  {title}
+                </div>
+                <p className="text-sm leading-snug whitespace-nowrap text-[#6C8888]">{description}</p>
               </div>
             </div>
-            <ArrowRight className="h-4 w-4 opacity-0 transition-all group-hover:opacity-100 duration-100" />
+            <ArrowRight className="h-4 w-4 opacity-0 transition-all text-[#6C8888] group-hover:opacity-100 duration-100" />
           </div>
         </a>
       </NavigationMenuLink>
@@ -135,7 +154,7 @@ function ListItem({ title, description, icon: Icon, color, iconColor, titleColor
 
 export function NavbarProducts() {
   return (
-    <header className="w-full py-6 px-6 md:my-0 my-4 z-100 bg-white ">
+    <header className="w-full py-6 px-6 md:my-0 my-4 z-100 bg-transparent ">
       <div className="container max-auto max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
@@ -151,7 +170,7 @@ export function NavbarProducts() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="font-figtree text-sm">Product</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[700px] gap-3 p-4 md:grid-cols-2">
+                  <ul className="grid w-[700px] gap-3 p-4 md:grid-cols-2 z-999">
                     {products.map((product) => (
                       <ListItem key={product.title} {...product} />
                     ))}
@@ -161,7 +180,7 @@ export function NavbarProducts() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="font-figtree text-sm">Company</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[400px]">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[400px] z-999">
                     {company.map((item) => (
                       <ListItem key={item.title} {...item} />
                     ))}
@@ -190,11 +209,13 @@ export function NavbarProducts() {
           <div className="flex items-center gap-3">
             <Button
               variant="outline"
-              className="rounded-[8px] border-black font-Onest font-normal text-base px-6 py-2 h-auto"
+              className="rounded-[8px] border-black bg-transparent font-Onest font-normal text-[15px] px-6 py-2 h-auto"
             >
-              Contact Us
+              <Link href="/contact" className="w-full h-full flex items-center justify-center">
+    Contact Us
+  </Link>
             </Button>
-            <Button className="rounded-[8px] font-Onest bf-[#1B1B1B] font-normal text-base px-6 py-2 h-auto">
+            <Button className="rounded-[8px] font-Onest bf-[#1B1B1B] font-normal text-[15px] px-6 py-2 h-auto">
               Get Started
             </Button>
           </div>

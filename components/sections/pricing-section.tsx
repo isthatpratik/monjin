@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/pricing-tabs";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import type { PricingProps } from "@/types/pricing";
