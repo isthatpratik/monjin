@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Footer } from "@/components/layout/footer";
 import { NavBarProducts } from "@/components/layout/navbar-products";
 import YcoiFeatures from "@/components/ycoi/ycoi-features";
@@ -6,6 +7,13 @@ import YcoiHeroSection from "@/components/ycoi/hero-section";
 import Image from "next/image";
 import React from "react";
 import InterviewSolutions from "@/components/ycoi/interview-solutions";
+=======
+import { Footer } from '@/components/layout/footer';
+import NavBarProducts from '@/components/layout/nav-product-menu';
+import { ClientsSlider } from '@/components/sliders/clients-slider';
+import Image from 'next/image';
+import React from 'react';
+>>>>>>> check
 
 const MonjinSuite = () => {
   return (

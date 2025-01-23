@@ -1,5 +1,5 @@
 import { Footer } from '@/components/layout/footer';
-import { NavBarProducts } from '@/components/layout/navbar-products';
+import { NavBarProducts } from '@/components/layout/nav-product-menu';
 import OcoiHeroSection from '@/components/ocoi/hero-section';
 import OcoiFeatures from '@/components/ocoi/ocoi-features';
 import OcoiPricing from '@/components/ocoi/ocoi-pricing';

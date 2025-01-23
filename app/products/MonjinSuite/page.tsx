@@ -1,5 +1,5 @@
 import { Footer } from '@/components/layout/footer';
-import { NavBarProducts } from '@/components/layout/navbar-products';
+import { NavBarProducts } from '@/components/layout/nav-product-menu';
 import MonjinSuiteHero from '@/components/MonjinSuite/hero-section';
 import MonjinSuitePricing from '@/components/MonjinSuite/monjin-suite-pricing';
 import MonjinSuiteProducts from '@/components/MonjinSuite/monjin-suite-products';

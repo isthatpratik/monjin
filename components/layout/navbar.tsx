@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -11,12 +11,18 @@ import {
   NavigationMenuTrigger,
   NavigationMenuContent,
   NavigationMenuLink,
+<<<<<<< HEAD
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ArrowRight } from "lucide-react";
+=======
+} from "@/components/ui/navigation-menu"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import ProductMenu from "@/components/layout/product-menu"
+>>>>>>> check
 
 export function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav className="w-full py-10 px-6 md:my-0 my-4 z-1000">
@@ -42,6 +48,7 @@ export function NavBar() {
                 <NavigationMenuTrigger className="text-gray-300 hover:text-white transition-colors bg-transparent border-none">
                   Products
                 </NavigationMenuTrigger>
+<<<<<<< HEAD
                 <NavigationMenuContent className="bg-white p-4 rounded-3xl shadow-lg w-[300px] h-auto border-none">
                   <ul className="grid grid-cols-2 gap-1 p-2 md:w-[500px] lg:w-[756px]">
                     <li>
@@ -189,6 +196,10 @@ export function NavBar() {
                       </div>
                     </li>
                   </ul>
+=======
+                <NavigationMenuContent className="bg-white p-4 rounded-md shadow-lg w-full h-auto border-none">
+                  <ProductMenu />
+>>>>>>> check
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
@@ -298,10 +309,19 @@ export function NavBar() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
+<<<<<<< HEAD
                 <Link
                   href="#candidate"
                   className="text-gray-300 hover:text-white transition-colors font-figtree"
                 >
+=======
+                <Link href="/support" className="text-gray-300 hover:text-white transition-colors">
+                  Support
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="#candidate" className="text-gray-300 hover:text-white transition-colors">
+>>>>>>> check
                   Candidate
                 </Link>
               </NavigationMenuItem>
@@ -366,5 +386,6 @@ export function NavBar() {
         </Sheet>
       </div>
     </nav>
-  );
+  )
 }
+
