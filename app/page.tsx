@@ -7,18 +7,15 @@ import CaseStudies from "@/components/sections/case-studies";
 import { Footer } from "@/components/layout/footer";
 import Testimonials from "@/components/sections/testimonials";
 import Image from "next/image";
-import SpotlightFeatures from "@/components/spotlight/spotlight-features";
 import CaseStudyHero from "@/components/case-study/company1";
 import TeamSection from "@/components/team/tean-section";
-// import CaseStudyHero from "@/components/case-study/company2";
-// import CaseStudyHero from "@/components/case-study/company3";
 
 
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      {/* <div className="absolute inset-0 -z-10 lg:hidden">
-        <Image
+      <div className="absolute inset-0 -z-10 lg:hidden">
+        {/* <Image
           alt="gradient-mobile-bg"
           src={"/assets/gradient-mobile.jpg"}
           quality={100}
@@ -26,7 +23,7 @@ export default function Home() {
           sizes="100vw"
           priority
           className="object-cover"
-        />
+        /> */}
       </div>
       <div className="absolute inset-0 -z-10 lg:block hidden md:block">
         <Image
@@ -47,9 +44,9 @@ export default function Home() {
         <Clients />
         <FeatureSection />
         <ProdcutsSection />
-        <CaseStudies /> */}
-        {/* <Testimonials /> */}
-        {/* <CaseStudyHero /> */}
+        <CaseStudies /> 
+        <Testimonials /> 
+        <CaseStudyHero /> */}
         <TeamSection />
   
       </div>
