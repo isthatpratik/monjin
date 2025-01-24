@@ -9,6 +9,9 @@ import {
 } from "@/components/ui/carousel"
 import { type Tab } from '@/components/ocoi/ocoi-features'
 
+import Image from "next/image"
+
+
 interface MobileSliderProps {
   tabs: Tab[]
 }
@@ -28,24 +31,34 @@ export function MobileSlider({ tabs }: MobileSliderProps) {
               </div>
               <p className="text-lg text-gray-600">{tab.description}</p>
               <div className="grid grid-cols-1 gap-4">
-                {tab.features.map((featurePair, idx) => (
-                  <div key={idx} className="space-y-4">
-                    {featurePair.map(
+
+                {tab.features.map((feature, index) => (
+                  <div key={index} className="space-y-4">
+                    {Array.isArray(feature) ? feature.map(
+
                       (feature, featureIdx) =>
                         feature && (
                           <div key={featureIdx} className="text-lg">
                             {feature}
                           </div>
                         )
+
+                    ) : (
+                      <div className="text-lg">{feature}</div>
+
                     )}
                   </div>
                 ))}
               </div>
               <div className="relative h-[300px] rounded-lg overflow-hidden mt-6">
-                <img
+
+                <Image
                   src={tab.imageUrl || "/placeholder.svg"}
                   alt={tab.title}
                   className="w-full h-full object-contain"
+                  height={50}
+                  width={50}
+
                 />
               </div>
             </div>
@@ -57,4 +70,5 @@ export function MobileSlider({ tabs }: MobileSliderProps) {
     </Carousel>
   )
 }
+
 

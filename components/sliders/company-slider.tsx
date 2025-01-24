@@ -9,10 +9,10 @@ const clientsSet1 = [
   { img: "/assets/clients/birlasoft.png" },
   { img: "/assets/clients/brillio.png" },
   { img: "/assets/clients/calsoft.png" },
+  { img: "/assets/clients/tcs.png" },
   { img: "/assets/clients/cognizant.png" },
   { img: "/assets/clients/cyient.png" },
   { img: "/assets/clients/emids.png" },
-  { img: "/assets/clients/evry.png" },
 ];
 
 const clientsSet2 = [
@@ -21,12 +21,12 @@ const clientsSet2 = [
   { img: "/assets/clients/GlobalLogic.png" },
   { img: "/assets/clients/guardian.png" },
   { img: "/assets/clients/hexaware.png" },
+  { img: "/assets/clients/evry.png" },
   { img: "/assets/clients/infosys.png" },
   { img: "/assets/clients/intraedge.png" },
   { img: "/assets/clients/itc.png" },
   { img: "/assets/clients/L&T.png" },
   { img: "/assets/clients/Mastek.png" },
-  { img: "/assets/clients/mgneto.png" },
 ];
 
 const clientsSet3 = [
@@ -38,7 +38,7 @@ const clientsSet3 = [
   { img: "/assets/clients/redington.png" },
   { img: "/assets/clients/talent500.png" },
   { img: "/assets/clients/tata-tech.png" },
-  { img: "/assets/clients/tcs.png" },
+  { img: "/assets/clients/mgneto.png" },
   { img: "/assets/clients/tavant.png" },
 ];
 
@@ -46,15 +46,15 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-[#F5FAF9] relative flex h-[10vh] w-[10vw] cursor-pointer overflow-hidden rounded-[18px] p-4",
-        "items-center justify-center hover:bg-[#e0fff9] hover:scale-1 transition-all transition-300",
+        "bg-[#F5FAF9] relative flex xl:h-[106px] xl:w-[186px] lg:h-[76px] w-[126px]  cursor-pointer overflow-hidden rounded-[18px] p-4",
+        "items-center justify-center hover:bg-[#e0fff9] transition-all transition-300",
       )}
     >
       <div className="flex items-center justify-center w-full h-full ">
         <Image
           className="object-contain opacity-70 hover:opacity-100 grayscale-hover grayscale transition duration-300 ease-in-out hover:grayscale-0"
-          width={100}
-          height={100}
+          width={120}
+          height={120}
           alt=""
           src={img}
         />
@@ -67,7 +67,7 @@ const ReviewCard = ({ img }: { img: string }) => {
 export function CompanySlider() {
   return (
     <div className="relative flex flex-col items-center justify-center space-y-8 bg-transparent">
-      <div className="relative flex h-[50vh] w-full flex-row items-center justify-center overflow-hidden bg-transparent">
+      <div className="relative flex lg:h-[540px] w-full flex-row items-center justify-center overflow-hidden bg-transparent">
         <Marquee pauseOnHover vertical className="[--duration:90s]">
           {clientsSet1.map((client) => (
             <ReviewCard key={client.img} {...client} />
