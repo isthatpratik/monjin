@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -192,6 +193,7 @@ export default function OcoiFeatures() {
             </TabsList>
 
             {tabs.map((tab) => (
+
               <TabsContent
                 key={tab.id}
                 value={tab.id}
@@ -245,7 +247,9 @@ export default function OcoiFeatures() {
             ))}
           </Tabs>
         </div>
+
       </div>
     </div>
   );
 }
+
