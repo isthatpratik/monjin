@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import Link from "next/link";
 
 const slides = [
   {
@@ -19,6 +20,7 @@ const slides = [
       "Futuristic Hiring Route.",
     buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-1.png",
+    buttonLink: "/casestudy/Persistent"
   },
   {
     title: "Futuristic Hiring Route",
@@ -26,6 +28,7 @@ const slides = [
       "Revolutionized Just-In-Time resourcing, addressing rapid hiring demands in the growing Tech sector.",
     buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-2.png",
+    buttonLink: "/casestudy/SearsHoldings"
   },
   {
     title: "Quality hiring for the digital skills",
@@ -33,13 +36,15 @@ const slides = [
       "Delivering higher selection ratio.",
     buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-3.png",
+    buttonLink: "/casestudy/EmpowerProfessionals"
   },
   {
     title: "Propelling Hiring Demands",
     description:
       "Provided a neutral assessment platform to help the world's leading IT company.",
     buttonText: "Dive In",
-    image: "/assets/CaseStudies/case-study-4.png",
+    image: "/assets/CaseStudies/case-study-4.jpg",
+    buttonLink: "/casestudy/DXCTechnology"
   },
 ];
 
@@ -79,12 +84,14 @@ export default function CaseStudies2() {
                       {slide.description}
                     </p>
                   </div>
+                  <Link href={slide.buttonLink}>
                   <Button
                     className="bg-black text-white hover:bg-gray-800 rounded-[8px] px-8 "
                     size="lg"
                   >
                     {slide.buttonText}
                   </Button>
+                  </Link>
                 </div>
                 <div className="order-1 lg:order-2">
                   <div className="relative lg:aspect-[4/3] aspect-[16/9] w-full overflow-hidden rounded-2xl">

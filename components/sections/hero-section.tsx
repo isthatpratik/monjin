@@ -50,7 +50,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Interviewer Card */}
-        <div className="space-y-2 sm:space-y-4 md:space-y-10 group flex flex-col min-h-full -z-10">
+        <div className="space-y-2 sm:space-y-4 md:space-y-10 group flex flex-col min-h-full -z-5">
           <div className="group relative overflow-hidden rounded-bl-[32px] md:rounded-bl-[64px] lg:rounded-bl-[84px] xl:rounded-bl-[100px] rounded-[4px] md:rounded-[6px] lg:rounded-[10px] bg-transparent with-vector2 hover:cursor-pointer flex-grow group card-hover h-[140px] md:h-[200px] lg:h-[200px] xl:h-[260px] ">
             <div className="p-2 sm:p-4 lg:p-6 h-full flex flex-col justify-center items-center relative">
               <Button className="text-[10px] md:text-base lg:text-lg xl:text-xl p-2 md:p-4 font-Onest font-bold text-[#262628] border bg-transparent group-hover:bg-transparent border-[#262628] rounded-full lg:p-6 group-hover:scale-110 transition-all duration-500 group-hover:shadow-[0px_6px_0px_rgba(0,0,0,0.3)] ease-in-out">

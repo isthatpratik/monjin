@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/ui/accordion-basic";
 
 const footerLinks = {
   products: [
@@ -46,8 +46,8 @@ const locations = ["INDIA", "USA", "UK"];
 
 export function Footer() {
   return (
-    <footer className="w-full text-gray-100 lg:rounded-t-[32px] rounded-t-3xl relative">
-      <div className="absolute inset-0 z-0 overflow-hidden">
+    <footer className="w-full text-gray-100 rounded-t-[32px] relative">
+      <div className="absolute inset-0 -z-1 overflow-hidden">
         <Image
           src={"/assets/footer-bg-web.jpg"}
           fill

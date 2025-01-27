@@ -235,7 +235,9 @@ const ProductsSection = () => {
           {/* Buttons */}
           <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3">
             <Button className="bg-[#FFFFFF] text-black rounded-[8px] p-6 font-Onest text-sm transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-white">
+              <Link href={'/products/MonjinSuite'}>
               Deep Dive In
+              </Link>
             </Button>
           </div>
         </div>

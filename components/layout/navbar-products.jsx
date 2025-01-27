@@ -209,7 +209,7 @@ export function NavbarProducts() {
           <div className="flex items-center gap-3">
             <Button
               variant="outline"
-              className="rounded-[8px] border-black bg-transparent font-Onest font-normal text-[15px] px-6 py-2 h-auto"
+              className="rounded-[8px] border-black/50 bg-transparent font-Onest font-normal text-[15px] px-6 py-2 h-auto"
             >
               <Link href="/contact" className="w-full h-full flex items-center justify-center">
     Contact Us
