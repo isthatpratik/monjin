@@ -118,7 +118,7 @@ export function Footer() {
               </Link>
               <Link href="#">
                 <Image
-                  src="/assets/social-media/linkedIn.png"
+                  src="/assets/social-media/linkedin.png"
                   alt="LinkedIn"
                   width={48}
                   height={48}

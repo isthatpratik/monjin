@@ -31,7 +31,7 @@ export default function About() {
           quality={100}
           fill
           priority
-          className="object-cover object-top lg:-translate-y-[600px] -translate-y-[200px]"
+          className="object-cover object-top lg:-translate-y-[300px] -translate-y-[200px]"
         />
       </div>
 
@@ -54,7 +54,7 @@ export default function About() {
           </TabsList>
 
           <TabsContent value="about">
-            <div className="h-full w-full flex flex-col gap-4 items-center justify-between mb-10">
+            <div className="h-full w-full flex flex-col gap-4 items-center justify-between mb-10 py-12">
               <div className="flex flex-col justify-center items-center space-y-4 mt-6">
                 <h1 className="text-center font-onest font-semibold text-[78px] text-white tracking-tighter leading-tight">
                   Where top talent & memorable <br />
@@ -71,7 +71,7 @@ export default function About() {
                   Monjin – where top talent meets unmatched opportunity.
                 </p>
               </div>
-              <div className="-z-10">
+              <div className="-z-10 py-24">
                 <Image
                   src={"/assets/about/about-hero.png"}
                   alt="Monjin Suite Illustration"

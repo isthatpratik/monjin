@@ -25,7 +25,7 @@ export default function BasicsHeroSection() {
           </p>
         </div>
 
-        <div className="absolute xl:right-[300px] top-[200px] lg:right-[100px] -z-10">
+        <div className="absolute xl:right-[300px] top-[200px] lg:right-[200px] -z-10">
           <Image
             src="/assets/basics/basics-hero-section.png"
             alt="Spotlight illustration"

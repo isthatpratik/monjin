@@ -30,12 +30,12 @@ const ValeusSection = () => {
       </div>
       <div className="flex flex-col gap-6 w-full max-w-5xl">
         <div className="flex flex-row gap-6">
-          <div className="basis-1/5 bg-white rounded-full px-9 py-5 border border-[#F46D70]/35">
+          <div className="basis-1/5 bg-white rounded-full px-9 py-5 border-2 border-[#F46D70]">
             <h3 className="text-[22px] font-onest tracking-tight">
               Valuing Skills
             </h3>
           </div>
-          <div className="basis-4/5 bg-white rounded-full px-11 py-6 border border-[#9F8AFF]/25">
+          <div className="basis-4/5 bg-white rounded-full px-11 py-6 border-2 border-[#9F8AFF]">
             <h3 className="text-[22px] font-onest tracking-tight text-right">
               Democratizing Interviewing
             </h3>
@@ -43,12 +43,12 @@ const ValeusSection = () => {
         </div>
 
         <div className="flex flex-row gap-6">
-          <div className="basis-4/5 bg-white rounded-full px-11 py-6 border border-[#D7F0C6]">
+          <div className="basis-4/5 bg-white rounded-full px-11 py-6 border-2 border-[#A1C28C]">
             <h3 className="text-[22px] font-onest tracking-tight">
               Building Interviewing communities
             </h3>
           </div>
-          <div className="basis-1/5 bg-white rounded-full px-11 py-6 border border-[#12A4B8]/25">
+          <div className="basis-1/5 bg-white rounded-full px-11 py-6 border-2 border-[#12A4B8]">
             <h3 className="text-[22px] font-onest tracking-tight text-right">
               Simplify
             </h3>
@@ -56,12 +56,12 @@ const ValeusSection = () => {
         </div>
 
         <div className="flex flex-row gap-6">
-          <div className="basis-3/6 bg-white rounded-full px-11 py-6 border border-[#9F8AFF]/25">
+          <div className="basis-3/6 bg-white rounded-full px-11 py-6 border-2 border-[#9F8AFF]">
             <h3 className="text-[22px] font-onest tracking-tight">
               Executional excellence
             </h3>
           </div>
-          <div className="basis-3/6 bg-white rounded-full px-11 py-6 border border-[#F46D70]/35">
+          <div className="basis-3/6 bg-white rounded-full px-11 py-6 border-2 border-[#F46D70]">
             <h3 className="text-[22px] font-onest tracking-tight text-right">
               Client interests first
             </h3>
@@ -69,12 +69,12 @@ const ValeusSection = () => {
         </div>
 
         <div className="flex flex-row gap-6">
-          <div className="basis-4/6 bg-white rounded-full px-11 py-6 border border-[#F46D70]/35">
+          <div className="basis-4/6 bg-white rounded-full px-11 py-6 border-2 border-[#F46D70]">
             <h3 className="text-[22px] font-onest tracking-tight">
               Create a culture of Belongingness
             </h3>
           </div>
-          <div className="basis-2/6 bg-white rounded-full px-11 py-6 border border-[#D7F0C6]">
+          <div className="basis-2/6 bg-white rounded-full px-11 py-6 border-2 border-[#A1C28C]">
             <h3 className="text-[22px] font-onest tracking-tight text-right">
               Transparency
             </h3>
@@ -82,12 +82,12 @@ const ValeusSection = () => {
         </div>
 
         <div className="flex flex-row gap-6">
-          <div className="basis-3/6 bg-white rounded-full px-11 py-6 border border-[#12A4B8]/25">
+          <div className="basis-3/6 bg-white rounded-full px-11 py-6 border-2 border-[#12A4B8]">
             <h3 className="text-[22px] font-onest tracking-tight">
               Passion and Innovation
             </h3>
           </div>
-          <div className="basis-3/6 bg-white rounded-full px-11 py-6 border border-[#9F8AFF]/25">
+          <div className="basis-3/6 bg-white rounded-full px-11 py-6 border-2 border-[#9F8AFF]">
             <h3 className="text-[22px] font-onest tracking-tight text-right">
               High ethical standards
             </h3>

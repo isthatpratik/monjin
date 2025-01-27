@@ -147,7 +147,7 @@ export default function OcoiFeatures() {
   }, [activeTab]);
 
   return (
-    <div className="min-h-auto bg-white rounded-3xl mx-12 mb-10">
+    <div className="min-h-auto bg-white rounded-3xl mx-12 my-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl md:text-5xl font-onest font-medium text-center mb-12 tracking-tighter">
           Simplify Hiring with Curated Interviews, <br /> Instant Feedback, and Easy Scheduling
