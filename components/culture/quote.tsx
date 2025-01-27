@@ -4,7 +4,7 @@ const Quote = () => {
   return (
     <section className="mx-auto px-4 py-16">
       <div className="flex items-center justify-center bg-[url('/assets/culture/quote-bg.jpg')] bg-cover bg-center bg-no-repeat p-36 rounded-[48px] mt-12">
-        <h2 className="font-Onest font-light text-5xl max-w-7xl text-center text-white">
+        <h2 className="font-onest font-light text-5xl max-w-7xl text-center text-white">
           Talent is transformative. The more energy, attention, and trust you
           pour into your team, the greater the rewards— for them, for your
           customers, and for you. <br />

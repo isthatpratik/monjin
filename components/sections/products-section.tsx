@@ -161,7 +161,7 @@ const ProductsSection = () => {
   return (
     <div className="my-20 bg-[#FFFFFF] rounded-3xl border lg:p-8 md:p-6 p-2 max-h-1/3 self-center">
       <div className="flex flex-col items-center justify-center gap-4 my-12 ">
-        <h2 className="font-Onest font-medium md:text-5xl text-center tracking-tighter text-3xl lg:max-w-[50vw]">
+        <h2 className="font-onest font-medium md:text-5xl text-center tracking-tighter text-3xl lg:max-w-[50vw]">
           Powering Achievements with Transformative Tools
         </h2>
         <p className="font-figtree tracking-tight text-center lg:max-w-[40vw] max-w-[80vw] sm:text-sm md:text-lg">
@@ -234,7 +234,7 @@ const ProductsSection = () => {
 
           {/* Buttons */}
           <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3">
-            <Button className="bg-[#FFFFFF] text-black rounded-[8px] p-6 font-Onest text-sm transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-white">
+            <Button className="bg-[#FFFFFF] text-black rounded-[8px] p-6 font-onest text-sm transition-all duration-300 ease-in-out hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] hover:bg-white">
               <Link href={'/products/MonjinSuite'}>
               Deep Dive In
               </Link>

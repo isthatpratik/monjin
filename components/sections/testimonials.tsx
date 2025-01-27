@@ -62,7 +62,7 @@ export default function Testimonials() {
   return (
     <section className="py-16 px-4 md:px-8 bg-[url('/assets/bg-testimonial.png')] bg-cover bg-center bg-no-repeat rounded-2xl mt-16">
       <div className="container mx-auto">
-        <h2 className="md:text-4xl text-center mb-4 font-Onest lg:text-5xl text-3xl tracking-tighter">
+        <h2 className="md:text-4xl text-center mb-4 font-onest lg:text-5xl text-3xl tracking-tighter">
           Client Journeys That Define Success
         </h2>
         <p className="text-lg lg:text-base text-center mb-12 max-w-3xl mx-auto font-figtree">
@@ -93,7 +93,7 @@ export default function Testimonials() {
                     />
                     <CardContent className="lg:p-12 md:p-8 p-4 relative flex-grow">
                       <div className="mt-8 flex flex-col gap-2">
-                        <h3 className="text-xl lg:text-3xl md:text-2xl font-Onest font-medium tracking-tighter flex items-center gap-2">
+                        <h3 className="text-xl lg:text-3xl md:text-2xl font-onest font-medium tracking-tighter flex items-center gap-2">
                           {testimonial.name}
                           <a
                             href={testimonial.linkedIn}

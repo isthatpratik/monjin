@@ -18,7 +18,7 @@ export default function CustomizedInterview() {
           <div className="space-y-6 flex flex-col justify-between w-1/2">
             <div className="flex flex-col gap-4">
               <h1
-                className={`font-Onest text-5xl tracking-tighter leading-snug max-w-xl font-medium text-[#353535]`}
+                className={`font-onest text-5xl tracking-tighter leading-snug max-w-xl font-medium text-[#353535]`}
               >
                 Unlock Customized Interview Solutions with Monjin’s Performance Management
               </h1>
@@ -30,8 +30,8 @@ export default function CustomizedInterview() {
               </p>
             </div>
             <div className=" text-center flex justify-center md:justify-start pt-4">
-              <Button className="px-8 py-7 text-lg rounded-[8px] font-Onest bg-[#1B1B1B] font-normal text-white hover:shadow-monjin transition-all duration-300">
-                Get Started Now
+              <Button className="px-8 py-7 text-lg rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-white hover:shadow-monjin transition-all duration-300">
+                Dive In
               </Button>
             </div>
           </div>

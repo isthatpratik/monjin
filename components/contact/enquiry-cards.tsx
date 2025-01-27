@@ -15,7 +15,7 @@ export function EnquiryCards() {
             <div className="p-2 bg-[#5C3FFC]/40 rounded-lg">
               <Headphones className="w-6 h-6 text-white" />
             </div>
-            <CardTitle className="text-[28px] font-Onest font-semibold">Support Enquiries</CardTitle>
+            <CardTitle className="text-[28px] font-onest font-semibold">Support Enquiries</CardTitle>
           </div>
           <p className="text-gray-600 text-base font-figtree leading-relaxed">
             Need assistance with Monjin&apos;s platform or services? Our support team is ready to resolve your queries

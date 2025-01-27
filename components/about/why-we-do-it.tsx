@@ -4,7 +4,7 @@ export default function WhyWeDoIt() {
   return (
     <section className="py-16 px-12 max-w-7xl bg-white rounded-[32px]">
       <div className="text-center mb-16">
-        <h2 className="text-5xl font-medium tracking-tighter font-Onest mb-6">Why We Do It</h2>
+        <h2 className="text-5xl font-medium tracking-tighter font-onest mb-6">Why We Do It</h2>
         <p className="text-lg font-figtree text-[#101010]">Because talent deserves more than a resume we are here to</p>
       </div>
 

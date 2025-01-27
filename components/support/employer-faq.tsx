@@ -1,5 +1,10 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/support-accordion"
-import { Separator } from "@/components/ui/separator"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Separator } from "@/components/ui/separator";
 
 const faqSections = [
   {
@@ -31,7 +36,8 @@ const faqSections = [
     questions: [
       {
         question: "What is YCOI?",
-        answer: "YCOI (Your Candidates, Our Interviewers) allows you to interview your candidates using Monjin's network of expert interviewers. The process is customizable to suit your requirements, ensuring better calibration and alignment with organizational needs.",
+        answer:
+          "YCOI (Your Candidates, Our Interviewers) allows you to interview your candidates using Monjin's network of expert interviewers. The process is customizable to suit your requirements, ensuring better calibration and alignment with organizational needs.",
       },
       {
         question: "How do I invite candidates for interviews?",
@@ -45,7 +51,8 @@ const faqSections = [
       },
       {
         question: "How can I collaborate and gather feedback on interviews?",
-        answer: "Playback and Assessment: Navigate through the interview using timestamps to review specific skills. Access textual and video assessments by expert interviewers.\nInternal Sharing: Share interviews with your team for feedback and decision-making.\nFeedback Section: View all feedback and final verdicts for each interview in one place.",
+        answer:
+          "Playback and Assessment: Navigate through the interview using timestamps to review specific skills. Access textual and video assessments by expert interviewers.\nInternal Sharing: Share interviews with your team for feedback and decision-making.\nFeedback Section: View all feedback and final verdicts for each interview in one place.",
       },
       {
         question: "What are the privacy settings available for YCOI?",
@@ -61,7 +68,8 @@ const faqSections = [
     questions: [
       {
         question: "What is Monjin Basics?",
-        answer: "Monjin Basics is a Unique ID-based interviewing platform that enables browser-based multi-party interviews. It’s an efficient way to conduct and manage interviews with candidates and interviewers.",
+        answer:
+          "Monjin Basics is a Unique ID-based interviewing platform that enables browser-based multi-party interviews. It’s an efficient way to conduct and manage interviews with candidates and interviewers.",
       },
       {
         question: "How do I schedule an interview?",
@@ -87,36 +95,41 @@ const faqSections = [
     questions: [
       {
         question: "What is Spotlight?",
-        answer: "Spotlight is Monjin's one-way interview platform where candidates respond to pre-configured questions and record their answers on video. These interviews are assessed by Monjin's expert panel based on client requirements.",
+        answer:
+          "Spotlight is Monjin's one-way interview platform where candidates respond to pre-configured questions and record their answers on video. These interviews are assessed by Monjin's expert panel based on client requirements.",
       },
       {
         question: "How do create a job requirement?",
-        answer: "You can create a textual or video job description. Video job descriptions, a premium feature, allow recruiters to explain their requirements in a 3-minute video, which candidates and interviewers can access.",
+        answer:
+          "You can create a textual or video job description. Video job descriptions, a premium feature, allow recruiters to explain their requirements in a 3-minute video, which candidates and interviewers can access.",
       },
       {
         question: "How do I setup questions for the interview?",
-        answer: "Customize your own questions or use Monjin's question bank.Multiple sets of questions can be created for a single job.Use Monjin’s randomizer feature to shuffle between question sets for multiple invites.Questions can be in video or multiple-choice format.",
+        answer:
+          "Customize your own questions or use Monjin's question bank.Multiple sets of questions can be created for a single job.Use Monjin’s randomizer feature to shuffle between question sets for multiple invites.Questions can be in video or multiple-choice format.",
       },
       {
         question: "How can I invite candidates for Spotlight round?",
-        answer: "Enter the candidate's first name, last name, and email address.Use Monjin’s customized templates to send the interview code to the candidates.",
+        answer:
+          "Enter the candidate's first name, last name, and email address.Use Monjin’s customized templates to send the interview code to the candidates.",
       },
       {
         question: "Can I collaborate with others to review feedback?",
-        answer: "You can playback interviews and navigate specific questions using timestamps.Share interviews internally or externally for feedback from stakeholders.Multiple-choice scores are generated systemically.All feedback and verdicts are available under the feedback section.",
+        answer:
+          "You can playback interviews and navigate specific questions using timestamps.Share interviews internally or externally for feedback from stakeholders.Multiple-choice scores are generated systemically.All feedback and verdicts are available under the feedback section.",
       },
       {
         question: "Can I view all candidate feedback and status in one place?",
-        answer: "Yes, all feedback, verdicts, and statuses (e.g., selects, rejects, or shared interviews) are available under the 'Activities' tab.",
+        answer:
+          "Yes, all feedback, verdicts, and statuses (e.g., selects, rejects, or shared interviews) are available under the 'Activities' tab.",
       },
     ],
   },
-]
+];
 
 export default function EmployerFAQ() {
   return (
     <div className="w-full max-w-5xl mx-auto px-4 pb-12">
-
       <div className="space-y-8">
         {faqSections.map((section, index) => (
           <div key={section.id}>
@@ -124,7 +137,9 @@ export default function EmployerFAQ() {
 
             <div className="grid grid-cols-[240px_1fr] gap-12">
               <div className="space-y-1">
-                <h2 className="text-5xl font-Onest text-[#010101] font-medium">{section.title}</h2>
+                <h2 className="text-5xl font-onest text-[#010101] font-medium">
+                  {section.title}
+                </h2>
                 <div className="text-[#929292] text-[32px] font-Onest font-normal">
                   {section.subtitle.map((line, i) => (
                     <div key={i}>{line}</div>
@@ -132,11 +147,19 @@ export default function EmployerFAQ() {
                 </div>
               </div>
 
-              <Accordion type="single" collapsible className="w-full max-w-5xl">
+              <Accordion type="single" collapsible className="w-full max-w-5xl" defaultValue={section.id === "ocoi" ? "ocoi-item-0" : undefined}>
                 {section.questions.map((item, i) => (
-                  <AccordionItem key={i} value={`${section.id}-item-${i}`} className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-2">
-                    <AccordionTrigger className="hover:no-underline flex justify-between items-center font-Onest font-normal text-2xl tracking-tight">{item.question}</AccordionTrigger>
-                    <AccordionContent className="text-gray-600 p-5 font-figtree text-lg font-light">{item.answer}</AccordionContent>
+                  <AccordionItem
+                    key={i}
+                    value={`${section.id}-item-${i}`}
+                    className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-4"
+                  >
+                    <AccordionTrigger className="hover:no-underline flex justify-between items-center font-onest font-normal text-2xl tracking-tight">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-600 p-5 font-figtree text-lg font-light">
+                      {item.answer}
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -145,6 +168,5 @@ export default function EmployerFAQ() {
         ))}
       </div>
     </div>
-  )
+  );
 }
-

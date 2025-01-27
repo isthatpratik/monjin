@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 
 export default function HowItWorks() {
   return (
-    <section className="container mx-auto px-4 py-16 max-w-7xl">
+    <section className="container mx-auto px-4 py-4 max-w-7xl">
       <h2
-        className={cn("text-5xl font-medium font-Onest text-center mb-20")}
+        className={cn("text-5xl font-medium font-onest text-center mb-20")}
       >
         How It Works
       </h2>

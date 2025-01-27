@@ -18,7 +18,7 @@ AI-Powered Solutions
           <p className="text-[#353535] font-light text-lg font-figtree pb-10">
           With AI-powered assessments, you can swiftly and efficiently identify top-tier talent. Eliminate guesswork, reduce hiring time, and secure high-quality candidates faster than ever before.
           </p>
-          <Button className="bg-[#1B1B1B] text-white hover:bg-gray-800 rounded-[8px] px-6 py-6 text-base font-Onest font-normal">
+          <Button className="bg-[#1B1B1B] text-white hover:bg-gray-800 rounded-[8px] px-6 py-6 text-base font-onest font-normal">
             Hire Smarter
           </Button>
         </div>

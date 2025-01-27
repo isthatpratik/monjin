@@ -16,8 +16,12 @@ import CultureHero from "@/components/culture/culture-hero";
 import ValeusSection from "@/components/culture/values-section";
 import Quote from "@/components/culture/quote";
 import TeamSection from "@/components/team/team-section";
+import CareersHero from "@/components/careers/careers-hero-section";
+import WhyChooseMonjin from "@/components/careers/why-choose-monjin";
+import CareerOpportunities from "@/components/careers/career-opportunities";
+import JobApplicationForm from "@/components/careers/apply";
 
-export default function Careers() {
+export default function About() {
   return (
     <main className="relative min-h-screen overflow-hidden justify-center">
       <div className="absolute inset-0 -z-10">
@@ -35,7 +39,7 @@ export default function Careers() {
         <Navbar />
       </div>
 
-      <div className="mx-auto py-10 -z-30">
+      <div className="mx-auto py-8 -z-30">
         <Tabs
           className="flex flex-col justify-center max-auto items-center"
           defaultValue="about"
@@ -52,7 +56,7 @@ export default function Careers() {
           <TabsContent value="about">
             <div className="h-full w-full flex flex-col gap-4 items-center justify-between mb-10">
               <div className="flex flex-col justify-center items-center space-y-4 mt-6">
-                <h1 className="text-center font-Onest font-semibold text-[78px] text-white tracking-tighter leading-tight">
+                <h1 className="text-center font-onest font-semibold text-[78px] text-white tracking-tighter leading-tight">
                   Where top talent & memorable <br />
                   interview experiences converge
                 </h1>
@@ -97,7 +101,13 @@ export default function Careers() {
             <Quote />
           </TabsContent>
 
-          <TabsContent value="careers"></TabsContent>
+          <TabsContent value="careers">
+            <CareersHero />
+            <WhyChooseMonjin />
+            <CareerOpportunities />
+            <JobApplicationForm />
+          </TabsContent>
+
         </Tabs>
       </div>
 

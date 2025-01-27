@@ -5,13 +5,19 @@ const CareersHero = () => {
   return (
     <div className="h-full w-full flex flex-col gap-4 items-center justify-between mb-10">
       <div className="flex flex-col justify-center items-center space-y-4 mt-6">
-        <h2 className="text-center font-Onest font-semibold text-[78px] tracking-tighter text-[#353535]">
-        Unlock Your Perfect Match with <br />Elite Talent on Monjin
+        <h2 className="text-center font-onest font-semibold text-[78px] tracking-tighter text-white">
+          Unlock Your Perfect Match with <br />
+          Elite Talent on Monjin
         </h2>
-        <h1 className="text-center text-[#353535] md:font-Onest font-figtree font-medium text-4xl tracking-tighter max-w-full">
-        Become A Monjineer!
+        <h1 className="text-center text-white md:font-Onest font-figtree font-medium text-4xl max-w-full">
+          Become A Monjineer!
         </h1>
-        <p className="text-center font-light font-figtree text-lg  max-w-full">At Monjin, we believe in empowering professionals to take ownership of their work and time. You understand your peak <br />productivity hours best, so here, you control your schedule. No rigid timelines. No unnecessary alarm bells.</p>
+        <p className="text-center font-light font-figtree text-lg text-white max-w-full">
+          At Monjin, we believe in empowering professionals to take ownership of
+          their work and time. You understand your peak <br />
+          productivity hours best, so here, you control your schedule. No rigid
+          timelines. No unnecessary alarm bells.
+        </p>
       </div>
       <div className="-z-10">
         <Image

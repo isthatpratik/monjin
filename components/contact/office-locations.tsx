@@ -24,7 +24,7 @@ const offices = [
 export function OfficeLocations() {
   return (
     <div className="py-20 px-6 max-w-fit mx-auto bg-white rounded-[32px] mt-20 mb-12">
-      <h2 className="text-5xl font-medium font-Onest tracking-tighter text-[#353535] text-center mb-12">Office Locations</h2>
+      <h2 className="text-5xl font-medium font-onest tracking-tighter text-[#353535] text-center mb-12">Office Locations</h2>
       <div className="grid gap-4 md:grid-cols-3">
         {offices.map((office) => (
           <Card key={office.country} className="relative overflow-hidden border-none shadow-none">

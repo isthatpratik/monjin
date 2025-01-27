@@ -8,7 +8,7 @@ export default function CaseTwo() {
     <section className="w-full relative grid items-center justify-center overflow-hidden">
       <div className="container px-8 pt-24 relative">
         <div className="text-center space-y-6">
-          <h1 className="text-4xl md:text-[78px] font-semibold text-white">
+          <h1 className="text-4xl md:text-[78px] font-semibold font-onest text-white">
             Futuristic Hiring Routes
           </h1>
           <h2 className="text-lg md:text-xl font-figtree font-light text-white ">

@@ -6,7 +6,7 @@ const solitreo = Solitreo({ weight: "400", preload: false });
 
 export default function CultureHero() {
     return (
-      <section className="min-h-screen px-4 py-24 flex flex-col items-center text-white">
+      <section className="px-4 py-24 flex flex-col items-center text-white">
         {/* Logo and Culture text */}
         <div className="flex flex-col items-center justify-center gap-3 mb-12">
           <div className="bg-white/10 backdrop-blur-sm px-14 py-6 gap-4 rounded-full flex flex-col items-center justify-center">
@@ -33,7 +33,7 @@ export default function CultureHero() {
         {/* Testimonial Card */}
         <div className="bg-white rounded-3xl py-24 px-36 max-w-7xl">
           <blockquote className="text-gray-800">
-            <p className="text-lg md:text-xl text-center leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-center font-figtree font-normal leading-relaxed mb-8">
               &quot;We have learned that culture is not just part of the equation—it is the equation. When you define your core
               values, hire people who embody them, and weave them into every aspect of your business, something magical
               happens: your team thrives. They do not just work; they innovate, deliver, and create unforgettable WOW

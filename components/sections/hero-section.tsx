@@ -8,13 +8,11 @@ export const HeroSection = () => {
     <div className="mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 justify-between px-0 md:px-2 lg:px-2 h-full">
       {/* Left Section */}
       <div className="space-y-4 lg:space-y-6 flex flex-col justify-center text-center lg:text-left lg:w-2/5">
-        <h1 className="text-5xl md:text-5xl lg:text-6xl xl:text-[78px] max-w-full lg:max-w-xl text-white font-Onest font-bold tracking-tighter leading-tight">
-          Unleash the Power of Talent Acquisition
+        <h1 className="text-5xl md:text-5xl lg:text-6xl xl:text-[78px] max-w-full lg:max-w-xl text-white font-onest font-semibold tracking-tighter leading-tight">
+        AI-Powered Talent Intelligence with Human Precision
         </h1>
         <p className="md:text-sm text-base lg:text-lg font-figtree font-light text-gray-300 max-w-full lg:max-w-md">
-          Connect with exceptional candidates, vetted by trusted experts,
-          delivering insightful assessments for smarter hiring
-          decisions.
+        LinkedIn tells you who they are, Monjin tells you how they are.
         </p>
         <div className="hidden lg:block">
           <Button className="bg-[#D0F16C] w-full sm:w-auto text-black hover:bg-[#D0F16C] rounded-[8px] px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 text-xs sm:text-sm lg:text-base font-Onest font-light transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-[#D0F16C]/50 hover:cursor-pointer">

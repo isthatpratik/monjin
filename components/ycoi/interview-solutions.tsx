@@ -18,7 +18,7 @@ export default function InterviewSolutions() {
           <div className="space-y-6 flex flex-col justify-between w-1/2">
             <div>
               <h1
-                className={`font-Onest text-5xl tracking-tighter leading-normal max-w-xl font-medium text-[#353535]`}
+                className={`font-onest text-5xl tracking-tighter leading-normal max-w-xl font-medium text-[#353535]`}
               >
                 Discover Tailored Interview Solutions with Monjin YCOI
               </h1>

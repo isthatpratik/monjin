@@ -103,7 +103,7 @@ export function Footer() {
           {/* Say Hello Section */}
           {/* Say Hello Section */}
           <div className="text-center md:text-right mb-8 md:mb-0 md:flex md:flex-col md:items-end md:justify-center">
-            <h2 className="text-lg md:text-5xl font-light font-Onest mb-6">
+            <h2 className="text-lg md:text-5xl font-light font-onest mb-6">
               Say hello.
             </h2>
             <div className="flex justify-center md:justify-end gap-4">

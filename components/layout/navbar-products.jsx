@@ -82,7 +82,7 @@ const company = [
     imageSrc: "/assets/product-icons/culture.png",
     color: "bg-[#F6FAEA]",
     iconColor: "text-[#899B51]",
-    href: "/companyculture",
+    href: "/company/culture",
   },
   {
     title: "Our Team",
@@ -209,13 +209,13 @@ export function NavbarProducts() {
           <div className="flex items-center gap-3">
             <Button
               variant="outline"
-              className="rounded-[8px] border-black/50 bg-transparent font-Onest font-normal text-[15px] px-6 py-2 h-auto"
+              className="rounded-[8px] border-black/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto"
             >
               <Link href="/contact" className="w-full h-full flex items-center justify-center">
     Contact Us
   </Link>
             </Button>
-            <Button className="rounded-[8px] font-Onest bf-[#1B1B1B] font-normal text-[15px] px-6 py-2 h-auto">
+            <Button className="rounded-[8px] font-onest bf-[#1B1B1B] font-normal text-[15px] px-6 py-2 h-auto">
               Get Started
             </Button>
           </div>

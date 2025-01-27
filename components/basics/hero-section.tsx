@@ -18,7 +18,7 @@ export default function BasicsHeroSection() {
           Unlock seamless hiring with Monjin Basics! Conduct video interviews on the fly without registration, host multi-panel sessions, and leverage code-based interviews for technical assessments. Enjoy screen sharing for enhanced collaboration — the smart solution for modern recruitment.
           </p>
           <Button className="bg-[#1B1B1B] text-white hover:bg-gray-800 rounded-[8px] px-6 py-6 text-base font-Onest font-normal">
-            Watch Free For 15 Days
+            15 Days FREE!
           </Button>
           <p className="font-figtree text-[#353535] italic font-light pt-4">
           Starting at $35* per month after 15 day free trial period.

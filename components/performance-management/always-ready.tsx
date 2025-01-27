@@ -4,10 +4,10 @@ export default function AlwaysReady() {
   return (
     <div className="flex flex-col items-center justify-center w-full mx-auto py-16 px-4 bg-white rounded-[32px]">
       <div className="text-center mb-4">
-        <h1 className="font-[Onest] text-[48px] leading-[62.4px] tracking-[-0.06em] font-medium mb-4">
+        <h1 className="font-onest text-[48px] leading-[62.4px] tracking-[-0.06em] font-medium mb-4">
           Talent That&apos;s Always Ready
         </h1>
-        <p className="font-[Figtree] text-base leading-[22px] max-w-[584px] mx-auto">
+        <p className="font-figtree text-base leading-[22px] max-w-[584px] mx-auto">
           Streamline your hiring with Monjin&apos;s pre-vetted, industry-ready
           professionals, ready to deliver results from day one
         </p>
@@ -24,7 +24,7 @@ export default function AlwaysReady() {
             src="/assets/performance-management/feature-1.png"
             className="object-contain aspect-[4/3]"
           />
-          <h3 className="font-Onest font-semibold text-[#1D1E23] lg:text-3xl text-2xl mt-4 text-center">
+          <h3 className="font-onest font-semibold text-[#1D1E23] lg:text-3xl text-2xl mt-4 text-center">
             Hire Elite Talent Today
           </h3>
           <p className="font-figtree font-normal text-center text-[#828489] text-sm md:text-base mt-2 max-w-[75%]">
