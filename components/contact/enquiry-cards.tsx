@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Headphones, Mail, MessageSquare, Phone } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardTitle } from "@/components/ui/card"
+import { Headphones, Mail, MessageSquare, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 
 export function EnquiryCards() {
   return (
@@ -15,16 +15,24 @@ export function EnquiryCards() {
             <div className="p-2 bg-[#5C3FFC]/40 rounded-lg">
               <Headphones className="w-6 h-6 text-white" />
             </div>
-            <CardTitle className="text-[28px] font-onest font-semibold">Support Enquiries</CardTitle>
+            <CardTitle className="text-[28px] font-onest font-semibold">
+              Support Enquiries
+            </CardTitle>
           </div>
           <p className="text-gray-600 text-base font-figtree leading-relaxed">
-            Need assistance with Monjin&apos;s platform or services? Our support team is ready to resolve your queries
-            quickly and efficiently. Reach out to us anytime—support is just a click away!
+            Need assistance with Monjin&apos;s platform or services? Our support
+            team is ready to resolve your queries quickly and efficiently. Reach
+            out to us anytime—support is just a click away!
           </p>
-          <Button variant="default" className="bg-black text-white hover:bg-gray-800 p-5">
-            <Phone className="mr-2 h-4 w-4" />
-            Contact Support
-          </Button>
+          <a href="tel:+918888817031">
+            <Button
+              variant="default"
+              className="bg-black text-white hover:bg-gray-800 p-5"
+            >
+              <Phone className="mr-2 h-4 w-4" />
+              Contact Support
+            </Button>
+          </a>
         </CardContent>
       </Card>
 
@@ -33,22 +41,29 @@ export function EnquiryCards() {
         <div className="absolute inset-0 " />
         <CardContent className="relative p-12 space-y-4">
           <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#FF272B]/30 rounded-lg">
+            <div className="p-2 bg-[#FF272B]/30 rounded-lg">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <CardTitle className="text-2xl font-semibold">Sales Enquiries</CardTitle>
+            <CardTitle className="text-2xl font-semibold">
+              Sales Enquiries
+            </CardTitle>
           </div>
           <p className="text-gray-600 text-base leading-relaxed">
-            Have questions about how Monjin can transform your hiring process? Our sales team is here to guide you!
-            Contact us today and take the first step toward smarter recruitment.
+            Have questions about how Monjin can transform your hiring process?
+            Our sales team is here to guide you! Contact us today and take the
+            first step toward smarter recruitment.
           </p>
-          <Button variant="default" className="bg-black text-white hover:bg-gray-800 p-5">
-            <Mail className="mr-2 h-4 w-4" />
-            Write us a mail
-          </Button>
+          <a href="mailto:info@monjin.com">
+            <Button
+              variant="default"
+              className="bg-black text-white hover:bg-gray-800 p-5"
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              Write us a mail
+            </Button>
+          </a>
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
-
