@@ -7,6 +7,7 @@ import FeatureSection from "@/components/sections/feature-section";
 import ProdcutsSection from "@/components/sections/products-section";
 import CaseStudies from "@/components/sections/case-studies";
 import { Footer } from "@/components/layout/footer";
+
 import Testimonials from "@/components/sections/testimonials";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/navbar";
@@ -45,8 +46,11 @@ export default function Home() {
           sizes="100vw"
           className="object-cover object-top"
           priority
+
         />
+
       </motion.div>
+
 
       {/* Content animation */}
       <Navbar />
