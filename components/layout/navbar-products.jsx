@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "../ui/button"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import Link from "next/link";
+import { Button } from "../ui/button";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +13,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
   NavigationMenuIndicator,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
+import { motion } from "framer-motion";
 
 const products = [
   {
@@ -65,7 +66,7 @@ const products = [
     titleColor: "text-gray-700",
     href: "/products/MonjinSuite",
   },
-]
+];
 
 const company = [
   {
@@ -100,9 +101,18 @@ const company = [
     iconColor: "text-[#4DACD1]",
     href: "/company/careers",
   },
-]
+];
 
-function ListItem({ title, description, imageSrc, bgImage, color, titleColor, href, hoverColor }) {
+function ListItem({
+  title,
+  description,
+  imageSrc,
+  bgImage,
+  color,
+  titleColor,
+  href,
+  hoverColor,
+}) {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -130,18 +140,28 @@ function ListItem({ title, description, imageSrc, bgImage, color, titleColor, hr
                 }
               >
                 {!bgImage && (
-                  <Image src={imageSrc} alt={title} className="h-5 w-5 object-contain" width={20} height={20} />
+                  <Image
+                    src={imageSrc}
+                    alt={title}
+                    className="h-5 w-5 object-contain"
+                    width={20}
+                    height={20}
+                  />
                 )}
               </div>
               <div>
                 <div
                   className={`text-[15px] font-medium leading-none ${
-                    title == "Monjin Suite" ? "group-hover:text-white" : titleColor
+                    title == "Monjin Suite"
+                      ? "group-hover:text-white"
+                      : titleColor
                   }`}
                 >
                   {title}
                 </div>
-                <p className="text-sm leading-snug whitespace-nowrap text-[#6C8888]">{description}</p>
+                <p className="text-sm leading-snug whitespace-nowrap text-[#6C8888]">
+                  {description}
+                </p>
               </div>
             </div>
             <ArrowRight className="h-4 w-4 opacity-0 transition-all text-[#6C8888] group-hover:opacity-100 duration-100" />
@@ -149,17 +169,28 @@ function ListItem({ title, description, imageSrc, bgImage, color, titleColor, hr
         </a>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }
 
 export function NavbarProducts() {
   return (
-    <header className="w-full py-6 px-6 md:my-0 my-4 z-100 bg-transparent ">
+    <motion.header
+      className="w-full py-6 px-6 md:my-0 my-4 z-100 bg-transparent"
+      initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, type: 'spring', stiffness: 100, damping: 20 }}
+    >
       <div className="container max-auto max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="relative">
-            <Image src="/assets/monjin-navbar.png" alt="Logo" width={140} height={120} className="object-contain" />
+            <Image
+              src="/assets/monjin-navbar.png"
+              alt="Logo"
+              width={140}
+              height={120}
+              className="object-contain"
+            />
           </div>
         </Link>
 
@@ -168,7 +199,9 @@ export function NavbarProducts() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-figtree text-sm">Product</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="font-figtree text-sm">
+                  Product
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[700px] gap-3 p-4 md:grid-cols-2 z-999">
                     {products.map((product) => (
@@ -178,7 +211,9 @@ export function NavbarProducts() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-figtree text-sm">Company</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="font-figtree text-sm">
+                  Company
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[400px] z-999">
                     {company.map((item) => (
@@ -189,17 +224,23 @@ export function NavbarProducts() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/support" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>Support</NavigationMenuLink>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Support
+                  </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/candidate" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>Candidate</NavigationMenuLink>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Candidate
+                  </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/interviewer" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>Interviewer</NavigationMenuLink>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Interviewer
+                  </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuIndicator />
@@ -211,9 +252,12 @@ export function NavbarProducts() {
               variant="outline"
               className="rounded-[8px] border-black/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto"
             >
-              <Link href="/contact" className="w-full h-full flex items-center justify-center">
-    Contact Us
-  </Link>
+              <Link
+                href="/contact"
+                className="w-full h-full flex items-center justify-center"
+              >
+                Contact Us
+              </Link>
             </Button>
             <Button className="rounded-[8px] font-onest bf-[#1B1B1B] font-normal text-[15px] px-6 py-2 h-auto">
               Get Started
@@ -221,7 +265,6 @@ export function NavbarProducts() {
           </div>
         </div>
       </div>
-    </header>
-  )
+    </motion.header>
+  );
 }
-

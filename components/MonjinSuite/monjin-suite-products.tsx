@@ -7,6 +7,7 @@ import { Autoplay } from "swiper/modules";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import "swiper/css";
+import { motion } from 'framer-motion'
 
 const ProductCard = ({
   icon,
@@ -113,7 +114,16 @@ const MonjinSuiteProducts = () => {
   ];
 
   return (
-    <div className="relative mx-auto rounded-[32px] flex flex-col lg:flex-row justify-between bg-[url('/assets/MonjinSuite/monjin-suite-products-bg.png')] bg-cover bg-center my-10">
+    <motion.div className="relative mx-auto rounded-[32px] flex flex-col lg:flex-row justify-between bg-[url('/assets/MonjinSuite/monjin-suite-products-bg.png')] bg-cover bg-center my-10" initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      duration: 0.8,
+      delay: 1.2,
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
+      ease: "easeInOut",
+    }}>
       {/* Left Section */}
       <div className="lg:w-1/2 flex flex-col items-center lg:items-start lg:justify-evenly justify-center text-center lg:text-left px-6 lg:px-10 py-8">
         <div className="md:flex md:flex-col md:justify-center md:items-center lg:items-start flex flex-col items-center">
@@ -169,7 +179,7 @@ const MonjinSuiteProducts = () => {
           ))}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

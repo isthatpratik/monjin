@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from "framer-motion";
 import { Clients } from "@/components/sections/clients-landing";
 import { HeroSection } from "@/components/sections/hero-section";
 import FeatureSection from "@/components/sections/feature-section";
@@ -11,7 +14,13 @@ import { Navbar } from "@/components/layout/navbar";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0 -z-10 lg:hidden">
+      {/* Background animation */}
+      <motion.div
+        className="absolute inset-0 -z-10 lg:hidden"
+        initial={{ opacity: 0, translateY: -100 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 1 }}
+      >
         <Image
           alt="gradient-mobile-bg"
           src={"/assets/gradient-mobile.jpg"}
@@ -21,8 +30,13 @@ export default function Home() {
           priority
           className="object-cover"
         />
-      </div>
-      <div className="absolute inset-0 -z-10 lg:block hidden md:block">
+      </motion.div>
+      <motion.div
+        className="absolute inset-0 -z-10 lg:block hidden md:block"
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20, ease: 'easeOut' }} 
+      >
         <Image
           alt="gradient-mobile-bg"
           src={"/assets/gradient-web.jpg"}
@@ -32,22 +46,27 @@ export default function Home() {
           className="object-cover object-top"
           priority
         />
-      </div>
+      </motion.div>
 
-      <Navbar/>
-
-      <div className="md:max-w-[1600px] mx-auto px-6 py-10">
-        <HeroSection />
-        <Clients />
-        <FeatureSection />
-        <ProdcutsSection />
-        <CaseStudies />
-        <Testimonials />
-      </div>
-
-      <footer>
-        <Footer />
-      </footer>
+      {/* Content animation */}
+      <Navbar />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.8, type: "spring", stiffness: 100, damping: 20, ease: 'easeOut' }}
+      >
+        <div className="md:max-w-[1600px] mx-auto px-6 py-10">
+          <HeroSection />
+          <Clients />
+          <FeatureSection />
+          <ProdcutsSection />
+          <CaseStudies />
+          <Testimonials />
+        </div>
+        <footer>
+          <Footer />
+        </footer>
+      </motion.div>
     </main>
   );
 }
