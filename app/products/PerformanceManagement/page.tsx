@@ -1,19 +1,27 @@
+"use client";
+
 import { Footer } from "@/components/layout/footer";
 import { NavbarProducts } from "@/components/layout/navbar-products";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import React from "react";
 import WhyMonjin from "@/components/performance-management/why-monjin";
 import AlwaysReady from "@/components/performance-management/always-ready";
 import PerformanceHeroSection from "@/components/performance-management/hero-section";
 import CustomizedInterview from "@/components/performance-management/customized-interview";
 
-const MonjinSuite = () => {
+const PerformanceManagement = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
       <NavbarProducts />
 
-      <div className="absolute inset-0 -z-50 w-full h-full">
+      <motion.div
+        className="absolute inset-0 -z-50 w-full h-full"
+        initial={{ opacity: 0, translateY: -100 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 1, type: "spring", stiffness: 80, damping: 20 }}
+      >
         <div className="hidden md:block w-full h-full">
           <Image
             src="/assets/MonjinSuite/background-web.jpg"
@@ -34,14 +42,26 @@ const MonjinSuite = () => {
             className="background-mobile object-cover object-top"
           />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.4,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+        }}
+        className="md:max-w-[1600px] mx-auto px-8 py-8 z-10"
+      >
         <PerformanceHeroSection />
         <AlwaysReady />
         <WhyMonjin />
         <CustomizedInterview />
-      </div>
+      </motion.div>
+
       <div className="flex flex-col gap-8">
         <ClientsSlider />
         <Footer />
@@ -50,4 +70,4 @@ const MonjinSuite = () => {
   );
 };
 
-export default MonjinSuite;
+export default PerformanceManagement;

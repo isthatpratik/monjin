@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { User, Mail } from "lucide-react";
+import { User, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -22,6 +22,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "../ui/label";
+import { Toaster } from "@/components/ui/toaster"
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -50,12 +51,12 @@ export default function ContactHero() {
   }
 
   return (
-    <section className="relative w-full px-4 py-8 md:px-6">
+    <section className="relative w-full px-4 py-6 md:px-6">
       <div className="mx-auto max-w-8xl flex flex-row gap-12">
         {/* Hero Text */}
         <div className="flex flex-col justify-center w-1/2">
           <h1 className="font-onest text-[78px] font-semibold leading-tight text-white">
-            Say Hello to Endless Possibilities
+          Unlock Endless Possibilities
           </h1>
           <p className="mt-4 text-lg font-figtree font-light text-gray-200">
             Send Us a Message and Let&apos;s Create Something <br />
@@ -68,21 +69,14 @@ export default function ContactHero() {
           {/* Background Div */}
           <div
             className="absolute bottom-0 h-[calc(100%-2rem)] w-full translate-y-8 rounded-3xl bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${
-                process.env.NEXT_PUBLIC_VERCEL_URL
-                  ? "https://" + process.env.NEXT_PUBLIC_VERCEL_URL
-                  : ""
-              }/8wKKM.png)`,
-            }}
           />
 
           {/* Form */}
-          <div className="relative rounded-3xl bg-white p-6 shadow-xl md:p-8">
+          <div className="relative rounded-3xl bg-white p-6 shadow-xl md:p-8 ">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-2"
+                className="space-y-4"
               >
                 <FormField
                   control={form.control}
@@ -208,6 +202,8 @@ export default function ContactHero() {
           </div>
         </div>
       </div>
+      <Toaster />
     </section>
   );
 }
+

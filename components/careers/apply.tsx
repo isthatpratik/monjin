@@ -45,7 +45,7 @@ export default function JobApplicationForm() {
           {/* Left Column */}
           <div className="space-y-8">
             <div>
-              <h1 className="text-5xl font-Onest font-smedium tracking-tighter text-gray-900 pb-4">
+              <h1 className="text-5xl font-onest font-smedium tracking-tighter text-gray-900 pb-4">
                 Apply For Position
               </h1>
               <p className="mt-4 text-lg font-figtree text-[#2E2C2C]">

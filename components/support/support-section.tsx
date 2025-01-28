@@ -6,7 +6,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/support-accordion";
+} from "@/components/ui/accordion";
 import InterviewerFAQ from "./interviewer-FAQ";
 import CandidateFAQ from "./candidate-faq";
 import EmployerFAQ from "./employer-faq";
@@ -44,7 +44,8 @@ const faqs = [
   },
   {
     question: "Can I register on Monjin using a mobile or tablet?",
-    answer: "Currently, our mobile app is under development. We recommend registering on Monjin using a desktop or laptop for a seamless experience.",
+    answer:
+      "Currently, our mobile app is under development. We recommend registering on Monjin using a desktop or laptop for a seamless experience.",
   },
   {
     question: "Can I give an interview on a mobile or tablet?",
@@ -80,25 +81,25 @@ export default function SupportSection() {
         <TabsList className="w-full justify-around border-b-2 border-t-0 border-r-0 border-l-0 rounded-none h-[46px] bg-transparent mt-8">
           <TabsTrigger
             value="general"
-            className="text-3xl font-Onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF]"
+            className="text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF]"
           >
             General
           </TabsTrigger>
           <TabsTrigger
             value="candidate"
-            className="text-3xl font-Onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
           >
             Candidate
           </TabsTrigger>
           <TabsTrigger
             value="interviewer"
-            className="text-3xl font-Onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
           >
             Interviewer
           </TabsTrigger>
           <TabsTrigger
             value="employer"
-            className="text-3xl font-Onest rounded-none  data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-3xl font-onest rounded-none  data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
           >
             Employer
           </TabsTrigger>
@@ -116,14 +117,14 @@ export default function SupportSection() {
               understanding our interview process
             </p>
           </div>
-          <Accordion type="single" collapsible className="w-full max-w-5xl">
+          <Accordion type="single" collapsible className="w-full max-w-5xl" defaultValue="item-0">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={`faq-${index}`}
                 value={`item-${index}`}
-                className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-2"
+                className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-4"
               >
-                <AccordionTrigger className="hover:no-underline flex justify-between items-center font-Onest font-normal text-2xl tracking-tight">
+                <AccordionTrigger className="hover:no-underline flex justify-between items-center">
                   <span>{faq.question}</span>
                   <div className="shrink-0">
                     <div className="h-8 w-8 rounded-[4px] flex items-center justify-center"></div>
@@ -139,42 +140,47 @@ export default function SupportSection() {
 
         <TabsContent
           value="candidate"
-          className="flex flex-col items-center justify-center mt-8"
+          className="flex flex-col items-center justify-center"
         >
           <div className="my-12 text-center">
             <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
               Candidate
             </h1>
             <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
-            Are you looking out for opportunities and want to showcase your skills to top companies? Be a <br />candidate and meet global experts.
+              Are you looking out for opportunities and want to showcase your
+              skills to top companies? Be a <br />
+              candidate and meet global experts.
             </p>
           </div>
           <CandidateFAQ />
         </TabsContent>
         <TabsContent
           value="interviewer"
-          className="flex flex-col items-center justify-center mt-8"
+          className="flex flex-col items-center justify-center"
         >
           <div className="my-12 text-center">
             <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
               Interviewer
             </h1>
             <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
-            Earn Money , Recognition and gratification as a Monjin Interviewer. Be a Monjin interviewer.
+              Earn Money , Recognition and gratification as a Monjin
+              Interviewer. Be a Monjin interviewer.
             </p>
           </div>
           <InterviewerFAQ />
         </TabsContent>
         <TabsContent
           value="employer"
-          className="flex flex-col items-center justify-center mt-8"
+          className="flex flex-col items-center justify-center"
         >
           <div className="my-12 text-center">
             <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
               Employer
             </h1>
             <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
-            Find answers to all your questions, from posting job openings to understanding <br />our interview process
+              Find answers to all your questions, from posting job openings to
+              understanding <br />
+              our interview process
             </p>
           </div>
           <EmployerFAQ />

@@ -63,7 +63,7 @@ export function Clients() {
             </div>
           </div>
 
-          <h2 className="text-2xl lg:text-3xl xl:text-5xl text-center md:text-center lg:text-left font-Onest font-medium text-[#262628] mb-6 tracking-tighter mt-6 max-w-xl md:max-w-full md:px-12 lg:px-0">
+          <h2 className="text-2xl lg:text-3xl xl:text-5xl text-center md:text-center lg:text-left font-onest font-medium text-[#262628] mb-6 tracking-tighter mt-6 max-w-xl md:max-w-full md:px-12 lg:px-0">
             Enabling Global Leaders to Build Exceptional Teams
           </h2>
           <p className="text-lg text-[#0D0E11] lg:mb-8 font-figtree text-center md:text-center lg:text-left font-light max-w-sm md:max-w-full flex-wrap mt-2 lg:mt-4 md:px-12 lg:px-0">

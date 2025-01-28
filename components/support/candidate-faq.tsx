@@ -4,8 +4,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/support-accordion";
+  AccordionTrigger
+} from "@/components/ui/accordion";
 
 const faqs = [
   {
@@ -73,20 +73,22 @@ const faqs = [
 export default function CandidateFAQ() {
   return (
     <div className="w-full max-w-5xl mx-auto">
-      <Accordion type="single" collapsible className="w-full max-w-5xl">
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue="item-0" // Set the first accordion item to be open by default
+        className="w-full max-w-5xl"
+      >
         {faqs.map((faq, index) => (
           <AccordionItem
             key={`faq-${index}`}
             value={`item-${index}`}
-            className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-2"
+            className="border border-gray-200 rounded-lg mb-4 px-6 py-4"
           >
-            <AccordionTrigger className="hover:no-underline flex justify-between items-center font-Onest font-normal text-2xl tracking-tight">
-              <span>{faq.question}</span>
-              <div className="shrink-0">
-                <div className="h-8 w-8 rounded-[4px] flex items-center justify-center"></div>
-              </div>
+            <AccordionTrigger className="hover:no-underline flex justify-between items-center font-onest font-normal text-2xl tracking-tighter flex-1 py-4 text-left transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
+              {faq.question}
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600 p-5 font-figtree text-lg font-light">
+            <AccordionContent className="text-gray-600 pt-5 font-figtree text-lg font-light">
               {faq.answer}
             </AccordionContent>
           </AccordionItem>

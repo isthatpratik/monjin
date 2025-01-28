@@ -60,7 +60,7 @@ export default function WhyChooseMonjin() {
                 className="w-48 h-auto object-contain"
               />
             </div>
-            <h3 className="text-[28px] font-semibold font-Onest mb-4">Boundless Opportunities</h3>
+            <h3 className="text-[28px] font-semibold font-onest mb-4">Boundless Opportunities</h3>
             <p className="text-[#CFCFCF] font-figtree font-light text-lg">
               Monjin is a talent-first platform designed to foster growth, innovation, and leadership. For those who are
               driven, determined, and ready to make an impact, Monjin offers unparalleled opportunities to thrive and

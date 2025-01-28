@@ -17,7 +17,7 @@ export default function Careers() {
           fill
           sizes="100vw"
           priority
-          className="object-cover object-top"
+          className="object-cover object-top xl:-translate-y-[200px] lg:-translate-y-[50px]"
         />
       </div>
 

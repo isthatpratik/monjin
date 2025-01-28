@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/support-accordion";
+} from "@/components/ui/accordion";
 
 export default function InterviewerFAQ() {
   return (
@@ -15,7 +15,7 @@ export default function InterviewerFAQ() {
           value="interviewer-faq"
           className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-2"
         >
-          <AccordionTrigger  className="hover:no-underline flex justify-between items-center font-Onest font-normal text-2xl tracking-tight">
+          <AccordionTrigger  className="hover:no-underline flex justify-between items-center font-onest font-normal text-2xl tracking-tight">
             <span>How Should I Conduct an Interview on Monjin?</span>
             <div className="shrink-0">
               <div className="h-8 w-8 rounded-[4px] flex items-center justify-center"></div>

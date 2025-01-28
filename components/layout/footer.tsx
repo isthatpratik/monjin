@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/ui/accordion-basic";
 
 const footerLinks = {
   products: [
@@ -46,8 +46,8 @@ const locations = ["INDIA", "USA", "UK"];
 
 export function Footer() {
   return (
-    <footer className="w-full text-gray-100 lg:rounded-t-[32px] rounded-t-3xl relative">
-      <div className="absolute inset-0 z-0 overflow-hidden">
+    <footer className="w-full text-gray-100 rounded-t-[32px] relative">
+      <div className="absolute inset-0 -z-1 overflow-hidden">
         <Image
           src={"/assets/footer-bg-web.jpg"}
           fill
@@ -103,7 +103,7 @@ export function Footer() {
           {/* Say Hello Section */}
           {/* Say Hello Section */}
           <div className="text-center md:text-right mb-8 md:mb-0 md:flex md:flex-col md:items-end md:justify-center">
-            <h2 className="text-lg md:text-5xl font-light font-Onest mb-6">
+            <h2 className="text-lg md:text-5xl font-light font-onest mb-6">
               Say hello.
             </h2>
             <div className="flex justify-center md:justify-end gap-4">
@@ -118,7 +118,7 @@ export function Footer() {
               </Link>
               <Link href="#">
                 <Image
-                  src="/assets/social-media/linkedIn.png"
+                  src="/assets/social-media/linkedin.png"
                   alt="LinkedIn"
                   width={48}
                   height={48}
