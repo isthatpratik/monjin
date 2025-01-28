@@ -159,7 +159,7 @@ const ProductsSection = () => {
   ];
 
   return (
-    <div className="my-20 bg-[#FFFFFF] rounded-3xl border lg:p-8 md:p-6 p-2 max-h-1/3 self-center">
+    <div id="products-section" className="my-20 bg-[#FFFFFF] rounded-3xl border lg:p-8 md:p-6 p-2 max-h-1/3 self-center">
       <div className="flex flex-col items-center justify-center gap-4 my-12 ">
         <h2 className="font-onest font-medium md:text-5xl text-center tracking-tighter text-3xl lg:max-w-[50vw]">
           Powering Achievements with Transformative Tools

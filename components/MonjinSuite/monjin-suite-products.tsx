@@ -133,7 +133,7 @@ const MonjinSuiteProducts = () => {
         </div>
         <div>
           <Button className="bg-[#ffffff] text-black rounded-[8px] w-64 h-16 hidden lg:block md:block font-onest font-normal text-xl py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
-            Start Trial
+            Start Exploring
           </Button>
         </div>
       </div>
@@ -158,7 +158,7 @@ const MonjinSuiteProducts = () => {
           </Swiper>
           <div className="mt-8 pb-8">
             <Button className="bg-[#ffffff] text-black rounded-[8px] w-full py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
-              Start Trial
+              Start Exploring
             </Button>
           </div>
         </div>

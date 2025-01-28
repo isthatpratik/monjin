@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function BasicsHeroSection() {
   return (
-    <main className="min-h-screen mb-10">
+    <main className="min-h-screen bg-[url('/assets/basics/basics-hero-section.png')] bg-contain bg-no-repeat aspect-square w-full">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center py-12">
         <div className="space-y-6">
           <div className="inline-flex rounded-xl border-[#F46D70] border p-1">
@@ -25,15 +24,6 @@ export default function BasicsHeroSection() {
           </p>
         </div>
 
-        <div className="absolute xl:right-[300px] top-[200px] lg:right-[200px] -z-10">
-          <Image
-            src="/assets/basics/basics-hero-section.png"
-            alt="Spotlight illustration"
-            width={1000}
-            height={1000}
-            className="object-contain w-[1200px] h-full"
-          />
-        </div>
       </div>
     </main>
   );

@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function SpotlightHeroSection() {
   return (
-    <main className="min-h-screen mb-10">
+    <main className="min-h-screen bg-[url('/assets/spotlight/spotlight-hero-section.png')] bg-contain bg-no-repeat aspect-square w-full">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center py-12">
         <div className="space-y-6">
           <div className="inline-flex rounded-xl border-[#DC7F07] border p-1">
@@ -23,16 +22,6 @@ export default function SpotlightHeroSection() {
           <p className="font-figtree text-[#353535] italic font-light pt-4">
           Starting at $24* per month after 15 day free trial period.
           </p>
-        </div>
-
-        <div className="absolute xl:right-[280px] top-[200px] lg:right-[100px] -z-10">
-          <Image
-            src="/assets/spotlight/spotlight-hero-section.png"
-            alt="Spotlight illustration"
-            width={1000}
-            height={1000}
-            className="object-contain w-[1200px] h-full"
-          />
         </div>
       </div>
     </main>

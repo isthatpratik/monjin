@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function YcoiHeroSection() {
   return (
-    <main className="min-h-screen mb-20">
+    <main className="min-h-screen bg-[url('/assets/ycoi/ycoi-hero-section.png')] bg-contain bg-no-repeat aspect-square w-full">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center py-12">
         <div className="space-y-6">
           <div className="inline-flex rounded-xl border-[#83AB09] border p-1">
@@ -22,15 +21,6 @@ export default function YcoiHeroSection() {
           </Button>
         </div>
 
-        <div className="absolute xl:right-[300px] top-[160px] lg:right-[100px] -z-10">
-          <Image
-            src="/assets/ycoi/ycoi-hero-section.png"
-            alt="Landing page illustration"
-            width={1000}
-            height={1000}
-            className="object-contain w-[1200px] h-full"
-          />
-        </div>
       </div>
     </main>
   );
