@@ -112,8 +112,12 @@ const tabs: Tab[] = [
     features: [
       "Keyword Extraction",
       "Sentiment Analysis",
-      "Emotion Detection",
-      "Audio & Video Feedback",
+      "Emotional Analysis",
+      "Speech-to-Text",
+      "Automated Transcription",
+      "Object Identification",
+      "Visual Analysis",
+      "Gesture & Expression Analysis"
     ],
     icon: <PlayCircle className="w-5 h-5" />,
     imageUrl: "/assets/ocoi/audio-video-analytics.png",

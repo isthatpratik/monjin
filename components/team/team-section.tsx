@@ -127,7 +127,7 @@ function TeamCard({
                 className="mt-4 w-fit"
               >
                 <Image
-                  src="/assets/social-media/linkedIn.png"
+                  src="/assets/social-media/linkedin.png"
                   alt="LinkedIn"
                   width={48}
                   height={48}
@@ -159,7 +159,7 @@ function TeamCard({
               className="rounded-full"
             >
               <Image
-                src="/assets/social-media/linkedIn.png"
+                src="/assets/social-media/linkedin.png"
                 alt="LinkedIn"
                 width={48}
                 height={48}
