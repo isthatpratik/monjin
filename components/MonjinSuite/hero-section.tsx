@@ -18,7 +18,7 @@ const MonjinSuiteHero = () => {
             damping: 20,
             ease: "easeOut",
           }}
-          className="text-center md:font-onest text-base md:text-4xl lg:text-5xl tracking-normal md:tracking-tighter"
+          className="text-center md:font-onest text-base md:text-2xl lg:text-5xl tracking-normal md:tracking-tighter"
         >
           Monjin Suite
         </motion.h2>
@@ -33,7 +33,7 @@ const MonjinSuiteHero = () => {
             damping: 20,
             ease: "easeOut",
           }}
-          className="text-center md:font-Onest font-Onest font-bold text-4xl md:text-6xl lg:text-7xl tracking-tighter max-w-full md:max-w-[80vw]"
+          className="text-center md:font-onest font-onest font-bold text-4xl lg:text-[78px] tracking-tighter max-w-full leading-tight md:max-w-[90vw]"
         >
           Streamline Talent Attraction & Retention for a Seamless Experience.
         </motion.h1>
@@ -60,7 +60,7 @@ const MonjinSuiteHero = () => {
         />
       </motion.div>
       <motion.p
-        className="text-center font-figtree text-sm md:max-w-[80%] pb-4"
+        className="text-center font-figtree text-sm md:max-w-[80%] pb-4 hidden lg:block"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -75,6 +75,21 @@ const MonjinSuiteHero = () => {
         Unlock the full potential of your recruitment and business strategies
         with our all-in-one platform designed to streamline your processes and
         deliver exceptional results.
+      </motion.p>
+      <motion.p
+        className="text-center font-figtree text-sm md:max-w-[80%] pb-4 block lg:hidden"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.6,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          ease: "easeOut",
+        }}
+      >
+        Unlock recruitment and business potential with our all-in-one platform for streamlined results.
       </motion.p>
     </div>
   );

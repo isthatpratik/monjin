@@ -81,7 +81,7 @@ export function Footer() {
               height={44}
               className="mx-auto md:mx-0 mb-4 object-contain hidden sm:block"
             />
-            <p className="text-xs md:text-base text-[#AAAAAA] font-figtree">
+            <p className="text-xs md:text-base text-[#AAAAAA] font-figtree md:max-w-lg lg:max-w-xl">
               Monjin is a dynamic network of expert interviewers spanning
               diverse skill sets, conducting real-time video interviews that
               empower businesses to find the right talent faster and more
@@ -101,7 +101,6 @@ export function Footer() {
           </div>
 
           {/* Say Hello Section */}
-          {/* Say Hello Section */}
           <div className="text-center md:text-right mb-8 md:mb-0 md:flex md:flex-col md:items-end md:justify-center">
             <h2 className="text-lg md:text-5xl font-light font-onest mb-6">
               Say hello.
@@ -113,7 +112,7 @@ export function Footer() {
                   alt="Facebook"
                   width={48}
                   height={48}
-                  className="hover:opacity-80"
+                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
                 />
               </Link>
               <Link href="#">
@@ -122,7 +121,7 @@ export function Footer() {
                   alt="LinkedIn"
                   width={48}
                   height={48}
-                  className="hover:opacity-80"
+                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
                 />
               </Link>
               <Link href="#">
@@ -131,7 +130,7 @@ export function Footer() {
                   alt="Instagram"
                   width={48}
                   height={48}
-                  className="hover:opacity-80"
+                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
                 />
               </Link>
               <Link href="#">
@@ -140,7 +139,7 @@ export function Footer() {
                   alt="YouTube"
                   width={48}
                   height={48}
-                  className="hover:opacity-80"
+                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
                 />
               </Link>
               <Link href="#">
@@ -149,7 +148,7 @@ export function Footer() {
                   alt="Twitter"
                   width={48}
                   height={48}
-                  className="hover:opacity-80"
+                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
                 />
               </Link>
             </div>

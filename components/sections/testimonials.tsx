@@ -57,7 +57,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const plugin = useRef(Autoplay({ delay:7000 }));
+  const plugin = useRef(Autoplay({ delay:4000, stopOnInteraction: false }));
 
   return (
     <section className="py-16 px-4 md:px-8 bg-[url('/assets/bg-testimonial.png')] bg-cover bg-center bg-no-repeat rounded-2xl mt-16">

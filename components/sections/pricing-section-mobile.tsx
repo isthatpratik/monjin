@@ -7,15 +7,10 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/pricing-tabs";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import type { PricingProps } from "@/types/pricing";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import { Pagination, Autoplay } from "swiper/modules";
 
 export function PricingSectionMobile({
   title,
@@ -32,8 +27,8 @@ export function PricingSectionMobile({
   };
 
   return (
-    <section className="py-12 lg:px-4 md:px-2 px-0 w-full lg:max-w-7xl lg:mx-auto">
-      <h2 className="text-4xl font-medium text-center mb-12 font-onest lg:text-5xl tracking-tighter">
+    <section className="py-4 lg:px-4 md:px-2 px-0 w-full lg:max-w-7xl lg:mx-auto">
+      <h2 className="text-2xl font-medium text-center mb-12 font-onest lg:text-5xl tracking-tighter">
         {title}
       </h2>
 
@@ -45,15 +40,15 @@ export function PricingSectionMobile({
         }
         className="w-full max-w-full flex justify-center mx-auto mb-12"
       >
-        <TabsList className="ld:grid ld:grid-cols-2 lg:w-[40vw] md:w-[60vw] w-[100vw] md:grid md:grid-cols-2 grid grid-cols-1 lg:rounded-full rounded-[42px] lg:h-20 md:h-20 h-40">
+        <TabsList className="w-full h-auto">
           <TabsTrigger
-            className="rounded-full px-8 font-figtree font-normal tracking-tighter py-4 h-full lg:text-2xl md:text-xl text-sm"
+            className="px-8 w-full font-figtree font-normal tracking-tighter py-2 h-full lg:text-2xl text-xl"
             value="monthly"
           >
             Monthly
           </TabsTrigger>
           <TabsTrigger
-            className="rounded-full px-8 font-figtree font-normal tracking-tighter py-4 flex items-center gap-2 h-full lg:text-2xl md:text-xl text-sm"
+            className="px-8 w-full font-figtree font-normal tracking-tighter py-2 flex items-center gap-2 h-full lg:text-2xl text-xl"
             value="annual"
           >
             Annually
@@ -66,187 +61,151 @@ export function PricingSectionMobile({
         </TabsList>
       </Tabs>
 
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={1}
-        pagination={{
-          clickable: true,
-          el: ".swiper-pagination-custom",
-        }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        className="my-12 md:w-[60vw] md:flex md:justify-center"
-        loop
-      >
-        <SwiperSlide>
-          <Card className="relative overflow-hidden rounded-[32px] border border-black/20 bg-transparent flex flex-col p-2 h-[500px]">
-            <div className="absolute inset-0 -z-10">
-              <Image
-                src={"/assets/pricing/lite.jpg"}
-                alt="pricing lite background"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            <CardHeader>
-              <span className="font-figtree font-bold inline-block px-4 py-1 rounded-full md:text-2xl text-xl bg-transparent border-2 border-[#9F8AFF] mb-2 w-min">
+      <div className="flex flex-col space-y-4">
+        <Card className="relative overflow-hidden rounded-[8px] border border-black/20 bg-transparent flex flex-col p-2 h-auto shadow-none">
+          <div className="absolute inset-0 -z-10">
+            <Image
+              src={"/assets/pricing/lite-mobile.jpg"}
+              alt="pricing lite background"
+              fill
+              className="object-cover bg-center"
+            />
+          </div>
+          <CardHeader className="p-2">
+            <div className="flex gap-2 items-center">
+              <span className="font-figtree font-semibold inline-block px-3 py-1 rounded-full md:text-2xl text-sm bg-transparent border-2 border-[#9F8AFF]  w-min">
                 {lite.name}
               </span>
-              <div className="text-black">
-                <p className="text-xs mb-4 font-figtree">{lite.tagline}</p>
-                <div className="flex items-baseline">
-                  <span className="md:text-6xl text-4xl font-figtree font-bold">
-                    <sup className="md:text-3xl text-2xl font-figtree font-bold">
-                      $
-                    </sup>
-                    {getPrice(lite.monthlyPrice, lite.annualPrice)}
-                  </span>
-                  <span className="ml-2 text-sm text-gray-600">/ mo</span>
-                </div>
-                <p className="text-sm text-gray-600 mt-2">
-                  Per month per user, billed{" "}
-                  {billingCycle === "monthly" ? "monthly" : "annually"}
-                </p>
-              </div>
-            </CardHeader>
-            {/* Ensure the content section grows and reserves space */}
-            <CardContent className="text-black flex-grow min-h-[100px]">
-              {lite.features.length > 0 ? (
-                <ul className="space-y-1">
-                  {lite.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <div className="w-1 h-1 rounded-full bg-current" />
-                      <span className="text-sm font-figtree">
-                        {feature.name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                // Optional placeholder for empty features
-                <div className="h-full flex items-center justify-center text-gray-400">
-                  No features available
-                </div>
-              )}
-            </CardContent>
-            {/* Footer stays at the bottom */}
-            <CardFooter className="mt-auto pt-6">
-              <Button
-                onClick={lite.ctaAction}
-                className="w-full bg-black text-white hover:shadow-monjin transition-all duration-300 rounded-full h-12 font-figtree"
-              >
-                {lite.ctaLabel}
-              </Button>
-            </CardFooter>
-          </Card>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          {/* ESSENTIAL Plan */}
-          <Card className="relative overflow-hidden rounded-[32px] border-black/20 bg-transparent flex flex-col p-2 h-[500px]">
-            <div className="absolute inset-0 -z-10">
-              <Image
-                src={"/assets/pricing/essential.jpg"}
-                alt="pricing lite background"
-                fill
-                className="object-cover object-top"
-              />
+              <p className="text-[10px] font-figtree">{lite.tagline}</p>
             </div>
-            <CardHeader>
-              <span className="font-figtree font-bold inline-block px-4 py-1 rounded-full md:text-2xl text-xl bg-transparent border-2 border-[#D0F16C] mb-2 w-min text-[#D0F16C]">
-                {essential.name}
-              </span>
-              <div className="text-white">
-                <p className="text-xs mb-4 font-figtree">{essential.tagline}</p>
-                <div className="flex items-baseline">
-                  <span className="md:text-6xl text-4xl font-bold font-onest">
-                    <sup className="md:text-3xl text-2xl font-figtree font-bold">
-                      $
-                    </sup>
-                    {getPrice(essential.monthlyPrice, essential.annualPrice)}
-                  </span>
-                  <span className="ml-2 text-sm text-gray-300">/ mo</span>
-                </div>
-                <p className="text-sm text-gray-300 mt-2">
-                  Per month per user, billed{" "}
-                  {billingCycle === "monthly" ? "monthly" : "annually"}
-                </p>
-              </div>
-            </CardHeader>
-            <CardContent className="text-white mt-4">
+          </CardHeader>
+          {/* Ensure the content section grows and reserves space */}
+          <CardContent className="text-black flex flex-row justify-between min-h-[100px] p-2">
+            {lite.features.length > 0 ? (
               <ul className="space-y-1">
-                {essential.features.map((feature, i) => (
+                {lite.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <div className="w-1 h-1 rounded-full bg-current" />
-                    <span className="text-sm font-figtree">{feature.name}</span>
+                    <span className="text-xs font-figtree">{feature.name}</span>
                   </li>
                 ))}
               </ul>
-            </CardContent>
-            <CardFooter className="mt-auto pt-6">
-              <Button
-                onClick={essential.ctaAction}
-                className="w-full bg-white text-black hover:shadow-monjin hover:bg-white transition-all duration-300 rounded-full h-12 font-figtree"
-              >
-                {essential.ctaLabel}
-              </Button>
-            </CardFooter>
-          </Card>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card className="relative overflow-hidden rounded-[32px] border-black/20 bg-transparent flex flex-col p-2 h-[510px]">
-            <div className="absolute inset-0 -z-10">
-              <Image
-                src={"/assets/pricing/professional.jpg"}
-                alt="pricing lite background"
-                fill
-                className="object-cover object-top"
-              />
+            ) : (
+              // Optional placeholder for empty features
+              <div className="h-full flex items-center justify-center text-gray-400">
+                No features available
+              </div>
+            )}
+            <div className="text-black justify-end">
+              <div className="flex items-center justify-center">
+                <span className="text-3xl font-figtree font-bold">
+                  <sup className="text-sm font-figtree font-bold">$</sup>
+                  {getPrice(lite.monthlyPrice, lite.annualPrice)}
+                </span>
+                <span className="ml-2 text-[10px] text-gray-800">/ mo</span>
+              </div>
+              <p className="text-[10px] text-center text-black mt-2">
+                Per month per user, <br />
+                billed {billingCycle === "monthly" ? "monthly" : "annually"}
+              </p>
             </div>
-            <CardHeader>
-              <span className="font-figtree font-bold inline-block px-4 py-1 rounded-full md:text-2xl text-xl bg-transparent border-2 border-[#9F8AFF] mb-2 w-min">
+          </CardContent>
+        </Card>
+
+        {/* ESSENTIAL Plan */}
+        <Card className="relative overflow-hidden rounded-[8px] border-black/20 bg-transparent flex flex-col p-2 h-auto shadow-none">
+          <div className="absolute inset-0 -z-10">
+            <Image
+              src={"/assets/pricing/essential-mobile.jpg"}
+              alt="pricing lite background"
+              fill
+              className="object-cover bg-center"
+            />
+          </div>
+          <CardHeader className="p-2">
+            <div className="flex gap-2 items-center">
+              <span className="font-figtree text-[#D0F16C] font-semibold inline-block px-3 py-1 rounded-full md:text-2xl text-sm bg-transparent border-2 border-[#D0F16C] w-min">
+                {essential.name}
+              </span>
+              <p className="text-[10px] font-figtree text-white">
+                {essential.tagline}
+              </p>
+            </div>
+          </CardHeader>
+          <CardContent className="text-white flex flex-row justify-between min-h-[100px] p-2">
+            <ul className="space-y-1">
+              {essential.features.map((feature, i) => (
+                <li key={i} className="flex items-center gap-2">
+                  <div className="w-1 h-1 rounded-full bg-current" />
+                  <span className="text-xs font-figtree">{feature.name}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="text-white flex flex-col items-cend justify-end">
+              <div className="flex items-center justify-center">
+                <span className="text-3xl font-figtree font-bold">
+                  <sup className="text-sm font-figtree font-bold">$</sup>
+                  {getPrice(essential.monthlyPrice, essential.annualPrice)}
+                </span>
+                <span className="ml-2 text-[10px] text-white">/ mo</span>
+              </div>
+              <p className="text-[10px] text-center flex items-end text-white mt-2">
+                Per month per user, <br />
+                billed {billingCycle === "monthly" ? "monthly" : "annually"}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* PROFESSIONAL Plan */}
+        <Card className="relative overflow-hidden rounded-[8px] border-black/20 bg-transparent flex flex-col p-2 h-auto shadow-none">
+          <div className="absolute inset-0 -z-10">
+            <Image
+              src={"/assets/pricing/professional-mobile.jpg"}
+              alt="pricing lite background"
+              fill
+              className="object-cover bg-center"
+            />
+          </div>
+          <CardHeader className="p-2">
+            <div className="flex items-center gap-2">
+              <span className="font-figtree font-semibold inline-block px-3 py-1 rounded-full md:text-2xl text-sm bg-transparent border-2 border-[#9F8AFF] w-min">
                 {professional.name}
               </span>
-              <div className="text-black">
-                <p className="text-xs mb-4 font-figtree">
-                  {professional.tagline}
-                </p>
+              <p className="text-[10px] font-figtree">
+                {professional.tagline}
+              </p>
+            </div>
+          </CardHeader>
+          {/* Ensure the content area takes space even if empty */}
+          <CardContent className="text-black font-figtree text-base flex-grow min-h-[100px] p-2">
+            {professional.features.length > 0 ? (
+              <ul className="space-y-1">
+                {professional.features.map((feature, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <div className="w-1 h-1 rounded-full bg-current" />
+                    <span className="text-xs font-figtree">{feature.name}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              // Optional placeholder for empty content
+              <div className="h-full flex items-center justify-center text-gray-400">
+                No features available
               </div>
-            </CardHeader>
-            {/* Ensure the content area takes space even if empty */}
-            <CardContent className="text-black font-figtree text-base flex-grow min-h-[100px]">
-              {professional.features.length > 0 ? (
-                <ul className="space-y-1">
-                  {professional.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <div className="w-1 h-1 rounded-full bg-current" />
-                      <span className="text-sm font-figtree">
-                        {feature.name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                // Optional placeholder for empty content
-                <div className="h-full flex items-center justify-center text-gray-400">
-                  No features available
-                </div>
-              )}
-            </CardContent>
-            <CardFooter className="mt-auto pt-6">
-              <Button
-                onClick={professional.ctaAction}
-                className="w-full bg-black text-white hover:shadow-monjin transition-all duration-300 rounded-full h-12 font-Onest font-light"
-              >
-                {professional.ctaLabel}
-              </Button>
-            </CardFooter>
-          </Card>
-        </SwiperSlide>
-      </Swiper>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+      <div className="text-center mt-8">
+        {/* Contact Sales Button */}
+        <Button
+          onClick={() => alert("Redirecting to contact sales page")}
+          className="bg-black text-white hover:bg-gray-800 transition-all duration-300 rounded-[8px] h-12 w-full md:w-[40vw] lg:w-[20vw] font-figtree"
+        >
+          Contact Sales
+        </Button>
+      </div>
       <div className="mt-8 text-center text-sm text-gray-500 space-y-2">
         <p>* Plus applicable taxes</p>
         <p>*Cancel your subscription anytime</p>

@@ -80,7 +80,7 @@ export function PricingSection({
               {lite.name}
             </span>
             <div className="text-black">
-            <p className="text-xs mb-4 font-figtree">{lite.tagline}</p>
+              <p className="text-xs mb-4 font-figtree">{lite.tagline}</p>
               {showPriceDetails(getPrice(lite.monthlyPrice, lite.annualPrice)) && (
                 <div className="flex items-baseline">
                   <span className="lg:text-6xl md:text-5xl text-4xl font-figtree font-bold">
@@ -106,14 +106,6 @@ export function PricingSection({
               ))}
             </ul>
           </CardContent>
-          <CardFooter className="mt-auto pt-6">
-            <Button
-              onClick={lite.ctaAction}
-              className="w-full bg-black text-white hover:shadow-monjin transition-all duration-300 rounded-[8px] h-12 font-figtree"
-            >
-              {lite.ctaLabel}
-            </Button>
-          </CardFooter>
         </Card>
 
         {/* ESSENTIAL Plan */}
@@ -131,7 +123,7 @@ export function PricingSection({
               {essential.name}
             </span>
             <div className="text-white">
-            <p className="text-xs mb-4 font-figtree">{essential.tagline}</p>
+              <p className="text-xs mb-4 font-figtree">{essential.tagline}</p>
               {showPriceDetails(getPrice(essential.monthlyPrice, essential.annualPrice)) && (
                 <div className="flex items-baseline">
                   <span className="lg:text-6xl md:text-5xl text-4xl font-figtree font-bold">
@@ -157,14 +149,6 @@ export function PricingSection({
               ))}
             </ul>
           </CardContent>
-          <CardFooter className="mt-auto pt-6">
-            <Button
-              onClick={essential.ctaAction}
-              className="w-full bg-white text-black hover:shadow-monjin hover:bg-white transition-all duration-300 rounded-[8px] h-12 font-figtree"
-            >
-              {essential.ctaLabel}
-            </Button>
-          </CardFooter>
         </Card>
 
         {/* PROFESSIONAL Plan */}
@@ -182,7 +166,7 @@ export function PricingSection({
               {professional.name}
             </span>
             <div className="text-black">
-            <p className="text-xs mb-4 font-figtree">{professional.tagline}</p>
+              <p className="text-xs mb-4 font-figtree">{professional.tagline}</p>
               {showPriceDetails(getPrice(professional.monthlyPrice, professional.annualPrice)) && (
                 <div className="flex items-baseline">
                   <span className="lg:text-6xl md:text-5xl text-4xl font-figtree font-bold">
@@ -208,15 +192,13 @@ export function PricingSection({
               ))}
             </ul>
           </CardContent>
-          <CardFooter className="mt-auto pt-6">
-            <Button
-              onClick={professional.ctaAction}
-              className="w-full bg-black text-white hover:shadow-monjin transition-all duration-300 rounded-[8px] h-12 font-Onest font-light"
-            >
-              {professional.ctaLabel}
-            </Button>
-          </CardFooter>
         </Card>
+      </div>
+
+      <div className="mt-12 pt-6 text-center">
+        <Button className="bg-[#1B1B1B] text-white font-onest  hover:bg-[#1B1B1B]/80 transition-all duration-300 rounded-[8px] py-8 px-20">
+          Contact Sales
+        </Button>
       </div>
 
       <div className="mt-8 text-center lg:text-[18px] text-base text-gray-500 space-y-2">
@@ -227,6 +209,8 @@ export function PricingSection({
           prior to subscription activation
         </p>
       </div>
+
+      {/* Contact Sales Button */}
     </section>
   );
 }

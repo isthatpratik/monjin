@@ -49,7 +49,7 @@ const slides = [
 ];
 
 export default function CaseStudies2() {
-  const plugin = useRef(Autoplay({ delay: 9000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
 
   return (
     <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8 lg:px-16 py-8">
@@ -58,7 +58,7 @@ export default function CaseStudies2() {
         Empowering Hiring Outcomes: <br />
         Client Insights{" "}
         </h1>
-        <p className="text-[#1D1E23] max-w-3xl mx-auto font-figtree text-lg font-light">
+        <p className="text-[#1D1E23] max-w-3xl mx-auto font-figtree text-lg font-light hidden lg:block">
           Explore how our partnerships have sparked innovation, driving <br />
           exceptional results and redefining success
         </p>
