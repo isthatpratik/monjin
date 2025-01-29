@@ -1,7 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/layout/footer";
-import { NavbarProducts } from "@/components/layout/navbar-products";
+import { NavbarBlack } from '@/components/layout/navbar-black';
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import SpotlightHeroSection from "@/components/spotlight/hero-section";
 import SpotlightFeatures from "@/components/spotlight/spotlight-features";
@@ -9,11 +9,13 @@ import SpotlightPricing from "@/components/spotlight/spotlight-pricing";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
+import { MobileNavbarDark } from "@/components/layout/mobile-navbar-dark";
 
 const Spotlight = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <NavbarProducts />
+      <NavbarBlack />
+      <MobileNavbarDark />
 
       <motion.div
         className="absolute inset-0 -z-50 w-full h-full"

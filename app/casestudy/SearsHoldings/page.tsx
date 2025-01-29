@@ -1,6 +1,7 @@
 import CaseTwo from "@/components/case-study/sears-holdings";
 import { Footer } from "@/components/layout/footer";
-import { Navbar } from "@/components/layout/navbar";
+import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
+import { NavbarWhite } from "@/components/layout/navbar-white";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import Image from "next/image";
 import React from "react";
@@ -8,7 +9,8 @@ import React from "react";
 const SearsHoldings = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <Navbar />
+      <NavbarWhite />
+      <MobileNavbarLight />
 
       <div className="absolute inset-0 -z-50 w-full h-full">
         <div className="hidden md:block w-full h-full">

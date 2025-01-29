@@ -1,7 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/layout/footer";
-import { NavbarProducts } from "@/components/layout/navbar-products";
+import { NavbarBlack } from '@/components/layout/navbar-black';
 import OcoiHeroSection from "@/components/ocoi/hero-section";
 import OcoiFeatures from "@/components/ocoi/ocoi-features";
 import OcoiPricing from "@/components/ocoi/ocoi-pricing";
@@ -9,11 +9,13 @@ import { ClientsSlider } from "@/components/sliders/clients-slider";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
+import { MobileNavbarDark } from "@/components/layout/mobile-navbar-dark";
 
 const OCOI = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <NavbarProducts />
+      <NavbarBlack />
+      <MobileNavbarDark />
 
       <motion.div
         className="absolute inset-0 -z-50 w-full h-full"

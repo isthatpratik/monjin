@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
   NavigationMenuIndicator,
-} from "@/components/ui/dark-navbar";
+} from "@/components/ui/navigation-menu";
 import { motion } from "framer-motion";
 
 const products = [
@@ -43,7 +43,7 @@ const products = [
   },
   {
     title: "Performance Management",
-    description: "Accelerate Efficient Screening",
+    description: "Pre-Assessed Candidatures",
     imageSrc: "/assets/product-icons/performance_management.png",
     color: "bg-[#F8EEFB]",
     titleColor: "text-[#BA57D3]",
@@ -118,7 +118,7 @@ function ListItem({
       <NavigationMenuLink asChild>
         <a
           href={href}
-          className={`block select-none z-999 space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all ${
+          className={`block select-none z-2000 space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all ${
             hoverColor || "hover:bg-[#F4F9F9]"
           } hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground group`}
         >
@@ -172,20 +172,25 @@ function ListItem({
   );
 }
 
-export function Navbar() {
+export function NavbarBlack() {
   return (
     <motion.header
-      className="w-full py-6 px-6 md:my-0 my-4 z-100 bg-transparent"
+      className="w-full py-6 px-6 md:my-0 my-4 z-100 bg-transparent hidden lg:block"
       initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, type: 'spring', stiffness: 100, damping: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.8,
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+      }}
     >
       <div className="container max-auto max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="relative">
             <Image
-              src="/assets/monjin-logo.png"
+              src="/assets/monjin-navbar.png"
               alt="Logo"
               width={140}
               height={120}
@@ -195,11 +200,11 @@ export function Navbar() {
         </Link>
 
         {/* Navigation and Buttons */}
-        <div className="flex items-center gap-6 z-999">
+        <div className="flex items-center gap-6 z-2000">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-figtree text-sm text-white bg-transparent">
+                <NavigationMenuTrigger className="font-figtree text-sm">
                   Product
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -211,7 +216,7 @@ export function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-figtree text-sm text-white bg-transparent">
+                <NavigationMenuTrigger className="font-figtree text-sm">
                   Company
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -247,19 +252,19 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Button
               variant="outline"
-              className="rounded-[8px] border-white/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto hover:bg-black/30"
+              className="rounded-[8px] border-black/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto"
             >
               <Link
                 href="/contact"
-                className="w-full h-full flex items-center justify-center text-white"
+                className="w-full h-full flex items-center justify-center"
               >
                 Contact Us
               </Link>
             </Button>
-            <Button className="rounded-[8px] font-onest bg-[#D0F16C] text-black hover:bg-[#D0F16C]/70 transition-all duration-200 font-normal text-[15px] px-6 py-2 h-auto">
+            <Button className="rounded-[8px] font-onest bf-[#1B1B1B] font-normal text-[15px] px-6 py-2 h-auto">
               Get Started
             </Button>
           </div>

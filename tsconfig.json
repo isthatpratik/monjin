@@ -25,6 +25,6 @@
     
   },
   
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src", "types", "components/layout/navbar-new.jsx", "components/layout/navbar.jsx", "components/layout/navbar-products.jsx",],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src", "types", "components/layout/navbar-new.jsx", "components/layout/navbar-white.jsx", "components/layout/navbar-products.jsx",],
   "exclude": ["node_modules"]
 }

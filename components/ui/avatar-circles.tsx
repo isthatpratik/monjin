@@ -31,7 +31,7 @@ const AvatarCircles = ({
         >
           <Image
             key={index}
-            className="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
+            className="h-6 w-auto md:h-10 rounded-full border-2 border-white dark:border-gray-800"
             src={url.imageUrl}
             width={40}
             height={40}

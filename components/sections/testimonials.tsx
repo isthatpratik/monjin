@@ -62,10 +62,10 @@ export default function Testimonials() {
   return (
     <section className="py-16 px-4 md:px-8 bg-[url('/assets/bg-testimonial.png')] bg-cover bg-center bg-no-repeat rounded-2xl mt-16">
       <div className="container mx-auto">
-        <h2 className="md:text-4xl text-center mb-4 font-onest lg:text-5xl text-3xl tracking-tighter">
+        <h2 className="text-center mb-4 font-onest lg:text-5xl text-3xl tracking-tighter">
           Client Journeys That Define Success
         </h2>
-        <p className="text-lg lg:text-base text-center mb-12 max-w-3xl mx-auto font-figtree">
+        <p className="text-lg hidden lg:block lg:text-base text-center mb-12 max-w-3xl mx-auto font-figtree">
           Uncover how our expert interviews have transformed hiring processes,
           helping businesses tap into top talent and make confident decisions.
           Listen to firsthand accounts of the impact we&apos;ve made.
@@ -93,7 +93,7 @@ export default function Testimonials() {
                     />
                     <CardContent className="lg:p-12 md:p-8 p-4 relative flex-grow">
                       <div className="mt-8 flex flex-col gap-2">
-                        <h3 className="text-xl lg:text-3xl md:text-2xl font-onest font-medium tracking-tighter flex items-center gap-2">
+                        <h3 className="text-2xl lg:text-3xl font-onest font-medium tracking-tighter flex items-center gap-2">
                           {testimonial.name}
                           <a
                             href={testimonial.linkedIn}
@@ -102,16 +102,16 @@ export default function Testimonials() {
                             className="text-[#A5A5A5] hover:text-[#005582] transition-all duration-300"
                             aria-label={`LinkedIn profile of ${testimonial.name}`}
                           >
-                            <LinkedInLogoIcon className="inline-block w-4 h-4 lg:w-8 lg:h-8 pl-1" />
+                            <LinkedInLogoIcon className="inline-block w-6 h-6 lg:w-8 lg:h-8 pl-1" />
                           </a>
                         </h3>
-                        <p className="text-sm lg:text-base font-figtree figtree-light text-[#636671]">
+                        <p className="text-base lg:text-base font-figtree text-[#636671]">
                           {testimonial.position}
                         </p>
-                        <p className="text-sm text-[#101010] mb-4 font-figtree lg:text-base uppercase tracking-widest">
+                        <p className="text-base text-[#101010] mb-4 font-figtree uppercase tracking-widest">
                           {testimonial.company}
                         </p>
-                        <p className="text-lg font-figtree font-light leading-relaxed text-[#1D1E23]">
+                        <p className="lg:text-lg text-base font-figtree font-light leading-relaxed text-[#1D1E23]">
                         &quot;{testimonial.description}&quot;
                         </p>
                       </div>

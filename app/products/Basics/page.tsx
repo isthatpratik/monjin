@@ -4,16 +4,18 @@ import BasicsFeatures from '@/components/basics/basics-features';
 import BasicsPricing from '@/components/basics/basics-pricing';
 import BasicsHeroSection from '@/components/basics/hero-section';
 import { Footer } from '@/components/layout/footer';
-import { NavbarProducts } from '@/components/layout/navbar-products';
+import { NavbarBlack } from '@/components/layout/navbar-black';
 import { ClientsSlider } from '@/components/sliders/clients-slider';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { MobileNavbarDark } from '@/components/layout/mobile-navbar-dark';
 
 const Basics = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <NavbarProducts />
+      <NavbarBlack />
+      <MobileNavbarDark />
 
       {/* Background Animation */}
       <motion.div

@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/footer";
-import { Navbar } from "@/components/layout/navbar";
+import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
+import { NavbarWhite } from "@/components/layout/navbar-white";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import ContactSection from "@/components/support/contact-section";
 import SupportHero from "@/components/support/support-hero-section";
@@ -10,7 +11,8 @@ import React from "react";
 const SupportPage = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <Navbar />
+      <NavbarWhite />
+      <MobileNavbarLight />
 
       <div className="absolute inset-0 -z-50 w-full h-full">
         <div className="hidden md:block w-full h-full">
@@ -39,7 +41,7 @@ const SupportPage = () => {
         <SupportHero />
         <SupportSection />
         <ContactSection />
-      </div>    
+      </div>
       <div className="flex flex-col gap-8">
         <ClientsSlider />
         <Footer />

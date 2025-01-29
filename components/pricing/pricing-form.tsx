@@ -55,12 +55,11 @@ export default function PricingForm() {
       <div className="mx-auto max-w-8xl flex flex-row gap-12">
         {/* Hero Text */}
         <div className="flex flex-col justify-center w-1/2">
-          <h1 className="font-onest text-[78px] font-semibold leading-tight text-white">
-          Unlock Endless Possibilities
+          <h1 className="font-onest text-[78px] font-semibold leading-tight text-[#1A1A1A]">
+          Unlock Your Exclusive Pricing
           </h1>
-          <p className="mt-4 text-lg font-figtree font-light text-gray-200">
-            Send Us a Message and Let&apos;s Create Something <br />
-            Extraordinary Together
+          <p className="mt-4 text-lg font-figtree font-light text-[#1A1A1A]">
+          Your reliable partner in navigating the complexities of the hiring process – we offer customized solutions designed to address your specific requirements and help you secure the ideal candidate for your organization.
           </p>
         </div>
 

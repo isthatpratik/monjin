@@ -25,11 +25,12 @@ const FeatureSection = () => {
         />
       </div>
 
-      <div className="flex flex-col gap-8 items-center mt-10 pt-6">
-        <h2 className="font-onest font-medium text-[#1D1E23] lg:text-5xl text-center tracking-tighter text-4xl lg:max-w-[60%] max-w-[95%] leading-normal">
-          Simplify Your Hiring Process with AI-Powered Interview Scheduling.
+      <div className="flex flex-col gap-8 items-center lg:mt-10 lg:pt-6 ">
+        <h2 className="font-onest font-semibold text-[#1D1E23] lg:text-5xl text-center tracking-tighter text-2xl lg:max-w-3xl max-w-full leading-normal">
+        Simplify Your Hiring Process with
+        AI-Powered Interview Scheduling
         </h2>
-        <p className="font-figtree font-normal text-[#1D1E23] tracking-tight text-center lg:max-w-[50%] max-w-[95%] text-base lg:text-[18px]">
+        <p className="font-figtree font-normal text-[#1D1E23] tracking-tight text-center lg:max-w-[50%] max-w-[95%] text-base lg:text-[18px] hidden md:block">
           Intuitive and efficient solution for hiring and talent assessment.
           Access to video interviews, AI-powered scheduling, multi-panel
           collaboration, and real-time feedback.

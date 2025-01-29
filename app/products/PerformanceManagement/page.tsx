@@ -1,7 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/layout/footer";
-import { NavbarProducts } from "@/components/layout/navbar-products";
+import { NavbarBlack } from '@/components/layout/navbar-black';
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -10,11 +10,13 @@ import WhyMonjin from "@/components/performance-management/why-monjin";
 import AlwaysReady from "@/components/performance-management/always-ready";
 import PerformanceHeroSection from "@/components/performance-management/hero-section";
 import CustomizedInterview from "@/components/performance-management/customized-interview";
+import { MobileNavbarDark } from "@/components/layout/mobile-navbar-dark";
 
 const PerformanceManagement = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <NavbarProducts />
+      <NavbarBlack />
+      <MobileNavbarDark />
 
       <motion.div
         className="absolute inset-0 -z-50 w-full h-full"

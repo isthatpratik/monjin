@@ -11,7 +11,7 @@ import WhoWeAre from "@/components/about/who-we-are";
 import MonjinTech from "@/components/about/monjin-tech";
 import HowItWorks from "@/components/about/how-it-works";
 import WhyWeDoIt from "@/components/about/why-we-do-it";
-import { Navbar } from "@/components/layout/navbar";
+import { NavbarWhite } from "@/components/layout/navbar-white";
 import CultureHero from "@/components/culture/culture-hero";
 import ValeusSection from "@/components/culture/values-section";
 import Quote from "@/components/culture/quote";
@@ -20,6 +20,7 @@ import CareersHero from "@/components/careers/careers-hero-section";
 import WhyChooseMonjin from "@/components/careers/why-choose-monjin";
 import CareerOpportunities from "@/components/careers/career-opportunities";
 import JobApplicationForm from "@/components/careers/apply";
+import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
 
 export default function About() {
   return (
@@ -36,7 +37,8 @@ export default function About() {
       </div>
 
       <div className="z-999">
-        <Navbar />
+        <NavbarWhite />
+        <MobileNavbarLight />
       </div>
 
       <div className="mx-auto py-8 -z-30">

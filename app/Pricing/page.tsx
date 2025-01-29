@@ -1,8 +1,9 @@
 import { Footer } from "@/components/layout/footer";
 import Image from "next/image";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
-import { Navbar } from "@/components/layout/navbar";
+import { NavbarWhite } from "@/components/layout/navbar-white";
 import PricingForm from "@/components/pricing/pricing-form";
+import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
 
 export default function Pricing() {
   return (
@@ -20,7 +21,8 @@ export default function Pricing() {
       </div>
 
       <div className="z-999">
-        <Navbar />
+        <NavbarWhite />
+        <MobileNavbarLight />
       </div>
 
       <div className="md:max-w-[1600px] mx-auto px-6 py-10 -z-30">

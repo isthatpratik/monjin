@@ -1,7 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/layout/footer";
-import { NavbarProducts } from "@/components/layout/navbar-products";
+import { NavbarBlack } from '@/components/layout/navbar-black';
 import YcoiFeatures from "@/components/ycoi/ycoi-features";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import YcoiHeroSection from "@/components/ycoi/hero-section";
@@ -9,11 +9,13 @@ import Image from "next/image";
 import React from "react";
 import InterviewSolutions from "@/components/ycoi/interview-solutions";
 import { motion } from "framer-motion";
+import { MobileNavbarDark } from "@/components/layout/mobile-navbar-dark";
 
 const YCOI = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <NavbarProducts />
+      <NavbarBlack />
+      <MobileNavbarDark />
 
       <motion.div
         className="absolute inset-0 -z-50 w-full h-full"

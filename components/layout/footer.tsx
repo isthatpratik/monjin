@@ -238,7 +238,7 @@ export function Footer() {
         {/* Footer Bottom */}
         <div className="text-sm text-white mb-8">
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-start gap-4">
-            <div className="flex flex-col lg:flex-row md:flex-row lg:justify-start justify-center items-center lg:items-start md:items-start gap-1 w-1/2">
+            <div className="flex lg:flex-row md:flex-row lg:justify-start justify-center items-center lg:items-start md:items-start gap-1 lg:w-1/2 w-full">
               <Link href="#" className="hover:text-white hover:underline">
                 Terms of Service
               </Link>
@@ -251,7 +251,7 @@ export function Footer() {
                 GDPR
               </Link>
             </div>
-            <div className="flex text-center hover:underline max-w-[80%] lg:w-full justify-end">
+            <div className="flex text-center hover:underline max-w-[80%] lg:w-full justify-end mt-2 lg:mt-0">
               © 2025 Monjin Interviews Pvt. Ltd. All Rights Reserved
             </div>
           </div>
