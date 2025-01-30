@@ -25,7 +25,7 @@ const YCOI = () => {
       >
         <div className="hidden md:block w-full h-full">
           <Image
-            src="/assets/MonjinSuite/background-web.jpg"
+            src="/assets/ycoi/ycoi-bg-web.jpg"
             alt="Background"
             fill
             quality={80}
@@ -35,7 +35,7 @@ const YCOI = () => {
         </div>
         <div className="block md:hidden w-full h-full">
           <Image
-            src="/assets/MonjinSuite/background-mobile.jpg"
+            src="/assets/ycoi/ycoi-bg-mobile.jpg"
             alt="Background"
             fill
             quality={80}
@@ -45,7 +45,6 @@ const YCOI = () => {
         </div>
       </motion.div>
 
-      {/* Content Animation */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -57,7 +56,7 @@ const YCOI = () => {
           damping: 20,
         }}
       >
-        <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
+        <div className="md:max-w-[1600px] mx-auto px-4 lg:px-8 py-8 z-10">
           <YcoiHeroSection />
           <YcoiFeatures />
           <InterviewSolutions />

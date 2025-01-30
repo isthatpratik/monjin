@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
 } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/pricing-tabs";
@@ -27,7 +26,7 @@ export function PricingSectionMobile({
   };
 
   return (
-    <section className="py-4 lg:px-4 md:px-2 px-0 w-full lg:max-w-7xl lg:mx-auto">
+    <section className="py-4 lg:px-4 md:px-2 px-2 w-full lg:max-w-7xl lg:mx-auto">
       <h2 className="text-2xl font-medium text-center mb-12 font-onest lg:text-5xl tracking-tighter">
         {title}
       </h2>
@@ -96,7 +95,7 @@ export function PricingSectionMobile({
                 No features available
               </div>
             )}
-            <div className="text-black justify-end">
+            <div className="text-black flex flex-col items-cend justify-end">
               <div className="flex items-center justify-center">
                 <span className="text-3xl font-figtree font-bold">
                   <sup className="text-sm font-figtree font-bold">$</sup>

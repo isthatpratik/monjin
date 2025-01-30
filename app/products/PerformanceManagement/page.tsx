@@ -26,7 +26,7 @@ const PerformanceManagement = () => {
       >
         <div className="hidden md:block w-full h-full">
           <Image
-            src="/assets/MonjinSuite/background-web.jpg"
+            src="/assets/performance-management/performance-bg-web.jpg"
             alt="Background"
             fill
             quality={80}
@@ -36,7 +36,7 @@ const PerformanceManagement = () => {
         </div>
         <div className="block md:hidden w-full h-full">
           <Image
-            src="/assets/MonjinSuite/background-mobile.jpg"
+            src="/assets/performance-management/performance-bg-mobile.jpg"
             alt="Background"
             fill
             quality={80}
@@ -56,7 +56,7 @@ const PerformanceManagement = () => {
           stiffness: 100,
           damping: 20,
         }}
-        className="md:max-w-[1600px] mx-auto px-8 py-8 z-10"
+        className="md:max-w-[1600px] mx-auto px-4 lg:px-8 py-8 z-10"
       >
         <PerformanceHeroSection />
         <AlwaysReady />

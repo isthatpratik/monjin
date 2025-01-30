@@ -187,7 +187,7 @@ const ProductsSection = () => {
       <div className="lg:hidden flex flex-col">
         <div>
           <h2 className="font-onest font-semibold text-2xl text-center pb-4">
-          Achieve More with Transformative Tools
+            Achieve More with Transformative Tools
           </h2>
           <div className="max-w-2xl mx-auto">
             <Accordion type="single" collapsible>
@@ -200,13 +200,14 @@ const ProductsSection = () => {
                 content={
                   <div className="space-y-6">
                     <p className="text-[#636671] text-sm font-figtree mb-4 md:text-base">
-                    OCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video 
-                    interview platform.
+                      OCOI streamlines hiring with access to pre-assessed,
+                      expert-reviewed candidates via an intuitive video
+                      interview platform.
                     </p>
-                    <Link href={'/products/OCOI'}>
-                    <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
-                      Discover More
-                    </Button>
+                    <Link href={"/products/OCOI"}>
+                      <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
+                        Discover More
+                      </Button>
                     </Link>
                   </div>
                 }
@@ -220,12 +221,14 @@ const ProductsSection = () => {
                 content={
                   <div className="space-y-6">
                     <p className="text-[#636671] text-sm font-figtree mb-4 md:text-base">
-                    YCOI empowers businesses to streamline their hiring process by leveraging a global network of experts to interview and assess candidates.
+                      YCOI empowers businesses to streamline their hiring
+                      process by leveraging a global network of experts to
+                      interview and assess candidates.
                     </p>
-                    <Link href={'/products/YCOI'}>
-                    <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
-                      Discover More
-                    </Button>
+                    <Link href={"/products/YCOI"}>
+                      <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
+                        Discover More
+                      </Button>
                     </Link>
                   </div>
                 }
@@ -237,12 +240,14 @@ const ProductsSection = () => {
                 content={
                   <div className="space-y-6">
                     <p className="text-[#636671] text-sm font-figtree mb-4 md:text-base">
-                    Screen candidates efficiently, customize interview questions, and watch video interviews to fast-track your hiring process.
+                      Screen candidates efficiently, customize interview
+                      questions, and watch video interviews to fast-track your
+                      hiring process.
                     </p>
-                    <Link href={'/products/Spotlight'}>
-                    <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
-                      Discover More
-                    </Button>
+                    <Link href={"/products/Spotlight"}>
+                      <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
+                        Discover More
+                      </Button>
                     </Link>
                   </div>
                 }
@@ -258,12 +263,13 @@ const ProductsSection = () => {
                 content={
                   <div className="space-y-6">
                     <p className="text-[#636671] text-sm font-figtree mb-4 md:text-base">
-                    Ensuring every candidate is rigorously assessed, skip the screening process and access a pool of curated talent.
+                      Ensuring every candidate is rigorously assessed, skip the
+                      screening process and access a pool of curated talent.
                     </p>
-                    <Link href={'/products/PerformanceManagement'}>
-                    <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
-                      Discover More
-                    </Button>
+                    <Link href={"/products/PerformanceManagement"}>
+                      <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
+                        Discover More
+                      </Button>
                     </Link>
                   </div>
                 }
@@ -277,12 +283,14 @@ const ProductsSection = () => {
                 content={
                   <div className="space-y-6">
                     <p className="text-[#636671] text-sm font-figtree mb-4 md:text-base">
-                    Conduct video interviews on the fly without requiring any registration, making the process quicker and more accessible.
+                      Conduct video interviews on the fly without requiring any
+                      registration, making the process quicker and more
+                      accessible.
                     </p>
-                    <Link href={'/products/Basics'}>
-                    <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
-                      Discover More
-                    </Button>
+                    <Link href={"/products/Basics"}>
+                      <Button className="w-full bg-black py-6 font-onest text-white hover:bg-gray-800 rounded-[8px]">
+                        Discover More
+                      </Button>
                     </Link>
                   </div>
                 }
@@ -327,9 +335,11 @@ const ProductsSection = () => {
 
           {/* Buttons */}
           <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3 p-2 justify-center lg:justify-normal">
-            <Button className="lg:bg-[#FFFFFF] lg:text-black text-white border bg-transparent border-white rounded-[8px] p-6 font-onest text-sm transition-all duration-300 ease-in-out lg:hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] lg:hover:bg-white">
-              <Link href={"/products/MonjinSuite"}>Deep Dive In</Link>
-            </Button>
+            <Link href={"/products/MonjinSuite"}>
+              <Button className="lg:bg-[#FFFFFF] lg:text-black text-white border bg-transparent border-white rounded-[8px] p-6 font-onest text-sm transition-all duration-300 ease-in-out lg:hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] lg:hover:bg-white">
+                Deep Dive In
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -357,7 +367,11 @@ function AccordionSection({
   content,
   borderColor,
   subtitleColor,
-}: AccordionSectionProps & { icon: string; borderColor: string; subtitleColor: string }) {
+}: AccordionSectionProps & {
+  icon: string;
+  borderColor: string;
+  subtitleColor: string;
+}) {
   return (
     <AccordionItem
       value={title}
@@ -374,7 +388,9 @@ function AccordionSection({
                 height={28}
                 className="object-contain"
               />
-              <h2 className="text-lg md:text-xl font-figtree font-semibold">{title}</h2>
+              <h2 className="text-lg md:text-xl font-figtree font-semibold">
+                {title}
+              </h2>
             </div>
             <span
               className={`px-2 py-1 rounded-[5px] text-[10px] md:text-xs font-figtree border ${borderColor} ${subtitleColor} w-fit`}
@@ -388,4 +404,3 @@ function AccordionSection({
     </AccordionItem>
   );
 }
-

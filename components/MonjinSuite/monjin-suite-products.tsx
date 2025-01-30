@@ -24,7 +24,7 @@ const ProductCard = ({
   subtitleColor: string;
 }) => {
   return (
-    <Card className="relative bg-white lg:p-4 p-2 rounded-2xl shadow-sm flex flex-col items-center overflow-hidden h-full ">
+    <Card className="relative bg-white lg:p-4 p-2 rounded-2xl shadow-sm flex flex-col items-center overflow-hidden h-auto ">
       <div
         className={`absolute lg:-bottom-10 lg:-right-10 -bottom-10 -right-10 lg:w-[135px] w-[105px] h-[70px] -rotate-45 lg:h-[90px] ${circleColor} rounded-full blur-[80px] z-10`}
       ></div>

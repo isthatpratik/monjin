@@ -136,15 +136,14 @@ export default function BasicsFeatures() {
   }, [activeTab]);
 
   return (
-    <div className="min-h-auto bg-white rounded-3xl mx-12 mb-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl md:text-5xl font-onest font-medium text-center mb-12 tracking-tighter">
-          Unlock Smarter Hiring with Curated Interviews, Real-Time Feedback, and
-          Seamless Scheduling
+    <div className="bg-white rounded-3xl lg:mx-12 mx-auto my-10">
+      <div className="lg:max-w-7xl max-w-full mx-auto px-1 md:px-2 lg:px-8 py-12">
+        <h1 className="text-2xl lg:text-5xl font-onest font-semibold text-center lg:mb-12 mb-6 tracking-tighter">
+          Transform hiring with tailored interviews, <br /> instant feedback,
+          and seamless scheduling
         </h1>
 
-        {/* Desktop View */}
-        <div className="hidden lg:block">
+        <div className="">
           <Tabs
             defaultValue="otp-interviews"
             className="w-full"
@@ -152,7 +151,7 @@ export default function BasicsFeatures() {
           >
             <TabsList
               ref={tabsListRef}
-              className="relative w-full flex mb-8 h-full border-b justify-between bg-transparent"
+              className="relative lg:w-full flex mb-8 h-full border-b justify-between bg-transparent overflow-x-auto scrollbar-hide"
             >
               <div
                 className="absolute bottom-0 left-0 h-0.5 bg-primary z-10"
@@ -163,13 +162,13 @@ export default function BasicsFeatures() {
                   key={tab.id}
                   value={tab.id}
                   className={cn(
-                    "relative flex items-center lg:gap-2 md:gap-4 gap-4 p-2",
+                    "relative flex items-center lg:gap-2 md:gap-4 gap-1 p-2 whitespace-nowrap",
                     "data-[state=active]:text-primary font-light font-figtree text-base"
                   )}
                 >
                   <span
                     className={cn(
-                      "p-1 rounded-full",
+                      "p-1 rounded-full hidden lg:block",
                       "data-[state=active]:bg-primary/10",
                       tab.id === activeTab ? "text-[#8B72FF]" : "text-gray-600"
                     )}
@@ -187,15 +186,15 @@ export default function BasicsFeatures() {
                 value={tab.id}
                 className="space-y-8 pt-4 justify-between"
               >
-                <div className="grid lg:grid-cols-2 gap-12">
-                  <div className="space-y-6">
-                    <h2 className="font-figtree font-medium text-2xl tracking-tighter">
+                <div className="grid lg:grid-cols-2 lg:gap-12 gap-2 ">
+                  <div className="space-y-6 order-2 lg:order-1">
+                    <h2 className="font-figtree hidden lg:block font-medium text-2xl tracking-tighter">
                       {tab.title}
                     </h2>
-                    <p className="text-lg font-figtree font-light text-[#353535] leading-loose">
+                    <p className="text-lg hidden lg:block font-figtree font-light text-[#353535] leading-loose">
                       {tab.description}
                     </p>
-                    <div className="grid lg:grid-cols-2 gap-4 text-lg font-figtree font-normal pt-2 tracking-wide relative">
+                    <div className="hidden lg:grid lg:grid-cols-2 gap-4 text-lg font-figtree font-normal pt-2 tracking-wide relative">
                       {tab.features.map((feature, index) => (
                         <React.Fragment key={index}>
                           <div
@@ -219,12 +218,29 @@ export default function BasicsFeatures() {
                         />
                       )}
                     </div>
+                    <div className="lg:hidden grid gap-4 text-sm font-figtree font-normal px-4 md:px-8 tracking-wide relative">
+                      {tab.features.map((feature, index) => (
+                        <React.Fragment key={index}>
+                          <div
+                            className={cn(
+                              "space-y-2",
+                              index % 2 === 1 ? "" : ""
+                            )}
+                          >
+                            <div className="text-sm md:text-lg">{feature}</div>
+                          </div>
+                          {index < tab.features.length - 1 && (
+                            <Separator className="col-span-2" />
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
                   </div>
-                  <div className="relative h-[400px] rounded-lg overflow-hidden">
+                  <div className="relative items-center flex rounded-lg overflow-hidden order-1 lg:order-2">
                     <Image
                       src={tab.imageUrl || "/placeholder.svg"}
                       alt={tab.title}
-                      className="w-full h-full object-contain"
+                      className="w-full h-auto object-contain aspect-auto"
                       height={1000}
                       width={1000}
                       quality={70}
