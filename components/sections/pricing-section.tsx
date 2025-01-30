@@ -23,7 +23,7 @@ export function PricingSection({
 
   const getPrice = (monthly: string, annual: string) => {
     const price = billingCycle === "monthly" ? monthly : annual;
-    return price || ""; // Return an empty string if the price is empty
+    return price || ""; 
   };
 
   const showPriceDetails = (price: string) => price !== "";

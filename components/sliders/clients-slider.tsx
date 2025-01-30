@@ -40,17 +40,19 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-transparent relative flex h-[100px] w-[160px] cursor-pointer overflow-hidden rounded-[18px] lg:p-4 md:p-2 p-0 xl:scale-150 lg:scale-125 scale-110 lg:m-6 m-4",
-        "items-center justify-center hover:scale-1 transition-all duration-300"
+        "bg-transparent relative flex lg:h-[100px] lg:w-[160px] h-[100px] w-[120px] overflow-visible rounded-[18px] lg:p-4 md:p-2 p-0 xl:scale-125 lg:scale-125 scale-125 lg:m-6 m-2",
+        "items-center justify-center"
       )}
     >
       <div className="flex items-center justify-center w-full h-full">
         <Image
-          className="object-contain opacity-70 hover:opacity-100 grayscale transition duration-300 ease-in-out hover:grayscale-0"
+          className="object-contain"
+          quality={30}
           width={100}
           height={100}
           alt=""
           src={img}
+          priority
         />
       </div>
     </figure>
@@ -59,8 +61,8 @@ const ReviewCard = ({ img }: { img: string }) => {
 
 export function ClientsSlider() {
   return (
-    <div className="relative flex flex-col items-center justify-center bg-transparent overflow-hidden">
-      <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden bg-transparent gap-2">
+    <div className="relative flex flex-col items-center justify-center bg-transparent overflow-hidden w-full">
+      <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-transparent gap-2">
         <div className="flex items-center justify-center lg:w-[80%] md:w-full w-full relative">
           <div className="flex items-center justify-center w-full relative">
             {/* Left Line */}
@@ -76,7 +78,7 @@ export function ClientsSlider() {
           </div>
         </div>
         <Marquee
-          className="[--duration:90s] xl:space-x-10 lg:space-x-8 space-x-2"
+          className="[--duration:90s] xl:space-x-10 lg:space-x-8 space-x-4 flex-no-wrap w-full"
         >
           {clientsSet1.map((client) => (
             <ReviewCard key={client.img} img={client.img} />
