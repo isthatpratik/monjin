@@ -4,9 +4,9 @@ export default function WhyChooseMonjin() {
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Top div with dark background */}
-      <div className="relative z-10 bg-[#272727] rounded-[32px] px-8 py-16 text-white">
-        <h2 className="text-5xl font-medium font-Onest text-center mb-6">Why Choose Monjin?</h2>
-        <p className="text-center font-figtree max-w-3xl mx-auto mb-20 text-lg">
+      <div className="relative z-10 bg-white rounded-[32px] px-8 py-16 text-white">
+        <h2 className="text-2xl lg:text-5xl font-semibold font-onest text-center text-[#1E1E1E] tracking-tighter mb-6">Why Choose Monjin?</h2>
+        <p className="text-center font-figtree max-w-3xl mx-auto mb-20 text-lg text-[#1E1E1E] hidden lg:bock">
         At Monjin, you would not just work—you will innovate, lead, and grow. Join us to be part of a transformative journey where your potential meets endless possibilities.
         </p>
 
@@ -20,11 +20,11 @@ export default function WhyChooseMonjin() {
                 alt="Diversity icon"
                 width={200}
                 height={200}
-                className="w-48 h-auto object-contain"
+                className="lg:w-48 w-32 h-auto object-contain"
               />
             </div>
-            <h3 className="text-[28px] font-semibold font-Onest mb-4">Commitment to Diversity</h3>
-            <p className="text-[#CFCFCF] font-figtree font-light text-lg">
+            <h3 className="text-xl lg:text-[28px] font-semibold font-onest mb-4 text-[#1e1e1e]">Commitment to Diversity</h3>
+            <p className="font-figtree font-light text-sm lg:text-lg text-[#1e1e1e]">
               Diversity at Monjin drives innovation and success through varied perspectives and cultures. We break down
               barriers to create an inclusive workplace delivering exceptional results.
             </p>
@@ -38,11 +38,11 @@ export default function WhyChooseMonjin() {
                 alt="Transparency icon"
                 width={200}
                 height={200}
-                className="w-48 h-auto object-contain"
+                className="lg:w-48 w-32 h-auto object-contain"
               />
             </div>
-            <h3 className="text-[28px] font-semibold font-Onest mb-4">Transparency at Every Level</h3>
-            <p className="text-[#CFCFCF] font-figtree font-light text-lg">
+            <h3 className="text-xl lg:text-[28px] font-semibold font-onest mb-4 text-[#1e1e1e]">Transparency at Every Level</h3>
+            <p className="font-figtree font-light text-sm lg:text-lg text-[#1e1e1e]">
               Transparency is the foundation of our work culture. We believe in open communication, collaborative
               decision-making, and eliminating bureaucracy to create a space where ideas can flourish and everyone feels
               empowered.
@@ -57,11 +57,11 @@ export default function WhyChooseMonjin() {
                 alt="Opportunities icon"
                 width={200}
                 height={200}
-                className="w-48 h-auto object-contain"
+                className="lg:w-48 w-32 h-auto object-contain"
               />
             </div>
-            <h3 className="text-[28px] font-semibold font-onest mb-4">Boundless Opportunities</h3>
-            <p className="text-[#CFCFCF] font-figtree font-light text-lg">
+            <h3 className="text-xl lg:text-[28px] font-semibold font-onest mb-4 text-[#1e1e1e]">Boundless Opportunities</h3>
+            <p className="font-figtree font-light text-sm lg:text-lg text-[#1e1e1e]">
               Monjin is a talent-first platform designed to foster growth, innovation, and leadership. For those who are
               driven, determined, and ready to make an impact, Monjin offers unparalleled opportunities to thrive and
               excel.
@@ -71,9 +71,9 @@ export default function WhyChooseMonjin() {
       </div>
 
       {/* Bottom div with gradient */}
-      <div className="relative -mt-8 rounded-b-[32px] overflow-hidden bg-[url('/assets/careers/why-choose-monjin-bg.jpg')] bg-cover bg-bottom bg-no-repeat">
+      <div className="relative lg:-mt-8 -mt-6 rounded-b-[32px] overflow-hidden bg-[url('/assets/careers/why-choose-monjin-bg.jpg')] bg-cover bg-bottom bg-no-repeat">
       <div className="py-8">
-          <h2 className="text-[28px] font-semibold font-Onest text-white text-center mt-6">- Be a Monjineer. Be the Future! -</h2>
+          <h2 className="text-sm lg:text-[28px] font-semibold font-Onest text-white text-center lg:mt-6 mt-4">- Be a Monjineer. Be the Future! -</h2>
         </div>
       </div>
     </div>

@@ -21,13 +21,24 @@ export default function Careers() {
           className="object-cover object-top xl:-translate-y-[200px] lg:-translate-y-[50px]"
         />
       </div>
+      <div className="absolute inset-0 -z-10 lg:hidden block">
+        <Image
+          alt="gradient-bg"
+          src={"/assets/contact/contact-bg-mobile.jpg"}
+          quality={100}
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover object-top"
+        />
+      </div>
 
       <div className="z-999">
         <NavbarWhite />
         <MobileNavbarLight />
       </div>
 
-      <div className="md:max-w-[1600px] mx-auto px-6 py-10 -z-30">
+      <div className="md:max-w-[1600px] mx-auto px-2 lg:px-8 py-10 -z-30">
         <ContactHero />
         <EnquiryCards />
         <OfficeLocations />

@@ -20,6 +20,7 @@ export function MobileMenuDark() {
   const renderMainMenu = () => (
     <div className="min-h-screen flex flex-col">
       <div className="flex items-center justify-between p-6">
+        <Link href={'/'}>
         <Image
           src="/assets/monjin-navbar.png"
           alt="Monjin Logo"
@@ -27,6 +28,7 @@ export function MobileMenuDark() {
           height={40}
           className="h-8 w-auto"
         />
+        </Link>
         <button
           onClick={() => setOpen(false)}
           className="h-8 w-8 flex items-center justify-center border-[1.5px] border-[#222222] rounded"

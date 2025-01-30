@@ -25,14 +25,24 @@ import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
 export default function About() {
   return (
     <main className="relative min-h-screen overflow-hidden justify-center">
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 hidden lg:block">
         <Image
           alt="gradient-bg"
-          src={"/assets/about/about-bg.jpg"}
+          src={"/assets/careers/career-bg-web.jpg"}
           quality={100}
           fill
           priority
-          className="object-cover object-top lg:-translate-y-[600px] -translate-y-[200px]"
+          className="object-cover object-top lg:-translate-y-[300px] -translate-y-[100px]"
+        />
+      </div>
+      <div className="absolute inset-0 -z-10 block lg:hidden">
+        <Image
+          alt="gradient-bg"
+          src={"/assets/careers/career-bg-mobile.jpg"}
+          quality={100}
+          fill
+          priority
+          className="object-cover object-top"
         />
       </div>
 
@@ -43,7 +53,7 @@ export default function About() {
 
       <div className="mx-auto py-8 -z-30">
         <Tabs
-          className="flex flex-col justify-center max-auto items-center"
+          className="flex flex-col justify-center mx-auto items-center"
           defaultValue="careers"
         >
           <TabsList className="bg-white">
@@ -112,8 +122,6 @@ export default function About() {
 
         </Tabs>
       </div>
-
-      <div className="md:max-w-[1600px] mx-auto px-6 py-10 -z-30"></div>
 
       <footer>
         <ClientsSlider />

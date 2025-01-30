@@ -83,12 +83,12 @@ export default function CandidateFAQ() {
           <AccordionItem
             key={`faq-${index}`}
             value={`item-${index}`}
-            className="border border-gray-200 rounded-lg mb-4 px-6 py-4"
+            className="border border-gray-200 bg-white rounded-lg mb-4 lg:px-6 lg:py-4 px-3 py-1"
           >
-            <AccordionTrigger className="hover:no-underline flex justify-between items-center font-onest font-normal text-2xl tracking-tighter flex-1 py-4 text-left transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
+            <AccordionTrigger className="hover:no-underline flex justify-between items-center lg:font-onest text-sm lg:text-[25px] font-figtree">
               {faq.question}
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600 pt-5 font-figtree text-lg font-light">
+            <AccordionContent className="text-gray-600 lg:py-5 font-figtree lg:text-lg text-sm font-light">
               {faq.answer}
             </AccordionContent>
           </AccordionItem>

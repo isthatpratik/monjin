@@ -27,7 +27,7 @@ const SupportPage = () => {
         </div>
         <div className="block md:hidden w-full h-full">
           <Image
-            src="/assets/MonjinSuite/background-mobile.jpg"
+            src="/assets/support/support-mobile-bg.jpg"
             alt="Background"
             fill
             quality={80}
@@ -37,7 +37,7 @@ const SupportPage = () => {
         </div>
       </div>
 
-      <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
+      <div className="md:max-w-[1600px] mx-auto px-2 lg:px-8 py-8 z-10">
         <SupportHero />
         <SupportSection />
         <ContactSection />

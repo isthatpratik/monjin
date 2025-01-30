@@ -51,28 +51,28 @@ export default function ContactHero() {
   }
 
   return (
-    <section className="relative w-full px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-8xl flex flex-row gap-12">
+    <section className="relative w-full px-0 py-6 lg:px-6">
+      <div className="mx-auto max-w-8xl flex flex-col lg:flex lg:flex-row gap-12">
         {/* Hero Text */}
-        <div className="flex flex-col justify-center w-1/2">
-          <h1 className="font-onest text-[78px] font-semibold leading-tight text-white">
+        <div className="flex flex-col justify-center lg:w-1/2">
+          <h1 className="font-onest text-4xl text-center lg:text-start lg:text-[78px] font-semibold leading-tight text-white">
           Unlock Endless Possibilities
           </h1>
-          <p className="mt-4 text-lg font-figtree font-light text-gray-200">
+          <p className="mt-4 text-base lg:text-lg text-center lg:text-start font-figtree font-light text-gray-200">
             Send Us a Message and Let&apos;s Create Something <br />
             Extraordinary Together
           </p>
         </div>
 
         {/* Form Container */}
-        <div className="relative w-1/2">
+        <div className="relative lg:w-1/2">
           {/* Background Div */}
           <div
             className="absolute bottom-0 h-[calc(100%-2rem)] w-full translate-y-8 rounded-3xl bg-cover bg-center"
           />
 
           {/* Form */}
-          <div className="relative rounded-3xl bg-white p-6 shadow-xl md:p-8 ">
+          <div className="relative rounded-3xl bg-white p-4 lg:p-6 shadow-xl md:p-8 ">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
@@ -101,7 +101,7 @@ export default function ContactHero() {
 
                 <FormItem>
                   <Label>Mobile Number</Label>
-                  <div className="grid grid-cols-[120px_1fr] gap-3">
+                  <div className="grid lg:grid-cols-[120px_1fr] grid-cols-[90px_1fr] gap-3">
                     <FormField
                       control={form.control}
                       name="countryCode"
@@ -113,13 +113,13 @@ export default function ContactHero() {
                           >
                             <FormControl>
                               <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px]">
-                                <SelectValue placeholder="🇮🇳 +91" />
+                                <SelectValue placeholder="+91" />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="IN">🇮🇳 IN +91</SelectItem>
-                              <SelectItem value="US">🇺🇸 US +1</SelectItem>
-                              <SelectItem value="UK">🇬🇧 UK +44</SelectItem>
+                              <SelectItem value="IN">IN +91</SelectItem>
+                              <SelectItem value="US">US +1</SelectItem>
+                              <SelectItem value="UK">UK +44</SelectItem>
                             </SelectContent>
                           </Select>
                         </FormItem>

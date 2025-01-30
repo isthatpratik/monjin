@@ -8,7 +8,7 @@ export function EnquiryCards() {
   return (
     <div className="grid gap-6 md:grid-cols-2 px-4 max-w-7xl mx-auto pt-12">
       {/* Support Enquiries Card */}
-      <Card className="relative overflow-hidden border-none shadow-lg backdrop-blur-3xl bg-[#FFFFFF]/40 rounded-[40px]">
+      <Card className="relative overflow-hidden border-none shadow-lg backdrop-blur-3xl lg:bg-[#FFFFFF]/40 rounded-2xl lg:rounded-[40px]">
         <div className="absolute inset-0" />
         <CardContent className="relative p-12 space-y-4">
           <div className="flex items-center gap-3">
@@ -29,7 +29,7 @@ export function EnquiryCards() {
       </Card>
 
       {/* Sales Enquiries Card */}
-      <Card className="relative overflow-hidden border-none shadow-lg backdrop-blur-3xl bg-[#FFFFFF]/40 rounded-[40px]">
+      <Card className="relative overflow-hidden border-none shadow-lg backdrop-blur-3xl lg:bg-[#FFFFFF]/40 rounded-2xl lg:rounded-[40px]">
         <div className="absolute inset-0 " />
         <CardContent className="relative p-12 space-y-4">
           <div className="flex items-center gap-3">

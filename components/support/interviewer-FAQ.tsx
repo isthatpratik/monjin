@@ -13,15 +13,15 @@ export default function InterviewerFAQ() {
       <Accordion type="single" collapsible defaultValue="interviewer-faq">
         <AccordionItem
           value="interviewer-faq"
-          className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-2"
+          className="border border-gray-200 bg-white rounded-lg mb-4 lg:px-6 lg:py-4 px-3 py-1"
         >
-          <AccordionTrigger  className="hover:no-underline flex justify-between items-center font-onest font-normal text-2xl tracking-tight">
+          <AccordionTrigger  className="hover:no-underline flex justify-between items-center lg:font-onest text-sm lg:text-[25px] font-figtree">
             <span>How Should I Conduct an Interview on Monjin?</span>
             <div className="shrink-0">
               <div className="h-8 w-8 rounded-[4px] flex items-center justify-center"></div>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="text-[#181C20] p-5 font-figtree text-lg font-light">
+          <AccordionContent className="text-gray-600 lg:py-5 font-figtree lg:text-lg text-sm font-light">
             <ol className="list-decimal list-inside space-y-8">
               <li>
                 <strong>Be Prepared</strong> - Review the candidate&apos;s resume

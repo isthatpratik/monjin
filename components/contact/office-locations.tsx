@@ -24,12 +24,12 @@ const offices = [
 export function OfficeLocations() {
   return (
     <div className="py-20 px-6 max-w-fit mx-auto bg-white rounded-[32px] mt-20 mb-12">
-      <h2 className="text-5xl font-medium font-onest tracking-tighter text-[#353535] text-center mb-12">Office Locations</h2>
+      <h2 className="text-3xl lg:text-5xl font-medium font-onest tracking-tighter text-[#353535] text-center mb-12">Office Locations</h2>
       <div className="grid gap-4 md:grid-cols-3">
         {offices.map((office) => (
           <Card key={office.country} className="relative overflow-hidden border-none shadow-none">
             <div className="absolute inset-0 bg-white/40" />
-            <CardContent className="relative p-6">
+            <CardContent className="relative lg:p-6 p-4">
               <div className="flex items-start gap-1">
                 {/* Image on the left */}
                 <Image
@@ -37,14 +37,14 @@ export function OfficeLocations() {
                   alt={`${office.country} office`}
                   width={104}
                   height={104}
-                  className="w-24 h-24 object-contain"
+                  className="lg:w-24 lg:h-24 w-16 h-16 object-contain"
                 />
                 {/* Location and Address on the right */}
                 <div className="space-y-2">
                   <div>
-                    <CardTitle className="text-[28px] font-semibold">{office.country}</CardTitle>
+                    <CardTitle className="text-xl lg:text-[28px] font-semibold">{office.country}</CardTitle>
                   </div>
-                  <p className="whitespace-pre-line leading-5 text-lg font-figtree font-light text-[#828489]">
+                  <p className="whitespace-pre-line leading-5 text-base lg:text-lg font-figtree font-light text-[#828489]">
                     {office.address}
                   </p>
                 </div>

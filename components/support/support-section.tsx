@@ -76,30 +76,30 @@ const faqs = [
 
 export default function SupportSection() {
   return (
-    <div className="w-full max-w-7xl mx-auto p-8 bg-[url('/assets/support/q&a-bg.jpg')] bg-cover bg-no-repeat object-top rounded-[32px] px-8">
+    <div className="w-full max-w-7xl mx-auto lg:p-8 p-2 bg-[url('/assets/support/q&a-bg.jpg')] bg-cover bg-no-repeat object-top lg:rounded-[32px] rounded-2xl lg:px-8">
       <Tabs defaultValue="general" className="w-full h-full">
-        <TabsList className="w-full justify-around border-b-2 border-t-0 border-r-0 border-l-0 rounded-none h-[46px] bg-transparent mt-8">
+        <TabsList className="w-full justify-around border-b-2 border-t-0 border-r-0 border-l-0 rounded-none lg:h-[48px] bg-transparent mt-8 overflow-x-auto h-[40px]">
           <TabsTrigger
             value="general"
-            className="text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF]"
+            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF]"
           >
             General
           </TabsTrigger>
           <TabsTrigger
             value="candidate"
-            className="text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
           >
             Candidate
           </TabsTrigger>
           <TabsTrigger
             value="interviewer"
-            className="text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
           >
             Interviewer
           </TabsTrigger>
           <TabsTrigger
             value="employer"
-            className="text-3xl font-onest rounded-none  data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-base lg:text-3xl font-onest rounded-none  data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
           >
             Employer
           </TabsTrigger>
@@ -108,11 +108,11 @@ export default function SupportSection() {
           value="general"
           className="flex flex-col items-center justify-center mt-8"
         >
-          <div className="my-12 text-center">
-            <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
+          <div className="lg:my-12 my-4 text-center">
+            <h1 className="font-medium mb-4 font-onest text-3xl lg:text-5xl tracking-tighter">
               General
             </h1>
-            <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
+            <p className="text-[#737373] font-figtree text-sm lg:text-lg mb-8">
               Find answers to all your questions, from posting job openings to
               understanding our interview process
             </p>
@@ -122,15 +122,15 @@ export default function SupportSection() {
               <AccordionItem
                 key={`faq-${index}`}
                 value={`item-${index}`}
-                className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-4"
+                className="border border-gray-200 bg-white rounded-lg mb-4 lg:px-6 lg:py-4 px-3 py-1"
               >
-                <AccordionTrigger className="hover:no-underline flex justify-between items-center">
+                <AccordionTrigger className="hover:no-underline flex justify-between items-center lg:font-onest text-sm lg:text-[25px] font-figtree">
                   <span>{faq.question}</span>
                   <div className="shrink-0">
                     <div className="h-8 w-8 rounded-[4px] flex items-center justify-center"></div>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 py-5 font-figtree text-lg font-light">
+                <AccordionContent className="text-gray-600 lg:py-5 font-figtree lg:text-lg text-sm font-light">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -142,11 +142,11 @@ export default function SupportSection() {
           value="candidate"
           className="flex flex-col items-center justify-center"
         >
-          <div className="my-12 text-center">
-            <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
+          <div className="lg:my-12 my-4 text-center">
+            <h1 className="font-medium mb-4 font-onest text-3xl lg:text-5xl tracking-tighter">
               Candidate
             </h1>
-            <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
+            <p className="text-[#737373] font-figtree text-sm lg:text-lg mb-8">
               Are you looking out for opportunities and want to showcase your
               skills to top companies? Be a <br />
               candidate and meet global experts.
@@ -158,11 +158,11 @@ export default function SupportSection() {
           value="interviewer"
           className="flex flex-col items-center justify-center"
         >
-          <div className="my-12 text-center">
-            <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
+          <div className="lg:my-12 my-4 text-center">
+          <h1 className="font-medium mb-4 font-onest text-3xl lg:text-5xl tracking-tighter">
               Interviewer
             </h1>
-            <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
+            <p className="text-[#737373] font-figtree text-sm lg:text-lg mb-8 px-4">
               Earn Money , Recognition and gratification as a Monjin
               Interviewer. Be a Monjin interviewer.
             </p>
@@ -173,11 +173,11 @@ export default function SupportSection() {
           value="employer"
           className="flex flex-col items-center justify-center"
         >
-          <div className="my-12 text-center">
-            <h1 className="font-medium mb-4 font-Onest text-5xl tracking-tighter">
+          <div className="lg:my-12 my-4 text-center">
+          <h1 className="font-medium mb-4 font-onest text-3xl lg:text-5xl tracking-tighter">
               Employer
             </h1>
-            <p className="text-[#2D2D2D] font-figtree text-lg mb-8">
+            <p className="text-[#737373] font-figtree text-sm lg:text-lg mb-8">
               Find answers to all your questions, from posting job openings to
               understanding <br />
               our interview process

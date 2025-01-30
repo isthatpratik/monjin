@@ -10,7 +10,9 @@ const faqSections = [
   {
     id: "ocoi",
     title: "OCOI",
-    subtitle: ["Our Candidate", "Our Interview"],
+    borderColor: "border-[#9F8AFF]",
+    subtitleColor: "text-[#6C58C6]",
+    subtitle: "Our Candidate Our Interview",
     questions: [
       {
         question: "What is OCOI?",
@@ -32,7 +34,9 @@ const faqSections = [
   {
     id: "ycoi",
     title: "YCOI",
-    subtitle: ["Your Candidate", "Our Interview"],
+    borderColor: "border-[#83AB09]",
+    subtitleColor: "text-[#83AB09]",
+    subtitle: "Your Candidate Our Interview",
     questions: [
       {
         question: "What is YCOI?",
@@ -64,7 +68,9 @@ const faqSections = [
   {
     id: "basics",
     title: "Basics",
-    subtitle: ["Streamline", "Effortless Hiring"],
+    borderColor: "border-[#F46D70]",
+    subtitleColor: "text-[#F46D70]",
+    subtitle: "Streamline Effortless Hiring",
     questions: [
       {
         question: "What is Monjin Basics?",
@@ -91,7 +97,9 @@ const faqSections = [
   {
     id: "spotlight",
     title: "Spotlight",
-    subtitle: ["Accelerate", "Efficient", "Screening"],
+    borderColor: "border-[#F18800]",
+    subtitleColor: "text-[#DC7F07]",
+    subtitle: "Accelerate Efficient Screening",
     questions: [
       {
         question: "What is Spotlight?",
@@ -133,17 +141,15 @@ export default function EmployerFAQ() {
       <div className="space-y-8">
         {faqSections.map((section, index) => (
           <div key={section.id}>
-            {index > 0 && <Separator className="my-16" />}
+            {index > 0 && <Separator className="lg:my-16 my-8" />}
 
-            <div className="grid grid-cols-[240px_1fr] gap-12">
+            <div className="lg:grid lg:grid-cols-[240px_1fr] flex flex-col gap-12">
               <div className="space-y-1">
-                <h2 className="text-5xl font-onest text-[#010101] font-medium">
+                <h2 className="lg:text-5xl text-xl font-onest text-[#010101] font-medium lg:pb-4 pb-2">
                   {section.title}
                 </h2>
-                <div className="text-[#929292] text-[32px] font-Onest font-normal">
-                  {section.subtitle.map((line, i) => (
-                    <div key={i}>{line}</div>
-                  ))}
+                <div className={`lg:text-sm text-xs p-2 w-fit font-figtree font-medium border lg:p-3 rounded-[8px] ${section.borderColor} ${section.subtitleColor}`}>
+                  {section.subtitle}
                 </div>
               </div>
 
@@ -152,12 +158,12 @@ export default function EmployerFAQ() {
                   <AccordionItem
                     key={i}
                     value={`${section.id}-item-${i}`}
-                    className="border border-gray-200 bg-white rounded-lg mb-4 px-6 py-4"
+                    className="border border-gray-200 bg-white rounded-lg mb-4 lg:px-6 lg:py-4 px-3 py-1"
                   >
-                    <AccordionTrigger className="hover:no-underline flex justify-between items-center font-onest font-normal text-2xl tracking-tight">
+                    <AccordionTrigger className="hover:no-underline flex justify-between items-center lg:font-onest text-sm lg:text-[25px] font-figtree">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-600 p-5 font-figtree text-lg font-light">
+                    <AccordionContent className="text-gray-600 lg:py-5 font-figtree lg:text-lg text-sm font-light">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>
