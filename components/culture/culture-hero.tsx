@@ -6,10 +6,10 @@ const solitreo = Solitreo({ weight: "400", preload: false });
 
 export default function CultureHero() {
     return (
-      <section className="px-4 py-24 flex flex-col items-center text-white">
+      <section className="px-4 lg:py-24 py-6 flex flex-col items-center text-white flex-wrap">
         {/* Logo and Culture text */}
         <div className="flex flex-col items-center justify-center gap-3 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm px-14 py-6 gap-4 rounded-full flex flex-col items-center justify-center">
+          <div className="bg-white/10 backdrop-blur-sm lg:px-14 px-7 py-4 lg:py-6 gap-4 rounded-full flex flex-col items-center justify-center">
             <Image 
                 src={'/assets/culture/monjin-logo.png'}
                 alt="Monjin Logo in White"
@@ -17,23 +17,23 @@ export default function CultureHero() {
                 height={32}
                 className="object-contain "
             />
-            <span className="textlg font-Onest tracking-wide">CULTURE AT MONJIN</span>
+            <span className="text-xs lg:textlg font-onest tracking-wide">CULTURE AT MONJIN</span>
           </div>
         </div>
   
         {/* Main heading */}
-        <h1 className="text-[78px] font-semibold font-onest text-center mb-6 tracking-tighter">The Catalyst for Success</h1>
+        <h1 className="text-4xl lg:text-[78px] font-semibold font-onest text-center mb-6 tracking-tighter lg:max-w-full max-w-xs">The Catalyst for Success</h1>
   
         {/* Subtitle */}
-        <p className="text-lg font-figtree font-light text-center mb-12">
+        <p className="text-lg font-figtree font-light text-center my-8 hidden lg:block">
           Whether you are launching your dream business or leading an established legacy, we&apos;re here to amplify your
           success.
         </p>
   
         {/* Testimonial Card */}
-        <div className="bg-white rounded-3xl py-24 px-36 max-w-7xl">
+        <div className="bg-white rounded-3xl py-6 lg:py-24 px-6 lg:px-36 max-w-xs md:max-w-lg lg:max-w-7xl">
           <blockquote className="text-gray-800">
-            <p className="text-lg md:text-xl text-center font-figtree font-normal leading-relaxed mb-8">
+            <p className="text-sm lg:text-xl text-center font-figtree font-normal leading-relaxed mb-8">
               &quot;We have learned that culture is not just part of the equation—it is the equation. When you define your core
               values, hire people who embody them, and weave them into every aspect of your business, something magical
               happens: your team thrives. They do not just work; they innovate, deliver, and create unforgettable WOW
@@ -41,8 +41,8 @@ export default function CultureHero() {
             </p>
             <footer className="text-center">
               <cite className="not-italic">
-                <span className={`${solitreo.className} font-solitreo text-[34px] mb-1 text-[#381664] block`}>Aniket Tapre</span>
-                <span className="text-[#F46D70] text-sm font-medium font-onest">CEO of Monjin</span>
+                <span className={`${solitreo.className} font-solitreo text-2xl lg:text-[34px] mb-1 text-[#381664] block`}>Aniket Tapre</span>
+                <span className="text-[#F46D70] text-xs lg:text-sm font-medium font-onest">CEO of Monjin</span>
               </cite>
             </footer>
           </blockquote>

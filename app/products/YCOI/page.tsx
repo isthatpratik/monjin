@@ -40,7 +40,7 @@ const YCOI = () => {
             fill
             quality={80}
             priority
-            className="background-mobile object-cover object-top"
+            className="background-mobile object-cover object-top -translate-y-[250px]"
           />
         </div>
       </motion.div>

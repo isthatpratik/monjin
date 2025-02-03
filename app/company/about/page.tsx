@@ -21,18 +21,29 @@ import WhyChooseMonjin from "@/components/careers/why-choose-monjin";
 import CareerOpportunities from "@/components/careers/career-opportunities";
 import JobApplicationForm from "@/components/careers/apply";
 import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
+import AboutHeroMobile from "@/components/about/about-hero-mobile";
 
 export default function About() {
   return (
     <main className="relative min-h-screen overflow-hidden justify-center">
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 hidden lg:block">
         <Image
           alt="gradient-bg"
           src={"/assets/about/about-bg.jpg"}
           quality={100}
           fill
           priority
-          className="object-cover object-top lg:-translate-y-[300px] -translate-y-[200px]"
+          className="object-cover object-top xl:-translate-y-[300px] lg:-translate-y-[200px]"
+        />
+      </div>
+      <div className="absolute inset-0 -z-10 block lg:hidden">
+        <Image
+          alt="gradient-bg"
+          src={"/assets/about/about-bg-mobile.jpg"}
+          quality={100}
+          fill
+          priority
+          className="object-cover object-top md:-translate-y-[400px]"
         />
       </div>
 
@@ -56,7 +67,7 @@ export default function About() {
           </TabsList>
 
           <TabsContent value="about">
-            <div className="h-full w-full flex flex-col gap-4 items-center justify-between mb-10 py-12">
+            <div className="h-full w-full lg:flex flex-col gap-4 items-center justify-between mb-10 py-12 hidden">
               <div className="flex flex-col justify-center items-center space-y-4 mt-6">
                 <h1 className="text-center font-onest font-semibold text-[78px] text-white tracking-tighter leading-tight">
                   Where top talent & memorable <br />
@@ -85,7 +96,9 @@ export default function About() {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center space-y-4 mt-24">
+            <AboutHeroMobile />
+
+            <div className="flex flex-col justify-center items-center space-y-4 mt-12 lg:mt-24">
               <WhoWeAre />
               <MonjinTech />
               <HowItWorks />
@@ -109,11 +122,8 @@ export default function About() {
             <CareerOpportunities />
             <JobApplicationForm />
           </TabsContent>
-
         </Tabs>
       </div>
-
-      <div className="md:max-w-[1600px] mx-auto px-6 py-10 -z-30"></div>
 
       <footer>
         <ClientsSlider />

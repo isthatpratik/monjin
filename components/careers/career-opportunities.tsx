@@ -31,7 +31,7 @@ export default function CareerOpportunities() {
           />
         </div>
 
-        <h1 className="text-2xl font-semibold font-onest text-center tracking-tighter mb-6 block lg:hidden">Career Opportunities</h1>
+        <h1 className="text-2xl font-semibold font-onest text-center tracking-tighter lg:mb-6 block lg:hidden">Career Opportunities</h1>
 
         {/* Right Column - Job Listings */}
         <div className="space-y-8">

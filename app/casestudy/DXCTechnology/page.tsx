@@ -25,7 +25,7 @@ const DXCTechnology = () => {
         </div>
         <div className="block md:hidden w-full h-full">
           <Image
-            src="/assets/MonjinSuite/background-mobile.jpg"
+            src="/assets/case-study/case-study-bg-mobile.jpg"
             alt="Background"
             fill
             quality={80}
@@ -35,7 +35,7 @@ const DXCTechnology = () => {
         </div>
       </div>
 
-      <div className="md:max-w-[1600px] mx-auto px-8 py-8 z-10">
+      <div className="md:max-w-[1600px] mx-auto lg:px-8 py-8 z-10">
         <CaseFour />
       </div>    
       <div className="flex flex-col gap-8">

@@ -55,7 +55,6 @@ const Basics = () => {
       >
         <BasicsHeroSection />
         <BasicsFeatures />
-        <BasicsPricing />
       </motion.div>
 
       {/* Footer and Other Sections Animation */}
@@ -65,6 +64,7 @@ const Basics = () => {
         transition={{ duration: 0.8, delay: 0.6, type: 'spring', stiffness: 100, damping: 20 }}
         className="flex flex-col gap-8"
       >
+        <BasicsPricing />
         <ClientsSlider />
         <Footer />
       </motion.div>

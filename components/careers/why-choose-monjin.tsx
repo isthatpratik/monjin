@@ -4,7 +4,7 @@ export default function WhyChooseMonjin() {
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Top div with dark background */}
-      <div className="relative z-10 bg-white rounded-[32px] px-8 py-16 text-white">
+      <div className="relative z-10 bg-white rounded-[32px] px-8 py-16 text-white border border-[#CCCBCB]">
         <h2 className="text-2xl lg:text-5xl font-semibold font-onest text-center text-[#1E1E1E] tracking-tighter mb-6">Why Choose Monjin?</h2>
         <p className="text-center font-figtree max-w-3xl mx-auto mb-20 text-lg text-[#1E1E1E] hidden lg:bock">
         At Monjin, you would not just work—you will innovate, lead, and grow. Join us to be part of a transformative journey where your potential meets endless possibilities.

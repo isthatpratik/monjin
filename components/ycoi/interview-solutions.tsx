@@ -4,13 +4,14 @@ import { Button } from "@/components/ui/button";
 export default function InterviewSolutions() {
   return (
     <section className="container mx-auto px-4 py-4 md:py-24">
-      <div className="gap-6 hidden lg:block">
+      <div className="gap-6 hidden lg:flex">
         <div className="relative w-1/2">
-          <Image
+        <Image
             src="/assets/ycoi/interview-solutions.png"
             alt="Interview management dashboard interface"
-            fill
-            className="object-contain"
+            width={400}
+            height={400}
+            className="w-full h-auto object-contain"
           />
         </div>
 

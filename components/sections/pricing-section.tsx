@@ -50,12 +50,12 @@ export function PricingSection({
             Monthly
           </TabsTrigger>
           <TabsTrigger
-            className="px-8 font-figtree font-normal tracking-tighter py-4 flex items-center gap-2 h-full lg:text-2xl md:text-xl text-sm"
+            className="px-8 font-figtree font-normal tracking-tighter py-4 flex items-center gap-4 h-full lg:text-2xl md:text-xl text-sm"
             value="annual"
           >
             Annually
             {billingCycle === "annual" && (
-              <span className="px-2 py-1 border-[#abd62b] border rounded-full text-[#abd62b] text-xs whitespace-nowrap tracking-wider">
+              <span className="px-2 py-1 bg-[#D0F16C] border-black rounded-full text-black text-xs whitespace-nowrap tracking-wider">
                 SAVE UPTO 30%
               </span>
             )}
@@ -200,9 +200,9 @@ export function PricingSection({
         </Button>
       </div>
 
-      <div className="mt-8 text-center lg:text-[18px] text-base text-gray-500 space-y-2">
+      <div className="mt-8 text-center lg:text-[18px] font-figtree font-light text-base space-y-2">
         <p>* Plus applicable taxes</p>
-        <p>*Cancel your subscription anytime</p>
+        <p>* Cancel your subscription anytime</p>
         <p>
           * Company registration details and email verification will be needed
           prior to subscription activation

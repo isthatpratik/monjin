@@ -59,10 +59,10 @@ const Spotlight = () => {
       >
         <SpotlightHeroSection />
         <SpotlightFeatures />
-        <SpotlightPricing />
       </motion.div>
 
       <div className="flex flex-col gap-8">
+        <SpotlightPricing />
         <ClientsSlider />
         <Footer />
       </div>

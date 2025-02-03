@@ -178,16 +178,18 @@ export default function SpotlightFeatures() {
                     <p className="text-lg hidden lg:block font-figtree font-light text-[#353535] leading-loose">
                       {tab.description}
                     </p>
-                    <div className="hidden lg:grid lg:grid-cols-2 gap-4 text-lg font-figtree font-normal pt-2 tracking-wide relative">
+                    <div className="hidden w-fit lg:grid lg:grid-cols-2 gap-4 text-lg font-figtree font-normal pt-2 tracking-wide relative">
                       {tab.features.map((feature, index) => (
                         <React.Fragment key={index}>
                           <div
                             className={cn(
                               "space-y-6",
-                              index % 2 === 1 ? "pl-14" : ""
+                              index % 2 === 1 ? "pl-4" : ""
                             )}
                           >
-                            <div className="text-lg">{feature}</div>
+                            <div className="text-lg text-nowrap w-min">
+                              {feature}
+                            </div>
                           </div>
                           {index % 2 === 1 &&
                             index < tab.features.length - 1 && (
@@ -205,14 +207,8 @@ export default function SpotlightFeatures() {
                     <div className="lg:hidden grid gap-4 text-sm font-figtree font-normal px-4 md:px-8 tracking-wide relative">
                       {tab.features.map((feature, index) => (
                         <React.Fragment key={index}>
-                          <div
-                            className={cn(
-                              "space-y-2",
-                              index % 2 === 1 ? "" : ""
-                            )}
-                          >
-                            <div className="text-sm md:text-lg">{feature}</div>
-                          </div>
+                          <div className="text-sm md:text-lg">{feature}</div>
+
                           {index < tab.features.length - 1 && (
                             <Separator className="col-span-2" />
                           )}
@@ -224,9 +220,9 @@ export default function SpotlightFeatures() {
                     <Image
                       src={tab.imageUrl || "/placeholder.svg"}
                       alt={tab.title}
-                      className="w-full h-auto object-contain"
-                      height={1000}
-                      width={1000}
+                      className="w-auto h-auto object-contain aspect-video"
+                      height={900}
+                      width={900}
                       quality={70}
                     />
                   </div>

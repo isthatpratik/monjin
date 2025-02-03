@@ -27,7 +27,7 @@ export function PricingSectionMobile({
 
   return (
     <section className="py-4 lg:px-4 md:px-2 px-2 w-full lg:max-w-7xl lg:mx-auto">
-      <h2 className="text-2xl font-medium text-center mb-12 font-onest lg:text-5xl tracking-tighter">
+      <h2 className="text-2xl font-medium text-center mb-4 font-onest lg:text-5xl tracking-tighter">
         {title}
       </h2>
 
@@ -37,23 +37,23 @@ export function PricingSectionMobile({
         onValueChange={(value) =>
           setBillingCycle(value as "monthly" | "annual")
         }
-        className="w-full max-w-full flex justify-center mx-auto mb-12"
+        className="w-full max-w-full flex justify-center mx-auto mb-6"
       >
-        <TabsList className="w-full h-auto">
+        <TabsList className="w-full h-16">
           <TabsTrigger
-            className="px-8 w-full font-figtree font-normal tracking-tighter py-2 h-full lg:text-2xl text-xl"
+            className="px-4 w-full font-figtree font-normal tracking-tighter py-2 h-full text-xs"
             value="monthly"
           >
             Monthly
           </TabsTrigger>
           <TabsTrigger
-            className="px-8 w-full font-figtree font-normal tracking-tighter py-2 flex items-center gap-2 h-full lg:text-2xl text-xl"
+            className="px-4 w-full font-figtree font-normal tracking-tighter py-2 flex items-center gap-4 h-full text-xs"
             value="annual"
           >
             Annually
             {billingCycle === "annual" && (
-              <span className="px-2 py-1 border-[#D0F16C] border rounded-full text-[#D0F16C] text-xs whitespace-nowrap tracking-wider">
-                SAVE UPTO 30%
+              <span className="px-2 py-1 bg-[#D0F16C] border-black rounded-full text-black text-[8px] font-figtree leading-tight">
+                SAVE <br />UP TO 30%
               </span>
             )}
           </TabsTrigger>
@@ -205,9 +205,9 @@ export function PricingSectionMobile({
           Contact Sales
         </Button>
       </div>
-      <div className="mt-8 text-center text-sm text-gray-500 space-y-2">
-        <p>* Plus applicable taxes</p>
-        <p>*Cancel your subscription anytime</p>
+      <div className="mt-8 text-center text-sm font-figtree font-light space-y-2">
+      <p>* Plus applicable taxes</p>
+        <p>* Cancel your subscription anytime</p>
         <p>
           * Company registration details and email verification will be needed
           prior to subscription activation

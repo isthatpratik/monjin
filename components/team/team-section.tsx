@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface TeamMember {
   name: string;
@@ -17,7 +18,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Abhijit Kashyape",
-    role: "Founder, Chief Product\nOfficer & Senior VP:\nUK & EU",
+    role: "Founder, Chief Product\nOfficer & Senior VP -\nUK & EU",
     image: "/assets/team/abhijit.png",
     linkedinUrl: "https://www.linkedin.com/in/kabhijeet/",
   },
@@ -55,119 +56,120 @@ const teamMembers: TeamMember[] = [
   },
 ];
 
-export default function TeamSection() {
+function LinkedInButton({ url }: { url: string }) {
   return (
-    <div className="min-h-screen w-full px-4 py-16 md:px-32">
-      <div className="text-center space-y-4">
-        <h1 className="text-[78px] font-onest font-semibold text-white tracking-tighter">
-          Meet the visionaries
-        </h1>
-        <h2 className="text-lg font-figtree font-light text-white max-w-6xl">
-          Discover the incredible individuals who make up our talented team at
-          Monjin! Each member brings unique skills and experiences that
-          contribute to our vibrant culture and innovative projects. Join us in
-          celebrating their dedication and passion!
-        </h2>
-        <div className="max-w-2xl mx-auto mt-8 pt-20"></div>
+    <Link
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex-shrink-0"
+    >
+      <Image
+        src="/assets/team/linkedin.png"
+        alt="LinkedIn"
+        width={48}
+        height={48}
+        className="w-10 h-10"
+      />
+    </Link>
+  );
+}
+
+function TeamMemberCard({ member }: { member: TeamMember }) {
+  if (member.isWide) {
+    return (
+      <div className="bg-white rounded-xl lg:rounded-[32px] p-6 flex items-center gap-2">
+        <div className="relative w-24 h-24 lg:w-32 lg:h-32 flex-shrink-0">
+          <Image
+            src={member.image || "/placeholder.svg"}
+            alt={member.name}
+            fill
+            className="rounded-full object-cover"
+          />
+        </div>
+        <div className="ml-6 lg:ml-0 flex flex-col lg:flex-row justify-between w-full">
+          <div className="flex flex-col">
+            <h2 className="text-sm lg:text-2xl font-medium font-onest tracking-tighter text-gray-900 mb-2">
+              {member.name}
+            </h2>
+            <p className="text-[#7B7B7B] font-figtree text-xs lg:text-sm mb-4 leading-tight">
+              {member.role}
+            </p>
+          </div>
+          <div className="flex flex-shrink-0 items-center lg:justify-center">
+            <LinkedInButton url={member.linkedinUrl} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-white rounded-xl lg:rounded-[32px] p-6 flex flex-row items-center text-left lg:flex-col lg:items-center lg:text-center gap-4">
+      {/* Profile Image */}
+      <div className="relative w-24 h-24 lg:w-32 lg:h-32 flex-shrink-0">
+        <Image
+          src={member.image || "/placeholder.svg"}
+          alt={member.name}
+          fill
+          className="rounded-full object-cover"
+        />
       </div>
 
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-5">
-          {teamMembers.slice(0, 5).map((member) => (
-            <TeamCard key={member.name} {...member} />
-          ))}
-        </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {teamMembers.slice(5).map((member) => (
-            <TeamCard key={member.name} {...member} />
-          ))}
+      {/* Details + LinkedIn Icon */}
+      <div className="ml-4 lg:ml-0 flex flex-col flex-grow">
+        <h2 className="text-sm lg:text-2xl font-medium font-onest tracking-tighter text-gray-900 mb-2">
+          {member.name}
+        </h2>
+        <p className="text-[#7B7B7B] text-xs lg:text-sm font-figtree leading-tight">
+          {member.role}
+        </p>
+
+        {/* LinkedIn Icon - Appears Below Details */}
+        <div className="lg:self-center mt-4">
+          <LinkedInButton url={member.linkedinUrl} />
         </div>
       </div>
     </div>
   );
 }
 
-function TeamCard({
-  name,
-  role,
-  image,
-  linkedinUrl,
-  isWide = false,
-}: TeamMember) {
-  return (
-    <div
-      className={`group relative overflow-hidden rounded-[375px] transition-all duration-300 ${
-        isWide ? "col-span-1 md:col-span-1" : "col-span-1"
-      }`}
-    >
-      <div className="absolute inset-0 backdrop-blur-[10px] bg-[#202020]/20" />
+export default function TeamSection() {
+  const topRow = teamMembers.slice(0, 2);
+  const middleRow = teamMembers.slice(2, 5);
+  const bottomRow = teamMembers.slice(5);
 
-      <div className="relative p-4">
-        {isWide ? (
-          <div className="flex items-center gap-8">
-            <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-full bg-[#202020]/20">
-              <Image
-                src={image || "/placeholder.svg"}
-                alt={name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="flex flex-col align-middle justify-center">
-              <div className="text-left">
-                <h3 className="text-[20px] font-onest text-white">{name}</h3>
-                <p className="mt-2 text-sm font-extralight font-onest text-white">
-                  {role}
-                </p>
-              </div>
-              <a
-                href={linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 w-fit"
-              >
-                <Image
-                  src="/assets/social-media/linkedin.png"
-                  alt="LinkedIn"
-                  width={48}
-                  height={48}
-                  className="hover:opacity-80"
-                />
-              </a>
-            </div>
+  return (
+    <div className="min-h-screen w-full px-4 py-4 lg:px-12">
+      <div className="text-center space-y-4 mb-6 lg:mb-16">
+        <h1 className="text-4xl lg:text-[78px] font-onest font-semibold text-white tracking-tighter">
+          Meet the visionaries
+        </h1>
+        <h2 className="text-lg font-figtree font-light text-white max-w-6xl mx-auto hidden lg:block">
+          Discover the incredible individuals who make up our talented team at
+          Monjin! Each member brings unique skills and experiences that
+          contribute to our vibrant culture and innovative projects. Join us in
+          celebrating their dedication and passion!
+        </h2>
+      </div>
+
+      <div className="max-w-lg lg:max-w-7xl mx-auto space-y-6">
+          {/* Responsive Grid for Different Screens */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {topRow.map((member) => (
+              <TeamMemberCard key={member.name} member={member} />
+            ))}
           </div>
-        ) : (
-          <div className="flex flex-col  items-center justify-between space-y-6 h-[401px]">
-            <div className="relative h-40 w-40 overflow-hidden rounded-full bg-white/10">
-              <Image
-                src={image || "/placeholder.svg"}
-                alt={name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="text-center">
-              <h3 className="text-[20px] font-Onest text-white">{name}</h3>
-              <p className="mt-2 text-sm font-light font-onest text-white/80">
-                {role}
-              </p>
-            </div>
-            <a
-              href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full"
-            >
-              <Image
-                src="/assets/social-media/linkedin.png"
-                alt="LinkedIn"
-                width={48}
-                height={48}
-                className="hover:opacity-80"
-              />
-            </a>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {middleRow.map((member) => (
+              <TeamMemberCard key={member.name} member={member} />
+            ))}
           </div>
-        )}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {bottomRow.map((member) => (
+              <TeamMemberCard key={member.name} member={member} />
+            ))}
+          </div>
       </div>
     </div>
   );

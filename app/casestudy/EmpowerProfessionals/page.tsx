@@ -35,7 +35,7 @@ const EmpowerProfessionals = () => {
         </div>
       </div>
 
-      <div className="md:max-w-[1600px] mx-auto lg:px-8 px-2 py-8 z-10">
+      <div className="md:max-w-[1600px] mx-auto lg:px-8 px-0 py-8 z-10">
         <CaseOne />
       </div>
       <div className="flex flex-col gap-8">

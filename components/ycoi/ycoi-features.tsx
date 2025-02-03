@@ -126,9 +126,9 @@ export default function YcoiFeatures() {
   }, [activeTab]);
 
   return (
-    <div className="bg-white rounded-3xl lg:mx-12 mx-auto my-10">
+    <div className="bg-white rounded-3xl lg:mx-12 mx-auto my-10 border" >
       <div className="lg:max-w-7xl max-w-full mx-auto px-1 md:px-2 lg:px-8 py-12">
-        <h1 className="text-2xl lg:text-5xl font-onest font-semibold text-center lg:mb-12 mb-6 tracking-tighter">
+        <h1 className="text-2xl lg:text-5xl font-onest font-semibold text-center lg:mb-12 mb-6 tracking-tighter leading-normal">
           Transform hiring with tailored interviews, <br /> instant feedback, and seamless scheduling
         </h1>
 
@@ -183,16 +183,16 @@ export default function YcoiFeatures() {
                     <p className="text-lg hidden lg:block font-figtree font-light text-[#353535] leading-loose">
                       {tab.description}
                     </p>
-                    <div className="hidden lg:grid lg:grid-cols-2 gap-4 text-lg font-figtree font-normal pt-2 tracking-wide relative">
+                    <div className="hidden w-fit lg:grid lg:grid-cols-2 gap-4 text-lg font-figtree font-normal pt-2 tracking-wide relative">
                       {tab.features.map((feature, index) => (
                         <React.Fragment key={index}>
                           <div
                             className={cn(
                               "space-y-6",
-                              index % 2 === 1 ? "pl-14" : ""
+                              index % 2 === 1 ? "pl-4" : ""
                             )}
                           >
-                            <div className="text-lg">{feature}</div>
+                            <div className="text-lg text-nowrap w-min">{feature}</div>
                           </div>
                           {index % 2 === 1 &&
                             index < tab.features.length - 1 && (
@@ -210,14 +210,9 @@ export default function YcoiFeatures() {
                     <div className="lg:hidden grid gap-4 text-sm font-figtree font-normal px-4 md:px-8 tracking-wide relative">
                     {tab.features.map((feature, index) => (
                         <React.Fragment key={index}>
-                          <div
-                            className={cn(
-                              "space-y-2",
-                              index % 2 === 1 ? "" : ""
-                            )}
-                          >
+                          
                             <div className="text-sm md:text-lg">{feature}</div>
-                          </div>
+                          
                           {
                             index < tab.features.length - 1 && (
                               <Separator className="col-span-2" />
@@ -230,7 +225,7 @@ export default function YcoiFeatures() {
                     <Image
                       src={tab.imageUrl || "/placeholder.svg"}
                       alt={tab.title}
-                      className="w-full h-auto object-contain"
+                      className="w-full h-auto object-contain aspect-[4/3]"
                       height={1000}
                       width={1000}
                       quality={70}

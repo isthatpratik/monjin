@@ -5,30 +5,30 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function CaseThree() {
   return (
-    <section className="w-full relative grid items-center justify-center overflow-hidden">
-      <div className="container px-8 pt-24 relative">
+    <section className="w-full relative lg:grid items-center justify-center overflow-hidden">
+      <div className="lg:px-8 px-4 lg:pt-24 py-4 relative">
         <div className="text-center space-y-6">
-          <h1 className="text-4xl md:text-[78px] font-semibold font-onest text-white leading-none">
+          <h1 className="text-4xl lg:text-[78px] font-onest text-center font-bold text-white leading-tight">
             On-demand Panels for Neutrally Assessed Candidates
           </h1>
-          <h2 className="text-lg md:text-xl font-figtree font-light text-white ">
-            Resolved talent acquisition challenges in the Retail Industry.
+          <h2 className="text-base lg:text-xl font-figtree font-light text-white text-center leading-tight">
+            Revolutionized Just-In-Time resourcing, by addressing rapid hiring
+            demands in the growing Tech sector.
           </h2>
-          <div className="max-w-2xl mx-auto mt-8 pt-20"></div>
         </div>
       </div>
 
-      <div className="min-h-screen bg-white p-16 rounded-3xl">
+      <div className="min-h-screen bg-white lg:p-16 p-4 rounded-3xl my-6 lg:my-12">
         <div className="mx-auto max-w-6xl space-y-16">
           {/* Overview Section */}
-          <Card className="overflow-hidden bg-[url('/assets/bg/casestudy1.jpg')] bg-cover bg-center rounded-[32px] shadow-none">
-            <CardContent className="p-16">
-              <div className="grid gap-8 md:grid-cols-2 items-center">
-                <div className="space-y-4">
-                  <h1 className="text-[72px] font-medium font-onest tracking-tighter">
+          <Card className="overflow-hidden bg-[url('/assets/bg/case-study1-mobile.png')] lg:bg-[url('/assets/bg/casestudy1.png')] bg-cover bg-bottom rounded-[32px] shadow-none border">
+            <CardContent className="lg:p-16 p-6">
+              <div className="grid gap-8 lg:grid-cols-2 items-center">
+                <div className="space-y-4 order-2 lg:order-1">
+                  <h1 className="text-2xl lg:text-[72px] font-medium font-onest tracking-tighter leading-tight">
                     Overview
                   </h1>
-                  <p className="text-gray-600 font-figtree font-normal text-xl">
+                  <p className="text-gray-600 font-figtree font-normal text-sm lg:text-xl leading-tight">
                     One of the largest professional services firm in the world
                     and a part of the “Big Four” accounting firms were in search
                     of Just In Time (JIT) resourcing to meet the demand
@@ -40,13 +40,13 @@ export default function CaseThree() {
                     hiring challenges faced in the professional services sector.
                   </p>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center order-1 lg:order-2">
                   <Image
                     src="/assets/case-study/company3.png"
                     alt="Empower Professionals Logo"
                     width={400}
                     height={400}
-                    className="object-contain"
+                    className="object-contain w-fit lg:w-full"
                   />
                 </div>
               </div>
@@ -54,11 +54,11 @@ export default function CaseThree() {
           </Card>
 
           {/* Challenges Section */}
-          <section className="space-y-8 p-4">
-            <h2 className="text-[72px] font-medium font-onest tracking-tighter">
+          <section className="space-y-8 p-4 text-left">
+            <h2 className="text-2xl lg:text-[72px] font-medium font-onest tracking-tighter">
               Challenges
             </h2>
-            <div className="grid md:grid-cols-3 gap-3">
+            <div className="grid lg:grid-cols-3 gap-3">
               {[
                 {
                   icon: "/assets/case-study/icons/8.png",
@@ -78,18 +78,19 @@ export default function CaseThree() {
                   key={index}
                   className="overflow-hidden bg-transparent shadow-none border-none"
                 >
-                  <CardContent className="p-6 text-center space-y-4">
-                    <div
-                      className={`max-w-3xl h-3xl mx-auto rounded-lg flex items-center justify-center text-2xl`}
-                    >
+                  <CardContent className="p-6 flex lg:flex-col lg:text-center items-center gap-4">
+                    {/* Icon - Left on sm/md, Centered on lg+ */}
+                    <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
                       <Image
                         src={challenge.icon}
-                        alt={"src"}
-                        width={100}
-                        height={100}
+                        alt="icon"
+                        width={80}
+                        height={80}
+                        className="object-contain flex items-center justify-center"
                       />
                     </div>
-                    <p className="font-figtree font-normal text-[#383838] text-[20px]">
+                    {/* Text - Right of Icon in sm/md, Below Icon in lg+ */}
+                    <p className="font-figtree font-normal text-[#383838] text-[20px] lg:text-center text-left">
                       {challenge.title}
                     </p>
                   </CardContent>
@@ -100,10 +101,8 @@ export default function CaseThree() {
 
           {/* Method Section */}
           <section className="space-y-4">
-            <h2 className="text-[72px] font-medium font-onest">
-             Approach
-            </h2>
-            <p className="text-xl font-normal font-figtree text-gray-600 leading-relaxed">
+          <h2 className="text-2xl lg:text-[72px] font-medium font-onest">Approach</h2>
+          <p className="text-sm lg:text-xl font-normal font-figtree text-gray-600 leading-relaxed">
               Monjin conducted a market research to provide the accurate
               assistance to Persistent. The company setup a process to reduce
               the Turn-around-time for any action items and timely support.
@@ -116,10 +115,10 @@ export default function CaseThree() {
           </section>
 
           {/* Benefits and Highlights Section */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-[url('/assets/case-study/benefits.png')] bg-cover bg-center] rounded-[32px] shadow-none border-none">
-              <CardContent className="p-12 space-y-6">
-                <h2 className="text-5xl leading-relaxed font-medium font-onest text-[#742325]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Card className="bg-[url('/assets/case-study/benefits.png')] bg-cover bg-center] rounded-[32px]">
+              <CardContent className="p-6 lg:p-12 space-y-6">
+                <h2 className="text-2xl lg:text-[72px] leading-relaxed font-medium tracking-tighter text-center font-onest text-[#742325]">
                   Benefits
                 </h2>
                 <ul className="space-y-4 text-white">
@@ -129,26 +128,29 @@ export default function CaseThree() {
                     "Faster hiring process",
                     "Reducing costs and closing positions in a time effective manner.",
                   ].map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-2 pb-8">
-                      <div className="mt-1 w-4 h-4 flex items-center justify-center">
+                    <li
+                      key={index}
+                      className="flex items-center gap-2 pb-8 px-8"
+                    >
+                      <div className="mt-1 w-6 h-6 rounded-full  flex items-center justify-center flex-shrink-0">
                         <Image
                           src="/assets/case-study/icons/tick.png"
                           alt="icon"
-                          width={32} 
+                          width={32}
                           height={32}
                           className="rounded-full"
                         />
                       </div>
-                      <span>{benefit}</span>
+                      <span className="text-sm lg:text-lg">{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="bg-[url('/assets/case-study/highlights.png')] bg-cover bg-center] rounded-[32px] shadow-none border-none">
-              <CardContent className="p-12 space-y-6">
-                <h2 className="text-5xl leading-relaxed font-medium font-onest text-[#41308F]">
+            <Card className="bg-[url('/assets/case-study/highlights.png')] bg-cover bg-center] rounded-[32px]">
+              <CardContent className="p-6 lg:p-12 space-y-6">
+                <h2 className="text-2xl lg:text-[72px] leading-relaxed font-medium tracking-tighter text-center font-onest text-[#41308F]">
                   Highlights
                 </h2>
                 <ul className="space-y-4 leading-loose text-white">
@@ -157,17 +159,20 @@ export default function CaseThree() {
                     "897+ Interviews conducted within 4 months",
                     "Weekend recruitment drives apart from weekdays",
                   ].map((highlight, index) => (
-                    <li key={index} className="flex items-start gap-2 pb-8">
-                      <div className="mt-1 w-4 h-4 flex items-center justify-center">
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 pb-8 px-8"
+                    >
+                      <div className="mt-1 w-6 h-6 flex items-center justify-center flex-shrink-0">
                         <Image
                           src="/assets/case-study/icons/light.png"
                           alt="icon"
-                          width={32} 
+                          width={32}
                           height={32}
                           className="rounded-full"
                         />
                       </div>
-                      <span>{highlight}</span>
+                      <span className="text-sm lg:text-lg">{highlight}</span>
                     </li>
                   ))}
                 </ul>
@@ -177,13 +182,13 @@ export default function CaseThree() {
 
           <section>
             <Card className="overflow-hidden bg-[url('/assets/case-study/conclusion-bg.jpg')] bg-cover bg-center shadow-none border-none">
-              <CardContent className="px-40 py-20">
+              <CardContent className="lg:px-40 lg:py-20">
                 <div className="grid gap-8 items-center">
                   <div className="space-y-4 py-12">
-                    <h1 className="text-5xl font-medium font-onest text-black">
-                    Conclusion
+                    <h1 className="texc-2xl lg:text-5xl font-medium font-onest text-black">
+                      Conclusion
                     </h1>
-                    <p className="text-black max-w-3xl">
+                    <p className="text-black text-sm lg:text-xl lg:max-w-3xl">
                       Persistent was extremely satisfied with Monjin’s
                       interviewer quality and service and based on it the
                       company gave a task of L2 selection to team Monjin. The

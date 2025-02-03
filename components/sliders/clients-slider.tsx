@@ -40,8 +40,8 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-transparent relative flex lg:h-[100px] lg:w-[160px] h-[100px] w-[120px] overflow-visible rounded-[18px] lg:p-4 md:p-2 p-0 xl:scale-125 lg:scale-125 scale-125 lg:m-6 m-2",
-        "items-center justify-center"
+        "bg-transparent relative flex lg:h-[80px] lg:w-[140px] h-[60px] w-[100px] overflow-visible rounded-[18px] lg:p-4 md:p-2 p-0 xl:scale-125 lg:scale-125 lg:m-6 m-1",
+        "items-center justify-center grayscale opacity-70"
       )}
     >
       <div className="flex items-center justify-center w-full h-full">
@@ -61,7 +61,7 @@ const ReviewCard = ({ img }: { img: string }) => {
 
 export function ClientsSlider() {
   return (
-    <div className="relative flex flex-col items-center justify-center bg-transparent overflow-hidden w-full">
+    <div className="relative flex flex-col items-center justify-center bg-transparent overflow-hidden w-full pt-3">
       <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-transparent gap-2">
         <div className="flex items-center justify-center lg:w-[80%] md:w-full w-full relative">
           <div className="flex items-center justify-center w-full relative">
