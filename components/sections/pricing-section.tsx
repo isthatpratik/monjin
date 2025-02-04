@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/pricing-tabs";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import type { PricingProps } from "@/types/pricing";
+import Link from "next/link";
 
 export function PricingSection({
   title,
@@ -195,9 +196,11 @@ export function PricingSection({
       </div>
 
       <div className="mt-12 pt-6 text-center">
+        <Link href={'/pricing'}>
         <Button className="bg-[#1B1B1B] text-white font-onest  hover:bg-[#1B1B1B]/80 transition-all duration-300 rounded-[8px] py-8 px-20">
           Contact Sales
         </Button>
+        </Link>
       </div>
 
       <div className="mt-8 text-center lg:text-[18px] font-figtree font-light text-base space-y-2">

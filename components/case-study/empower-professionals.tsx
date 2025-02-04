@@ -18,7 +18,6 @@ export default function CaseOne() {
             as an opportunity, Monjin looks to resolve hiring challenges faced
             by Empower Professionals.
           </h2>
-    
         </div>
       </div>
 
@@ -77,8 +76,8 @@ export default function CaseOne() {
                 />
               </div>
               <h2 className="text-3xl lg:text-5xl font-medium font-onest lg:hidden order-2">
-              Goals
-            </h2>
+                Goals
+              </h2>
               <p className="font-figtree font-normal text-sm lg:text-xl text-[#0D0E11] leading-normal basis-3/5 order-3 lg:order-1">
                 Providing value to every talent, helping with assessed talent.
                 Hiring has tremendously evolved in the last decade. Experts
@@ -115,7 +114,7 @@ export default function CaseOne() {
                   key={index}
                   className="overflow-hidden bg-transparent shadow-none border-none"
                 >
-                  <CardContent className="p-6 flex lg:flex-col lg:text-center items-center gap-4">
+                  <CardContent className="lg:p-6 px-0 flex lg:flex-col lg:text-center items-center gap-4">
                     {/* Icon - Left on sm/md, Centered on lg+ */}
                     <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
                       <Image
@@ -127,7 +126,7 @@ export default function CaseOne() {
                       />
                     </div>
                     {/* Text - Right of Icon in sm/md, Below Icon in lg+ */}
-                    <p className="font-figtree font-normal text-[#383838] text-[20px] lg:text-center text-left">
+                    <p className="font-figtree font-normal text-[#383838] text-sm lg:text-[20px] lg:text-center text-left">
                       {challenge.title}
                     </p>
                   </CardContent>
@@ -138,7 +137,9 @@ export default function CaseOne() {
 
           {/* Method Section */}
           <section className="space-y-4">
-            <h2 className="text-2xl lg:text-[72px] font-medium font-onest">Method</h2>
+            <h2 className="text-2xl lg:text-[72px] font-medium font-onest">
+              Method
+            </h2>
             <p className="text-sm lg:text-xl font-normal font-figtree text-gray-600 leading-relaxed">
               In the US Staffing market, particularly when dealing with
               mid-level commodity resources, there is rampant gaming of the

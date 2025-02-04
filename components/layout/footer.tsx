@@ -30,12 +30,12 @@ const footerLinks = {
     { name: "What's in it for you", href: "#" },
     { name: "Express Interview", href: "#" },
     { name: "Premium Packages", href: "#" },
-    { name: "Support", href: "#" },
+    { name: "Support", href: "/support" },
   ],
   company: [
-    { name: "About", href: "#" },
-    { name: "Culture", href: "#" },
-    { name: "Careers", href: "#" },
+    { name: "About", href: "/about" },
+    { name: "Culture", href: "/culture" },
+    { name: "Careers", href: "/careers" },
     { name: "GDPR", href: "#" },
     { name: "CSR", href: "#" },
     { name: "Contact Us", href: "/contact" },
@@ -70,16 +70,16 @@ export function Footer() {
               src="/assets/monjin-footer-logo.png"
               alt="Monjin Logo"
               width={100}
-              height={24}
-              className="mx-auto md:mx-0 mb-4 object-contain block sm:hidden"
+              height={100}
+              className="mx-auto md:mx-0 h-auto w-auto mb-4 object-contain block sm:hidden"
             />
 
             <Image
               src="/assets/monjin-footer-logo.png"
               alt="Monjin Logo Small"
               width={186}
-              height={44}
-              className="mx-auto md:mx-0 mb-4 object-contain hidden sm:block"
+              height={186}
+              className="mx-auto md:mx-0 h-auto w-auto mb-4 object-contain hidden sm:block"
             />
             <p className="text-xs md:text-base text-[#AAAAAA] font-figtree md:max-w-lg lg:max-w-xl">
               Monjin is a dynamic network of expert interviewers spanning
@@ -110,36 +110,36 @@ export function Footer() {
                 <Image
                   src="/assets/social-media/facebook.png"
                   alt="Facebook"
-                  width={48}
-                  height={48}
-                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
+                  width={100}
+                  height={100}
+                  className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
                 />
               </Link>
               <Link href="#">
                 <Image
                   src="/assets/social-media/linkedin.png"
                   alt="LinkedIn"
-                  width={48}
-                  height={48}
-                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
+                  width={100}
+                  height={100}
+                  className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
                 />
               </Link>
               <Link href="#">
                 <Image
                   src="/assets/social-media/instagram.png"
                   alt="Instagram"
-                  width={48}
-                  height={48}
-                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
+                  width={100}
+                  height={100}
+                  className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
                 />
               </Link>
               <Link href="#">
                 <Image
                   src="/assets/social-media/youtube.png"
                   alt="YouTube"
-                  width={48}
-                  height={48}
-                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
+                  width={100}
+                  height={100}
+                  className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12  object-contain"
                 />
               </Link>
               <Link href="#">
@@ -148,7 +148,7 @@ export function Footer() {
                   alt="Twitter"
                   width={48}
                   height={48}
-                  className="hover:opacity-80 w-8 lg:w-12 h-auto object-contain"
+                  className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12  object-contain"
                 />
               </Link>
             </div>

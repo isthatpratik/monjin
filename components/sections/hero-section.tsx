@@ -39,6 +39,7 @@ export const HeroSection = () => {
               src="/assets/hero_images/employer.png"
               alt="Professional in business attire"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover object-center"
               quality={80}
               priority
@@ -72,6 +73,7 @@ export const HeroSection = () => {
             <Image
               src="/assets/hero_images/interviewer.png"
               alt="Professional with glasses"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               fill
               className="object-cover object-center"
               priority
@@ -86,6 +88,7 @@ export const HeroSection = () => {
             <Image
               src="/assets/hero_images/candidate.png"
               alt="Professional with laptop"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               fill
               className="object-cover object-center"
               priority

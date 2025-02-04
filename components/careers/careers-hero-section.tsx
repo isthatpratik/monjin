@@ -3,9 +3,9 @@ import React from "react";
 
 const CareersHero = () => {
   return (
-    <div className="h-full w-full flex flex-col gap-4 items-center justify-between mb-10">
-      <div className="flex flex-col justify-center items-center space-y-4 mt-6">
-        <h2 className="text-center font-onest text-4xl font-bold lg:text-[78px] tracking-tighter text-white leading-tight px-2 lg:px-0">
+    <div className="h-full w-full flex flex-col gap-4 items-center justify-between mb-10 lg:py-24 py-6">
+      <div className="flex flex-col justify-center items-center space-y-4">
+        <h2 className="text-center font-onest text-4xl font-bold lg:font-semibold lg:text-[78px] tracking-tight text-white leading-tight px-2 lg:px-0">
           Unlock Your Perfect Match with <br />
           Elite Talent on Monjin
         </h2>

@@ -31,7 +31,7 @@ export default function SupportHero() {
                 className="w-full pl-12 pr-20 py-8 text-lg bg-[#F5F9FA] rounded-lg mb-10 lg:mb-0"
               />
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
-              <Button className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 bg-[#1B1B1B] hover:bg-[#1B1B1B]/80 p-6 text-base font-Onest font-normal">
+              <Button className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 bg-[#1B1B1B] hover:bg-[#1B1B1B]/80 text-base font-onest font-normal">
                 Search
               </Button>
             </div>

@@ -78,7 +78,7 @@ export default function CaseThree() {
                   key={index}
                   className="overflow-hidden bg-transparent shadow-none border-none"
                 >
-                  <CardContent className="p-6 flex lg:flex-col lg:text-center items-center gap-4">
+                  <CardContent className="lg:p-6 px-0 flex lg:flex-col lg:text-center items-center gap-4">
                     {/* Icon - Left on sm/md, Centered on lg+ */}
                     <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
                       <Image
@@ -90,7 +90,7 @@ export default function CaseThree() {
                       />
                     </div>
                     {/* Text - Right of Icon in sm/md, Below Icon in lg+ */}
-                    <p className="font-figtree font-normal text-[#383838] text-[20px] lg:text-center text-left">
+                    <p className="font-figtree font-normal text-[#383838] text-sm lg:text-[20px] lg:text-center text-left">
                       {challenge.title}
                     </p>
                   </CardContent>
@@ -101,8 +101,10 @@ export default function CaseThree() {
 
           {/* Method Section */}
           <section className="space-y-4">
-          <h2 className="text-2xl lg:text-[72px] font-medium font-onest">Approach</h2>
-          <p className="text-sm lg:text-xl font-normal font-figtree text-gray-600 leading-relaxed">
+            <h2 className="text-2xl lg:text-[72px] font-medium font-onest">
+              Approach
+            </h2>
+            <p className="text-sm lg:text-xl font-normal font-figtree text-gray-600 leading-relaxed">
               Monjin conducted a market research to provide the accurate
               assistance to Persistent. The company setup a process to reduce
               the Turn-around-time for any action items and timely support.

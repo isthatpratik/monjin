@@ -20,7 +20,7 @@ export default function ContactSection() {
           {/* Contact Card */}
           <div className="bg-white rounded-2xl lg:p-10 p-4">
             <div className="flex items-start gap-4">
-              <div className="lg:w-16 lg:h-16 w-12 h-12 flex items-center justify-center rounded-2xl bg-[#E5FFCF] shadow-[0px_22px_28px_rgba(214,222,189,0.45)] flex-shrink-0">
+              <div className="lg:w-16 lg:h-16 w-12 h-12 flex items-center justify-center rounded-2xl bg-[#E5FFCF] shadow-[0px_22px_24px_rgba(214,222,189,0.45)] flex-shrink-0">
                 <Phone className="w-6 h-6 text-[#7FB93E]" />
               </div>
               <div>
@@ -33,7 +33,7 @@ export default function ContactSection() {
           {/* Mail Card */}
           <div className="bg-white rounded-2xl lg:p-10 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
             <div className="flex items-start gap-4">
-              <div className="lg:w-16 lg:h-16 w-12 h-12 flex items-center justify-center rounded-2xl bg-[#E8E5FF] shadow-[0px_22px_28px_rgba(200,189,222,0.45)] flex-shrink-0">
+              <div className="lg:w-16 lg:h-16 w-12 h-12 flex items-center justify-center rounded-2xl bg-[#E8E5FF] shadow-[0px_22px_24px_rgba(200,189,222,0.45)] flex-shrink-0">
                 <Mail className="w-6 h-6 text-[#7B6EF6]" />
               </div>
               <div>

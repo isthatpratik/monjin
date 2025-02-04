@@ -40,8 +40,8 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "bg-transparent relative flex lg:h-[80px] lg:w-[140px] h-[60px] w-[100px] overflow-visible rounded-[18px] lg:p-4 md:p-2 p-0 xl:scale-125 lg:scale-125 lg:m-6 m-1",
-        "items-center justify-center grayscale opacity-70"
+        "relative flex lg:h-[80px] lg:w-[140px] h-[60px] w-[100px] overflow-visible rounded-[18px] lg:p-4 md:p-2 p-0 xl:scale-125 lg:scale-125 lg:m-6 m-1",
+        "items-center justify-center grayscale"
       )}
     >
       <div className="flex items-center justify-center w-full h-full">
@@ -59,22 +59,18 @@ const ReviewCard = ({ img }: { img: string }) => {
   );
 };
 
-export function ClientsSlider() {
+export function PricingSlider() {
   return (
-    <div className="relative flex flex-col items-center justify-center bg-transparent overflow-hidden w-full py-3">
-      <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-transparent gap-2">
+    <div className="relative flex flex-col items-center justify-center overflow-hidden w-full mb-12 py-3 bg-white rounded-[18px] px-4 md:px-8 max-w-screen-xl mx-auto">
+      {/* Fade effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-2% from-white via-transparent to-white to-98% z-10" />
+      
+      <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden mt-6 gap-2">
         <div className="flex items-center justify-center lg:w-[80%] md:w-full w-full relative">
           <div className="flex items-center justify-center w-full relative">
-            {/* Left Line */}
-            <div className="h-0.5 xl:w-1/3 lg:w-1/3 w-1/3 bg-gradient-to-r from-transparent to-[#666666]/50"></div>
-
-            {/* Center Text */}
-            <p className="lg:text-[18px] text-xs font-figtree text-[#5E5E5E] text-center leading-tight lg:mx-4 lg:px-2 px-2 w-max">
+            <p className="lg:text-[27px] text-xs font-onest font-semibold text-center leading-tight lg:mx-4 lg:px-2 px-2 w-max z-999">
               Enabling Global Leaders to Build Exceptional Teams
             </p>
-
-            {/* Right Line */}
-            <div className="h-0.5 xl:w-1/3 lg:w-1/3 w-1/3 bg-gradient-to-l from-transparent to-[#666666]/50"></div>
           </div>
         </div>
         <Marquee

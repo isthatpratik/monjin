@@ -12,7 +12,7 @@ export default function CaseFour() {
             Propelling Hiring Demands
           </h1>
           <h2 className="text-base lg:text-xl font-figtree font-light text-white text-center  leading-tight">
-            Provided a neutral assessment platform to help the world's leading
+            Provided a neutral assessment platform to help the world&apos;s leading
             IT company.
           </h2>
         </div>
@@ -84,7 +84,7 @@ export default function CaseFour() {
                   key={index}
                   className="overflow-hidden bg-transparent shadow-none border-none"
                 >
-                  <CardContent className="p-6 flex lg:flex-col lg:text-center items-center gap-4">
+                  <CardContent className="lg:p-6 px-0 flex lg:flex-col lg:text-center items-center gap-4">
                     {/* Icon - Left on sm/md, Centered on lg+ */}
                     <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
                       <Image
@@ -96,7 +96,7 @@ export default function CaseFour() {
                       />
                     </div>
                     {/* Text - Right of Icon in sm/md, Below Icon in lg+ */}
-                    <p className="font-figtree font-normal text-[#383838] text-[20px] lg:text-center text-left">
+                    <p className="font-figtree font-normal text-[#383838] text-sm lg:text-[20px] lg:text-center text-left">
                       {challenge.title}
                     </p>
                   </CardContent>

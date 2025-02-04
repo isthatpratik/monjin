@@ -69,29 +69,30 @@ export default function About() {
           <TabsContent value="about">
             <div className="h-full w-full lg:flex flex-col gap-4 items-center justify-between mb-10 py-12 hidden">
               <div className="flex flex-col justify-center items-center space-y-4 mt-6">
-                <h1 className="text-center font-onest font-semibold text-[78px] text-white tracking-tighter leading-tight">
-                  Where top talent & memorable <br />
+                <h1 className="text-center font-onest font-semibold text-[78px] text-white tracking-tighter leading-tight text-balance max-w-screen-xl">
+                  Where top talent & memorable
                   interview experiences converge
                 </h1>
-                <p className="text-center font-light text-white font-figtree text-lg max-w-full">
+                <p className="text-center font-light text-white font-figtree text-lg max-w-screen-xl text-balance">
                   Leveraging a global network of expert interviewers and
                   advanced technology, we empower businesses to save time, cut
-                  hiring costs, and make <br />
+                  hiring costs, and make
                   smarter decisions. Whether you&apos;re expanding your team or
                   seeking specialized expertise, Monjin guarantees a seamless,
-                  efficient, and tailored <br />
+                  efficient, and tailored
                   hiring experience. Step into the future of recruitment with
                   Monjin – where top talent meets unmatched opportunity.
                 </p>
               </div>
-              <div className="-z-10 py-24">
+              <div className="-z-10 lg:py-12 xl:py-24">
                 <Image
                   src={"/assets/about/about-hero.png"}
                   alt="Monjin Suite Illustration"
                   width={1000}
                   height={1000}
                   quality={100}
-                  className="object-contain object-center w-[100vw] h-auto mt-8"
+                  className="object-contain object-center w-full h-auto xl:mt-8"
+                  sizes="(max-width: 768px) 100vw, (max-width: 2560px) 100vw, 33vw"
                 />
               </div>
             </div>

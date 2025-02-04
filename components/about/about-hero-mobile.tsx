@@ -17,7 +17,7 @@ const AboutHeroMobile = () => {
           width={1000}
           height={800}
           quality={100}
-          className="object-contain object-center w-[100vw] h-min mt-8"
+          className="object-contain object-center w-full h-min mt-8"
         />
       </div>
     </div>

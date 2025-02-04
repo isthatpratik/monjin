@@ -28,6 +28,7 @@ const OCOI = () => {
             src="/assets/ocoi/ocoi-bg-web.jpg"
             alt="Background"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={80}
             priority
             className="background-desktop object-cover object-center"
@@ -38,6 +39,7 @@ const OCOI = () => {
             src="/assets/ocoi/ocoi-bg-mobile.jpg"
             alt="Background"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={80}
             priority
             className="background-mobile object-cover object-top"

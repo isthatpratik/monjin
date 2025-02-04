@@ -140,7 +140,7 @@ export default function TeamSection() {
   const bottomRow = teamMembers.slice(5);
 
   return (
-    <div className="min-h-screen w-full px-4 py-4 lg:px-12">
+    <div className="min-h-screen w-full px-4 lg:py-24 py-6 lg:px-12">
       <div className="text-center space-y-4 mb-6 lg:mb-16">
         <h1 className="text-4xl lg:text-[78px] font-onest font-semibold text-white tracking-tighter">
           Meet the visionaries

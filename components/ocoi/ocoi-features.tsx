@@ -42,8 +42,8 @@ const tabs: Tab[] = [
       "Advanced Indexing",
       "Seamless Sharing",
       "Detailed Feedback",
-      "Granular Assessments",
       "Summaries & Closed Captions",
+      "Granular Assessments",
     ],
     icon: <CircleCheck className="w-5 h-5" />,
     imageUrl: "/assets/ocoi/ready-interviews.png",
@@ -71,8 +71,8 @@ const tabs: Tab[] = [
     description:
       "Experience the most efficient and tailored search options with Monjin's advanced search capabilities, designed to provide users with the best search experience possible.",
     features: [
-      "Search by Name",
       "Experience & Monjin Ratings",
+      "Search by Name",
       "Skills & Subskills",
       "Search by Location",
     ],
@@ -114,10 +114,10 @@ const tabs: Tab[] = [
       "Sentiment Analysis",
       "Emotional Analysis",
       "Speech-to-Text",
+      "Gesture & Expression Analysis",
       "Automated Transcription",
       "Object Identification",
       "Visual Analysis",
-      "Gesture & Expression Analysis",
     ],
     icon: <PlayCircle className="w-5 h-5" />,
     imageUrl: "/assets/ocoi/audio-video-analytics.png",
@@ -216,10 +216,10 @@ export default function OcoiFeatures() {
                           <div
                             className={cn(
                               "space-y-6",
-                              index % 2 === 1 ? "pl-6" : ""
+                              index % 2 === 1 ? "pl-2" : ""
                             )}
                           >
-                            <div className="text-lg text-nowrap w-min">
+                            <div className="text-lg text-nowrap w-min pr-2">
                               {feature}
                             </div>
                           </div>

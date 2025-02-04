@@ -1,3 +1,5 @@
+"use client";
+
 import { Footer } from "@/components/layout/footer";
 import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
 import { NavbarWhite } from "@/components/layout/navbar-white";
@@ -7,6 +9,7 @@ import SupportHero from "@/components/support/support-hero-section";
 import SupportSection from "@/components/support/support-section";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const SupportPage = () => {
   return (
@@ -14,7 +17,18 @@ const SupportPage = () => {
       <NavbarWhite />
       <MobileNavbarLight />
 
-      <div className="absolute inset-0 -z-50 w-full h-full">
+      <motion.div
+        className="absolute inset-0 -z-50 w-full h-full"
+        initial={{ opacity: 0, translateY: -100 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          ease: "easeOut",
+        }}
+      >
         <div className="hidden md:block w-full h-full">
           <Image
             src="/assets/support/support-web.jpg"
@@ -35,13 +49,25 @@ const SupportPage = () => {
             className="background-mobile object-cover object-top"
           />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="md:max-w-[1600px] mx-auto px-2 lg:px-8 py-8 z-10">
+      <motion.div
+        className="md:max-w-[1600px] mx-auto px-2 lg:px-8 py-8 z-10"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.8,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          ease: "easeOut",
+        }}
+      >
         <SupportHero />
         <SupportSection />
         <ContactSection />
-      </div>
+      </motion.div>
       <div className="flex flex-col gap-8">
         <ClientsSlider />
         <Footer />
