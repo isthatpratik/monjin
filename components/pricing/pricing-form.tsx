@@ -47,6 +47,10 @@ interface Country {
 }
 
 export default function PricingForm() {
+  const [isLoading, setIsLoading] = useState(false);
+    const [responseMessage, setResponseMessage] = useState<string | null>(
+      null
+    );
   const [countries, setCountries] = useState<Country[]>([]);
 
   useEffect(() => {
@@ -134,9 +138,31 @@ export default function PricingForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+      setIsLoading(true);
+      setResponseMessage(null);
+  
+      fetch("/api/pricing", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setResponseMessage(data.message);
+  
+          if (data.success) {
+            form.reset();
+          }
+        })
+        .catch(() => {
+          setResponseMessage("Something went wrong. Please try again.");
+        })
+        .finally(() => setIsLoading(false));
+    }
 
   return (
     <section className="relative w-full lg:px-4 lg:py-6">
@@ -475,12 +501,18 @@ export default function PricingForm() {
                   <Button
                     type="submit"
                     className="w-full p-6 bg-[#1B1B1B] text-white rounded-[8px] text-sm"
+                    disabled={isLoading}
                   >
-                    Let&apos;s Connect
+                    {isLoading ? "Sending..." : "Let's Connect"}
                   </Button>
                 </div>
               </form>
             </Form>
+            {responseMessage && (
+              <div className="mt-4 text-center text-sm text-gray-500">
+                {responseMessage}
+              </div>
+            )}
           </div>
           <div className="relative border-2 border-white -mt-16 lg:-mt-12 -z-10 rounded-b-[32px] overflow-hidden bg-[url('/assets/contact/contact-form-bg.jpg')] bg-cover bg-bottom bg-no-repeat">
             <div className="py-4 lg:py-8">
