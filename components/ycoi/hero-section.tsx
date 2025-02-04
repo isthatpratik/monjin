@@ -11,10 +11,10 @@ export default function YcoiHeroSection() {
               <strong>YCOI</strong> - YOUR CANDIDATES OUR INTERVIEWERS
             </button>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-start font-onest lg:text-7xl text-[#353535] tracking-tighter leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-start font-onest xl:text-7xl text-[#353535] tracking-tighter leading-tight">
             Streamline Your Hiring Process
           </h2>
-          <p className="text-[#353535] font-light text-lg font-figtree pb-10 hidden lg:block">
+          <p className="text-[#353535] font-light xl:text-lg font-figtree pb-10 hidden lg:block">
             Leverage Monjin&apos;s global network of experienced interviewers
             for precise candidate evaluations. Benefit from industry expertise
             tailored to your hiring needs and accelerate recruitment with an

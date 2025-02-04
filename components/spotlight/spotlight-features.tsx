@@ -37,7 +37,10 @@ const tabs: Tab[] = [
     title: "Customize Your Interview",
     description:
       "Tailor your interview process to fit your hiring needs with Spot Light’s customizable options.",
-    features: ["Video Question", "Multiple Choice Question"],
+    features: [
+      "Multiple Choice Question",
+      "Video Question", 
+    ],
     icon: <CircleCheck className="w-5 h-5" />,
     imageUrl: "/assets/spotlight/customize-interview.png",
   },
@@ -57,7 +60,10 @@ const tabs: Tab[] = [
     title: "Assessment",
     description:
       "Spot Light offers comprehensive candidate evaluations using advanced AI and expert assessments to ensure the best hiring decisions.",
-    features: ["AI Based Assessment", "Assesment by Experts"],
+    features: [
+      "Assesment by Experts",
+      "AI Based Assessment", 
+    ],
     icon: <StarIcon className="w-5 h-5" />,
     imageUrl: "/assets/spotlight/assessment.png",
   },
@@ -67,7 +73,10 @@ const tabs: Tab[] = [
     title: "Collaboration",
     description:
       "Spot Light offers comprehensive candidate evaluations using advanced AI and expert assessments to ensure the best hiring decisions.",
-    features: ["Sharing", "Move Forward"],
+    features: [
+      "Move Forward",
+      "Sharing", 
+    ],
     icon: <FileStack className="w-5 h-5" />,
     imageUrl: "/assets/spotlight/collaboration.png",
   },
@@ -77,7 +86,10 @@ const tabs: Tab[] = [
     title: "Question Bank",
     description:
       "Monjin Spot Light offers a powerful question bank to help you assess candidates effectively, ensuring a tailored and thorough evaluation process.",
-    features: ["Smart Question Bank", "Customized Question Bank"],
+    features: [
+      "Customized Question Bank",
+      "Smart Question Bank", 
+    ],
     icon: <Files className="w-5 h-5" />,
     imageUrl: "/assets/spotlight/question-bank.png",
   },
@@ -87,7 +99,10 @@ const tabs: Tab[] = [
     title: "Reports Analytics ",
     description:
       "Simplify your hiring decisions with Monjin Spot Light's advanced analytics, providing deep insights into your recruitment process.",
-    features: ["Advanced Reports", "Sharing and Collaboration"],
+    features: [
+      "Sharing and Collaboration",
+      "Advanced Reports", 
+    ],
     icon: <FileChartColumn className="w-5 h-5" />,
     imageUrl: "/assets/spotlight/report-analytics.png",
   },
@@ -184,10 +199,10 @@ export default function SpotlightFeatures() {
                           <div
                             className={cn(
                               "space-y-6",
-                              index % 2 === 1 ? "pl-4" : ""
+                              index % 2 === 1 ? "pl-2" : ""
                             )}
                           >
-                            <div className="text-lg text-nowrap w-min">
+                            <div className="text-lg text-nowrap w-min pr-2">
                               {feature}
                             </div>
                           </div>

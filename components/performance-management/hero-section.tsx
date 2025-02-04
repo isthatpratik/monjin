@@ -12,10 +12,10 @@ export default function PerformanceHeroSection() {
               Candidatures
             </button>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-start font-onest lg:text-7xl text-[#353535] tracking-tighter leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-start font-onest xl:text-7xl text-[#353535] tracking-tighter leading-tight">
             Unlock Exceptional Talent with AI-Powered Solutions
           </h2>
-          <p className="text-[#353535] font-light text-lg font-figtree hidden lg:block">
+          <p className="text-[#353535] font-light xl:text-lg font-figtree hidden lg:block">
             With AI-powered assessments, you can swiftly and efficiently
             identify top-tier talent. Eliminate guesswork, reduce hiring time,
             and secure high-quality candidates faster than ever before.

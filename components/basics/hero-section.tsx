@@ -4,17 +4,17 @@ import Image from "next/image";
 export default function BasicsHeroSection() {
   return (
     <main className="min-h-screen lg:bg-[url('/assets/basics/basics-hero-section.png')] bg-contain bg-no-repeat lg:aspect-auto w-full bg-right">
-      <div className="container mx-auto lg:px-4 px-0 grid lg:grid-cols-2 gap-12 items-center justify-center lg:justify-start lg:py-12 py-2">
+      <div className="container mx-auto lg:px-4 px-0 grid lg:grid-cols-2 gap-12 items-center justify-center lg:justify-start lg:py-8 xl:py-12 py-2">
         <div className="space-y-6 flex flex-col items-center justify-center lg:justify-start  lg:items-start">
           <div className="inline-flex rounded-xl border-[#F46D70] border lg:p-1 p-0 items-center justify-center lg:items-start lg:justify-normal">
             <button className="px-4 py-2 font-figree text-[#F46D70] text-xs md:text-sm lg:text-lg font-medium cursor-default text-center">
               <strong>Basics</strong> - Streamline Effortless Hiring
             </button>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-start font-onest lg:text-7xl text-[#353535] tracking-tighter leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-start font-onest xl:text-7xl text-[#353535] tracking-tighter leading-tight">
             Code-based interviews on the fly!
           </h2>
-          <p className="text-[#353535] font-light text-lg font-figtree hidden lg:block">
+          <p className="text-[#353535] font-light xl:text-lg font-figtree hidden lg:block">
             Unlock seamless hiring with Monjin Basics! Conduct video interviews
             on the fly without registration, host multi-panel sessions, and
             leverage code-based interviews for technical assessments. Enjoy

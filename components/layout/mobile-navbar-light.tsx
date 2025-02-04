@@ -24,8 +24,8 @@ export function MobileNavbarLight() {
             src="/assets/monjin-logo.png"
             alt="Monjin Logo"
             width={100}
-            height={100}
-            className="h-8 w-8 object-contain"
+            height={40}
+            className="h-8 w-auto"
           />
         </Link>
       </div>

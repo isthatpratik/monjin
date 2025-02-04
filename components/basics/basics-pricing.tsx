@@ -9,8 +9,8 @@ export default function BasicsPricing() {
     lite: {
       name: "LITE",
       tagline: "Ideal for Small Teams",
-      monthlyPrice: 49,
-      annualPrice: 35,
+      monthlyPrice: "",
+      annualPrice: "",
       features: [
         { name: "Two way video interview" },
         { name: "Scheduling" },
@@ -25,8 +25,8 @@ export default function BasicsPricing() {
     essential: {
       name: "ESSENTIAL",
       tagline: "Ideal for Growing Teams",
-      monthlyPrice: 99,
-      annualPrice: 69,
+      monthlyPrice: "",
+      annualPrice: "",
       features: [
         { name: "Two way video interview" },
         { name: "Scheduling" },
@@ -43,8 +43,8 @@ export default function BasicsPricing() {
     professional: {
       name: "PROFESSIONAL",
       tagline: "Made for Enterprises",
-      monthlyPrice: '166',
-      annualPrice: '166',
+      monthlyPrice: '',
+      annualPrice: '',
       features: [
         { name: "Essential+" },
         { name: "Unlimited External Share" },

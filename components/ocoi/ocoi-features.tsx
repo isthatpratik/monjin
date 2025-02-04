@@ -112,10 +112,10 @@ const tabs: Tab[] = [
     features: [
       "Keyword Extraction",
       "Sentiment Analysis",
-      "Emotional Analysis",
-      "Speech-to-Text",
-      "Gesture & Expression Analysis",
       "Automated Transcription",
+      "Emotional Analysis",
+      "Gesture & Expression Analysis",
+      "Speech-to-Text",
       "Object Identification",
       "Visual Analysis",
     ],

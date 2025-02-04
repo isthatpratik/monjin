@@ -38,10 +38,10 @@ const tabs: Tab[] = [
     description:
       "Simplify your interview process with instant, secure invites. Share a unique OTP for candidates to join video interviews seamlessly. No registration required — just enter the code and connect instantly, ensuring a fast and frictionless experience for both interviewers and candidates.",
     features: [
+      "Lightning-Fast Setup",
       "Simple Code Login",
       "Calendar Integration",
       "Interviewer Access",
-      "Lightning-Fast Setup",
     ],
     icon: <CircleCheck className="w-5 h-5" />,
     imageUrl: "/assets/basics/otp-interviews.png",
@@ -81,8 +81,8 @@ const tabs: Tab[] = [
     features: [
       "Creating Timestamps",
       "Screen Sharing",
-      "Code and Chat",
       "Granular Feedback",
+      "Code and Chat",
     ],
     icon: <SquarePlay className="w-5 h-5" />,
     imageUrl: "/assets/basics/video-conclave.png",
@@ -103,7 +103,10 @@ const tabs: Tab[] = [
     title: "Reports & Analytics ",
     description:
       "Make data-driven hiring decisions with Basics' advanced reporting and analytics features. With advanced reporting capabilities, you can visually track key metrics such as candidate ratings, performance scores, and the overall efficiency of your hiring operations. These insights allow you to make data-driven decisions and improve your recruitment strategy.",
-    features: ["Advanced Reports", "Sharing and Collaboration"],
+    features: [
+      "Sharing and Collaboration",
+      "Advanced Reports", 
+    ],
     icon: <FileChartColumn className="w-5 h-5" />,
     imageUrl: "/assets/basics/reports-analytics.png",
   },
@@ -200,7 +203,7 @@ export default function BasicsFeatures() {
                           <div
                             className={cn(
                               "space-y-6",
-                              index % 2 === 1 ? "pl-6" : ""
+                              index % 2 === 1 ? "pl-2" : ""
                             )}
                           >
                             <div className="text-lg text-nowrap w-min pr-2">

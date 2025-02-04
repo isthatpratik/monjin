@@ -11,10 +11,10 @@ export default function SpotlightHeroSection() {
               <strong>Spotlight</strong> - Accelerate Efficient Screening
             </button>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-start font-onest lg:text-7xl text-[#353535] tracking-tighter leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-center lg:text-start font-onest xl:text-7xl text-[#353535] tracking-tighter leading-tight">
             Effortless One-Way Interviews & Instant Scheduling.
           </h2>
-          <p className="text-[#353535] font-light text-lg font-figtree pb-10 hidden lg:block">
+          <p className="text-[#353535] font-light xl:text-lg font-figtree pb-10 hidden lg:block">
             Spotlight streamlines your hiring process with one-way video
             interviews that are quick, efficient, and simple to schedule. With
             flexible scheduling and user-friendly features, Spotlight empowers

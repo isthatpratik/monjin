@@ -38,8 +38,8 @@ const tabs: Tab[] = [
       "Leverage Industry Expertise for Superior Candidate Evaluation.",
     features: [
       "Top-Tier Assessments",
-      "Comprehensive Skill Evaluation",
       "Video Feedback & Insights",
+      "Comprehensive Skill Evaluation",
       "Customizable Assessments",
     ],
     icon: <StarIcon className="w-5 h-5" />,
@@ -83,7 +83,11 @@ const tabs: Tab[] = [
     title: "Collaboration for Swift Hiring Decisions",
     description:
       "Enhance teamwork and streamline hiring with Monjin’s collaborative features designed to bring candidates, hiring managers, and recruiters together effortlessly.",
-    features: ["Sharing", "Comments & Feedback", "Playback & verdict"],
+    features: [
+      "Comments & Feedback", 
+      "Sharing", 
+      "Playback & verdict"
+    ],
     icon: <CircleCheck className="w-5 h-5" />,
     imageUrl: "/assets/ycoi/hiring-decisions.png",
   },
@@ -126,10 +130,11 @@ export default function YcoiFeatures() {
   }, [activeTab]);
 
   return (
-    <div className="bg-white rounded-3xl lg:mx-12 mx-auto my-10 border" >
+    <div className="bg-white rounded-3xl lg:mx-12 mx-auto my-10 border">
       <div className="lg:max-w-7xl max-w-full mx-auto px-1 md:px-2 lg:px-8 py-12">
-        <h1 className="text-2xl lg:text-5xl font-onest font-semibold text-center lg:mb-12 mb-6 tracking-tighter leading-normal">
-          Transform hiring with tailored interviews, <br /> instant feedback, and seamless scheduling
+        <h1 className="text-2xl lg:text-5xl font-onest font-semibold text-center lg:mb-12 mb-6 tracking-tighter leading-tight text-balance">
+          Transform hiring with tailored interviews, instant feedback,
+          and seamless scheduling
         </h1>
 
         <div className="">
@@ -189,10 +194,12 @@ export default function YcoiFeatures() {
                           <div
                             className={cn(
                               "space-y-6",
-                              index % 2 === 1 ? "pl-4" : ""
+                              index % 2 === 1 ? "pl-2" : ""
                             )}
                           >
-                            <div className="text-lg text-nowrap w-min">{feature}</div>
+                            <div className="text-lg text-nowrap w-min pr-2">
+                              {feature}
+                            </div>
                           </div>
                           {index % 2 === 1 &&
                             index < tab.features.length - 1 && (
@@ -208,15 +215,13 @@ export default function YcoiFeatures() {
                       )}
                     </div>
                     <div className="lg:hidden grid gap-4 text-sm font-figtree font-normal px-4 md:px-8 tracking-wide relative">
-                    {tab.features.map((feature, index) => (
+                      {tab.features.map((feature, index) => (
                         <React.Fragment key={index}>
-                          
-                            <div className="text-sm md:text-lg">{feature}</div>
-                          
-                          {
-                            index < tab.features.length - 1 && (
-                              <Separator className="col-span-2" />
-                            )}
+                          <div className="text-sm md:text-lg">{feature}</div>
+
+                          {index < tab.features.length - 1 && (
+                            <Separator className="col-span-2" />
+                          )}
                         </React.Fragment>
                       ))}
                     </div>
@@ -239,5 +244,4 @@ export default function YcoiFeatures() {
       </div>
     </div>
   );
-
 }
