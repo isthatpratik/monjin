@@ -86,37 +86,37 @@ export default function PricingForm() {
 
   const products = [
     {
-      id: "product1",
+      id: "ocoi",
       name: "OCOI",
       subtitle: "Our Candidates Our Interviewer",
       image: "/assets/pricing/ocoi.png",
     },
     {
-      id: "product2",
+      id: "ycoi",
       name: "YCOI",
       subtitle: "Your Candidates Our Interviewer",
       image: "/assets/pricing/ycoi.png",
     },
     {
-      id: "product3",
+      id: "spotlight",
       name: "Spotlight",
       subtitle: "Accelerate Efficient Screening",
       image: "/assets/pricing/spotlight.png",
     },
     {
-      id: "product4",
+      id: "basics",
       name: "Basics",
       subtitle: "Streamline Effortless Hiring",
       image: "/assets/pricing/basics.png",
     },
     {
-      id: "product5",
+      id: "performance-management",
       name: "Performance Management",
       subtitle: "Pre-Assessed Candidatures",
       image: "/assets/pricing/performance.png",
     },
     {
-      id: "product6",
+      id: "monjin-suite",
       name: "Monjin Suite",
       subtitle: "Attract, engage & retain talent",
       image: "/assets/pricing/suite.png",
@@ -132,17 +132,17 @@ export default function PricingForm() {
       organization: "",
       jobTitle: "",
       email: "",
-      numberOfHires: "",
-      productSelection: "",
+      numberOfHires: "10-20",
+      productSelection: "ocoi",
       message: "",
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: z.infer<typeof formSchema>) {
       setIsLoading(true);
       setResponseMessage(null);
   
-      fetch("/api/pricing-form", {
+      fetch("/api/pricing", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -163,6 +163,7 @@ export default function PricingForm() {
         })
         .finally(() => setIsLoading(false));
     }
+  
 
   return (
     <section className="relative w-full lg:px-4 lg:py-6">
@@ -188,7 +189,7 @@ export default function PricingForm() {
         <div className="relative lg:w-1/2">
           <div className="relative rounded-3xl bg-white p-5 lg:p-6 shadow-2xl">
             <Form {...form}>
-              <form
+            <form
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="space-y-4"
               >

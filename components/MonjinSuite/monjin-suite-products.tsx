@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ProductCard = ({
   icon,
@@ -43,7 +44,9 @@ const ProductCard = ({
           {title}
         </h3>
 
-        <div className={`border ${subtitleBorderColor} p-1 mt-2 lg:rounded-[4px] rounded-[7px]`}>
+        <div
+          className={`border ${subtitleBorderColor} p-1 mt-2 lg:rounded-[4px] rounded-[7px]`}
+        >
           <p className={`font-figtree ${subtitleColor} text-xs text-center`}>
             {subtitle}
           </p>
@@ -105,7 +108,7 @@ const MonjinSuiteProducts = () => {
 
   return (
     <motion.div
-      className="relative mx-auto rounded-[32px] flex flex-col lg:flex-row justify-between bg-[url('/assets/MonjinSuite/monjin-suite-products-bg.png')] bg-cover bg-center my-10"
+      className="relative max-w-7xl mx-auto rounded-[32px] flex flex-col lg:flex-row justify-between bg-[url('/assets/MonjinSuite/monjin-suite-products-bg.png')] bg-cover bg-center my-10"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -135,9 +138,11 @@ const MonjinSuiteProducts = () => {
           </p>
         </div>
         <div>
-          <Button className="bg-[#ffffff] text-black rounded-[8px] w-64 h-16 hidden lg:block font-onest font-normal text-xl py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
-            Start Exploring
-          </Button>
+          <Link href="https://uni.monjin.com" passHref>
+            <Button className="bg-[#ffffff] text-black rounded-[8px] w-64 h-16 hidden lg:block font-onest font-normal text-xl py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
+              Start Exploring
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -149,10 +154,12 @@ const MonjinSuiteProducts = () => {
       </div>
 
       <div className="flex items-center justify-center lg:hidden py-2 mb-6 px-6">
+        <Link href="https://uni.monjin.com" passHref>
           <Button className="flex-1 bg-[#ffffff] text-black rounded-[8px] w-64 h-16 font-onest font-normal text-xl py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
             Start Exploring
           </Button>
-        </div>
+        </Link>
+      </div>
     </motion.div>
   );
 };

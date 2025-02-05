@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BasicsHeroSection() {
   return (
@@ -30,9 +31,11 @@ export default function BasicsHeroSection() {
               className="object-contain w-full md:w-[50vw] h-full"
             />
           </div>
-          <Button className="bg-black lg:flex flex-1 w-full md:w-fit lg:w-fit text-white hover:bg-gray-800 rounded-[8px] px-6 py-3">
-            15 Days FREE!
-          </Button>
+          <Link href="https://uni.monjin.com" passHref>
+            <Button className="bg-black lg:flex flex-1 w-full md:w-fit lg:w-fit text-white hover:bg-gray-800 rounded-[8px] px-6 py-3">
+              15 Days FREE!
+            </Button>
+          </Link>
           <p className="font-figtree text-[#353535] italic font-light pt-4 hidden lg:block">
             Starting at $35* per month after 15 day free trial period.
           </p>

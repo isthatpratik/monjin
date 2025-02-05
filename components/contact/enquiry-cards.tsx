@@ -1,8 +1,19 @@
 "use client"
 
-import { Headphones, Mail, MessageSquare, Phone } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardTitle } from "@/components/ui/card"
+import { Headphones, Mail, MessageSquare, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+
+const copyToClipboard = (text: string) => {
+  navigator.clipboard.writeText(text).then(
+    () => {
+      alert('Phone number copied to clipboard');
+    },
+    (err) => {
+      console.error('Could not copy text: ', err);
+    }
+  );
+};
 
 export function EnquiryCards() {
   return (
@@ -21,7 +32,17 @@ export function EnquiryCards() {
             Need assistance with Monjin&apos;s platform or services? Our support team is ready to resolve your queries
             quickly and efficiently. Reach out to us anytime—support is just a click away!
           </p>
-          <Button variant="default" className="bg-black text-white hover:bg-gray-800 p-5">
+          <Button
+            variant="default"
+            className="bg-black text-white hover:bg-gray-800 p-5"
+            onClick={() => {
+              if (navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)) {
+                window.location.href = 'tel:+1234567890';
+              } else {
+                copyToClipboard('+1234567890');
+              }
+            }}
+          >
             <Phone className="mr-2 h-4 w-4" />
             Contact Support
           </Button>
@@ -42,7 +63,13 @@ export function EnquiryCards() {
             Have questions about how Monjin can transform your hiring process? Our sales team is here to guide you!
             Contact us today and take the first step toward smarter recruitment.
           </p>
-          <Button variant="default" className="bg-black text-white hover:bg-gray-800 p-5">
+          <Button
+            variant="default"
+            className="bg-black text-white hover:bg-gray-800 p-5"
+            onClick={() => {
+              window.location.href = 'mailto:info@monjin.com';
+            }}
+          >
             <Mail className="mr-2 h-4 w-4" />
             Write us a mail
           </Button>

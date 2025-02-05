@@ -8,7 +8,7 @@ export default function WhyWeDoIt() {
         <p className="text-sm lg:text-lg font-figtree text-[#101010]">Because talent deserves more than a resume we are here to</p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+      <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-center justify-center">
         <div className="flex flex-col items-center text-center">
         <div className="w-16 h-16 lg:w-24 lg:h-24 mb-6 relative">
             <Image
@@ -27,7 +27,7 @@ export default function WhyWeDoIt() {
         </div>
 
         <div className="flex flex-col items-center text-center">
-          <div className="w-16 h-16 lg:w-24 mb-6 relative">
+          <div className="w-16 h-16 lg:w-24 lg:h-24 mb-6 relative">
             <Image
               src="/assets/about/icon-2.png"
               alt="Checkmark icon"
@@ -44,7 +44,7 @@ export default function WhyWeDoIt() {
         </div>
 
         <div className="flex flex-col items-center text-center pb-4 lg:pb-0">
-        <div className="w-16 h-16 lg:w-24 mb-6 relative">
+        <div className="w-16 h-16 lg:w-24 lg:h-24 mb-6 relative">
             <Image
               src="/assets/about/icon-3.png"
               alt="Checkmark icon"
@@ -61,4 +61,3 @@ export default function WhyWeDoIt() {
     </section>
   )
 }
-

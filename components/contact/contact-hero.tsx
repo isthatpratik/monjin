@@ -69,7 +69,7 @@ export default function ContactHero() {
         setResponseMessage(data.message);
 
         if (data.success) {
-          form.reset(); // Reset the form fields
+          form.reset();
         }
       })
       .catch(() => {
@@ -79,26 +79,26 @@ export default function ContactHero() {
   }
 
   return (
-    <section className="relative w-full px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-8xl flex flex-row gap-12">
+    <section className="relative w-full px-0 py-6 lg:px-6">
+      <div className="mx-auto max-w-8xl flex flex-col lg:flex lg:flex-row gap-12">
         {/* Hero Text */}
-        <div className="flex flex-col justify-center w-1/2">
-          <h1 className="font-onest text-[78px] font-semibold leading-tight text-white">
+        <div className="flex flex-col justify-center lg:w-1/2">
+          <h1 className="font-onest text-4xl text-center lg:text-start lg:text-[78px] font-semibold leading-tight text-white">
             Unlock Endless Possibilities
           </h1>
-          <p className="mt-4 text-lg font-figtree font-light text-gray-200">
+          <p className="mt-4 text-base lg:text-lg text-center lg:text-start font-figtree font-light text-gray-200">
             Send Us a Message and Let&apos;s Create Something <br />
             Extraordinary Together
           </p>
         </div>
 
         {/* Form Container */}
-        <div className="relative w-1/2">
+        <div className="relative lg:w-1/2">
           {/* Background Div */}
           <div className="absolute bottom-0 h-[calc(100%-2rem)] w-full translate-y-8 rounded-3xl bg-cover bg-center" />
 
           {/* Form */}
-          <div className="relative rounded-3xl bg-white p-6 shadow-xl md:p-8 ">
+          <div className="relative rounded-3xl bg-white p-4 lg:p-6 shadow-xl md:p-8 ">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
@@ -115,7 +115,7 @@ export default function ContactHero() {
                           <User className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                           <Input
                             placeholder="Enter your full name"
-                            className="border-[#D8E3E5] bg-[#F5F9FA] pl-10 py-6 rounded-[8px]"
+                            className="border-[#D8E3E5] bg-[#F5F9FA] pl-10 py-6 rounded-[8px] text-sm"
                             {...field}
                           />
                         </div>
@@ -127,7 +127,7 @@ export default function ContactHero() {
 
                 <FormItem>
                   <Label>Mobile Number</Label>
-                  <div className="grid grid-cols-[120px_1fr] gap-3">
+                  <div className="grid lg:grid-cols-[120px_1fr] grid-cols-[90px_1fr] gap-3">
                     <FormField
                       control={form.control}
                       name="countryCode"
@@ -138,7 +138,7 @@ export default function ContactHero() {
                             defaultValue={field.value}
                           >
                             <FormControl>
-                              <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px]">
+                              <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm">
                                 <SelectValue placeholder="🇮🇳 +91" />
                               </SelectTrigger>
                             </FormControl>
@@ -194,7 +194,7 @@ export default function ContactHero() {
                           <FormControl>
                             <Input
                               placeholder="Enter your mobile number"
-                              className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px]"
+                              className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm"
                               {...field}
                             />
                           </FormControl>
@@ -217,7 +217,7 @@ export default function ContactHero() {
                           <Input
                             placeholder="Enter your work mail"
                             type="email"
-                            className="border-[#D8E3E5] bg-[#F5F9FA] pl-10 py-6 rounded-[8px]"
+                            className="border-[#D8E3E5] bg-[#F5F9FA] pl-10 py-6 rounded-[8px] text-sm"
                             {...field}
                           />
                         </div>
@@ -236,7 +236,7 @@ export default function ContactHero() {
                       <FormControl>
                         <Textarea
                           placeholder="Enter Your Message"
-                          className="min-h-[120px] border-[#D8E3E5] bg-[#F5F9FA] rounded-[8px]"
+                          className="min-h-[120px] border-[#D8E3E5] bg-[#F5F9FA] rounded-[8px] text-sm"
                           {...field}
                         />
                       </FormControl>
@@ -247,7 +247,7 @@ export default function ContactHero() {
 
                 <Button
                   type="submit"
-                  className="w-full p-6 bg-[#1B1B1B] text-white hover:bg-[#1B1B1B]/90 rounded-[8px]"
+                  className="w-full p-6 bg-[#1B1B1B] text-white hover:bg-[#1B1B1B]/90 rounded-[8px] text-sm"
                   disabled={isLoading}
                 >
                   {isLoading ? "Sending..." : "Let's Connect"}
@@ -261,8 +261,8 @@ export default function ContactHero() {
             )}
           </div>
           <div className="relative border-2 border-white -mt-12 -z-10 rounded-b-[32px] overflow-hidden bg-[url('/assets/contact/contact-form-bg.jpg')] bg-cover bg-bottom bg-no-repeat">
-            <div className="py-8">
-              <h2 className="text-base font-medium font-Onest text-white text-center mt-10">
+            <div className="lg:py-8 py-4">
+              <h2 className="text-sm lg:text-base font-medium font-onest text-white text-center mt-10">
                 - Bridging Talent and Opportunity -
               </h2>
             </div>

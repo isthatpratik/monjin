@@ -33,9 +33,9 @@ const MonjinSuiteHero = () => {
             damping: 20,
             ease: "easeOut",
           }}
-          className="text-center md:font-onest font-onest font-bold text-4xl lg:text-[78px] tracking-tighter max-w-full leading-tight md:max-w-[90vw]"
+          className="text-center md:font-onest font-onest font-bold text-4xl lg:text-[78px] tracking-tighter max-w-full leading-tight md:max-w-[90vw] text-balance"
         >
-          Streamline Talent Attraction & Retention for a Seamless Experience.
+          Streamline Talent Attraction & Retention for a Seamless Experience
         </motion.h1>
       </div>
       <motion.div
@@ -60,7 +60,7 @@ const MonjinSuiteHero = () => {
         />
       </motion.div>
       <motion.p
-        className="text-center font-figtree text-sm md:max-w-[80%] pb-4 hidden lg:block"
+        className="text-center font-figtree text-sm md:max-w-[80%] pb-4 hidden lg:block text-balance"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

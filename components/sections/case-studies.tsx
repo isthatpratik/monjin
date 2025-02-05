@@ -43,7 +43,7 @@ const slides = [
     description:
       "Provided a neutral assessment platform to help the world's leading IT company.",
     buttonText: "Dive In",
-    image: "/assets/CaseStudies/case-study-4.jpg",
+    image: "/assets/CaseStudies/case-study-4.png",
     buttonLink: "/casestudy/DXCTechnology"
   },
 ];

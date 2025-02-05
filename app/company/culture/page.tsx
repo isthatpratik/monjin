@@ -1,3 +1,5 @@
+"use client";
+
 import { Footer } from "@/components/layout/footer";
 import Image from "next/image";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
@@ -22,38 +24,72 @@ import CareerOpportunities from "@/components/careers/career-opportunities";
 import JobApplicationForm from "@/components/careers/apply";
 import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
 import AboutHeroMobile from "@/components/about/about-hero-mobile";
+import { motion } from "framer-motion";
 
 export default function Culture() {
   return (
     <main className="relative min-h-screen overflow-hidden justify-center">
-      <div className="absolute inset-0 -z-10 hidden lg:block">
-              <Image
-                alt="gradient-bg"
-                src={"/assets/about/about-bg.jpg"}
-                quality={100}
-                fill
-                priority
-                className="object-cover object-top xl:-translate-y-[300px] lg:-translate-y-[200px]"
-              />
-            </div>
-            <div className="absolute inset-0 -z-10 block lg:hidden">
-              <Image
-                alt="gradient-bg"
-                src={"/assets/about/about-bg-mobile.jpg"}
-                quality={100}
-                fill
-                priority
-                className="object-cover object-top md:-translate-y-[400px]"
-              />
-            </div>
-      
+      <motion.div
+        className="absolute inset-0 -z-10 hidden lg:block"
+        initial={{ opacity: 0, translateY: -100 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          ease: "easeOut",
+        }}
+      >
+        <Image
+          alt="gradient-bg"
+          src={"/assets/about/about-bg.jpg"}
+          quality={100}
+          fill
+          priority
+          className="object-cover object-top xl:-translate-y-[300px] lg:-translate-y-[200px]"
+        />
+      </motion.div>
+      <motion.div
+        className="absolute inset-0 -z-10 block lg:hidden"
+        initial={{ opacity: 0, translateY: -100 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          ease: "easeOut",
+        }}
+      >
+        <Image
+          alt="gradient-bg"
+          src={"/assets/about/about-bg-mobile.jpg"}
+          quality={100}
+          fill
+          priority
+          className="object-cover object-top md:-translate-y-[400px]"
+        />
+      </motion.div>
 
       <div className="z-999">
         <NavbarWhite />
         <MobileNavbarLight />
       </div>
 
-      <div className="mx-auto py-8 -z-30">
+      <motion.div
+        className="mx-auto py-8 -z-30"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.8,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          ease: "easeOut",
+        }}
+      >
         <Tabs
           className="flex flex-col justify-center max-auto items-center"
           defaultValue="culture"
@@ -123,9 +159,8 @@ export default function Culture() {
             <CareerOpportunities />
             <JobApplicationForm />
           </TabsContent>
-
         </Tabs>
-      </div>
+      </motion.div>
 
       <footer>
         <ClientsSlider />

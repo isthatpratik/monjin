@@ -235,7 +235,7 @@ export default function SpotlightFeatures() {
                     <Image
                       src={tab.imageUrl || "/placeholder.svg"}
                       alt={tab.title}
-                      className="w-auto h-auto object-contain aspect-video"
+                      className="w-auto h-auto object-contain aspect-[4/3]"
                       height={900}
                       width={900}
                       quality={70}

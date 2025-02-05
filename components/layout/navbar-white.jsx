@@ -259,14 +259,16 @@ export function NavbarWhite() {
             >
               <Button
                 variant="outline"
-                className="rounded-[8px] border-white/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto hover:bg-black/30"
+                className="rounded-[8px] border-white/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto hover:bg-white hover:text-black transition-all duration-300 ease-in-out hover:scale-105"
               >
                 Contact Us
               </Button>
             </Link>
-            <Button className="rounded-[8px] font-onest bg-[#D0F16C] text-black hover:bg-[#D0F16C]/70 transition-all duration-200 font-normal text-[15px] px-6 py-2 h-auto">
-              Get Started
-            </Button>
+            <Link href="https://uni.monjin.com" passHref>
+              <Button className="rounded-[8px] font-onest bg-[#D0F16C] hover:bg-[#B5E916] text-black transition-all duration-300 font-normal text-[15px] px-6 py-2 h-auto ease-in-out hover:scale-105">
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

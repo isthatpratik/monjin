@@ -1,3 +1,5 @@
+"use client";
+
 import { Footer } from "@/components/layout/footer";
 import Image from "next/image";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
@@ -22,11 +24,23 @@ import CareerOpportunities from "@/components/careers/career-opportunities";
 import JobApplicationForm from "@/components/careers/apply";
 import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
 import AboutHeroMobile from "@/components/about/about-hero-mobile";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <main className="relative min-h-screen overflow-hidden justify-center">
-      <div className="absolute inset-0 -z-10 hidden lg:block">
+      <motion.div
+        className="absolute inset-0 -z-10 hidden lg:block"
+        initial={{ opacity: 0, translateY: -100 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          ease: "easeOut",
+        }}
+      >
         <Image
           alt="gradient-bg"
           src={"/assets/about/about-bg.jpg"}
@@ -35,8 +49,19 @@ export default function About() {
           priority
           className="object-cover object-top xl:-translate-y-[300px] lg:-translate-y-[200px]"
         />
-      </div>
-      <div className="absolute inset-0 -z-10 block lg:hidden">
+      </motion.div>
+      <motion.div
+        className="absolute inset-0 -z-10 block lg:hidden"
+        initial={{ opacity: 0, translateY: -100 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          ease: "easeOut",
+        }}
+      >
         <Image
           alt="gradient-bg"
           src={"/assets/about/about-bg-mobile.jpg"}
@@ -45,14 +70,24 @@ export default function About() {
           priority
           className="object-cover object-top md:-translate-y-[400px]"
         />
-      </div>
+      </motion.div>
 
       <div className="z-999 ">
         <NavbarWhite />
         <MobileNavbarLight />
       </div>
 
-      <div className="mx-auto py-8 -z-30">
+      <motion.div className="mx-auto py-8 -z-30"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.8,
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+        ease: "easeOut",
+      }}>
         <Tabs
           className="flex flex-col justify-center max-auto items-center"
           defaultValue="about"
@@ -70,18 +105,16 @@ export default function About() {
             <div className="h-full w-full lg:flex flex-col gap-4 items-center justify-between mb-10 py-12 hidden">
               <div className="flex flex-col justify-center items-center space-y-4 mt-6">
                 <h1 className="text-center font-onest font-semibold text-[78px] text-white tracking-tighter leading-tight text-balance max-w-screen-xl">
-                  Where top talent & memorable
-                  interview experiences converge
+                  Where top talent & memorable interview experiences converge
                 </h1>
                 <p className="text-center font-light text-white font-figtree text-lg max-w-screen-xl text-balance">
                   Leveraging a global network of expert interviewers and
                   advanced technology, we empower businesses to save time, cut
-                  hiring costs, and make
-                  smarter decisions. Whether you&apos;re expanding your team or
-                  seeking specialized expertise, Monjin guarantees a seamless,
-                  efficient, and tailored
-                  hiring experience. Step into the future of recruitment with
-                  Monjin – where top talent meets unmatched opportunity.
+                  hiring costs, and make smarter decisions. Whether you&apos;re
+                  expanding your team or seeking specialized expertise, Monjin
+                  guarantees a seamless, efficient, and tailored hiring
+                  experience. Step into the future of recruitment with Monjin –
+                  where top talent meets unmatched opportunity.
                 </p>
               </div>
               <div className="-z-10 lg:py-12 xl:py-24">
@@ -124,7 +157,7 @@ export default function About() {
             <JobApplicationForm />
           </TabsContent>
         </Tabs>
-      </div>
+      </motion.div>
 
       <footer>
         <ClientsSlider />

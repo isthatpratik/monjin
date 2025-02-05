@@ -33,9 +33,9 @@ const footerLinks = {
     { name: "Support", href: "/support" },
   ],
   company: [
-    { name: "About", href: "/about" },
-    { name: "Culture", href: "/culture" },
-    { name: "Careers", href: "/careers" },
+    { name: "About", href: "/company/about" },
+    { name: "Culture", href: "/company/culture" },
+    { name: "Careers", href: "/company/careers" },
     { name: "GDPR", href: "#" },
     { name: "CSR", href: "#" },
     { name: "Contact Us", href: "/contact" },
@@ -106,7 +106,7 @@ export function Footer() {
               Say hello.
             </h2>
             <div className="flex justify-center md:justify-end gap-4">
-              <Link href="#">
+              <Link href="https://www.facebook.com/MonjinInterview">
                 <Image
                   src="/assets/social-media/facebook.png"
                   alt="Facebook"
@@ -115,7 +115,7 @@ export function Footer() {
                   className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
                 />
               </Link>
-              <Link href="#">
+              <Link href="https://www.linkedin.com/company/monjin/">
                 <Image
                   src="/assets/social-media/linkedin.png"
                   alt="LinkedIn"
@@ -124,7 +124,7 @@ export function Footer() {
                   className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
                 />
               </Link>
-              <Link href="#">
+              <Link href="https://www.instagram.com/monjininterviews/">
                 <Image
                   src="/assets/social-media/instagram.png"
                   alt="Instagram"
@@ -133,7 +133,7 @@ export function Footer() {
                   className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
                 />
               </Link>
-              <Link href="#">
+              <Link href="https://www.youtube.com/@MonjinInterviewsPvtLtd">
                 <Image
                   src="/assets/social-media/youtube.png"
                   alt="YouTube"
@@ -142,7 +142,7 @@ export function Footer() {
                   className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12  object-contain"
                 />
               </Link>
-              <Link href="#">
+              <Link href="https://x.com/MonjinCorp">
                 <Image
                   src="/assets/social-media/x-twitter.png"
                   alt="Twitter"

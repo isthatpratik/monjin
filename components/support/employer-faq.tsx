@@ -160,7 +160,7 @@ export default function EmployerFAQ() {
                     value={`${section.id}-item-${i}`}
                     className="border border-gray-200 bg-white rounded-lg mb-4 lg:px-6 lg:py-4 px-3 py-1"
                   >
-                    <AccordionTrigger className="hover:no-underline flex justify-between items-center lg:font-onest text-sm lg:text-[25px] font-figtree">
+                    <AccordionTrigger className="hover:no-underline flex justify-between items-center lg:font-onest text-sm lg:text-[25px] font-figtree leading-tight">
                       {item.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600 lg:py-5 font-figtree lg:text-lg text-sm font-light">

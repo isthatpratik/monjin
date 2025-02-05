@@ -23,7 +23,7 @@ const OCOI = () => {
         animate={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 1, type: "spring", stiffness: 80, damping: 20 }}
       >
-        <div className="hidden md:block w-full h-full">
+        <div className="lg:block w-full h-full">
           <Image
             src="/assets/ocoi/ocoi-bg-web.jpg"
             alt="Background"
@@ -34,7 +34,7 @@ const OCOI = () => {
             className="background-desktop object-cover object-center"
           />
         </div>
-        <div className="block md:hidden w-full h-full">
+        <div className="block lg:hidden w-full h-full">
           <Image
             src="/assets/ocoi/ocoi-bg-mobile.jpg"
             alt="Background"

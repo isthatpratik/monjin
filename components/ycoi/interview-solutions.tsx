@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function InterviewSolutions() {
   return (
     <section className="container mx-auto px-4 py-4 md:py-24">
       <div className="gap-6 hidden lg:flex">
         <div className="relative w-1/2">
-        <Image
+          <Image
             src="/assets/ycoi/interview-solutions.png"
             alt="Interview management dashboard interface"
             width={400}
@@ -63,10 +64,12 @@ export default function InterviewSolutions() {
           that drive better hiring outcomes.
         </p>
         <div className=" text-center flex justify-center md:justify-start pt-4">
+          <Link href={"/Pricing"}>
             <Button className="flex-1 px-8 py-7 text-lg rounded-[8px] font-Onest bg-[#1B1B1B] font-normal text-white hover:shadow-monjin transition-all duration-300">
               Dive In Now
             </Button>
-          </div>
+          </Link>
+        </div>
       </div>
     </section>
   );

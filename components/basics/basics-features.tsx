@@ -239,7 +239,7 @@ export default function BasicsFeatures() {
                     <Image
                       src={tab.imageUrl || "/placeholder.svg"}
                       alt={tab.title}
-                      className="w-full h-auto object-contain aspect-video"
+                      className="w-full h-auto object-contain aspect-[4/3]"
                       height={1000}
                       width={1000}
                       quality={70}

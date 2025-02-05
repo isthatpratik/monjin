@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  ChevronLeft,
-  ChevronRight,
-  X,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -20,14 +16,14 @@ export function MobileMenuDark() {
   const renderMainMenu = () => (
     <div className="min-h-screen flex flex-col">
       <div className="flex items-center justify-between p-6">
-        <Link href={'/'}>
-        <Image
-          src="/assets/monjin-navbar.png"
-          alt="Monjin Logo"
-          width={100}
-          height={40}
-          className="h-8 w-auto"
-        />
+        <Link href={"/"}>
+          <Image
+            src="/assets/monjin-navbar.png"
+            alt="Monjin Logo"
+            width={100}
+            height={40}
+            className="h-8 w-auto"
+          />
         </Link>
         <button
           onClick={() => setOpen(false)}
@@ -71,14 +67,17 @@ export function MobileMenuDark() {
             Interviewer
           </Link>
           <div className="space-y-4 flex flex-col w-fit">
-            <Button className="items-center justify-center  text-center font-onest h-auto px-5 py-4 bg-[#212121] text-white rounded-[8px]">
-              <Link href="/" className="">
+            <Link href="https://uni.monjin.com" passHref>
+              <Button className="items-center justify-center  text-center font-onest h-auto px-5 py-4 bg-[#212121] text-white rounded-[8px]">
                 Get Started
-              </Link>
-            </Button>
-            <Button className="items-center justify-center text-center hover:bg-transparent h-auto px-5 py-4 shadow-none border border-[#0E0E0E]/25 bg-transparent text-black rounded-[8px]">
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+              </Button>
+            </Link>
+
+            <Link href="/contact">
+              <Button className="items-center justify-center text-center hover:bg-transparent h-auto px-5 py-4 shadow-none border border-[#0E0E0E]/25 bg-transparent text-black rounded-[8px]">
+              Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </nav>

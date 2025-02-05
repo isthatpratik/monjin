@@ -61,8 +61,8 @@ const products = [
     title: "Monjin Suite",
     description: "Attract, engage & retain talent",
     imageSrc: "/assets/product-icons/monjin-suite.png",
-    bgImage: "/assets/product-icons/monjin-suite-bg.png", // New background image for Monjin Suite
-    hoverColor: "hover:bg-[#2E2F33]", // Custom hover color for Monjin Suite
+    bgImage: "/assets/product-icons/monjin-suite-bg.png", 
+    hoverColor: "hover:bg-[#2E2F33]", 
     titleColor: "text-gray-700",
     href: "/products/MonjinSuite",
   },
@@ -264,9 +264,11 @@ export function NavbarBlack() {
                 Contact Us
               </Button>
             </Link>
+            <Link href="https://uni.monjin.com" passHref>
             <Button className="rounded-[8px] font-onest bf-[#1B1B1B] font-normal text-[15px] px-6 py-2 h-auto">
               Get Started
             </Button>
+            </Link>
           </div>
         </div>
       </div>
