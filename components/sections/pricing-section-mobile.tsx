@@ -1,15 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/pricing-tabs";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import type { PricingProps } from "@/types/pricing";
+import Link from "next/link";
 
 export function PricingSectionMobile({
   title,
@@ -53,7 +50,8 @@ export function PricingSectionMobile({
             Annually
             {billingCycle === "annual" && (
               <span className="px-2 py-1 bg-[#D0F16C] border-black rounded-full text-black text-[8px] font-figtree leading-tight">
-                SAVE <br />UP TO 30%
+                SAVE <br />
+                UP TO 30%
               </span>
             )}
           </TabsTrigger>
@@ -171,9 +169,7 @@ export function PricingSectionMobile({
               <span className="font-figtree font-semibold inline-block px-3 py-1 rounded-full md:text-2xl text-sm bg-transparent border-2 border-[#9F8AFF] w-min">
                 {professional.name}
               </span>
-              <p className="text-[10px] font-figtree">
-                {professional.tagline}
-              </p>
+              <p className="text-[10px] font-figtree">{professional.tagline}</p>
             </div>
           </CardHeader>
           {/* Ensure the content area takes space even if empty */}
@@ -198,15 +194,14 @@ export function PricingSectionMobile({
       </div>
       <div className="text-center mt-8">
         {/* Contact Sales Button */}
-        <Button
-          onClick={() => alert("Redirecting to contact sales page")}
-          className="bg-black text-white hover:bg-gray-800 transition-all duration-300 rounded-[8px] h-12 w-full md:w-[40vw] lg:w-[20vw] font-figtree"
-        >
-          Contact Sales
-        </Button>
+        <Link href={"/Pricing"}>
+          <Button className="bg-black text-white hover:bg-gray-800 transition-all duration-300 rounded-[8px] h-12 w-full md:w-[40vw] lg:w-[20vw] font-figtree">
+            Contact Sales
+          </Button>
+        </Link>
       </div>
       <div className="mt-8 text-center text-sm font-figtree font-light space-y-2">
-      <p>* Plus applicable taxes</p>
+        <p>* Plus applicable taxes</p>
         <p>* Cancel your subscription anytime</p>
         <p>
           * Company registration details and email verification will be needed

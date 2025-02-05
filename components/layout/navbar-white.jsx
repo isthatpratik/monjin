@@ -253,17 +253,17 @@ export function NavbarWhite() {
           </NavigationMenu>
 
           <div className="flex items-center gap-4">
-            <Button
-              variant="outline"
-              className="rounded-[8px] border-white/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto hover:bg-black/30"
+            <Link
+              href="/contact"
+              className="w-full h-full flex items-center justify-center text-white"
             >
-              <Link
-                href="/contact"
-                className="w-full h-full flex items-center justify-center text-white"
+              <Button
+                variant="outline"
+                className="rounded-[8px] border-white/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto hover:bg-black/30"
               >
                 Contact Us
-              </Link>
-            </Button>
+              </Button>
+            </Link>
             <Button className="rounded-[8px] font-onest bg-[#D0F16C] text-black hover:bg-[#D0F16C]/70 transition-all duration-200 font-normal text-[15px] px-6 py-2 h-auto">
               Get Started
             </Button>

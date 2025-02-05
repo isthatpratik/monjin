@@ -16,8 +16,6 @@ export default function MonjinSuitePricing() {
         { name: "Basics Unlimited" },
         { name: "OCOI Unlimited" },
       ],
-      ctaLabel: "Buy Now",
-      ctaAction: () => console.log("Lite plan selected"),
     },
     essential: {
       name: "ESSENTIAL",
@@ -31,8 +29,6 @@ export default function MonjinSuitePricing() {
         { name: "Assessed OW- 100 Interviews" },
         { name: "YCOI- 100 Interviews" },
       ],
-      ctaLabel: "Buy Now",
-      ctaAction: () => console.log("Essential plan selected"),
     },
     professional: {
       name: "PROFESSIONAL",
@@ -46,8 +42,6 @@ export default function MonjinSuitePricing() {
         { name: "Assessed OW- Unlimited" },
         { name: "YCOI Unlimited" },
       ],
-      ctaLabel: "Contact Sales",
-      ctaAction: () => console.log("Professional plan selected"),
     },
   };
 

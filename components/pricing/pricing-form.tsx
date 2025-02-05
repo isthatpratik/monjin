@@ -142,7 +142,7 @@ export default function PricingForm() {
       setIsLoading(true);
       setResponseMessage(null);
   
-      fetch("/api/pricing", {
+      fetch("/api/pricing-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

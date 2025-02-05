@@ -196,8 +196,8 @@ export function PricingSection({
       </div>
 
       <div className="mt-12 pt-6 text-center">
-        <Link href={'/pricing'}>
-        <Button className="bg-[#1B1B1B] text-white font-onest  hover:bg-[#1B1B1B]/80 transition-all duration-300 rounded-[8px] py-8 px-20">
+        <Link href={'/Pricing'}>
+        <Button className="bg-[#1B1B1B] text-white font-onest hover:bg-[#1B1B1B]/80 transition-all duration-300 rounded-[8px] py-8 px-20">
           Contact Sales
         </Button>
         </Link>
@@ -212,7 +212,6 @@ export function PricingSection({
         </p>
       </div>
 
-      {/* Contact Sales Button */}
     </section>
   );
 }

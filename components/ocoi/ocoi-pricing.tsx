@@ -18,8 +18,6 @@ export default function OcoiPricing() {
         { name: "JD Based OCOI (Optional add-on)" },
         { name: "Publish your Jobs to Multiple Portals (Limited)" },
       ],
-      ctaLabel: "Buy Now",
-      ctaAction: () => console.log("Lite plan selected"),
     },
     essential: {
       name: "ESSENTIAL",
@@ -33,8 +31,6 @@ export default function OcoiPricing() {
         { name: "Assessed OW- 100 Interviews" },
         { name: "YCOI- 100 Interviews" },
       ],
-      ctaLabel: "Buy Now",
-      ctaAction: () => console.log("Essential plan selected"),
     },
     professional: {
       name: "PROFESSIONAL",
@@ -48,8 +44,6 @@ export default function OcoiPricing() {
         { name: "Assessed OW- Unlimited" },
         { name: "YCOI Unlimited" },
       ],
-      ctaLabel: "Contact Sales",
-      ctaAction: () => console.log("Professional plan selected"),
     },
   };
 

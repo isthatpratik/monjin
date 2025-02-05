@@ -19,8 +19,6 @@ export default function BasicsPricing() {
         { name: "Internal Share" },
         { name: "Job Postings" },
       ],
-      ctaLabel: "Buy Now",
-      ctaAction: () => console.log("Lite plan selected"),
     },
     essential: {
       name: "ESSENTIAL",
@@ -37,8 +35,6 @@ export default function BasicsPricing() {
         { name: "Code and Chat" },
         { name: "Screen Sharing" },
       ],
-      ctaLabel: "Buy Now",
-      ctaAction: () => console.log("Essential plan selected"),
     },
     professional: {
       name: "PROFESSIONAL",
@@ -51,8 +47,6 @@ export default function BasicsPricing() {
         { name: "Unlimited Job Postings" },
         { name: "Publish your Jobs to Multiple Portals (Unlimited)" },
       ],
-      ctaLabel: "Contact Sales",
-      ctaAction: () => console.log("Professional plan selected"),
     },
   };
 

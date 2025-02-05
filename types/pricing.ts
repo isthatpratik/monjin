@@ -8,8 +8,6 @@ export interface PricingFeature {
     monthlyPrice: any;
     annualPrice: any;
     features: PricingFeature[];
-    ctaLabel: string;
-    ctaAction?: () => void;
   }
   
   export interface PricingProps {

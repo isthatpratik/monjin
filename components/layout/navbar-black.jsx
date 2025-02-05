@@ -253,17 +253,17 @@ export function NavbarBlack() {
           </NavigationMenu>
 
           <div className="flex items-center gap-3">
-            <Button
-              variant="outline"
-              className="rounded-[8px] border-black/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto"
+            <Link
+              href="/contact"
+              className="w-full h-full flex items-center justify-center"
             >
-              <Link
-                href="/contact"
-                className="w-full h-full flex items-center justify-center"
+              <Button
+                variant="outline"
+                className="rounded-[8px] border-black/50 bg-transparent font-onest font-normal text-[15px] px-6 py-2 h-auto"
               >
                 Contact Us
-              </Link>
-            </Button>
+              </Button>
+            </Link>
             <Button className="rounded-[8px] font-onest bf-[#1B1B1B] font-normal text-[15px] px-6 py-2 h-auto">
               Get Started
             </Button>
