@@ -73,7 +73,7 @@ export default function CaseTwo() {
                 },
                 {
                   icon: "/assets/case-study/icons/7.png",
-                  title: "Lack of connectivityto global retailorganisations",
+                  title: "Lack of connectivityto global retail organisations",
                 },
               ].map((challenge, index) => (
                 <Card

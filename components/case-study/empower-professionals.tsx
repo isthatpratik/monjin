@@ -22,7 +22,7 @@ export default function CaseOne() {
       </div>
 
       <div className="min-h-screen bg-white lg:p-16 p-4 rounded-3xl my-6 lg:my-12">
-        <div className="mx-auto max-w-6xl space-y-16">
+        <div className="mx-auto max-w-6xl space-y-8">
           {/* Overview Section */}
           <Card className="overflow-hidden bg-[url('/assets/bg/case-study1-mobile.png')] lg:bg-[url('/assets/bg/casestudy1.png')] bg-cover bg-bottom rounded-[32px] shadow-none border">
             <CardContent className="lg:p-16 p-6">
@@ -63,10 +63,11 @@ export default function CaseOne() {
                   alt="Professional"
                   width={500}
                   height={100}
+                  quality={100}
                   className="relative z-10 rounded-lg object-contain"
                 />
               </div>
-              <div className="lg:w-full basis-2/5 order-1 lg:order-2 lg:hidden">
+              <div className="lg:w-full basis-2/5 order-1 lg:order-2 md:hidden">
                 <Image
                   src="/assets/bg/case-study-1-mobile.png"
                   alt="Professional"

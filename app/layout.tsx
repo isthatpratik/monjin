@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { Onest, Figtree } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 
 const onest = Onest({ subsets: ["latin"] });
 const figtree = Figtree({ subsets: ["latin"] });
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${onest.className} ${figtree.className}`}>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

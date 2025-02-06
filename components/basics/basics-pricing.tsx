@@ -9,8 +9,8 @@ export default function BasicsPricing() {
     lite: {
       name: "LITE",
       tagline: "Ideal for Small Teams",
-      monthlyPrice: "",
-      annualPrice: "",
+      monthlyPrice: '',
+      annualPrice: '',
       features: [
         { name: "Two way video interview" },
         { name: "Scheduling" },
@@ -23,8 +23,8 @@ export default function BasicsPricing() {
     essential: {
       name: "ESSENTIAL",
       tagline: "Ideal for Growing Teams",
-      monthlyPrice: "",
-      annualPrice: "",
+      monthlyPrice: '',
+      annualPrice: '',
       features: [
         { name: "Two way video interview" },
         { name: "Scheduling" },

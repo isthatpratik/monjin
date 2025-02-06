@@ -11,7 +11,7 @@ import {
   Mail,
   Briefcase,
   Flag,
-  Upload,
+  Link,
 } from "lucide-react";
 import {
   Form,
@@ -31,34 +31,100 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState } from "react";
 import { Label } from "../ui/label";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+
+interface Country {
+  code: string;
+  flag: string;
+  dialCode: string;
+}
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
   countryCode: z.string().min(1, "Please select a country code"),
-  mobileNumber: z.string().min(10, "Please enter a mobile number"),
+  mobile: z.string().min(10, "Please enter a mobile number"),
   workMail: z.string().email("Please enter a valid email address"),
   position: z.string().min(1, "Please select a position"),
-  cv: z.any().optional(),
+  cvUrl: z.any().optional(),
 });
 
 export default function JobApplicationForm() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState<string | null>(null);
+  const [countries, setCountries] = useState<Country[]>([]);
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+      setIsLoading(true);
+      setResponseMessage(null);
+  
+      fetch("/api/job-application", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setResponseMessage(data.message);
+  
+          if (data.success) {
+            form.reset();
+          }
+        })
+        .catch(() => {
+          setResponseMessage("Something went wrong. Please try again.");
+        })
+        .finally(() => setIsLoading(false));
+    }
+
+  useEffect(() => {
+    async function fetchCountries() {
+      try {
+        const res = await fetch("https://restcountries.com/v3.1/all");
+        const data: Array<{
+          cca2: string;
+          flags: { svg: string };
+          idd?: { root?: string; suffixes?: string[] };
+        }> = await res.json();
+
+        const formattedCountries = data.map((country) => ({
+          code: country.cca2,
+          flag: country.flags.svg,
+          dialCode: country.idd?.root
+            ? `${country.idd.root}${
+                country.idd.suffixes ? country.idd.suffixes[0] : ""
+              }`
+            : "",
+        }));
+
+        setCountries(
+          formattedCountries.sort((a: Country, b: Country) =>
+            a.code.localeCompare(b.code)
+          )
+        );
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      }
+    }
+
+    fetchCountries();
+  }, []);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: "",
-      mobileNumber: "",
+      countryCode: "IN",
+      mobile: "",
       workMail: "",
       position: "",
-      cv: null,
+      cvUrl: null,
     },
   });
-  const [file, setFile] = useState<File | null>(null);
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
 
   return (
     <div className="p-4 lg:p-8 lg:my-12">
@@ -124,7 +190,7 @@ export default function JobApplicationForm() {
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-6"
+                  className="space-y-4"
                 >
                   <FormField
                     control={form.control}
@@ -149,39 +215,85 @@ export default function JobApplicationForm() {
 
                   <FormItem>
                     <Label>Mobile Number</Label>
-                    <div className="grid lg:grid-cols-[100px_1fr] grid-cols-[90px_1fr] gap-3">
+                    <div className="grid grid-cols-[0.2fr_1fr] lg:grid-cols-[140px_1fr] gap-3">
                       <FormField
                         control={form.control}
                         name="countryCode"
-                        render={({ field }) => (
-                          <FormItem>
-                            <Select
-                              onValueChange={field.onChange}
-                              defaultValue={field.value}
-                            >
-                              <FormControl>
-                                <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px]">
-                                  <SelectValue placeholder="+91" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                <SelectItem value="IN">IN +91</SelectItem>
-                                <SelectItem value="US">US +1</SelectItem>
-                                <SelectItem value="UK">UK +44</SelectItem>
-                              </SelectContent>
-                            </Select>
-                          </FormItem>
-                        )}
+                        render={({ field }) => {
+                          const selectedCountry =
+                            countries.find((c) => c.code === field.value) ||
+                            countries[0];
+
+                          return (
+                            <FormItem>
+                              <Select
+                                onValueChange={field.onChange}
+                                defaultValue={field.value || countries[0]?.code}
+                              >
+                                <FormControl>
+                                  <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm">
+                                    {selectedCountry ? (
+                                      <div className="flex items-center gap-2">
+                                        <Image
+                                          src={selectedCountry.flag}
+                                          alt={selectedCountry.code}
+                                          width={24}
+                                          height={16}
+                                          className="hidden lg:block"
+                                        />
+                                        <span
+                                          className={
+                                            field.value
+                                              ? "text-black"
+                                              : "text-gray-400"
+                                          }
+                                        >
+                                          {selectedCountry.code}{" "}
+                                          {selectedCountry.dialCode}
+                                        </span>
+                                      </div>
+                                    ) : (
+                                      <span className="text-gray-400 text-sm">
+                                        Select Country
+                                      </span>
+                                    )}
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  {countries.map((country) => (
+                                    <SelectItem
+                                      key={country.code}
+                                      value={country.code}
+                                      className="p-4"
+                                    >
+                                      <div className="flex items-center gap-2">
+                                        <Image
+                                          src={country.flag}
+                                          alt={country.code}
+                                          width={24}
+                                          height={16}
+                                        />
+                                        <span>
+                                          {country.code} {country.dialCode}
+                                        </span>
+                                      </div>
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                            </FormItem>
+                          );
+                        }}
                       />
                       <FormField
                         control={form.control}
-                        name="mobileNumber"
+                        name="mobile"
                         render={({ field }) => (
                           <FormItem>
                             <FormControl>
                               <Input
                                 placeholder="Enter your mobile number"
-                                className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px]"
+                                className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm"
                                 {...field}
                               />
                             </FormControl>
@@ -249,43 +361,19 @@ export default function JobApplicationForm() {
                   />
                   <FormField
                     control={form.control}
-                    name="cv"
-                    render={({ field: { onChange, ...rest } }) => (
+                    name="cvUrl"
+                    render={({ field }) => (
                       <FormItem>
-                        <FormLabel>CV/Resume</FormLabel>
+                        <FormLabel>CV</FormLabel>
                         <FormControl>
-                          <div className="flex w-full items-start gap-1.5">
-                            <Label
-                              htmlFor="cv"
-                              className="sr-only w-full text-[#94A2A4]"
-                            >
-                              Upload CV
-                            </Label>
+                          <div className="relative">
+                            <Link className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
                             <Input
-                              id="cv"
-                              type="file"
-                              accept=".pdf,.doc,.docx"
-                              className="hidden w-full"
-                              onChange={(e) => {
-                                const file = e.target.files?.[0];
-                                if (file) {
-                                  setFile(file);
-                                  onChange(file);
-                                }
-                              }}
-                              {...rest}
+                              placeholder="Enter public URL of CV"
+                              type="url"
+                              className="bg-[#F5F9FA] border-[#D8E3E5] pl-10 py-6"
+                              {...field}
                             />
-                            <Button
-                              type="button"
-                              variant="outline"
-                              className="w-full bg-[#F5F9FA] border-[#D8E3E5] py-6"
-                              onClick={() =>
-                                document.getElementById("cv")?.click()
-                              }
-                            >
-                              <Upload className="mr-2 h-5 w-5 text-[#94A2A4] items-start" />
-                              {file ? file.name : "Upload Your CV"}
-                            </Button>
                           </div>
                         </FormControl>
                         <FormMessage />
@@ -297,10 +385,15 @@ export default function JobApplicationForm() {
                     type="submit"
                     className="w-full bg-gray-900 text-white hover:bg-gray-800 py-6"
                   >
-                    Submit Enquiry
+                    {isLoading ? "Sending..." : "Submit Enquiry"}
                   </Button>
                 </form>
               </Form>
+              {responseMessage && (
+              <div className="mt-4 text-center text-sm text-gray-500">
+                {responseMessage}
+              </div>
+            )}
             </CardContent>
           </Card>
         </div>

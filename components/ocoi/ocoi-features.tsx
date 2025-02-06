@@ -255,8 +255,9 @@ export default function OcoiFeatures() {
                       className="w-full h-auto object-contain aspect-[4/3]"
                       height={1000}
                       width={1000}
-                      quality={60}
+                      quality={50}
                       priority
+                      loading="eager"
                     />
                   </div>
                 </div>

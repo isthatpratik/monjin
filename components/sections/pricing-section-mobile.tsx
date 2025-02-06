@@ -18,9 +18,11 @@ export function PricingSectionMobile({
     "monthly"
   );
 
-  const getPrice = (monthly: number, annual: number) => {
+  const getPrice = (monthly: string, annual: string) => {
     return billingCycle === "monthly" ? monthly : annual;
   };
+
+  const showPriceDetails = (price: string) => price !== "";
 
   return (
     <section className="py-4 lg:px-4 md:px-2 px-2 w-full lg:max-w-7xl lg:mx-auto">
@@ -88,12 +90,12 @@ export function PricingSectionMobile({
                 ))}
               </ul>
             ) : (
-              // Optional placeholder for empty features
               <div className="h-full flex items-center justify-center text-gray-400">
                 No features available
               </div>
             )}
             <div className="text-black flex flex-col items-cend justify-end">
+            {showPriceDetails(getPrice(lite.monthlyPrice, lite.annualPrice)) && (
               <div className="flex items-center justify-center">
                 <span className="text-3xl font-figtree font-bold">
                   <sup className="text-sm font-figtree font-bold">$</sup>
@@ -101,6 +103,7 @@ export function PricingSectionMobile({
                 </span>
                 <span className="ml-2 text-[10px] text-gray-800">/ mo</span>
               </div>
+            )}
               <p className="text-[10px] text-center text-black mt-2">
                 Per month per user, <br />
                 billed {billingCycle === "monthly" ? "monthly" : "annually"}
@@ -139,6 +142,7 @@ export function PricingSectionMobile({
               ))}
             </ul>
             <div className="text-white flex flex-col items-cend justify-end">
+            {showPriceDetails(getPrice(lite.monthlyPrice, lite.annualPrice)) && (
               <div className="flex items-center justify-center">
                 <span className="text-3xl font-figtree font-bold">
                   <sup className="text-sm font-figtree font-bold">$</sup>
@@ -146,6 +150,7 @@ export function PricingSectionMobile({
                 </span>
                 <span className="ml-2 text-[10px] text-white">/ mo</span>
               </div>
+            )}
               <p className="text-[10px] text-center flex items-end text-white mt-2">
                 Per month per user, <br />
                 billed {billingCycle === "monthly" ? "monthly" : "annually"}

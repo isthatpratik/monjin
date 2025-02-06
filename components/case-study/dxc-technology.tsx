@@ -72,7 +72,7 @@ export default function CaseFour() {
                 {
                   icon: "/assets/case-study/icons/13.png",
                   title:
-                    "Delayed interviews due to unavailability of interview pane",
+                    "Delayed interviews due to unavailability of interview panel",
                 },
                 {
                   icon: "/assets/case-study/icons/14.png",

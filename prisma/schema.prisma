@@ -8,24 +8,36 @@ datasource db {
 }
 
 model Contact {
+  id          Int    @id @default(autoincrement())
   email       String
   message     String
   countryCode String
   fullName    String
   mobile      String
-  id          Int    @id @default(autoincrement())
+  createdAt   DateTime @default(now())
 }
 
 model PricingForm {
   id               String   @id @default(uuid())
+  email            String   @unique
   fullName         String
   countryCode      String
   mobile           String
   organization     String
   jobTitle         String
-  email            String   @unique
   numberOfHires    String
   productSelection String
   message          String
   createdAt        DateTime @default(now())
+}
+
+model JobApplication {
+  id          String   @id @default(uuid())
+  fullName    String
+  countryCode String
+  mobile      String
+  workMail    String   @unique
+  position    String
+  cvUrl       String?  
+  createdAt   DateTime @default(now())
 }

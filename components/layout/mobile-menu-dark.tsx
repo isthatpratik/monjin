@@ -67,7 +67,7 @@ export function MobileMenuDark() {
             Interviewer
           </Link>
           <div className="space-y-4 flex flex-col w-fit">
-            <Link href="https://uni.monjin.com" passHref>
+            <Link href="https://uni.monjin.com/public/organization/registration" passHref>
               <Button className="items-center justify-center  text-center font-onest h-auto px-5 py-4 bg-[#212121] text-white rounded-[8px]">
                 Get Started
               </Button>

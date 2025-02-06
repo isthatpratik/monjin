@@ -44,7 +44,7 @@ export default function About() {
         <Image
           alt="gradient-bg"
           src={"/assets/about/about-bg.jpg"}
-          quality={100}
+          quality={60}
           fill
           priority
           className="object-cover object-top xl:-translate-y-[300px] lg:-translate-y-[200px]"
@@ -65,7 +65,7 @@ export default function About() {
         <Image
           alt="gradient-bg"
           src={"/assets/about/about-bg-mobile.jpg"}
-          quality={100}
+          quality={60}
           fill
           priority
           className="object-cover object-top md:-translate-y-[400px]"

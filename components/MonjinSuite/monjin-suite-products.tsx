@@ -138,7 +138,7 @@ const MonjinSuiteProducts = () => {
           </p>
         </div>
         <div>
-          <Link href="https://uni.monjin.com" passHref>
+          <Link href="https://uni.monjin.com/public/organization/registration" passHref>
             <Button className="bg-[#ffffff] text-black rounded-[8px] w-64 h-16 hidden lg:block font-onest font-normal text-xl py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
               Start Exploring
             </Button>

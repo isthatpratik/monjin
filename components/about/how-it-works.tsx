@@ -12,10 +12,10 @@ export default function HowItWorks() {
         How It Works
       </h2>
 
-      <div className="grid gap-16 lg:gap-24">
+      <div className="grid gap-8">
         {/* First Section */}
-        <div className={cn("grid lg:grid-cols-2 grid-cols-1 items-center gap-4")}>
-          <div className="relative aspect-video lg:aspect-[4/3]">
+        <div className={cn("grid lg:grid-cols-2 grid-cols-1 items-center")}>
+          <div className="relative aspect-[4/3] lg:aspect-[4/3]">
             <Image
               src="/assets/about/how-1.png"
               alt="Platform interface showing code and user profiles"

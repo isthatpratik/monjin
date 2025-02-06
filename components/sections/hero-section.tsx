@@ -20,7 +20,7 @@ export const HeroSection = () => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[78px] max-w-full lg:max-w-xl text-white font-onest font-semibold tracking-tighter leading-tight">
         AI-Powered Talent Intelligence with Human Precision
         </h1>
-        <p className="text-lg font-figtree font-light text-gray-300 max-w-xs lg:max-w-md">
+        <p className="text-lg text-center lg:text-left font-figtree font-light text-gray-300 text-balance lg:max-w-md">
         LinkedIn tells you who they are, Monjin tells you how they are.
         </p>
         <div className="hidden lg:block">

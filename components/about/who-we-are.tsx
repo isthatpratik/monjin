@@ -3,7 +3,7 @@ import React from "react";
 
 const WhoWeAre = () => {
   return (
-    <section className="w-full h-auto px-4 max-w-screen-2xl">
+    <section className="w-full h-auto px-4 lg:max-w-screen-2xl">
       <div className="hidden h-full mx-8 lg:flex flex-row gap-12 items-start justify-around xl:my-10 lg:my-8 my-4 bg-white p-12 rounded-[32px]">
         <div className="flex flex-col items-center justify-center space-y-4 pl-12">
           <div className="flex flex-row items-center justify-center">

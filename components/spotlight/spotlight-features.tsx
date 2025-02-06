@@ -238,8 +238,9 @@ export default function SpotlightFeatures() {
                       className="w-auto h-auto object-contain aspect-[4/3]"
                       height={900}
                       width={900}
-                      quality={60}
+                      quality={50}
                       priority
+                      loading="eager"
                     />
                   </div>
                 </div>

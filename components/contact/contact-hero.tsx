@@ -49,35 +49,37 @@ export default function ContactHero() {
   const [countries, setCountries] = useState<Country[]>([]);
 
   useEffect(() => {
-      async function fetchCountries() {
-        try {
-          const res = await fetch("https://restcountries.com/v3.1/all");
-          const data: Array<{
-            cca2: string;
-            flags: { svg: string };
-            idd?: { root?: string; suffixes?: string[] };
-          }> = await res.json();
-  
-          const formattedCountries = data.map((country) => ({
-            code: country.cca2,
-            flag: country.flags.svg,
-            dialCode: country.idd?.root
-              ? `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ""}`
-              : "",
-          }));
-  
-          setCountries(
-            formattedCountries.sort((a: Country, b: Country) =>
-              a.code.localeCompare(b.code)
-            )
-          );
-        } catch (error) {
-          console.error("Error fetching countries:", error);
-        }
+    async function fetchCountries() {
+      try {
+        const res = await fetch("https://restcountries.com/v3.1/all");
+        const data: Array<{
+          cca2: string;
+          flags: { svg: string };
+          idd?: { root?: string; suffixes?: string[] };
+        }> = await res.json();
+
+        const formattedCountries = data.map((country) => ({
+          code: country.cca2,
+          flag: country.flags.svg,
+          dialCode: country.idd?.root
+            ? `${country.idd.root}${
+                country.idd.suffixes ? country.idd.suffixes[0] : ""
+              }`
+            : "",
+        }));
+
+        setCountries(
+          formattedCountries.sort((a: Country, b: Country) =>
+            a.code.localeCompare(b.code)
+          )
+        );
+      } catch (error) {
+        console.error("Error fetching countries:", error);
       }
-  
-      fetchCountries();
-    }, []);
+    }
+
+    fetchCountries();
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -164,95 +166,95 @@ export default function ContactHero() {
                 />
 
                 <FormItem>
-                                  <Label>Mobile Number</Label>
-                                  <div className="grid grid-cols-[0.2fr_1fr] lg:grid-cols-[140px_1fr] gap-3">
-                                    <FormField
-                                      control={form.control}
-                                      name="countryCode"
-                                      render={({ field }) => {
-                                        const selectedCountry =
-                                          countries.find((c) => c.code === field.value) ||
-                                          countries[0];
-                
-                                        return (
-                                          <FormItem>
-                                            <Select
-                                              onValueChange={field.onChange}
-                                              defaultValue={field.value || countries[0]?.code}
-                                            >
-                                              <FormControl>
-                                                <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm">
-                                                  {selectedCountry ? (
-                                                    <div className="flex items-center gap-2">
-                                                      <Image
-                                                        src={selectedCountry.flag}
-                                                        alt={selectedCountry.code}
-                                                        width={24}
-                                                        height={16}
-                                                        className="hidden lg:block" 
-                                                      />
-                                                      <span
-                                                        className={
-                                                          field.value
-                                                            ? "text-black"
-                                                            : "text-gray-400"
-                                                        }
-                                                      >
-                                                        {selectedCountry.code}{" "}
-                                                        {selectedCountry.dialCode}
-                                                      </span>
-                                                    </div>
-                                                  ) : (
-                                                    <span className="text-gray-400 text-sm">
-                                                      Select Country
-                                                    </span>
-                                                  )}
-                                                </SelectTrigger>
-                                              </FormControl>
-                                              <SelectContent>
-                                                {countries.map((country) => (
-                                                  <SelectItem
-                                                    key={country.code}
-                                                    value={country.code}
-                                                    className="p-4"
-                                                  >
-                                                    <div className="flex items-center gap-2">
-                                                      <Image
-                                                        src={country.flag}
-                                                        alt={country.code}
-                                                        width={24}
-                                                        height={16}
-                                                      />
-                                                      <span>
-                                                        {country.code} {country.dialCode}
-                                                      </span>
-                                                    </div>
-                                                  </SelectItem>
-                                                ))}
-                                              </SelectContent>
-                                            </Select>
-                                          </FormItem>
-                                        );
-                                      }}
-                                    />
-                                    <FormField
-                                      control={form.control}
-                                      name="mobile"
-                                      render={({ field }) => (
-                                        <FormItem>
-                                          <FormControl>
-                                            <Input
-                                              placeholder="Enter your mobile number"
-                                              className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm"
-                                              {...field}
-                                            />
-                                          </FormControl>
-                                          <FormMessage />
-                                        </FormItem>
-                                      )}
-                                    />
-                                  </div>
-                                </FormItem>
+                  <Label>Mobile Number</Label>
+                  <div className="grid grid-cols-[0.2fr_1fr] lg:grid-cols-[140px_1fr] gap-3">
+                    <FormField
+                      control={form.control}
+                      name="countryCode"
+                      render={({ field }) => {
+                        const selectedCountry =
+                          countries.find((c) => c.code === field.value) ||
+                          countries[0];
+
+                        return (
+                          <FormItem>
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue={field.value || countries[0]?.code}
+                            >
+                              <FormControl>
+                                <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm">
+                                  {selectedCountry ? (
+                                    <div className="flex items-center gap-2">
+                                      <Image
+                                        src={selectedCountry.flag}
+                                        alt={selectedCountry.code}
+                                        width={24}
+                                        height={16}
+                                        className="hidden lg:block"
+                                      />
+                                      <span
+                                        className={
+                                          field.value
+                                            ? "text-black"
+                                            : "text-gray-400"
+                                        }
+                                      >
+                                        {selectedCountry.code}{" "}
+                                        {selectedCountry.dialCode}
+                                      </span>
+                                    </div>
+                                  ) : (
+                                    <span className="text-gray-400 text-sm">
+                                      Select Country
+                                    </span>
+                                  )}
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {countries.map((country) => (
+                                  <SelectItem
+                                    key={country.code}
+                                    value={country.code}
+                                    className="p-4"
+                                  >
+                                    <div className="flex items-center gap-2">
+                                      <Image
+                                        src={country.flag}
+                                        alt={country.code}
+                                        width={24}
+                                        height={16}
+                                      />
+                                      <span>
+                                        {country.code} {country.dialCode}
+                                      </span>
+                                    </div>
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          </FormItem>
+                        );
+                      }}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="mobile"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormControl>
+                            <Input
+                              placeholder="Enter your mobile number"
+                              className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                </FormItem>
 
                 <FormField
                   control={form.control}
