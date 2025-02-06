@@ -9,8 +9,8 @@ export default function OcoiPricing() {
     lite: {
       name: "LITE",
       tagline: "Ideal for Small Teams",
-      monthlyPrice: 66,
-      annualPrice: 99,
+      monthlyPrice: '',
+      annualPrice: '',
       features: [
         { name: "View Monjin Expert assessed interviews" },
         { name: "Rating and Feedback" },
@@ -22,8 +22,8 @@ export default function OcoiPricing() {
     essential: {
       name: "ESSENTIAL",
       tagline: "Ideal for Growing Teams",
-      monthlyPrice: 99,
-      annualPrice: 69,
+      monthlyPrice: '',
+      annualPrice: '',
       features: [
         { name: "Spotlight Unlimited" },
         { name: "Basics Unlimited" },

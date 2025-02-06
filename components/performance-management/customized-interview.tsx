@@ -35,9 +35,11 @@ export default function CustomizedInterview() {
             </p>
           </div>
           <div className=" text-center flex justify-center md:justify-start pt-4">
-            <Button className="px-8 py-7 text-lg rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-white hover:shadow-monjin transition-all duration-300">
-              Dive In
-            </Button>
+            <Link href={"/Pricing"}>
+              <Button className="px-8 py-7 text-lg rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-white transition-all duration-300">
+                Dive In
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -67,7 +69,7 @@ export default function CustomizedInterview() {
         </p>
         <div className=" text-center flex justify-center md:justify-start pt-4">
           <Link href={"/Pricing"}>
-            <Button className="flex-1 px-8 py-7 text-lg rounded-[8px] font-Onest bg-[#1B1B1B] font-normal text-white hover:shadow-monjin transition-all duration-300">
+            <Button className="flex-1 px-8 py-7 text-lg rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-white transition-all duration-300">
               Dive In
             </Button>
           </Link>

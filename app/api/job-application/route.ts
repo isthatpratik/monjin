@@ -43,7 +43,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "Your message has been sent!",
+      message: "Application sent successfully!",
     });
   } catch (error) {
     console.error("Database Error:", error);

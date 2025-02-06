@@ -9,8 +9,8 @@ export default function SpotlightPricing() {
     lite: {
       name: "LITE",
       tagline: "Ideal for Small Teams",
-      monthlyPrice: 409,
-      annualPrice: 649,
+      monthlyPrice: '',
+      annualPrice: '',
       features: [
         { name: "Spotlight Unlimited" },
         { name: "Basics Unlimited" },
@@ -20,8 +20,8 @@ export default function SpotlightPricing() {
     essential: {
       name: "ESSENTIAL",
       tagline: "Ideal for Growing Teams",
-      monthlyPrice: 49,
-      annualPrice: 35,
+      monthlyPrice: '',
+      annualPrice: '',
       features: [
         { name: "Spotlight Unlimited" },
         { name: "Basics Unlimited" },
@@ -33,8 +33,8 @@ export default function SpotlightPricing() {
     professional: {
       name: "PROFESSIONAL",
       tagline: "Made for Enterprises",
-      monthlyPrice: '99',
-      annualPrice: '69',
+      monthlyPrice: '',
+      annualPrice: '',
       features: [
         { name: "Spotlight Unlimited" },
         { name: "Basics Unlimited" },

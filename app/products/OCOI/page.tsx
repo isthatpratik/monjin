@@ -17,11 +17,9 @@ const OCOI = () => {
       <NavbarBlack />
       <MobileNavbarDark />
 
-      <motion.div
+      <div
         className="absolute inset-0 -z-50 w-full h-full"
-        initial={{ opacity: 0, translateY: -100 }}
-        animate={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 1, type: "spring", stiffness: 80, damping: 20 }}
+        
       >
         <div className="lg:block w-full h-full">
           <Image
@@ -45,7 +43,7 @@ const OCOI = () => {
             className="background-mobile object-cover object-top"
           />
         </div>
-      </motion.div>
+      </div>
       
       <motion.div
         initial={{ opacity: 0, y: 50 }}

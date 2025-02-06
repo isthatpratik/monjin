@@ -17,11 +17,9 @@ const YCOI = () => {
       <NavbarBlack />
       <MobileNavbarDark />
 
-      <motion.div
+      <div
         className="absolute inset-0 -z-50 w-full h-full"
-        initial={{ opacity: 0, translateY: -100 }}
-        animate={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 1 }}
+        
       >
         <div className="hidden md:block w-full h-full">
           <Image
@@ -43,7 +41,7 @@ const YCOI = () => {
             className="background-mobile object-cover object-top -translate-y-[250px]"
           />
         </div>
-      </motion.div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
