@@ -139,7 +139,7 @@ const MonjinSuiteProducts = () => {
         </div>
         <div>
           <Link href="https://uni.monjin.com/public/organization/registration" passHref>
-            <Button className="bg-[#ffffff] text-black rounded-[8px] w-64 h-16 hidden lg:block font-onest font-normal text-xl py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
+            <Button className="bg-[#ffffff] text-black rounded-[8px] w-64 h-16 hidden lg:block font-onest font-normal text-sm py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
               Start Exploring
             </Button>
           </Link>
@@ -155,7 +155,7 @@ const MonjinSuiteProducts = () => {
 
       <div className="flex items-center justify-center lg:hidden py-2 mb-6 px-6">
         <Link href="https://uni.monjin.com" passHref>
-          <Button className="flex-1 bg-[#ffffff] text-black rounded-[8px] w-64 h-16 font-onest font-normal text-xl py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
+          <Button className="flex-1 bg-[#ffffff] text-black rounded-[8px] w-64 h-16 font-onest font-normal text-sm py-2 hover:bg-gray-200 hover:shadow-monjin transition-all duration-300 ease-in-out">
             Start Exploring
           </Button>
         </Link>

@@ -1,9 +1,5 @@
 "use client"
 
-import { Search } from "lucide-react"
-import { Input } from "../ui/input"
-import { Button } from "@/components/ui/button"
-
 export default function SupportHero() {
   return (
     <div
@@ -23,7 +19,7 @@ export default function SupportHero() {
             Browse through our carefully curated FAQs to quickly find detailed, easy-to-understand information designed to resolve your queries and provide <br />seamless support.
           </h2>
 
-          <div className="max-w-2xl mx-auto mt-8 lg:pt-20 pt-4">
+          {/* <div className="max-w-2xl mx-auto mt-8 lg:pt-20 pt-4">
             <div className="relative">
               <Input
                 type="text"
@@ -35,7 +31,7 @@ export default function SupportHero() {
                 Search
               </Button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

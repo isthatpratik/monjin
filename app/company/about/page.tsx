@@ -20,7 +20,6 @@ import Quote from "@/components/culture/quote";
 import TeamSection from "@/components/team/team-section";
 import CareersHero from "@/components/careers/careers-hero-section";
 import WhyChooseMonjin from "@/components/careers/why-choose-monjin";
-import CareerOpportunities from "@/components/careers/career-opportunities";
 import JobApplicationForm from "@/components/careers/apply";
 import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
 import AboutHeroMobile from "@/components/about/about-hero-mobile";
@@ -153,7 +152,6 @@ export default function About() {
           <TabsContent value="careers">
             <CareersHero />
             <WhyChooseMonjin />
-            <CareerOpportunities />
             <JobApplicationForm />
           </TabsContent>
         </Tabs>

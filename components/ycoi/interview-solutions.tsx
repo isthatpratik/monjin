@@ -66,8 +66,8 @@ export default function InterviewSolutions() {
           that drive better hiring outcomes.
         </p>
         <div className=" text-center flex justify-center md:justify-start pt-4">
-          <Link href={"/Pricing"}>
-            <Button className="flex-1 px-8 py-7 text-lg rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-white hover:shadow-monjin transition-all duration-300">
+          <Link href={"/Pricing"} className="w-full lg:w-fit md:w-fit">
+            <Button className="w-full px-6 py-3 text-sm rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-white hover:shadow-monjin transition-all duration-300">
               Dive In Now
             </Button>
           </Link>

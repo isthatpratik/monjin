@@ -238,15 +238,15 @@ export function Footer() {
         <div className="text-sm text-white mb-8">
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-start gap-4">
             <div className="flex lg:flex-row md:flex-row lg:justify-start justify-center items-center lg:items-start md:items-start gap-1 lg:w-1/2 w-full">
-              <Link href="#" className="hover:text-white hover:underline">
+              <Link href="/terms-of-services" className="hover:text-white hover:underline">
                 Terms of Service
               </Link>
               -
-              <Link href="#" className="hover:text-white hover:underline">
+              <Link href="/privacy-policy" className="hover:text-white hover:underline">
                 Privacy Notice
               </Link>
               -
-              <Link href="#" className="hover:text-white hover:underline">
+              <Link href="/gdpr" className="hover:text-white hover:underline">
                 GDPR
               </Link>
             </div>

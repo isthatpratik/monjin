@@ -50,12 +50,12 @@ export function PricingSectionMobile({
             value="annual"
           >
             Annually
-            {billingCycle === "annual" && (
+            
               <span className="px-2 py-1 bg-[#D0F16C] border-black rounded-full text-black text-[8px] font-figtree leading-tight">
                 SAVE <br />
                 UP TO 30%
               </span>
-            )}
+            
           </TabsTrigger>
         </TabsList>
       </Tabs>

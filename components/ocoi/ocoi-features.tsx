@@ -151,7 +151,7 @@ export default function OcoiFeatures() {
   }, [activeTab]);
 
   return (
-    <div className="bg-white rounded-3xl lg:mx-12 mx-auto lg:my-10 border">
+    <div className="bg-white rounded-3xl lg:mx-12 mx-auto lg:my-10 border mt-4">
       <div className="lg:max-w-7xl max-w-full mx-auto px-1 md:px-2 lg:px-8 py-12">
         <h1 className="text-2xl lg:text-5xl md:text-3xl font-onest font-semibold text-center lg:mb-12 mb-6 tracking-tighter text-balance leading-normal">
           Simplify Hiring with Curated Interviews, Instant Feedback, and Easy

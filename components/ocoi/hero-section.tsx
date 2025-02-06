@@ -29,8 +29,8 @@ export default function OcoiHeroSection() {
               className="object-contain  w-full md:w-[50vw] h-full"
             />
           </div>
-          <Link href="https://uni.monjin.com/public/organization/registration" passHref>
-            <Button className="bg-black lg:flex flex-1 w-full md:w-fit lg:w-fit text-white hover:bg-gray-800 rounded-[8px] px-6 py-3">
+          <Link href="https://uni.monjin.com/public/organization/registration" passHref className="w-full lg:w-fit md:w-fit">
+            <Button className="bg-black lg:flex flex-1 w-full md:w-fit lg:w-fit text-white hover:bg-gray-800 rounded-[8px] px-6 py-3 lg:h-12">
               15 Days FREE!
             </Button>
           </Link>

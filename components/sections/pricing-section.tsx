@@ -55,11 +55,9 @@ export function PricingSection({
             value="annual"
           >
             Annually
-            {billingCycle === "annual" && (
               <span className="px-2 py-1 bg-[#D0F16C] border-black rounded-full text-black text-xs whitespace-nowrap tracking-wider">
                 SAVE UPTO 30%
               </span>
-            )}
           </TabsTrigger>
         </TabsList>
       </Tabs>

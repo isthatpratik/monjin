@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AlwaysReady() {
   return (
-    <div className="flex flex-col items-center justify-center w-full mx-auto py-6 lg:py-16 lg:px-4 px-2 bg-white border rounded-[32px]">
+    <div className="flex flex-col items-center justify-center w-full mx-auto py-6 lg:py-16 lg:px-4 px-2 bg-white border rounded-[32px] mt-4">
       <div className="text-center mb-4">
         <h1 className="font-onest lg:text-5xl text-2xl tracking-tighter font-semibold lg:mb-4">
           Talent That&apos;s Always Ready

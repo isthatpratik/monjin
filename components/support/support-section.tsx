@@ -78,28 +78,28 @@ export default function SupportSection() {
   return (
     <div className="w-full max-w-7xl mx-auto lg:p-8 p-2 bg-[url('/assets/support/q&a-bg.jpg')] bg-cover bg-no-repeat object-top lg:rounded-[32px] rounded-2xl lg:px-8">
       <Tabs defaultValue="general" className="w-full h-full">
-        <TabsList className="w-full justify-around border-b-2 border-t-0 border-r-0 border-l-0 rounded-none lg:h-[48px] bg-transparent mt-8 overflow-x-auto h-[40px]">
+        <TabsList className="overflow-auto scrollbar-hide w-full justify-around border-b-2 border-t-0 border-r-0 border-l-0 rounded-none lg:h-[48px] bg-transparent mt-8 overflow-x-auto h-[40px]">
           <TabsTrigger
             value="general"
-            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF]"
+            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:border-b-2 data-[state=active]:text-[#795BFF]"
           >
             General
           </TabsTrigger>
           <TabsTrigger
             value="candidate"
-            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] data-[state=active]:border-b-2"
           >
             Candidate
           </TabsTrigger>
           <TabsTrigger
             value="interviewer"
-            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-base lg:text-3xl font-onest rounded-none data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] data-[state=active]:border-b-2"
           >
             Interviewer
           </TabsTrigger>
           <TabsTrigger
             value="employer"
-            className="text-base lg:text-3xl font-onest rounded-none  data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] "
+            className="text-base lg:text-3xl font-onest rounded-none  data-[state=active]:border-b-[#795BFF] data-[state=active]:text-[#795BFF] data-[state=active]:border-b-2"
           >
             Employer
           </TabsTrigger>

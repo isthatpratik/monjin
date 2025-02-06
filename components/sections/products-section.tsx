@@ -300,7 +300,7 @@ const ProductsSection = () => {
         </div>
       </div>
 
-      <div className="relative lg:mx-6 rounded-3xl flex flex-col gap-6 md:justify-between lg:bg-[url('/assets/monjin-suite-landing-bg.png')] bg-[url('/assets/monjin-suite-landing-mobile.jpg')] bg-cover bg-center h-auto lg:flex-row lg:mt-2 my-10">
+      <div className="lg:max-w-6xl items-center mx-auto lg:justify-center relative rounded-3xl flex flex-col gap-6 md:justify-between lg:bg-[url('/assets/monjin-suite-landing-bg.png')] bg-[url('/assets/monjin-suite-landing-mobile.jpg')] bg-cover bg-center h-auto lg:flex-row lg:mt-4 my-10">
         {/* Monjin Suite Section */}
         <div className="flex flex-col items-center lg:p-10 md:p-6 p-6 gap-4 lg:w-1/2 lg:items-start lg:justify-center text-center lg:text-left">
           {/* Logo and Title */}
@@ -335,7 +335,7 @@ const ProductsSection = () => {
 
           {/* Buttons */}
           <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3 p-2 justify-center lg:justify-normal">
-            <Link href={"/products/MonjinSuite"}>
+            <Link href={"/products/MonjinSuite"} className="w-full">
               <Button className="lg:bg-[#FFFFFF] lg:text-black text-white border bg-transparent border-white rounded-[8px] p-6 font-onest text-sm transition-all duration-300 ease-in-out lg:hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] lg:hover:bg-white">
                 Deep Dive In
               </Button>
