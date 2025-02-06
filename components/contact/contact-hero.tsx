@@ -23,7 +23,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "../ui/label";
-import { Toaster } from "@/components/ui/toaster";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+
+interface Country {
+  code: string;
+  flag: string;
+  dialCode: string;
+}
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -40,6 +47,38 @@ export default function ContactHero() {
   const [responseMessage, setResponseMessage] = React.useState<string | null>(
     null
   );
+  const [countries, setCountries] = useState<Country[]>([]);
+
+  useEffect(() => {
+      async function fetchCountries() {
+        try {
+          const res = await fetch("https://restcountries.com/v3.1/all");
+          const data: Array<{
+            cca2: string;
+            flags: { svg: string };
+            idd?: { root?: string; suffixes?: string[] };
+          }> = await res.json();
+  
+          const formattedCountries = data.map((country) => ({
+            code: country.cca2,
+            flag: country.flags.svg,
+            dialCode: country.idd?.root
+              ? `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ""}`
+              : "",
+          }));
+  
+          setCountries(
+            formattedCountries.sort((a: Country, b: Country) =>
+              a.code.localeCompare(b.code)
+            )
+          );
+        } catch (error) {
+          console.error("Error fetching countries:", error);
+        }
+      }
+  
+      fetchCountries();
+    }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -126,84 +165,95 @@ export default function ContactHero() {
                 />
 
                 <FormItem>
-                  <Label>Mobile Number</Label>
-                  <div className="grid lg:grid-cols-[120px_1fr] grid-cols-[90px_1fr] gap-3">
-                    <FormField
-                      control={form.control}
-                      name="countryCode"
-                      render={({ field }) => (
-                        <FormItem>
-                          <Select
-                            onValueChange={field.onChange}
-                            defaultValue={field.value}
-                          >
-                            <FormControl>
-                              <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm">
-                                <SelectValue placeholder="🇮🇳 +91" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="IN">🇮🇳 IN +91</SelectItem>
-                              <SelectItem value="US">🇺🇸 US +1</SelectItem>
-                              <SelectItem value="GB">🇬🇧 UK +44</SelectItem>
-                              <SelectItem value="CA">🇨🇦 CA +1</SelectItem>
-                              <SelectItem value="AU">🇦🇺 AU +61</SelectItem>
-                              <SelectItem value="DE">🇩🇪 DE +49</SelectItem>
-                              <SelectItem value="FR">🇫🇷 FR +33</SelectItem>
-                              <SelectItem value="IT">🇮🇹 IT +39</SelectItem>
-                              <SelectItem value="ES">🇪🇸 ES +34</SelectItem>
-                              <SelectItem value="MX">🇲🇽 MX +52</SelectItem>
-                              <SelectItem value="BR">🇧🇷 BR +55</SelectItem>
-                              <SelectItem value="ZA">🇿🇦 ZA +27</SelectItem>
-                              <SelectItem value="RU">🇷🇺 RU +7</SelectItem>
-                              <SelectItem value="CN">🇨🇳 CN +86</SelectItem>
-                              <SelectItem value="JP">🇯🇵 JP +81</SelectItem>
-                              <SelectItem value="NG">🇳🇬 NG +234</SelectItem>
-                              <SelectItem value="KR">🇰🇷 KR +82</SelectItem>
-                              <SelectItem value="SA">🇸🇦 SA +966</SelectItem>
-                              <SelectItem value="AE">🇦🇪 AE +971</SelectItem>
-                              <SelectItem value="EG">🇪🇬 EG +20</SelectItem>
-                              <SelectItem value="TR">🇹🇷 TR +90</SelectItem>
-                              <SelectItem value="ID">🇮🇩 ID +62</SelectItem>
-                              <SelectItem value="PH">🇵🇭 PH +63</SelectItem>
-                              <SelectItem value="SE">🇸🇪 SE +46</SelectItem>
-                              <SelectItem value="NO">🇳🇴 NO +47</SelectItem>
-                              <SelectItem value="FI">🇫🇮 FI +358</SelectItem>
-                              <SelectItem value="DK">🇩🇰 DK +45</SelectItem>
-                              <SelectItem value="NL">🇳🇱 NL +31</SelectItem>
-                              <SelectItem value="BE">🇧🇪 BE +32</SelectItem>
-                              <SelectItem value="CH">🇨🇭 CH +41</SelectItem>
-                              <SelectItem value="AT">🇦🇹 AT +43</SelectItem>
-                              <SelectItem value="PL">🇵🇱 PL +48</SelectItem>
-                              <SelectItem value="RO">🇷🇴 RO +40</SelectItem>
-                              <SelectItem value="GR">🇬🇷 GR +30</SelectItem>
-                              <SelectItem value="TH">🇹🇭 TH +66</SelectItem>
-                              <SelectItem value="VN">🇻🇳 VN +84</SelectItem>
-                              <SelectItem value="MY">🇲🇾 MY +60</SelectItem>
-                              <SelectItem value="PK">🇵🇰 PK +92</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="mobile"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormControl>
-                            <Input
-                              placeholder="Enter your mobile number"
-                              className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                </FormItem>
+                                  <Label>Mobile Number</Label>
+                                  <div className="grid grid-cols-[0.2fr_1fr] lg:grid-cols-[140px_1fr] gap-3">
+                                    <FormField
+                                      control={form.control}
+                                      name="countryCode"
+                                      render={({ field }) => {
+                                        const selectedCountry =
+                                          countries.find((c) => c.code === field.value) ||
+                                          countries[0];
+                
+                                        return (
+                                          <FormItem>
+                                            <Select
+                                              onValueChange={field.onChange}
+                                              defaultValue={field.value || countries[0]?.code}
+                                            >
+                                              <FormControl>
+                                                <SelectTrigger className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm">
+                                                  {selectedCountry ? (
+                                                    <div className="flex items-center gap-2">
+                                                      <Image
+                                                        src={selectedCountry.flag}
+                                                        alt={selectedCountry.code}
+                                                        width={24}
+                                                        height={16}
+                                                        className="hidden lg:block" 
+                                                      />
+                                                      <span
+                                                        className={
+                                                          field.value
+                                                            ? "text-black"
+                                                            : "text-gray-400"
+                                                        }
+                                                      >
+                                                        {selectedCountry.code}{" "}
+                                                        {selectedCountry.dialCode}
+                                                      </span>
+                                                    </div>
+                                                  ) : (
+                                                    <span className="text-gray-400 text-sm">
+                                                      Select Country
+                                                    </span>
+                                                  )}
+                                                </SelectTrigger>
+                                              </FormControl>
+                                              <SelectContent>
+                                                {countries.map((country) => (
+                                                  <SelectItem
+                                                    key={country.code}
+                                                    value={country.code}
+                                                    className="p-4"
+                                                  >
+                                                    <div className="flex items-center gap-2">
+                                                      <Image
+                                                        src={country.flag}
+                                                        alt={country.code}
+                                                        width={24}
+                                                        height={16}
+                                                      />
+                                                      <span>
+                                                        {country.code} {country.dialCode}
+                                                      </span>
+                                                    </div>
+                                                  </SelectItem>
+                                                ))}
+                                              </SelectContent>
+                                            </Select>
+                                          </FormItem>
+                                        );
+                                      }}
+                                    />
+                                    <FormField
+                                      control={form.control}
+                                      name="mobile"
+                                      render={({ field }) => (
+                                        <FormItem>
+                                          <FormControl>
+                                            <Input
+                                              placeholder="Enter your mobile number"
+                                              className="border-[#D8E3E5] bg-[#F5F9FA] py-6 rounded-[8px] text-sm"
+                                              {...field}
+                                            />
+                                          </FormControl>
+                                          <FormMessage />
+                                        </FormItem>
+                                      )}
+                                    />
+                                  </div>
+                                </FormItem>
 
                 <FormField
                   control={form.control}
@@ -269,7 +319,6 @@ export default function ContactHero() {
           </div>
         </div>
       </div>
-      <Toaster />
     </section>
   );
 }

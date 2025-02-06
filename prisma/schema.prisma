@@ -17,15 +17,15 @@ model Contact {
 }
 
 model PricingForm {
-  id               String  @id @default(uuid())
+  id               String   @id @default(uuid())
   fullName         String
   countryCode      String
-  mobile          String
+  mobile           String
   organization     String
-  jobTitle        String
-  email           String  @unique
-  numberOfHires   String
+  jobTitle         String
+  email            String   @unique
+  numberOfHires    String
   productSelection String
-  message         String
-  createdAt       DateTime @default(now())
+  message          String
+  createdAt        DateTime @default(now())
 }

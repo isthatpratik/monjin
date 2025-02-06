@@ -233,7 +233,8 @@ export default function YcoiFeatures() {
                       className="w-full h-auto object-contain aspect-[4/3]"
                       height={1000}
                       width={1000}
-                      quality={70}
+                      quality={60}
+                      priority
                     />
                   </div>
                 </div>
