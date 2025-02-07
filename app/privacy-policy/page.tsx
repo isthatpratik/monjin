@@ -6,6 +6,7 @@ import { NavbarWhite } from "@/components/layout/navbar-white";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Privacy from "@/components/privacy-policy/privacy";
 
 const SupportPage = () => {
   return (
@@ -60,6 +61,7 @@ const SupportPage = () => {
           ease: "easeOut",
         }}
       >
+        <Privacy />
       </motion.div>
       <div className="flex flex-col gap-8">
         <Footer />

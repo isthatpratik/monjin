@@ -119,8 +119,8 @@ export default function ContactHero() {
   }
 
   return (
-    <section className="relative w-full px-0 py-6 lg:px-6">
-      <div className="mx-auto max-w-8xl flex flex-col lg:flex lg:flex-row gap-12">
+    <section className="relative w-full px-0 py-6">
+      <div className="mx-auto max-w-screen-2xl flex flex-col lg:flex lg:flex-row gap-12">
         {/* Hero Text */}
         <div className="flex flex-col justify-center lg:w-1/2">
           <h1 className="font-onest text-4xl text-center lg:text-start lg:text-[78px] font-semibold leading-tight text-white">

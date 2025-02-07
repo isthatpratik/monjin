@@ -17,7 +17,7 @@ const copyToClipboard = (text: string) => {
 
 export function EnquiryCards() {
   return (
-    <div className="grid gap-6 md:grid-cols-2 px-4 max-w-7xl mx-auto pt-12">
+    <div className="grid lg:gap-12 md:grid-cols-2 max-w-screen-2xl mx-auto pt-12">
       {/* Support Enquiries Card */}
       <Card className="relative overflow-hidden border-none shadow-lg backdrop-blur-3xl lg:bg-[#FFFFFF]/40 rounded-2xl lg:rounded-[40px]">
         <div className="absolute inset-0" />
@@ -26,7 +26,7 @@ export function EnquiryCards() {
             <div className="p-2 bg-[#5C3FFC]/40 rounded-lg">
               <Headphones className="w-6 h-6 text-white" />
             </div>
-            <CardTitle className="text-[28px] font-onest font-semibold">Support Enquiries</CardTitle>
+            <CardTitle className="text-xl lg:text-[28px] font-onest font-semibold">Support Enquiries</CardTitle>
           </div>
           <p className="text-gray-600 text-base font-figtree leading-relaxed">
             Need assistance with Monjin&apos;s platform or services? Our support team is ready to resolve your queries
@@ -57,7 +57,7 @@ export function EnquiryCards() {
           <div className="p-2 bg-[#FF272B]/30 rounded-lg">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <CardTitle className="text-2xl font-semibold">Sales Enquiries</CardTitle>
+            <CardTitle className="text-xl lg:text-[28px] font-onest font-semibold">Sales Enquiries</CardTitle>
           </div>
           <p className="text-gray-600 text-base leading-relaxed">
             Have questions about how Monjin can transform your hiring process? Our sales team is here to guide you!
