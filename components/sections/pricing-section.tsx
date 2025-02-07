@@ -64,7 +64,7 @@ export function PricingSection({
 
       <div className="grid md:grid-cols-3 gap-8">
         {/* LITE Plan */}
-        <Card className="relative overflow-hidden rounded-[32px] border border-black/20 bg-transparent flex flex-col lg:p-4 p-2">
+        <Card className="relative overflow-hidden rounded-[32px] border-black/20 bg-transparent flex flex-col lg:p-4 p-2">
           <div className="absolute inset-0 -z-10">
             <Image
               src={"/assets/pricing/lite.jpg"}

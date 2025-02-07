@@ -264,9 +264,9 @@ export function NavbarBlack() {
                 Contact Us
               </Button>
             </Link>
-            <Link href="https://uni.monjin.com/public/organization/registration" passHref>
+            <Link href="https://uni.monjin.com/public/organization/registration" target="_blank" passHref>
             <Button className="rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-[15px] px-6 py-3 h-auto hover:scale-[98%] transition-all duration-500">
-              Get Started
+              Login
             </Button>
             </Link>
           </div>

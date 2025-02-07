@@ -31,7 +31,7 @@ export default function BasicsHeroSection() {
               className="object-contain w-full md:w-[50vw] h-full"
             />
           </div>
-          <Link href="https://uni.monjin.com/public/organization/registration" passHref>
+          <Link href="https://uni.monjin.com/public/organization/registration" passHref target="_blank">
             <Button className="bg-black lg:flex flex-1 w-full md:w-fit lg:w-fit text-white hover:bg-gray-800 rounded-[8px] px-6 py-3">
               15 Days FREE!
             </Button>

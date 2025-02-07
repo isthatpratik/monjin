@@ -83,6 +83,7 @@ export default function ContactHero() {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    mode: "onBlur",
     defaultValues: {
       fullName: "",
       countryCode: "IN",

@@ -116,13 +116,14 @@ export default function JobApplicationForm() {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    mode: "onBlur",
     defaultValues: {
       fullName: "",
       countryCode: "IN",
       mobile: "",
       workMail: "",
       position: "",
-      cvUrl: null,
+      cvUrl: "",
     },
   });
 
@@ -385,7 +386,7 @@ export default function JobApplicationForm() {
                     type="submit"
                     className="w-full bg-gray-900 text-white hover:bg-gray-800 py-6"
                   >
-                    {isLoading ? "Sending..." : "Submit Enquiry"}
+                    {isLoading ? "Sending..." : "Submit Application"}
                   </Button>
                 </form>
               </Form>

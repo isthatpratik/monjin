@@ -61,7 +61,7 @@ export function PricingSectionMobile({
       </Tabs>
 
       <div className="flex flex-col space-y-4">
-        <Card className="relative overflow-hidden rounded-[8px] border border-black/20 bg-transparent flex flex-col p-2 h-auto shadow-none">
+        <Card className="relative overflow-hidden rounded-[8px] border-black/20 bg-transparent flex flex-col p-2 h-auto shadow-none">
           <div className="absolute inset-0 -z-10">
             <Image
               src={"/assets/pricing/lite-mobile.jpg"}

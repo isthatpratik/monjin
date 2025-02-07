@@ -60,7 +60,7 @@ const MonjinSuiteHero = () => {
         />
       </motion.div>
       <motion.p
-        className="text-center font-figtree text-sm md:max-w-[80%] pb-4 hidden lg:block text-balance"
+        className="text-center font-figtree text-sm lg:text-lg md:max-w-[80%] pb-4 hidden lg:block text-balance"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
