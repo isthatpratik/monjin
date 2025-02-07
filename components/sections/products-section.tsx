@@ -28,6 +28,7 @@ const ProductCard = ({
   description,
   circleColor,
   subtitleBorderColor,
+  subtitleColor,
   buttonText,
   buttonHover,
   link,
@@ -38,6 +39,7 @@ const ProductCard = ({
   description: string;
   circleColor: string;
   subtitleBorderColor: string;
+  subtitleColor: string;
   buttonText: string;
   buttonHover: string;
   link: string;
@@ -65,12 +67,12 @@ const ProductCard = ({
         <div
           className={`border ${subtitleBorderColor} p-2 mt-2 rounded-3xl w-[90%]`}
         >
-          <p className="font-figtree text-[#565656] text-sm text-center">
+          <p className={`font-figtree ${subtitleColor} text-sm text-center`}>
             {subtitle}
           </p>
         </div>
 
-        <div className="flex flex-col justify-center items-center mt-2 mb-2 flex-grow">
+        <div className="flex flex-col justify-start  items-center mt-2 mb-2 flex-grow">
           <p className="font-figtree text-center text-[#636671] text-base mt-2 max-w-[90%]">
             {description}
           </p>
@@ -101,6 +103,7 @@ const ProductsSection = () => {
       circleColor: "bg-[#9F8AFF]",
       subtitleBorderColor: "border-[#8B72FF]/30",
       buttonText: "Discover More",
+      subtitleColor:"text-[#8B72FF]",
       buttonHover: "hover:bg-[#947EFF]",
       link: "/products/OCOI",
     },
@@ -112,6 +115,7 @@ const ProductsSection = () => {
         "YCOI streamlines hiring with access to pre-assessed, expert-reviewed candidates via an intuitive video interview platform.",
       circleColor: "bg-[#B7D659]",
       subtitleBorderColor: "border-[#B7D659]/30",
+      subtitleColor:"text-[#B7D659]",
       buttonText: "Discover More",
       buttonHover: "hover:bg-[#B7D659]",
       link: "/products/YCOI",
@@ -124,6 +128,7 @@ const ProductsSection = () => {
         "Screen candidates efficiently, customize interview questions, and watch video interviews to fast-track your hiring process.",
       circleColor: "bg-[#FFB14A]",
       subtitleBorderColor: "border-[#FFB14A]/30",
+      subtitleColor:"text-[#FFB14A]",
       buttonText: "Discover More",
       buttonHover: "hover:bg-[#FFB14A]",
       link: "/products/Spotlight",
@@ -136,6 +141,7 @@ const ProductsSection = () => {
         "Ensuring every candidate is rigorously assessed, skip the screening process and access a pool of curated talent.",
       circleColor: "bg-[#BA57D3]",
       subtitleBorderColor: "border-[#BA57D3]/30",
+      subtitleColor:"text-[#BA57D3]",
       buttonText: "Discover More",
       buttonHover: "hover:bg-[#BA57D3]",
       link: "/products/PerformanceManagement",
@@ -148,6 +154,7 @@ const ProductsSection = () => {
         "Conduct video interviews on the fly without requiring any registration, making the process quicker and more accessible.",
       circleColor: "bg-[#F46D70]",
       subtitleBorderColor: "border-[#F46D70]/30",
+      subtitleColor:"text-[#F46D70]",
       buttonText: "Discover More",
       buttonHover: "hover:bg-[#F46D70]",
       link: "/products/Basics",
@@ -160,10 +167,10 @@ const ProductsSection = () => {
       className="lg:my-20 lg:bg-[#FFFFFF] rounded-3xl lg:border lg:p-8 md:p-4 p-0 max-h-1/3 self-center"
     >
       <div className="flex flex-col items-center justify-center gap-4 my-12 ">
-        <h2 className="font-onest hidden lg:block font-medium md:text-5xl text-center tracking-tighter text-3xl lg:max-w-[50vw]">
+        <h2 className="font-onest hidden lg:block font-medium md:text-5xl text-center tracking-tighter text-3xl text-balance max-w-screen-lg">
           Powering Achievements with Transformative Tools
         </h2>
-        <p className="font-figtree hidden lg:block tracking-tight text-center lg:max-w-[40vw] max-w-[80vw] sm:text-sm md:text-lg">
+        <p className="font-figtree hidden lg:block tracking-tight text-center max-w-lg text-balance text-sm md:text-lg">
           Unleash the true power of your processes with solutions built for
           rapid execution, flawless precision, and transformative results
         </p>

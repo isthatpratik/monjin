@@ -42,11 +42,11 @@ export default function Culture() {
       >
         <Image
           alt="gradient-bg"
-          src={"/assets/about/about-bg.jpg"}
+          src={"/assets/culture/culture-bg-web.jpg"}
           quality={100}
           fill
           priority
-          className="object-cover object-top xl:-translate-y-[300px] lg:-translate-y-[200px]"
+          className="object-cover object-top 2xl:-translate-y-[600px] lg:-translate-y-[200px]"
         />
       </motion.div>
       <motion.div

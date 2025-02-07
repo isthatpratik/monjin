@@ -65,7 +65,7 @@ export default function Testimonials() {
         <h2 className="text-center mb-4 font-onest lg:text-5xl text-3xl tracking-tighter">
           Client Journeys That Define Success
         </h2>
-        <p className="text-lg hidden lg:block lg:text-base text-center mb-12 max-w-3xl mx-auto font-figtree">
+        <p className="text-lg text-[#1D1E23] hidden lg:block lg:text-base text-center mb-12 max-w-3xl mx-auto font-figtree font-light">
           Uncover how our expert interviews have transformed hiring processes,
           helping businesses tap into top talent and make confident decisions.
           Listen to firsthand accounts of the impact we&apos;ve made.

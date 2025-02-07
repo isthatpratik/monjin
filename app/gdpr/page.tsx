@@ -8,7 +8,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import GDPR from "@/components/gdpr/gdpr";
 
-const SupportPage = () => {
+const Gdpr = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
       <NavbarWhite />
@@ -70,4 +70,4 @@ const SupportPage = () => {
   );
 };
 
-export default SupportPage;
+export default Gdpr;

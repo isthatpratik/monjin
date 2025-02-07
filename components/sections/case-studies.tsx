@@ -17,7 +17,7 @@ const slides = [
   {
     title: "On-demand Panels for Neutrally Assessed Candidates",
     description:
-      "Futuristic Hiring Route.",
+      "Revolutionized Just-In-Time resourcing, by addressing rapid hiring demands in the growing Tech sector.",
     buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-1.png",
     buttonLink: "/casestudy/Persistent"
@@ -25,7 +25,7 @@ const slides = [
   {
     title: "Futuristic Hiring Route",
     description:
-      "Revolutionized Just-In-Time resourcing, addressing rapid hiring demands in the growing Tech sector.",
+      "Resolved talent acquisition challenges in the Retail Industry.",
     buttonText: "Dive In",
     image: "/assets/CaseStudies/case-study-2.png",
     buttonLink: "/casestudy/SearsHoldings"

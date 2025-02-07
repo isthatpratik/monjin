@@ -2,7 +2,7 @@ import React from "react";
 
 const Quote = () => {
   return (
-    <section className="mx-auto px-4 lg:py-16">
+    <section className="mx-auto md:max-w-xl px-4 lg:py-16">
       <div className="flex items-center justify-center lg:bg-[url('/assets/culture/quote-bg.jpg')] bg-[url('/assets/culture/quote-bg-mobile.jpg')] bg-cover bg-center bg-no-repeat p-12 lg:p-36 rounded-2xl lg:rounded-[48px] lg:mt-12">
         <h2 className="font-onest font-light text-base md:text-2xl lg:text-5xl max-w-7xl text-center text-white leading-snug">
           Talent is transformative. The more energy, attention, and trust you

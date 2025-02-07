@@ -6,9 +6,10 @@ import { NavbarWhite } from "@/components/layout/navbar-white";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import Privacy from "@/components/privacy-policy/privacy";
+import CSR from "@/components/csr/csr";
+import { ClientsSlider } from "@/components/sliders/clients-slider";
 
-const PrivacyPolicy = () => {
+const Csr = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
       <NavbarWhite />
@@ -28,17 +29,17 @@ const PrivacyPolicy = () => {
       >
         <div className="hidden md:block w-full h-full">
           <Image
-            src="/assets/support/support-web.jpg"
+            src="/assets/csr/csr-bg-web.jpg"
             alt="Background"
             fill
             quality={80}
             priority
-            className="background-desktop object-cover object-top"
+            className="background-desktop object-cover object-top xl:-translate-y-[400px]"
           />
         </div>
         <div className="block md:hidden w-full h-full">
           <Image
-            src="/assets/support/support-mobile-bg.jpg"
+            src="/assets/csr/csr-bg-mobile.jpg"
             alt="Background"
             fill
             quality={80}
@@ -61,13 +62,14 @@ const PrivacyPolicy = () => {
           ease: "easeOut",
         }}
       >
-        <Privacy />
+        <CSR />
       </motion.div>
       <div className="flex flex-col gap-8">
+        <ClientsSlider />
         <Footer />
       </div>
     </main>
   );
 };
 
-export default PrivacyPolicy;
+export default Csr;

@@ -56,7 +56,7 @@ export default function Home() {
           quality={100}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           fill
-          className="object-cover object-top"
+          className="object-cover object-top xl:-translate-y-[300px]"
           priority
         />
       </motion.div>
@@ -78,7 +78,7 @@ export default function Home() {
           ease: "easeOut",
         }}
       >
-        <div className="md:max-w-[1600px] mx-auto px-6 py-10">
+        <div className="md:max-w-[1600px] mx-auto px-4 lg:px-8 py-10">
           <HeroSection />
           <Clients />
           <FeatureSection />

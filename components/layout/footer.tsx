@@ -17,27 +17,27 @@ const footerLinks = {
     { name: "Basics", href: "/products/Basics" },
   ],
   interviewer: [
-    { name: "Become an Interviewer", href: "#" },
-    { name: "Why Monjin", href: "#" },
-    { name: "Express Interview", href: "#" },
-    { name: "Interviewer Requirement", href: "#" },
-    { name: "Bonus", href: "#" },
-    { name: "Earnings", href: "#" },
+    { name: "Become an Interviewer", href: "/interviewer" },
+    { name: "Why Monjin", href: "/interviewer" },
+    { name: "Express Interview", href: "/interviewer" },
+    { name: "Interviewer Requirement", href: "/interviewer" },
+    { name: "Bonus", href: "/interviewer" },
+    { name: "Earnings", href: "/interviewer" },
     { name: "Support", href: "/support" },
   ],
   candidates: [
-    { name: "Give an Interview", href: "#" },
-    { name: "What's in it for you", href: "#" },
-    { name: "Express Interview", href: "#" },
-    { name: "Premium Packages", href: "#" },
+    { name: "Give an Interview", href: "/candidate" },
+    { name: "What's in it for you", href: "/candidate" },
+    { name: "Express Interview", href: "/candidate" },
+    { name: "Premium Packages", href: "/candidate" },
     { name: "Support", href: "/support" },
   ],
   company: [
     { name: "About", href: "/company/about" },
     { name: "Culture", href: "/company/culture" },
     { name: "Careers", href: "/company/careers" },
-    { name: "GDPR", href: "#" },
-    { name: "CSR", href: "#" },
+    { name: "GDPR", href: "/gdpr" },
+    { name: "CSR", href: "/csr" },
     { name: "Contact Us", href: "/contact" },
   ],
 };
@@ -46,8 +46,8 @@ const locations = ["INDIA", "USA", "UK"];
 
 export function Footer() {
   return (
-    <footer className="w-full text-gray-100 rounded-t-[32px] relative">
-      <div className="absolute inset-0 -z-1 overflow-hidden">
+    <footer className="w-full mx-auto text-gray-100 rounded-t-[32px] relative">
+      <div className="absolute inset-0 -z-1 overflow-hidden rounded-t-2xl lg:rounded-t-[32px]">
         <Image
           src={"/assets/footer-bg-web.jpg"}
           fill
@@ -223,14 +223,12 @@ export function Footer() {
             alt="AICPA SOC"
             width={80}
             height={80}
-            className=""
           />
           <Image
             src="/assets/certification-2.png"
             alt="ISO Certification"
             width={80}
             height={80}
-            className=""
           />
         </div>
 

@@ -129,7 +129,7 @@ export default function JobApplicationForm() {
   return (
     <div className="p-4 lg:p-8 lg:my-12">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16 items-center">
           {/* Left Column */}
           <div className="space-y-8">
             <div>
@@ -143,7 +143,7 @@ export default function JobApplicationForm() {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="rounded-lg bg-[#FFA7A7]/40 p-3 drop-shadow-[0_8px_12px_rgba(244,109,109,0.6)]">
                   <Star className="w-4 h-4 lg:h-6 lg:w-6 text-[#F46D70]" />
