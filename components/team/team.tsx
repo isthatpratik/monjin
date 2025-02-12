@@ -64,9 +64,9 @@ function LinkedInButton({ url }: { url: string }) {
       <Image
         src="/assets/team/linkedin.png"
         alt="LinkedIn"
-        width={48}
-        height={48}
-        className="w-8 h-8"
+        width={100}
+        height={100}
+        className="w-8 h-8 md:w-10 md:h-10 grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
       />
     </Link>
   );
@@ -75,10 +75,10 @@ function LinkedInButton({ url }: { url: string }) {
 function TeamCard({ name, role, image, linkedinUrl }: TeamMember) {
   return (
     <div
-      className="bg-white shadow-lg backdrop-blur-sm lg:w-[280px] lg:flex-col lg:rounded-[32px] lg:h-auto flex-row w-full h-[120px] rounded-2xl flex"
+      className="bg-white shadow-lg backdrop-blur-sm lg:w-[280px] lg:flex-col lg:rounded-[32px] lg:h-auto flex-row w-full h-[120px] md:h-[140px] rounded-2xl flex"
     >
       {/* Image section */}
-      <div className="relative lg:w-full lg:h-[240px] w-[120px] bg-transparent flex-shrink-0 lg:order-2 object-center">
+      <div className="relative lg:w-full lg:h-[240px] md:w-[160px] w-[120px] bg-transparent flex-shrink-0 lg:order-2 object-center">
         <Image
           src={image || "/placeholder.svg"}
           alt={name}
@@ -89,7 +89,7 @@ function TeamCard({ name, role, image, linkedinUrl }: TeamMember) {
       </div>
 
       {/* Info section */}
-      <div className="flex flex-row flex-grow justify-between lg:p-6 lg:gap-2 p-2 lg:order-1">
+      <div className="flex flex-row flex-grow justify-between lg:p-6 lg:gap-2 md:p-4 p-2 lg:order-1">
         <div className="flex flex-col gap-1 w-4/5">
           <h3 className="font-bold font-onest w-1/2 text-black tracking-tight leading-tight text-lg lg:text-[28px]">
             {name}

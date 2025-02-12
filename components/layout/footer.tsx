@@ -136,15 +136,6 @@ export function Footer() {
               Say hello.
             </h2>
             <div className="flex justify-center md:justify-end gap-4">
-              <Link href="https://www.facebook.com/MonjinInterview">
-                <Image
-                  src="/assets/social-media/facebook.png"
-                  alt="Facebook"
-                  width={100}
-                  height={100}
-                  className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
-                />
-              </Link>
               <Link href="https://www.linkedin.com/company/monjin/">
                 <Image
                   src="/assets/social-media/linkedin.png"
@@ -153,16 +144,7 @@ export function Footer() {
                   height={100}
                   className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
                 />
-              </Link>
-              <Link href="https://www.instagram.com/monjininterviews/">
-                <Image
-                  src="/assets/social-media/instagram.png"
-                  alt="Instagram"
-                  width={100}
-                  height={100}
-                  className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12 object-contain"
-                />
-              </Link>
+              </Link>       
               <Link href="https://www.youtube.com/@MonjinInterviewsPvtLtd">
                 <Image
                   src="/assets/social-media/youtube.png"
@@ -172,20 +154,10 @@ export function Footer() {
                   className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12  object-contain"
                 />
               </Link>
-              <Link href="https://x.com/MonjinCorp">
-                <Image
-                  src="/assets/social-media/x-twitter.png"
-                  alt="Twitter"
-                  width={48}
-                  height={48}
-                  className="hover:opacity-80 w-8 h-8 lg:w-12 lg:h-12  object-contain"
-                />
-              </Link>
             </div>
           </div>
         </div>
 
-        {/* Divider */}
         <div className="border-b border-[#FFFFFF]/20 mb-8"></div>
 
         {/* Desktop Navigation */}
@@ -284,7 +256,7 @@ export function Footer() {
                 GDPR
               </Link>
             </div>
-            <div className="flex text-left gap-2 hover:underline justify-center lg:justify-start items-center lg:items-start md:mt-2 lg:mt-0 mt-4 px-6">
+            <div className="flex text-left gap-2 justify-center lg:justify-start items-center lg:items-start md:mt-2 lg:mt-0 mt-4 px-6">
               <div className="flex font-figtree md:text-sm text-xs max-w-xs md:max-w-full">
 
               © 2025 Monjin Interviews Pvt. Ltd. All Rights Reserved

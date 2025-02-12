@@ -8,7 +8,7 @@ export default function SpotlightHeroSection() {
       <div className="container mx-auto lg:px-4 px-0 grid lg:grid-cols-2 gap-12 items-center justify-center lg:justify-start lg:py-12 py-2">
         <div className="space-y-6 flex flex-col items-center justify-center lg:justify-start  lg:items-start">
           <div className="inline-flex rounded-xl border-[#DC7F07] border lg:p-1 p-0 items-center justify-center lg:items-start lg:justify-normal">
-            <button className="px-4 py-2 font-figree text-[#DC7F07] text-xs md:text-sm font-medium cursor-default text-center">
+            <button className="px-4 py-2 font-figree text-[#DC7F07] text-xs md:text-sm font-medium cursor-default text-center uppercase">
               <strong>Spotlight</strong> - Accelerate Efficient Screening
             </button>
           </div>

@@ -8,7 +8,7 @@ export default function BasicsHeroSection() {
       <div className="container mx-auto lg:px-4 px-0 grid lg:grid-cols-2 gap-12 items-center justify-center lg:justify-start lg:py-8 xl:py-12 py-2">
         <div className="space-y-6 flex flex-col items-center justify-center lg:justify-start  lg:items-start">
           <div className="inline-flex rounded-xl border-[#F46D70] border lg:p-1 p-0 items-center justify-center lg:items-start lg:justify-normal">
-            <button className="px-4 py-2 font-figree text-[#F46D70] text-xs md:text-sm lg:text-lg font-medium cursor-default text-center">
+            <button className="px-4 py-2 font-figree text-[#F46D70] text-xs uppercase md:text-sm lg:text-lg font-medium cursor-default text-center">
               <strong>Basics</strong> - Streamline Effortless Hiring
             </button>
           </div>

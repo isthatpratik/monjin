@@ -341,9 +341,9 @@ const ProductsSection = () => {
           </p>
 
           {/* Buttons */}
-          <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3 p-2 justify-center lg:justify-normal">
+          <div className="gap-4 flex flex-col md:flex-row mt-4 w-full lg:w-2/3 justify-center lg:justify-normal">
             <Link href={"/products/MonjinSuite"} className="w-full">
-              <Button className="lg:bg-[#FFFFFF] lg:text-black text-white border bg-transparent border-white rounded-[8px] p-6 font-onest text-sm transition-all duration-300 ease-in-out lg:hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] lg:hover:bg-white">
+              <Button className="lg:bg-[#FFFFFF] lg:text-black text-white border w-full bg-transparent border-white rounded-[8px] p-6 font-onest text-sm transition-all duration-300 ease-in-out lg:hover:shadow-[0px_4px_0px_rgba(255,255,255,0.3)] lg:hover:bg-white">
                 Deep Dive In
               </Button>
             </Link>

@@ -28,7 +28,7 @@ const ValeusSection = () => {
         </div>
         <div>{""}</div>
       </div>
-      <div className="lg:flex flex-col gap-6 w-full max-w-xs md:max-w-lg lg:max-w-5xl hidden">
+      <div className="lg:flex flex-col gap-6 w-full max-w-xs md:max-w-screen-md lg:max-w-screen-2xl hidden">
         <div className="flex flex-row gap-6">
           <div className="basis-1/5 bg-white rounded-full px-3 py-3 lg:px-9 lg:py-5 border-2 border-[#F46D70]">
             <h3 className="text-xs md:text-[22px] leading-tight font-onest tracking-tight">
