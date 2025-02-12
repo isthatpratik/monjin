@@ -1,8 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Solitreo } from "next/font/google";
-
-const solitreo = Solitreo({ weight: "400", preload: false });
 
 export default function CultureHero() {
     return (
@@ -39,11 +36,15 @@ export default function CultureHero() {
               happens: your team thrives. They do not just work; they innovate, deliver, and create unforgettable WOW
               experiences for your customers.&quot;
             </p>
-            <footer className="text-center">
-              <cite className="not-italic">
-                <span className={`${solitreo.className} font-solitreo text-2xl lg:text-[34px] mb-1 text-[#381664] block`}>Aniket Tapre</span>
+            <footer className="text-center flex flex-col gap-4 items-center justify-center">
+                <Image 
+                  src={'/assets/culture/signature.png'}
+                  alt="Aniket Signature"
+                  width={100}
+                  height={100}
+                  className="object-contain w-24 lg:w-40 h-auto"
+                />
                 <span className="text-[#F46D70] text-xs lg:text-sm font-medium font-onest">CEO of Monjin</span>
-              </cite>
             </footer>
           </blockquote>
         </div>

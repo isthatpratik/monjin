@@ -5,7 +5,7 @@ const ValeusSection = () => {
   return (
     <section className="flex flex-col lg:flex-row gap-4 lg:gap-12 lg:px-24 px-12 py-6 items-center lg:items-start lg:justify-center">
       <div className="flex-col justify-between items-center">
-        <h2 className="font-onest font-medium text-white text-2xl lg:text-3xl">Our Values</h2>
+        <h2 className="font-onest font-medium text-black text-2xl lg:text-3xl">Our Values</h2>
         <div className="lg:flex items-center justify-center translate-y-40 hidden">
             <div className="flex">
                 <Image 
