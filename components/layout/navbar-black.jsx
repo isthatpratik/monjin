@@ -235,14 +235,14 @@ export function NavbarBlack() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/candidate" legacyBehavior passHref>
+                <Link href="https://uni.monjin.com/public/candidate/registration" target="_blank" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Candidate
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/interviewer" legacyBehavior passHref>
+                <Link href="https://uni.monjin.com/public/interviewer/registration" target="_blank" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Interviewer
                   </NavigationMenuLink>
@@ -252,20 +252,20 @@ export function NavbarBlack() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="flex items-center gap-3">
+          <div className="grid grid-cols-2 items-center gap-3">
             <Link
               href="/contact"
               className="w-full h-full flex items-center justify-center"
             >
               <Button
                 variant="outline"
-                className="rounded-[8px] border-black/50 bg-transparent font-onest font-normal text-[15px] px-6 py-3 h-auto transition-all duration-500 hover:scale-[98%]"
+                className="rounded-[8px] border-black/50 bg-transparent font-onest font-normal text-[15px] px-6 py-3 h-auto transition-all duration-500 hover:scale-[98%] w-full"
               >
                 Contact Us
               </Button>
             </Link>
-            <Link href="https://uni.monjin.com/public/organization/registration" target="_blank" passHref>
-            <Button className="rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-[15px] px-6 py-3 h-auto hover:scale-[98%] transition-all duration-500">
+            <Link href="https://uni.monjin.com/public/organization/registration" target="_blank" passHref className="w-full">
+            <Button className="rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-[15px] px-6 py-3 h-auto hover:scale-[98%] transition-all duration-500 w-full">
               Login
             </Button>
             </Link>

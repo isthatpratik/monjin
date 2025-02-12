@@ -235,14 +235,14 @@ export function NavbarWhite() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/candidate" legacyBehavior passHref>
+                <Link href="https://uni.monjin.com/public/candidate/registration" target="_blank" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Candidate
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/interviewer" legacyBehavior passHref>
+                <Link href="https://uni.monjin.com/public/interviewer/registration" target="_blank" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Interviewer
                   </NavigationMenuLink>
@@ -252,20 +252,20 @@ export function NavbarWhite() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="flex items-center gap-4">
+          <div className="grid grid-cols-2 items-center gap-4">
             <Link
               href="/contact"
               className="w-full h-full flex items-center justify-center text-white"
             >
               <Button
                 variant="outline"
-                className="rounded-[8px] border-white/50 bg-transparent font-onest font-normal text-[15px] px-6 py-3 h-auto hover:bg-white hover:text-black transition-all duration-500 ease-in-out hover:scale-[98%]"
+                className="rounded-[8px] border-white/50 bg-transparent font-onest font-normal text-[15px] px-6 py-3 h-auto hover:bg-white hover:text-black transition-all duration-500 ease-in-out hover:scale-[98%] w-full"
               >
                 Contact Us
               </Button>
             </Link>
             <Link href="https://uni.monjin.com/public/organization/registration" target="_blank" passHref>
-              <Button className="rounded-[8px] font-onest bg-[#D0F16C] hover:bg-[#B5E916] text-black transition-all duration-500 font-normal text-[15px] px-6 py-3 h-auto ease-in-out hover:scale-[98%]">
+              <Button className="rounded-[8px] font-onest bg-[#D0F16C] hover:bg-[#B5E916] text-black transition-all duration-500 font-normal text-[15px] px-6 py-3 h-auto ease-in-out hover:scale-[98%] w-full">
                 Login
               </Button>
             </Link>

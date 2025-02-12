@@ -55,14 +55,16 @@ export function MobileMenuLight() {
             Support
           </Link>
           <Link
-            href="/candidate"
+            href="https://uni.monjin.com/public/candidate/registration"
             className="block text-lg text-[#0E0E0E]/60 font-figtree font-light "
+            target="_blank"
           >
             Candidate
           </Link>
           <Link
-            href="/interviewer"
+            href="https://uni.monjin.com/public/interviewer/registration"
             className="block text-lg text-[#0E0E0E]/60 font-figtree font-light "
+            target="_blank"
           >
             Interviewer
           </Link>

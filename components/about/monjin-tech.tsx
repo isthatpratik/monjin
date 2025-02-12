@@ -13,7 +13,7 @@ const MonjinTech = () => {
             className="object-contain xl:w-[60vw] lg:w-[70vw] h-auto lg:h-fit w-full"
         />
         <h3 className="text-center font-figtree lg:font-light lg:text-[32px] text-sm leading-tight text-balance">
-        <strong className="font-bold font-figtree">From the ground up, we&apos;ve built a state-of-the-art AI-powered platform and a dynamic library of real-world video interviews—</strong>changing the way organizations discover and connect with exceptional talent.
+        <strong className="font-semibold font-figtree">From the ground up, we&apos;ve built a state-of-the-art AI-powered platform and a dynamic library of real-world video interviews—</strong>changing the way organizations discover and connect with exceptional talent.
         </h3>
 
         <div className="hidden self-center lg:block mt-10 mb-5 h-[0.5px] w-full bg-[#464646]"></div>  
