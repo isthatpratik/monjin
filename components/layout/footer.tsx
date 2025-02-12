@@ -284,7 +284,7 @@ export function Footer() {
                 GDPR
               </Link>
             </div>
-            <div className="flex text-left gap-4 hover:underline justify-cente lg:justify-start items-center lg:items-start md:mt-2 lg:mt-0 mt-4">
+            <div className="flex text-left gap-2 hover:underline justify-center lg:justify-start items-center lg:items-start md:mt-2 lg:mt-0 mt-4 px-6">
               <div className="flex font-figtree md:text-sm text-xs max-w-xs md:max-w-full">
 
               © 2025 Monjin Interviews Pvt. Ltd. All Rights Reserved
