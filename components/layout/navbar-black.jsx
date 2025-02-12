@@ -61,8 +61,8 @@ const products = [
     title: "Monjin Suite",
     description: "Attract, engage & retain talent",
     imageSrc: "/assets/product-icons/monjin-suite.png",
-    bgImage: "/assets/product-icons/monjin-suite-bg.png", 
-    hoverColor: "hover:bg-[#2E2F33]", 
+    bgImage: "/assets/product-icons/monjin-suite-bg.png",
+    hoverColor: "hover:bg-[#2E2F33]",
     titleColor: "text-gray-700",
     href: "/products/MonjinSuite",
   },
@@ -228,6 +228,24 @@ export function NavbarBlack() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
+                <NavigationMenuTrigger className="font-figtree text-sm">
+                  Jobs
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="grid w-[600px] gap-3 p-4 md:w-[300px] z-999">
+                  <Link
+                    href={
+                      "https://uni.monjin.com/public/organization/registration"
+                    }
+                    target="_blank"
+                    className="text-black"
+                  >
+                    <NavigationMenuLink target="_blank">
+                      Post a Job
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Link href="/support" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Support
@@ -235,14 +253,24 @@ export function NavbarBlack() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem target="_blank">
-                <Link href="https://uni.monjin.com/public/candidate/registration" target="_blank" legacyBehavior passHref>
+                <Link
+                  href="https://uni.monjin.com/public/candidate/registration"
+                  target="_blank"
+                  legacyBehavior
+                  passHref
+                >
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Candidate
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem target="_blank">
-                <Link href="https://uni.monjin.com/public/interviewer/registration" target="_blank" legacyBehavior passHref>
+                <Link
+                  href="https://uni.monjin.com/public/interviewer/registration"
+                  target="_blank"
+                  legacyBehavior
+                  passHref
+                >
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Interviewer
                   </NavigationMenuLink>
@@ -264,10 +292,15 @@ export function NavbarBlack() {
                 Contact Us
               </Button>
             </Link>
-            <Link href="https://uni.monjin.com/public/organization/registration" target="_blank" passHref className="w-full">
-            <Button className="rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-[15px] px-6 py-3 h-auto hover:scale-[98%] transition-all duration-500 w-full">
-              Login
-            </Button>
+            <Link
+              href="https://uni.monjin.com/public/organization/registration"
+              target="_blank"
+              passHref
+              className="w-full"
+            >
+              <Button className="rounded-[8px] font-onest bg-[#1B1B1B] font-normal text-[15px] px-6 py-3 h-auto hover:scale-[98%] transition-all duration-500 w-full">
+                Login
+              </Button>
             </Link>
           </div>
         </div>

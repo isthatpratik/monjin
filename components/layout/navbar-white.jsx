@@ -228,6 +228,24 @@ export function NavbarWhite() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
+                <NavigationMenuTrigger className="font-figtree text-sm">
+                  Jobs
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="grid w-[600px] gap-3 p-4 md:w-[300px] z-999">
+                  <Link
+                    href={
+                      "https://uni.monjin.com/public/organization/registration"
+                    }
+                    target="_blank"
+                    className="text-black"
+                  >
+                    <NavigationMenuLink target="_blank">
+                      Post a Job
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Link href="/support" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Support
@@ -235,19 +253,28 @@ export function NavbarWhite() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem target="_blank">
-                <Link href="https://uni.monjin.com/public/candidate/registration" target="_blank" passHref>
+                <Link
+                  href="https://uni.monjin.com/public/candidate/registration"
+                  target="_blank"
+                  passHref
+                >
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Candidate
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem target="_blank">
-                <Link href="https://uni.monjin.com/public/interviewer/registration" target="_blank" passHref>
+                <Link
+                  href="https://uni.monjin.com/public/interviewer/registration"
+                  target="_blank"
+                  passHref
+                >
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Interviewer
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuIndicator />
             </NavigationMenuList>
           </NavigationMenu>
@@ -264,7 +291,11 @@ export function NavbarWhite() {
                 Contact Us
               </Button>
             </Link>
-            <Link href="https://uni.monjin.com/public/organization/registration" target="_blank" passHref>
+            <Link
+              href="https://uni.monjin.com/public/organization/registration"
+              target="_blank"
+              passHref
+            >
               <Button className="rounded-[8px] font-onest bg-[#D0F16C] hover:bg-[#B5E916] text-black transition-all duration-500 font-normal text-[15px] px-6 py-3 h-auto ease-in-out hover:scale-[98%] w-full">
                 Login
               </Button>
