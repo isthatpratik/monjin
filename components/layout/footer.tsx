@@ -17,19 +17,49 @@ const footerLinks = {
     { name: "Basics", href: "/products/Basics" },
   ],
   interviewer: [
-    { name: "Become an Interviewer", href: "https://uni.monjin.com/public/interviewer/registration" },
-    { name: "Why Monjin", href: "https://uni.monjin.com/public/interviewer/registration" },
-    { name: "Express Interview", href: "https://uni.monjin.com/public/interviewer/registration" },
-    { name: "Interviewer Requirement", href: "https://uni.monjin.com/public/interviewer/registration" },
-    { name: "Bonus", href: "https://uni.monjin.com/public/interviewer/registration" },
-    { name: "Earnings", href: "https://uni.monjin.com/public/interviewer/registration" },
+    {
+      name: "Become an Interviewer",
+      href: "https://uni.monjin.com/public/interviewer/registration",
+    },
+    {
+      name: "Why Monjin",
+      href: "https://uni.monjin.com/public/interviewer/registration",
+    },
+    {
+      name: "Express Interview",
+      href: "https://uni.monjin.com/public/interviewer/registration",
+    },
+    {
+      name: "Interviewer Requirement",
+      href: "https://uni.monjin.com/public/interviewer/registration",
+    },
+    {
+      name: "Bonus",
+      href: "https://uni.monjin.com/public/interviewer/registration",
+    },
+    {
+      name: "Earnings",
+      href: "https://uni.monjin.com/public/interviewer/registration",
+    },
     { name: "Support", href: "/support" },
   ],
   candidates: [
-    { name: "Give an Interview", href: "https://uni.monjin.com/public/candidate/registration" },
-    { name: "What's in it for you", href: "https://uni.monjin.com/public/candidate/registration" },
-    { name: "Express Interview", href: "https://uni.monjin.com/public/candidate/registration" },
-    { name: "Premium Packages", href: "https://uni.monjin.com/public/candidate/registration" },
+    {
+      name: "Give an Interview",
+      href: "https://uni.monjin.com/public/candidate/registration",
+    },
+    {
+      name: "What's in it for you",
+      href: "https://uni.monjin.com/public/candidate/registration",
+    },
+    {
+      name: "Express Interview",
+      href: "https://uni.monjin.com/public/candidate/registration",
+    },
+    {
+      name: "Premium Packages",
+      href: "https://uni.monjin.com/public/candidate/registration",
+    },
     { name: "Support", href: "/support" },
   ],
   company: [
@@ -71,7 +101,7 @@ export function Footer() {
               alt="Monjin Logo"
               width={100}
               height={100}
-              className="mx-auto md:mx-0 h-auto w-auto mb-4 object-contain block sm:hidden"
+              className="mx-auto md:mx-0 h-auto w-auto mb-4 object-contain lg:block hidden"
             />
 
             <Image
@@ -79,7 +109,7 @@ export function Footer() {
               alt="Monjin Logo Small"
               width={186}
               height={186}
-              className="mx-auto md:mx-0 h-auto w-auto mb-4 object-contain hidden sm:block"
+              className="mx-auto md:mx-0 h-auto w-auto mb-4 object-contain lg:hidden block"
             />
             <p className="text-xs md:text-base text-[#AAAAAA] font-figtree md:max-w-lg lg:max-w-xl">
               Monjin is a dynamic network of expert interviewers spanning
@@ -217,7 +247,7 @@ export function Footer() {
         </div>
 
         {/* Certifications */}
-        <div className="hidden md:flex justify-end gap-4 mb-8">
+        <div className="hidden lg:flex justify-end gap-4 mb-8">
           <Image
             src="/assets/certification-1.png"
             alt="AICPA SOC"
@@ -236,20 +266,45 @@ export function Footer() {
         <div className="text-sm text-white mb-8">
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-start gap-4">
             <div className="flex lg:flex-row md:flex-row lg:justify-start justify-center items-center lg:items-start md:items-start gap-1 lg:w-1/2 w-full">
-              <Link href="/terms-of-services" className="hover:text-white hover:underline">
+              <Link
+                href="/terms-of-services"
+                className="hover:text-white md:text-sm font-figtree text-xs hover:underline"
+              >
                 Terms of Service
               </Link>
               -
-              <Link href="/privacy-policy" className="hover:text-white hover:underline">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-white md:text-sm font-figtree text-xs hover:underline"
+              >
                 Privacy Notice
               </Link>
               -
-              <Link href="/gdpr" className="hover:text-white hover:underline">
+              <Link href="/gdpr" className="hover:text-white md:text-sm font-figtree text-xs hover:underline">
                 GDPR
               </Link>
             </div>
-            <div className="flex text-center hover:underline max-w-[80%] lg:w-full justify-end mt-2 lg:mt-0">
+            <div className="flex text-left gap-4 hover:underline justify-cente lg:justify-start items-center lg:items-start md:mt-2 lg:mt-0 mt-4">
+              <div className="flex font-figtree md:text-sm text-xs max-w-xs md:max-w-full">
+
               © 2025 Monjin Interviews Pvt. Ltd. All Rights Reserved
+              </div>
+              <div className="lg:hidden flex flex-shrink-0">
+                <Image
+                  src="/assets/certification-1.png"
+                  alt="AICPA SOC"
+                  width={32}
+                  height={32}
+                  className="flex-shrink-0 object-contain"
+                />
+                <Image
+                  src="/assets/certification-2.png"
+                  alt="ISO Certification"
+                  width={32}
+                  height={32}
+                  className="flex-shrink-0 object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
