@@ -17,13 +17,13 @@ import { NavbarWhite } from "@/components/layout/navbar-white";
 import CultureHero from "@/components/culture/culture-hero";
 import ValeusSection from "@/components/culture/values-section";
 import Quote from "@/components/culture/quote";
-import TeamSection from "@/components/team/team-section";
 import CareersHero from "@/components/careers/careers-hero-section";
 import WhyChooseMonjin from "@/components/careers/why-choose-monjin";
 import JobApplicationForm from "@/components/careers/apply";
 import { MobileNavbarLight } from "@/components/layout/mobile-navbar-light";
 import AboutHeroMobile from "@/components/about/about-hero-mobile";
 import { motion } from "framer-motion";
+import TeamGrid from "@/components/team/team";
 
 export default function Team() {
   return (
@@ -63,7 +63,7 @@ export default function Team() {
       >
         <Image
           alt="gradient-bg"
-          src={"/assets/about/about-bg-mobile.jpg"}
+          src={"/assets/team/team-bg-mobile.jpg"}
           quality={100}
           fill
           priority
@@ -143,7 +143,7 @@ export default function Team() {
           </TabsContent>
 
           <TabsContent value="team">
-            <TeamSection />
+            <TeamGrid />
           </TabsContent>
 
           <TabsContent value="culture">

@@ -68,16 +68,20 @@ export function MobileMenuDark() {
           >
             Interviewer
           </Link>
-          <div className="space-y-4 flex flex-col w-fit">
-            <Link href="https://uni.monjin.com/public/organization/registration" passHref>
-              <Button className="items-center justify-center  text-center font-onest h-auto px-5 py-4 bg-[#212121] text-white rounded-[8px]">
+          <div className="grid grid-cols-1 gap-4">
+            <Link
+              href="https://uni.monjin.com/public/organization/registration"
+              passHref
+              className="col-span-1"
+            >
+              <Button className="w-full items-center justify-center text-center font-onest h-auto px-5 py-4 bg-[#212121] text-white rounded-[8px]">
                 Login
               </Button>
             </Link>
 
-            <Link href="/contact">
-              <Button className="items-center justify-center text-center hover:bg-transparent h-auto px-5 py-4 shadow-none border border-[#0E0E0E]/25 bg-transparent text-black rounded-[8px]">
-              Contact Us
+            <Link href="/contact" className="col-span-1">
+              <Button className="w-full items-center justify-center text-center hover:bg-transparent h-auto px-5 py-4 shadow-none border border-[#0E0E0E]/25 bg-transparent text-black rounded-[8px]">
+                Contact Us
               </Button>
             </Link>
           </div>

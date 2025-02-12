@@ -234,15 +234,15 @@ export function NavbarWhite() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="https://uni.monjin.com/public/candidate/registration" target="_blank" legacyBehavior passHref>
+              <NavigationMenuItem target="_blank">
+                <Link href="https://uni.monjin.com/public/candidate/registration" target="_blank" passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Candidate
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="https://uni.monjin.com/public/interviewer/registration" target="_blank" legacyBehavior passHref>
+              <NavigationMenuItem target="_blank">
+                <Link href="https://uni.monjin.com/public/interviewer/registration" target="_blank" passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Interviewer
                   </NavigationMenuLink>

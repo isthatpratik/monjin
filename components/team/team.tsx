@@ -74,28 +74,33 @@ function LinkedInButton({ url }: { url: string }) {
 
 function TeamCard({ name, role, image, linkedinUrl }: TeamMember) {
   return (
-    <div className="w-[280px] bg-white lg:rounded-[32px] flex flex-col h-auto shadow-lg backdrop-blur-sm">
-      <div className="flex justify-between flex-grow p-6 gap-2">
-        <div className="space-y-1">
-          <h3 className="font-bold lg:w-1/2 font-onest lg:text-[28px] text-black tracking-tight leading-tight">
-            {name}
-          </h3>
-          <p className="text-sm font-normal tracking-tight font-onest text-[#7B7B7B] leading-tight text-balance">
-            {role}
-          </p>
-        </div>
-        <div className="flex flex-shrink-0">
-            <LinkedInButton url={linkedinUrl} />
-          </div>
-      </div>
-      <div className="mt-auto relative h-[240px] bg-transparent">
+    <div
+      className="bg-white shadow-lg backdrop-blur-sm lg:w-[280px] lg:flex-col lg:rounded-[32px] lg:h-auto flex-row w-full h-[120px] rounded-2xl flex"
+    >
+      {/* Image section */}
+      <div className="relative lg:w-full lg:h-[240px] w-[120px] bg-transparent flex-shrink-0 lg:order-2 object-center">
         <Image
           src={image || "/placeholder.svg"}
           alt={name}
           fill
-          className="object-cover object-center lg:rounded-[32px]"
-          sizes="300px"
+          className="object-cover object-center lg:rounded-[32px] rounded-2xl"
+          sizes="(max-width: 640px) 180px, 300px"
         />
+      </div>
+
+      {/* Info section */}
+      <div className="flex flex-row flex-grow justify-between lg:p-6 lg:gap-2 p-2 lg:order-1">
+        <div className="flex flex-col gap-1 w-4/5">
+          <h3 className="font-bold font-onest w-1/2 text-black tracking-tight leading-tight text-lg lg:text-[28px]">
+            {name}
+          </h3>
+          <p className="text-[10px] lg:text-sm lg:w-full w-4/5 font-normal tracking-tight font-onest text-[#7B7B7B] leading-tight text-balance whitespace-pre-line">
+            {role}
+          </p>
+        </div>
+        <div className="flex w-1/5 justify-end">
+          <LinkedInButton url={linkedinUrl} />
+        </div>
       </div>
     </div>
   );
@@ -104,7 +109,7 @@ function TeamCard({ name, role, image, linkedinUrl }: TeamMember) {
 export default function TeamGrid() {
   return (
     <div className="min-h-screen w-full px-4 lg:py-24 py-6 lg:px-12">
-        <div className="text-center space-y-4 mb-6 lg:mb-16">
+      <div className="text-center space-y-4 mb-6 lg:mb-16">
         <h1 className="text-4xl lg:text-[78px] font-onest font-semibold text-white tracking-tighter leading-tight">
           Meet the visionaries
         </h1>
@@ -115,24 +120,35 @@ export default function TeamGrid() {
           celebrating their dedication and passion!
         </h2>
       </div>
+
+      {/* Responsive layout */}
       <div className="mx-auto max-w-screen-xl">
-        {/* First row - 2 cards */}
-        <div className="flex justify-center gap-6 mb-6">
-          <TeamCard {...team[0]} />
-          <TeamCard {...team[1]} />
+        <div className="hidden lg:flex flex-col gap-6">
+          {/* First row - 2 cards */}
+          <div className="flex justify-center gap-6 mb-6">
+            <TeamCard {...team[0]} />
+            <TeamCard {...team[1]} />
+          </div>
+
+          {/* Second row - 3 cards */}
+          <div className="flex justify-center gap-6 mb-6">
+            <TeamCard {...team[2]} />
+            <TeamCard {...team[3]} />
+            <TeamCard {...team[4]} />
+          </div>
+
+          {/* Third row - 2 cards */}
+          <div className="flex justify-center gap-6">
+            <TeamCard {...team[5]} />
+            <TeamCard {...team[6]} />
+          </div>
         </div>
 
-        {/* Second row - 3 cards */}
-        <div className="flex justify-center gap-6 mb-6">
-          <TeamCard {...team[2]} />
-          <TeamCard {...team[3]} />
-          <TeamCard {...team[4]} />
-        </div>
-
-        {/* Third row - 2 cards */}
-        <div className="flex justify-center gap-6">
-          <TeamCard {...team[5]} />
-          <TeamCard {...team[6]} />
+        {/* Stacked layout for small & medium screens */}
+        <div className="lg:hidden flex flex-col gap-6">
+          {team.map((member) => (
+            <TeamCard key={member.name} {...member} />
+          ))}
         </div>
       </div>
     </div>
