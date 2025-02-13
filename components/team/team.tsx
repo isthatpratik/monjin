@@ -22,10 +22,10 @@ const team: TeamMember[] = [
     linkedinUrl: "https://www.linkedin.com/in/kabhijeet/",
   },
   {
-    name: "Aniruddha Fansalkar",
-    role: "Co-Founder &\nChief Human Resource\nOfficer",
-    image: "/assets/team/aniruddha.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/aniruddha-fansalkar-731177a/",
+    name: "Ashutosh Kulkarni",
+    role: "Co-Founder &\nVice President - Engineering",
+    image: "/assets/team/ashutosh.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/ashutosh-kulkarni-4480324/",
   },
   {
     name: "Avadhoot Deshpande",
@@ -34,10 +34,16 @@ const team: TeamMember[] = [
     linkedinUrl: "https://www.linkedin.com/in/avadhootd/",
   },
   {
-    name: "Ashutosh Kulkarni",
-    role: "Co-Founder &\nVice President - Engineering",
-    image: "/assets/team/ashutosh.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/ashutosh-kulkarni-4480324/",
+    name: "Sharvari Wagh",
+    role: "Vice President - Finance & compliance",
+    image: "/assets/team/sharvari.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/ca-sharvari-wagh-970a2257/",
+  },
+  {
+    name: "Aniruddha Fansalkar",
+    role: "Co-Founder &\nChief Human Resource\nOfficer",
+    image: "/assets/team/aniruddha.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/aniruddha-fansalkar-731177a/",
   },
   {
     name: "Sonal Gokhale",
@@ -141,6 +147,7 @@ export default function TeamGrid() {
           <div className="flex justify-center gap-6">
             <TeamCard {...team[5]} />
             <TeamCard {...team[6]} />
+            <TeamCard {...team[7]} />
           </div>
         </div>
 
