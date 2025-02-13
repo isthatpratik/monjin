@@ -35,7 +35,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Sharvari Wagh",
-    role: "Vice President - Finance & compliance",
+    role: "Vice President - Finance & Compliance",
     image: "/assets/team/sharvari.jpg",
     linkedinUrl: "https://www.linkedin.com/in/ca-sharvari-wagh-970a2257/",
   },
