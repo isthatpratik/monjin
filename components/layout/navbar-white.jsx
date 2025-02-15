@@ -243,6 +243,16 @@ export function NavbarWhite() {
                       Post a Job
                     </NavigationMenuLink>
                   </Link>
+                  <Link
+                    href={
+                      "/viewjobs"
+                    }
+                    className="text-black"
+                  >
+                    <NavigationMenuLink target="_blank">
+                      View Jobs
+                    </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>

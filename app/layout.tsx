@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { Onest, Figtree } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import QueryProvider from "@/components/QueryProvider";
 
 const onest = Onest({ subsets: ["latin"] });
 const figtree = Figtree({ subsets: ["latin"] });
@@ -58,9 +59,11 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${onest.className} ${figtree.className}`}>
-        {children}
-        <SpeedInsights />
-        <Analytics />
+        <QueryProvider>
+          {children}
+          <SpeedInsights />
+          <Analytics />
+        </QueryProvider>
       </body>
     </html>
   );
