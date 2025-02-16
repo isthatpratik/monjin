@@ -1,42 +1,53 @@
 import { NextResponse } from "next/server";
 
-const MONJIN_API = "https://api.monjin.com/f/22/1/1";
-const BEARER_TOKEN = process.env.MONJIN_AUTH_TOKEN!; // Use environment variable for security
-
-export async function GET(
-  req: Request,
-  context: { params: { code: string } }
-) {
+export async function GET(request: Request, context: { params: { code: string } }) {
   try {
-    const { code } = context.params;
+    const { code } = await context.params; // Await params before using
 
-    const response = await fetch(
-      `${MONJIN_API}/list/published-job?filter=code[${code}]`,
+    if (!code) {
+      return NextResponse.json({ error: "Missing job ID" }, { status: 400 });
+    }
+
+    // Fetch access token
+    const tokenResponse = await fetch(process.env.MONJIN_AUTH_URL!, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "application/json",
+      },
+      body: new URLSearchParams({
+        client_id: process.env.MONJIN_CLIENT_ID!,
+        client_secret: process.env.MONJIN_CLIENT_SECRET!,
+        scope: process.env.MONJIN_SCOPE!,
+        grant_type: process.env.MONJIN_GRANT_TYPE!,
+      }),
+    });
+
+    if (!tokenResponse.ok) {
+      return NextResponse.json({ error: "Failed to obtain access token" }, { status: 500 });
+    }
+
+    const { access_token } = await tokenResponse.json();
+
+    // Fetch job details
+    const jobResponse = await fetch(
+      `https://api.monjin.com/f/22/1/1/list/published-job?filter=code[${code}]`,
       {
-        headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
+        headers: { Authorization: `Bearer ${access_token}` },
       }
     );
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error("Error fetching job details:", errorText);
-      return NextResponse.json(
-        { error: "Failed to fetch job details", details: errorText },
-        { status: response.status }
-      );
+    if (!jobResponse.ok) {
+      return NextResponse.json({ error: "Failed to fetch job details" }, { status: 500 });
     }
 
-    const jobDetails = await response.json();
-    if (!jobDetails || jobDetails.length === 0) {
+    const jobs = await jobResponse.json();
+    if (jobs.length === 0) {
       return NextResponse.json({ error: "Job not found" }, { status: 404 });
     }
 
-    return NextResponse.json(jobDetails[0], { status: 200 });
+    return NextResponse.json(jobs[0]);
   } catch (error) {
-    console.error("Unexpected server error:", error);
-    return NextResponse.json(
-      { error: "Internal Server Error", details: (error as Error).message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
