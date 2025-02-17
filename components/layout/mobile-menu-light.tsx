@@ -80,7 +80,7 @@ export function MobileMenuLight() {
             className="block text-lg text-[#0E0E0E]/60 font-figtree font-light "
             target="_blank"
           >
-            Post a Job
+            View Jobs
           </Link>
           <div className="grid grid-cols-1 gap-4">
             <Link
