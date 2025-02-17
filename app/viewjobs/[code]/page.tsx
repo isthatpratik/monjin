@@ -75,6 +75,12 @@ interface CountryDialCode {
   code: string;
 }
 
+interface Country {
+  name: string;
+  callingCodes: string[];
+  alpha2Code: string;
+}
+
 const fetchCountryDialCodes = async (): Promise<CountryDialCode[]> => {
   const response = await fetch(
     "https://restcountries.com/v2/all?fields=name,callingCodes,alpha2Code"
@@ -82,13 +88,15 @@ const fetchCountryDialCodes = async (): Promise<CountryDialCode[]> => {
   if (!response.ok) {
     throw new Error("Failed to fetch country dial codes");
   }
-  const data = await response.json();
-  return data.map((country: any) => ({
+
+  const data: Country[] = await response.json();
+  return data.map((country) => ({
     name: country.name,
     dial_code: `+${country.callingCodes[0]}`,
     code: country.alpha2Code,
   }));
 };
+
 
 const formSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),
