@@ -2,10 +2,10 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { firstName, lastName, email, jobDescriptionId, dialCode, contactNumber, sourceType, apexBusinessModelId, aId, sCId } = await req.json();
+    const { firstName, lastName, email, jobDescriptionId, dialCode, contactNumber, sourceType, apexBusinessModelId, aId, scId } = await req.json();
 
     // Validate input
-    if (!firstName || !lastName || !email || !jobDescriptionId || !dialCode || !contactNumber || !apexBusinessModelId || !aId || !sCId) {
+    if (!firstName || !lastName || !email || !jobDescriptionId || !dialCode || !contactNumber || !apexBusinessModelId || !aId || !scId) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -33,7 +33,7 @@ export async function POST(req: Request) {
     const { access_token } = await tokenResponse.json();
 
     // Determine environment URL
-    const BASE_API_URL = `https://api.monjin.com/a/22/${aId}/1/${sCId}/Itv/Invite`
+    const BASE_API_URL = `https://api.monjin.com/a/22/${aId}/1/${scId}/Itv/Invite`;
 
     // Send application request
     const applyResponse = await fetch(BASE_API_URL, {
@@ -51,6 +51,8 @@ export async function POST(req: Request) {
         contactNumber,
         apexBusinessModelId,
         sourceType: sourceType || "website",
+        aId,
+        scId,
       }),
     });
 
@@ -60,14 +62,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: applyData.infoList[0].Info }, { status: 400 });
     }
 
-    if (!applyData.code) {
-      return NextResponse.json({ error: "Application failed" }, { status: 500 });
-    }
+    return NextResponse.json({ success: true, message: "Please check your mail to join the interview." });
 
-    // Generate redirect URL
-    const invitationURL = `https://uni.monjin.com/public/invitations/${applyData.code}`
-
-    return NextResponse.json({ success: true, invitationURL });
   } catch (error) {
     console.error("Unexpected server error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });

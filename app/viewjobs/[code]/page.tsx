@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import parse from "html-react-parser";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -11,6 +11,35 @@ import { Clock, MapPin } from "lucide-react";
 import { ClientsSlider } from "@/components/sliders/clients-slider";
 import { Footer } from "@/components/layout/footer";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+} from "@/components/ui/select";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AlertCircle } from "lucide-react";
 
 interface JobDetail {
   id: number;
@@ -35,8 +64,43 @@ interface JobDetail {
   vacancy: number;
   salary: string;
   aId: number;
-  sCId: number;
+  apexBusinessModelId: number;
+  scId: number;
+  alreadyApplied: boolean;
 }
+
+interface CountryDialCode {
+  name: string;
+  dial_code: string;
+  code: string;
+}
+
+const fetchCountryDialCodes = async (): Promise<CountryDialCode[]> => {
+  const response = await fetch(
+    "https://restcountries.com/v2/all?fields=name,callingCodes,alpha2Code"
+  );
+  if (!response.ok) {
+    throw new Error("Failed to fetch country dial codes");
+  }
+  const data = await response.json();
+  return data.map((country: any) => ({
+    name: country.name,
+    dial_code: `+${country.callingCodes[0]}`,
+    code: country.alpha2Code,
+  }));
+};
+
+const formSchema = z.object({
+  firstName: z.string().min(2, "First name must be at least 2 characters"),
+  lastName: z.string().min(2, "Last name must be at least 2 characters"),
+  email: z.string().email("Invalid email format"),
+  dialCode: z.string(),
+  contactNumber: z
+    .string()
+    .regex(/^\d{10}$/, "Phone number must be exactly 10 digits"),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 const fetchJobDetails = async (code: string): Promise<JobDetail> => {
   const res = await fetch(`/api/jobs/${code}`, { cache: "no-store" });
@@ -52,7 +116,7 @@ const formatJobDescription = (description: string) => {
   );
   formattedDesc = formattedDesc.replace(
     /(Experience Level.*?):/g,
-    `\n\n<h2 class="text-xl font-bold mt-8 mb-2">$1:</h2>`
+    `\n\n<h2 className="text-xl font-bold mt-8 mb-2">$1:</h2>`
   );
   formattedDesc = formattedDesc.replace(
     /<ul>/g,
@@ -64,18 +128,35 @@ const formatJobDescription = (description: string) => {
 };
 
 export default function JobDetailPage() {
-  const router = useRouter();
   const params = useParams();
   const [code, setCode] = useState<string | null>(null);
   const [isApplying, setIsApplying] = useState(false);
   const [showDialog, setShowDialog] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    dialCode: "91",
-    contactNumber: "",
+  const [successDialog, setSuccessDialog] = useState(false);
+  const [dialogMessage, setDialogMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    mode: "onBlur",
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      dialCode: "IN",
+      contactNumber: "",
+    },
   });
+
+  const { data: countryDialCodes } = useQuery<
+    CountryDialCode[]
+  >({
+    queryKey: ["countryDialCodes"],
+    queryFn: fetchCountryDialCodes,
+  });
+
+  const selectedCountry = countryDialCodes?.find(
+    (country) => country.code === form.watch("dialCode")
+  );
 
   useEffect(() => {
     if (params?.code) {
@@ -89,31 +170,29 @@ export default function JobDetailPage() {
     staleTime: 5000,
   });
 
-  if (isLoading) return (
-    <div className="flex items-center justify-center ">
-      {[...Array(1)].map((_, i) => (
-        <Skeleton
-          key={i}
-          className="h-20 w-auto lg:rounded-3xl rounded-2xl"
-        />
-      ))}
-    </div>
-  );
+  if (isLoading)
+    return (
+      <div className="flex items-center justify-center ">
+        {[...Array(1)].map((_, i) => (
+          <Skeleton
+            key={i}
+            className="h-20 w-auto lg:rounded-3xl rounded-2xl"
+          />
+        ))}
+      </div>
+    );
   if (isError || !data) return <p>Error loading job details.</p>;
 
-  const handleApply = async () => {
+  const onSubmit = async (values: FormValues) => {
     setIsApplying(true);
+    setErrorMessage(null);
 
     const payload = {
-      firstName: formData.firstName.trim(),
-      lastName: formData.lastName.trim(),
-      email: formData.email.trim(),
-      dialCode: formData.dialCode.trim(),
-      contactNumber: formData.contactNumber.trim(),
+      ...values,
       jobDescriptionId: data.id,
-      apexBusinessModelId: data.aId,
+      apexBusinessModelId: data.apexBusinessModelId,
       aId: data.aId,
-      sCId: data.sCId,
+      scId: data.scId,
       sourceType: "website",
     };
 
@@ -127,20 +206,27 @@ export default function JobDetailPage() {
       });
 
       const result = await response.json();
-      console.log("API Response:", result); // Debugging response
 
       if (result.success) {
-        router.push(result.invitationURL);
+        setDialogMessage("Please check your mail to join the interview.");
+        setShowDialog(false);
+        setSuccessDialog(true);
+        form.reset();
       } else {
-        alert(result.error || "Application failed. Please try again.");
+        setErrorMessage(
+          result.error || "An error occurred while submitting your application."
+        );
+        setShowDialog(true);
       }
     } catch (error) {
-      alert("Application failed. Please try again.");
+      console.error("Application error:", error);
+      setErrorMessage("An unexpected error occurred. Please try again.");
     } finally {
       setIsApplying(false);
-      setShowDialog(false);
     }
   };
+
+  const overallExperience = `${data.minExpInYears} - ${data.maxExpInYears} years`;
 
   return (
     <main className="relative min-h-screen overflow-hidden">
@@ -194,33 +280,22 @@ export default function JobDetailPage() {
 
           <div className="flex justify-between">
             <div className="flex-1 space-x-4">
-              <button
+              <Button
                 onClick={() => setShowDialog(true)}
-                className="bg-[#141414] text-white px-4 py-2 lg:px-12 lg:py-4 rounded-xl shadow-xl"
-                disabled={isApplying}
+                className="bg-[#141414] text-white px-4 py-2 lg:px-12 lg:py-6 rounded-lg shadow-xl"
+                disabled={isApplying || data.alreadyApplied}
               >
-                {isApplying ? "Applying..." : "Apply"}
-              </button>
+                {data.alreadyApplied
+                  ? "Already Applied"
+                  : isApplying
+                  ? "Applying..."
+                  : "Apply"}
+              </Button>
             </div>
           </div>
         </div>
 
-        {/* {data.companyLogo ? (
-          <div className="bg-gray-500 p-4 my-4 w-fit rounded-3xl">
-            <Image
-              src={data.companyLogo}
-              alt={data.company}
-              height={200}
-              width={200}
-              className="w-40 h-auto object-contain"
-            />
-          </div>
-        ) : (
-          <div className="w-20 h-20 mt-4 bg-gray-200 rounded-md flex items-center justify-center">
-            <span className="text-gray-500">No Logo</span>
-          </div>
-        )} */}
-
+        {/* Job Description */}
         <div className="font-figtree lg:text-lg text-sm border-b border-[#9F8AFF] lg:py-8">
           {formatJobDescription(data.description)}
         </div>
@@ -261,7 +336,9 @@ export default function JobDetailPage() {
                 <p className="font-onest font-medium text-sm lg:text-xl flex flex-col text-[#0D0E11]/50">
                   Overall Experience
                 </p>
-                <span className="font-onest font-normal">{data.overallExperience}</span>
+                <span className="font-onest font-normal">
+                  {overallExperience}
+                </span>
               </div>
               <div className="flex flex-col space-y-4">
                 <p className="font-onest text-sm flex flex-col font-medium lg:text-xl text-[#0D0E11]/50">
@@ -315,82 +392,167 @@ export default function JobDetailPage() {
         </div>
 
         {/* Application Dialog */}
-        {showDialog && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-              <h2 className="text-xl font-bold mb-4">Apply for {data.title}</h2>
-              <input
-                type="text"
-                placeholder="First Name"
-                className="w-full p-2 border rounded mb-2"
-                value={formData.firstName}
-                onChange={(e) =>
-                  setFormData({ ...formData, firstName: e.target.value })
-                }
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="w-full p-2 border rounded mb-2"
-                value={formData.lastName}
-                onChange={(e) =>
-                  setFormData({ ...formData, lastName: e.target.value })
-                }
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full p-2 border rounded mb-2"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
-              <div className="flex space-x-2">
-                {/* Dial Code Selector */}
-                <select
-                  className="w-1/4 p-2 border rounded"
-                  value={formData.dialCode}
-                  onChange={(e) =>
-                    setFormData({ ...formData, dialCode: e.target.value })
-                  }
-                >
-                  <option value="91">+91 🇮🇳</option>
-                  <option value="1">+1 🇺🇸</option>
-                  <option value="44">+44 🇬🇧</option>
-                  <option value="61">+61 🇦🇺</option>
-                  <option value="971">+971 🇦🇪</option>
-                  {/* Add more country codes if needed */}
-                </select>
-
-                {/* Phone Number Input */}
-                <input
-                  type="text"
-                  placeholder="Phone Number"
-                  className="w-3/4 p-2 border rounded"
-                  value={formData.contactNumber}
-                  onChange={(e) =>
-                    setFormData({ ...formData, contactNumber: e.target.value })
-                  }
+        <Dialog open={showDialog} onOpenChange={setShowDialog}>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Apply for {data.title}</DialogTitle>
+              <DialogDescription>
+                Please fill out the form below to apply for this position.
+              </DialogDescription>
+            </DialogHeader>
+            {errorMessage && (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertTitle>Error</AlertTitle>
+                <AlertDescription>{parse(errorMessage)}</AlertDescription>
+              </Alert>
+            )}
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-4"
+              >
+                <FormField
+                  control={form.control}
+                  name="firstName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>First Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="First Name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              <div className="flex justify-end space-x-2 mt-4">
-                <button
-                  onClick={() => setShowDialog(false)}
-                  className="bg-gray-300 px-4 py-2 rounded-lg"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={handleApply}
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
-                >
-                  Apply
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+                <FormField
+                  control={form.control}
+                  name="lastName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Last Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Last Name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Email" type="email" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <div className="flex space-x-2">
+                  <FormField
+                    control={form.control}
+                    name="dialCode"
+                    render={({ field }) => (
+                      <FormItem className="w-fit">
+                        <FormLabel>Code</FormLabel>
+                        <Select
+                          onValueChange={field.onChange}
+                          defaultValue={
+                            field.value || countryDialCodes?.[0]?.code
+                          }
+                        >
+                          <FormControl>
+                            <SelectTrigger className="rounded-[8px] text-sm">
+                              {selectedCountry ? (
+                                <div className="flex items-center gap-2">
+                                  <span
+                                    className={
+                                      field.value
+                                        ? "text-black"
+                                        : "text-gray-400"
+                                    }
+                                  >
+                                    {selectedCountry.code}{" "}
+                                    {selectedCountry.dial_code}
+                                  </span>
+                                </div>
+                              ) : (
+                                <span className="text-gray-400 text-sm">
+                                  Select Country
+                                </span>
+                              )}
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {countryDialCodes?.map((country) => (
+                              <SelectItem
+                                key={country.code}
+                                value={country.code}
+                                className="p-4"
+                              >
+                                <div className="flex items-center gap-2">
+                                  <span>
+                                    {country.code} {country.dial_code}
+                                  </span>
+                                </div>
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="contactNumber"
+                    render={({ field }) => (
+                      <FormItem className="w-full">
+                        <FormLabel>Phone Number</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Phone Number"
+                            type="tel"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <DialogFooter>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => setShowDialog(false)}
+                  >
+                    Cancel
+                  </Button>
+                  <Button type="submit" disabled={isApplying}>
+                    {isApplying ? "Applying..." : "Apply"}
+                  </Button>
+                </DialogFooter>
+              </form>
+            </Form>
+          </DialogContent>
+        </Dialog>
+
+        {/* Success Dialog */}
+        <Dialog open={successDialog} onOpenChange={setSuccessDialog}>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Application Submitted</DialogTitle>
+              <DialogDescription>{dialogMessage}</DialogDescription>
+            </DialogHeader>
+            <DialogFooter>
+              <Button onClick={() => setSuccessDialog(false)}>Close</Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
 
       <ClientsSlider />
