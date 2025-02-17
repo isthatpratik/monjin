@@ -47,7 +47,7 @@ export async function GET(request: Request, context: { params: { code: string } 
     }
 
     return NextResponse.json(jobs[0]);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }

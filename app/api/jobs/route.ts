@@ -30,7 +30,6 @@ export async function GET(req: Request) {
     }
 
     const { access_token } = await tokenResponse.json();
-    console.log(access_token)
 
     // Fetch total count of jobs
     const countResponse = await fetch("https://api.monjin.com/f/22/1/1/list/published-job", {
@@ -42,7 +41,6 @@ export async function GET(req: Request) {
     }
 
     const totalJobs = parseInt(countResponse.headers.get("Content-Range")?.split("/")[1] || "0", 10);
-    const totalPages = Math.ceil(totalJobs / limit);
 
     // Reverse pagination logic
     const start = totalJobs - (page * limit) + 1;

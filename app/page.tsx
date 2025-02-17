@@ -32,8 +32,7 @@ export default function Home() {
           alt="gradient-mobile-bg"
           src={"/assets/gradient-mobile.jpg"}
           quality={100}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"     
+          fill     
           priority
           className="object-cover -translate-y-[400px]"
         />
@@ -51,10 +50,9 @@ export default function Home() {
         }}
       >
         <Image
-          alt="gradient-mobile-bg"
+          alt="gradient-web-bg"
           src={"/assets/gradient-web.jpg"}
           quality={100}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           fill
           className="object-cover object-top xl:-translate-y-[300px]"
           priority

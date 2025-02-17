@@ -3,6 +3,7 @@ import { Onest, Figtree } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import QueryProvider from "@/components/QueryProvider";
+import Script from 'next/script';
 
 const onest = Onest({ subsets: ["latin"] });
 const figtree = Figtree({ subsets: ["latin"] });
@@ -26,18 +27,20 @@ export default function RootLayout({
           name="google-site-verification"
           content="yNOPETeedrRcS6SmekSKy-Yfj59X3Ctii4jSboeweq0"
         />
-        <script
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-L8GMBT5CXD"
-        ></script>
-        <script
+        ></Script>
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-L8GMBT5CXD');
-          `,
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L8GMBT5CXD');
+            `,
           }}
         />
         <link rel="icon" href="/favicon.ico" sizes="any" />
