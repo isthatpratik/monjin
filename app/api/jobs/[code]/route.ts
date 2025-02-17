@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request, { params }: { params: { code: string } }) {
+export async function GET(request: Request, context: { params: { code: string } }) {
   try {
-    const { code } = params;
+    const { code } = await context.params; // Await params before using
 
     if (!code) {
       return NextResponse.json({ error: "Missing job ID" }, { status: 400 });
@@ -41,10 +41,13 @@ export async function GET(request: Request, { params }: { params: { code: string
       return NextResponse.json({ error: "Failed to fetch job details" }, { status: 500 });
     }
 
-    const jobDetails = await jobResponse.json();
-    return NextResponse.json(jobDetails);
-  } catch (error) {
-    console.error("Error fetching job details:", error);
+    const jobs = await jobResponse.json();
+    if (jobs.length === 0) {
+      return NextResponse.json({ error: "Job not found" }, { status: 404 });
+    }
+
+    return NextResponse.json(jobs[0]);
+  } catch {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
