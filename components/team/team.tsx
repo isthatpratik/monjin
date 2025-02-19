@@ -47,7 +47,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Sonal Gokhale",
-    role: "Head of People & Purpose",
+    role: "Vice President - Global Accounts",
     image: "/assets/team/sonal.jpg",
     linkedinUrl: "https://www.linkedin.com/in/sonal-gokhale-b9bb196a/",
   },
