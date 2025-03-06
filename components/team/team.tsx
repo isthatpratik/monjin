@@ -23,7 +23,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Ashutosh Kulkarni",
-    role: "Co-Founder &\nVice President - Engineering",
+    role: "Co-Founder, CCO &\nVice President - Engineering",
     image: "/assets/team/ashutosh.jpg",
     linkedinUrl: "https://www.linkedin.com/in/ashutosh-kulkarni-4480324/",
   },
