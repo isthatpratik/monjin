@@ -47,7 +47,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Sonal Gokhale",
-    role: "Vice President & CCO - Global Accounts",
+    role: "CCO & Vice President - Global Accounts",
     image: "/assets/team/sonal.jpg",
     linkedinUrl: "https://www.linkedin.com/in/sonal-gokhale-b9bb196a/",
   },
