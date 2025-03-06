@@ -23,7 +23,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Ashutosh Kulkarni",
-    role: "Co-Founder, CCO &\nVice President - Engineering",
+    role: "Co-Founder &\nVice President - Engineering",
     image: "/assets/team/ashutosh.jpg",
     linkedinUrl: "https://www.linkedin.com/in/ashutosh-kulkarni-4480324/",
   },
@@ -47,7 +47,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Sonal Gokhale",
-    role: "Vice President - Global Accounts",
+    role: "Vice President & CCO - Global Accounts",
     image: "/assets/team/sonal.jpg",
     linkedinUrl: "https://www.linkedin.com/in/sonal-gokhale-b9bb196a/",
   },
