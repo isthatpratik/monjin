@@ -10,12 +10,6 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Aniket Tapre",
-    role: "Global - \nChief Executive Officer ",
-    image: "/assets/team/aniket.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/atapre/",
-  },
-  {
     name: "Abhijit Kashyape",
     role: "Founder, Chief Product\nOfficer & Senior VP -\nUK & EU",
     image: "/assets/team/abhijit.jpg",
@@ -38,19 +32,7 @@ const teamMembers: TeamMember[] = [
     role: "Co-Founder &\nVice President - Engineering, Chief Compliance Officer",
     image: "/assets/team/ashutosh.jpg",
     linkedinUrl: "https://www.linkedin.com/in/ashutosh-kulkarni-4480324/",
-  },
-  {
-    name: "Sonal Gokhale",
-    role: "Head of People & Purpose",
-    image: "/assets/team/sonal.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/sonal-gokhale-b9bb196a/",
-  },
-  {
-    name: "Sharon Matharu",
-    role: "General Counsel & Investor Relations",
-    image: "/assets/team/sharon.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/sharon-matharu/",
-  },
+  }
 ];
 
 function LinkedInButton({ url }: { url: string }) {

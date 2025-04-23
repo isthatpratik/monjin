@@ -10,12 +10,6 @@ interface TeamMember {
 
 const team: TeamMember[] = [
   {
-    name: "Aniket Tapre",
-    role: "Global - \nChief Executive Officer ",
-    image: "/assets/team/aniket.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/atapre/",
-  },
-  {
     name: "Abhijit Kashyape",
     role: "Founder, Chief Product\nOfficer & Senior VP -\nUK & EU",
     image: "/assets/team/abhijit.jpg",
@@ -44,18 +38,6 @@ const team: TeamMember[] = [
     role: "Co-Founder &\nChief Human Resource\nOfficer",
     image: "/assets/team/aniruddha.jpg",
     linkedinUrl: "https://www.linkedin.com/in/aniruddha-fansalkar-731177a/",
-  },
-  {
-    name: "Sonal Gokhale",
-    role: "CCO & Vice President - Global Accounts",
-    image: "/assets/team/sonal.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/sonal-gokhale-b9bb196a/",
-  },
-  {
-    name: "Sharon Matharu",
-    role: "General Counsel & Investor Relations",
-    image: "/assets/team/sharon.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/sharon-matharu/",
   },
 ];
 
@@ -141,13 +123,6 @@ export default function TeamGrid() {
             <TeamCard {...team[2]} />
             <TeamCard {...team[3]} />
             <TeamCard {...team[4]} />
-          </div>
-
-          {/* Third row - 2 cards */}
-          <div className="flex justify-center gap-6">
-            <TeamCard {...team[5]} />
-            <TeamCard {...team[6]} />
-            <TeamCard {...team[7]} />
           </div>
         </div>
 
