@@ -12,6 +12,7 @@ import {
   Briefcase,
   Flag,
   Link,
+  Upload,
 } from "lucide-react";
 import {
   Form,
@@ -47,7 +48,7 @@ const formSchema = z.object({
   mobile: z.string().min(10, "Please enter a mobile number"),
   workMail: z.string().email("Please enter a valid email address"),
   position: z.string().min(1, "Please select a position"),
-  cvUrl: z.any().optional(),
+  cv: z.any().optional(),
 });
 
 export default function JobApplicationForm() {
@@ -55,31 +56,36 @@ export default function JobApplicationForm() {
   const [responseMessage, setResponseMessage] = useState<string | null>(null);
   const [countries, setCountries] = useState<Country[]>([]);
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-      setIsLoading(true);
-      setResponseMessage(null);
-  
-      fetch("/api/job-application", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          setResponseMessage(data.message);
-  
-          if (data.success) {
-            form.reset();
-          }
-        })
-        .catch(() => {
-          setResponseMessage("Something went wrong. Please try again.");
-        })
-        .finally(() => setIsLoading(false));
+  function onSubmit(values: any) {
+    setIsLoading(true);
+    setResponseMessage(null);
+
+    const formData = new FormData();
+    formData.append("fullName", values.fullName);
+    formData.append("countryCode", values.countryCode);
+    formData.append("mobile", values.mobile);
+    formData.append("workMail", values.workMail);
+    formData.append("position", values.position);
+    if (values.cv && values.cv[0]) {
+      formData.append("cv", values.cv[0]);
     }
+
+    fetch("/api/job-application", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setResponseMessage(data.message);
+        if (data.success) {
+          form.reset();
+        }
+      })
+      .catch(() => {
+        setResponseMessage("Something went wrong. Please try again.");
+      })
+      .finally(() => setIsLoading(false));
+  }
 
   useEffect(() => {
     async function fetchCountries() {
@@ -123,7 +129,6 @@ export default function JobApplicationForm() {
       mobile: "",
       workMail: "",
       position: "",
-      cvUrl: "",
     },
   });
 
@@ -362,19 +367,30 @@ export default function JobApplicationForm() {
                   />
                   <FormField
                     control={form.control}
-                    name="cvUrl"
+                    name="cv"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>CV</FormLabel>
                         <FormControl>
-                          <div className="relative">
-                            <Link className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
-                            <Input
-                              placeholder="Enter public URL of CV"
-                              type="url"
-                              className="bg-[#F5F9FA] border-[#D8E3E5] pl-10 py-6"
-                              {...field}
-                            />
+                          <div>
+                            <label
+                              htmlFor="cv-upload"
+                              className="flex items-center gap-4 cursor-pointer border border-[#D8E3E5] bg-[#F5F9FA] rounded-md px-4 py-3 w-full transition hover:border-gray-400"
+                            >
+                              <Upload className="w-5 h-5 text-gray-400" />
+                              <span className="text-sm text-gray-400">
+                                {field.value && field.value.length > 0
+                                  ? field.value[0].name
+                                  : "Upload Your CV Here"}
+                              </span>
+                              <input
+                                id="cv-upload"
+                                type="file"
+                                accept=".pdf,.doc,.docx"
+                                className="hidden"
+                                onChange={(e) => field.onChange(e.target.files)}
+                              />
+                            </label>
                           </div>
                         </FormControl>
                         <FormMessage />
