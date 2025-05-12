@@ -25,7 +25,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <span className="inline-block px-4 py-1 bg-gray-100 rounded-full font-figtree text-xs lg:text-sm mb-2">CONTACT</span>
-                <h3 className="text-sm font-figtree lg:text-2xl font-medium">+91 – 88888 17031</h3>
+                <h3 className="text-sm font-figtree lg:text-2xl font-medium">+91 9850048233</h3>
               </div>
             </div>
           </div>
