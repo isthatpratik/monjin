@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     // Email content
     const mailOptions = {
       from: 'Monjin Contact <dev@ampvc.co>',
-      to: 'ashutosh@monjin.com',
+      to: 'sales@monjin.com',
       subject: 'New Contact Form Submission',
       html: `
         <div style="background: #f4f6fb; padding: 40px 0; font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;">

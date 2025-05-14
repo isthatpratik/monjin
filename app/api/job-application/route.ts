@@ -81,7 +81,7 @@ export async function POST(req: NextRequest) {
   try {
     await transporter.sendMail({
       from: `Monjin Careers <${process.env.SMTP_USER}>`,
-      to: 'ashutosh@monjin.com',
+      to: 'sales@monjin.com',
       subject: `New Job Application: ${fullName} (${position})`,
       html,
       attachments,

@@ -76,7 +76,7 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: `Monjin Pricing <${process.env.GMAIL_SMTP_USER}>`,
-      to: "ashutosh@monjin.com",
+      to: "sales@monjin.com",
       subject: `New Pricing Inquiry from ${fullName}`,
       html,
     });

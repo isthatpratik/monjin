@@ -37,9 +37,9 @@ export function EnquiryCards() {
             className="bg-black text-white hover:bg-gray-800 p-5"
             onClick={() => {
               if (navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)) {
-                window.location.href = 'tel:+91 9850048233';
+                window.location.href = 'tel:+91 8855048757';
               } else {
-                copyToClipboard('+91 9850048233');
+                copyToClipboard('+91 88550 48757');
               }
             }}
           >
