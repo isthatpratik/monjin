@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Monjin - Job Platform
 
-## Getting Started
+A modern job platform built with Next.js, TypeScript, and Prisma.
 
-First, run the development server:
+## 🚀 Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Monjin is a comprehensive job platform that connects candidates with companies through an intuitive interface. The platform includes features for job listings, candidate management, interviewer tools, and company showcase.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.2.3 (TypeScript)
+- **Database**: Prisma ORM
+- **Styling**: Tailwind CSS with shadcn/ui
+- **State Management**: TanStack Query
+- **UI Components**: 
+  - shadcn/ui
+  - Radix UI
+  - Material Tailwind
+  - Ant Design Icons
+- **Form Handling**: React Hook Form
+- **Animations**: Framer Motion
+- **Deployment**: Vercel
+
+## 📋 Project Structure
+
+```
+monjin/
+├── app/              # Next.js App Router pages and routes
+│   ├── api/         # API routes
+│   ├── candidate/   # Candidate-related pages
+│   ├── casestudy/   # Case study pages
+│   ├── company/     # Company showcase
+│   ├── products/    # Product pages
+│   └── ...          # Other routes
+├── components/      # Reusable React components
+├── hooks/          # Custom React hooks
+├── lib/            # Utility functions and shared code
+├── prisma/         # Database schema and migrations
+├── styles/         # Global styles
+└── types/          # TypeScript type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the Repository**
+```bash
+git clone https://github.com/isthatpratik/monjin.git
+cd monjin
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install Dependencies**
+```bash
+npm install
+```
 
-## Learn More
+3. **Environment Variables**
+Create a `.env` file in the root directory with the following variables:
+```
+# Database
+DATABASE_URL="postgresql://..."
 
-To learn more about Next.js, take a look at the following resources:
+# Email Configuration
+DATABASE_URL=
+NEXT_PUBLIC_BASE_URL=
+MONJIN_AUTH_URL=
+MONJIN_CLIENT_ID=
+MONJIN_CLIENT_SECRET=
+MONJIN_SCOPE=
+MONJIN_GRANT_TYPE=
+GMAIL_SMTP_HOST=
+GMAIL_SMTP_PORT=
+GMAIL_SMTP_USER=
+GMAIL_SMTP_PASS=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Run the Development Server**
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Development Tools
 
-## Deploy on Vercel
+- **TypeScript**: For type safety
+- **ESLint**: For code linting
+- **Prettier**: For code formatting
+- **Tailwind CSS**: For styling
+- **Prisma**: For database ORM
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Job Platform Features**
+   - Candidate management
+   - Interviewer tools
+   - Company showcase
+   - Job listings
+   - Case studies
+
+2. **Technical Features**
+   - Server-side rendering (SSR)
+   - API routes
+   - Middleware
+   - Form handling with validation
+   - Responsive design
+   - SEO optimization
+   - Performance optimization
+
+## 🚀 Deployment
+
+The project is deployed on Vercel. To deploy:
+
+1. Push changes to the main branch
+2. Vercel will automatically deploy the changes
+3. Verify deployment in the Vercel dashboard
+
+## 🔐 Security Considerations
+
+- All middleware authorization checks are properly enforced (fixed in Next.js 15.2.3)
+- Input validation is implemented
+- Rate limiting is configured
+- Secure headers are set
+- Environment variables are properly managed
+
+## 📝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📚 Documentation
+
+- [Next.js Documentation](https://next.js.org/docs)
+- [Prisma Documentation](https://www.prisma.io/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [TanStack Query Documentation](https://tanstack.com/query/latest/docs/react/overview)
+
+## 🤝 Support
+
+For support, please:
+- Open an issue on GitHub
+- Contact the development team
+- Check the documentation
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
