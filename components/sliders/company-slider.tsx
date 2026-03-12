@@ -13,7 +13,7 @@ const clientsSet1 = [
   { img: "/assets/clients/cognizant.png" },
   { img: "/assets/clients/cyient.png" },
   { img: "/assets/clients/emids.png" },
-  { img: "/assets/clients/itc.png" },
+  // { img: "/assets/clients/itc.png" },
 ];
 
 const clientsSet2 = [
